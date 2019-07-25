@@ -20,19 +20,19 @@ public class DaoEmpleados implements EmpleadosInterface {
             cn.abrirConexion();
             sql = "select * from empleados where correo=? and contrasenia=MD5(?)";
             ejecutar = cn.getCon().prepareStatement(sql);
-            ejecutar.setString(1, empleado.getCorreo());
-            ejecutar.setString(2, empleado.getPassword());
+            ejecutar.setString(1, empleado.getEmpleadocorreo());
+            ejecutar.setString(2, empleado.getContraseña());
             resultado = ejecutar.executeQuery();
             resultado.next();
             emp = new Empleados();
-            emp.setCorreo(resultado.getString("correo"));
-            emp.setNombre(resultado.getString("nombre"));
-            emp.setPassword(resultado.getString("contrasenia"));
-            emp.setTipo_empleado(resultado.getByte("tipoempleado_id"));
+            emp.setEmpleadocorreo(resultado.getString("correo"));
+            emp.setEmpleadonombre(resultado.getString("nombre"));
+            emp.setContraseña(resultado.getString("contrasenia"));
+            emp.setTipoempleado_id(resultado.getByte("tipoempleado_id"));
             resultado.close();
         } catch (Exception e) {
             System.out.println("Error al leer datos: " + e);
-            emp.setCorreo(null);
+            emp.setEmpleadocorreo(null);
         } finally {
             cn.cerrarConexion();
         }

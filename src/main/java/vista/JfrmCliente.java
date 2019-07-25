@@ -38,7 +38,8 @@ public class JfrmCliente extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jTxtNit = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jBtnGuardar = new javax.swing.JButton();
+        jBtnAgregar = new javax.swing.JButton();
+        jBtnBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,13 +86,11 @@ public class JfrmCliente extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("Nit:");
 
-        jBtnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jBtnGuardar.setText("Guardar");
-        jBtnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnGuardarActionPerformed(evt);
-            }
-        });
+        jBtnAgregar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jBtnAgregar.setText("Guardar");
+
+        jBtnBuscar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jBtnBuscar.setText("Buscar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,8 +125,10 @@ public class JfrmCliente extends javax.swing.JFrame {
                             .addComponent(jTxtNit))))
                 .addGap(359, 359, 359))
             .addGroup(layout.createSequentialGroup()
-                .addGap(205, 205, 205)
-                .addComponent(jBtnGuardar)
+                .addGap(248, 248, 248)
+                .addComponent(jBtnAgregar)
+                .addGap(82, 82, 82)
+                .addComponent(jBtnBuscar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -157,7 +158,9 @@ public class JfrmCliente extends javax.swing.JFrame {
                     .addComponent(jTxtNit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jBtnGuardar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnAgregar)
+                    .addComponent(jBtnBuscar))
                 .addContainerGap())
         );
 
@@ -175,10 +178,6 @@ public class JfrmCliente extends javax.swing.JFrame {
     private void jTxtNitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtNitActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTxtNitActionPerformed
-
-    private void jBtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGuardarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,7 +215,8 @@ public class JfrmCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JButton jBtnGuardar;
+    public javax.swing.JButton jBtnAgregar;
+    public javax.swing.JButton jBtnBuscar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
