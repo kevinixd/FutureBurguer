@@ -67,13 +67,8 @@ public class EmpleadoControlador implements ActionListener {
             //Se verifican si los datos son correctos
             if ((p.getEmpleadonombre()!= null) && (p.getTipoempleado_id() == 1)) {
                 JfrmPrincipal vista = new JfrmPrincipal();
+                PrincipalControlador controlador= new PrincipalControlador(vista);
                 vista.setVisible(true);
-                vista.jBtnCombos.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-                vista.jBtnBebidas.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\bebidas.png"));
-                vista.jBtnPostres.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\postres.png"));
-                vista.jBtnSnacks.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\snacks.png"));
-
-                
                 vista.jLblUsuario.setText(p.getEmpleadonombre());
 
                 vista.setLocationRelativeTo(null);
@@ -114,12 +109,6 @@ public class EmpleadoControlador implements ActionListener {
         }
     }
 
-    public void imagenes() {
-        JfrmPrincipal vista = new JfrmPrincipal();
-        vista.jBtnCombos.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-        vista.jBtnBebidas.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\bebidas.png"));
-        vista.jBtnPostres.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\postres.png"));
-        vista.jBtnSnacks.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\snacks.png"));
-    }
+    
 
 }

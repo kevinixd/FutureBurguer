@@ -34,7 +34,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jBtnCombos = new javax.swing.JButton();
         jBtnBebidas = new javax.swing.JButton();
         jBtnPostres = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jPnlMenus = new javax.swing.JPanel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -94,19 +94,19 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         desktopPane.add(jBtnPostres);
         jBtnPostres.setBounds(90, 380, 130, 130);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 980, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPnlMenusLayout = new javax.swing.GroupLayout(jPnlMenus);
+        jPnlMenus.setLayout(jPnlMenusLayout);
+        jPnlMenusLayout.setHorizontalGroup(
+            jPnlMenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 910, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+        jPnlMenusLayout.setVerticalGroup(
+            jPnlMenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 550, Short.MAX_VALUE)
         );
 
-        desktopPane.add(jPanel1);
-        jPanel1.setBounds(230, 110, 980, 540);
+        desktopPane.add(jPnlMenus);
+        jPnlMenus.setBounds(270, 100, 910, 550);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -175,13 +175,13 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -251,7 +251,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
-    private javax.swing.JDesktopPane desktopPane;
+    public javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
@@ -262,7 +262,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton jBtnSnacks;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLblUsuario;
-    private javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPnlMenus;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
