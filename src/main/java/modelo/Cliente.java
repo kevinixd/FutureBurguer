@@ -5,7 +5,7 @@ package modelo;
 public class Cliente {
     
     private int clienteid;
-   private int  clientenit;
+   private String  clientenit;
    private String clientenombre;
    private String clienteapellido;
    private int clientetelefono;
@@ -14,7 +14,7 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(int clienteid, int clientenit, String clientenombre, String clienteapellido, int clientetelefono, String clientedireccion) {
+    public Cliente(int clienteid, String clientenit, String clientenombre, String clienteapellido, int clientetelefono, String clientedireccion) {
         this.clienteid = clienteid;
         this.clientenit = clientenit;
         this.clientenombre = clientenombre;
@@ -31,11 +31,11 @@ public class Cliente {
         this.clienteid = clienteid;
     }
 
-    public int getClientenit() {
+    public String getClientenit() {
         return clientenit;
     }
 
-    public void setClientenit(int clientenit) {
+    public void setClientenit(String clientenit) {
         this.clientenit = clientenit;
     }
 
