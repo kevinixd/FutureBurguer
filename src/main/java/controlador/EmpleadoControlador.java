@@ -8,6 +8,7 @@ package controlador;
 import dao.DaoEmpleados;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import modelo.Empleados;
 import vista.JfrmLogin;
@@ -67,8 +68,12 @@ public class EmpleadoControlador implements ActionListener {
             if ((p.getNombre() != null) && (p.getTipo_empleado() == 1)) {
                 JfrmPrincipal vista = new JfrmPrincipal();
                 vista.setVisible(true);
-                
+
                 vista.jLblUsuario.setText(p.getNombre());
+                vista.jBtnCombos.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
+                vista.jBtnBebidas.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\bebidas.png"));
+                vista.jBtnPostres.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\postres.png"));
+                vista.jBtnSnacks.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\snacks.png"));
                 vista.setLocationRelativeTo(null);
                 fromLogin.hide();
             } else if ((p.getNombre() != null) && (p.getTipo_empleado() == 2)) {
@@ -96,7 +101,7 @@ public class EmpleadoControlador implements ActionListener {
         } else if (!fromLogin.jTxtUser.getText().contains("@") || !fromLogin.jTxtUser.getText().contains(".")) {
             fromLogin.jLblError.setText("Correo Invalido");
             comprobarCampos++;
-        }else{
+        } else {
             fromLogin.jLblError.setText(" ");
         }
 
@@ -105,6 +110,14 @@ public class EmpleadoControlador implements ActionListener {
         } else {
             verificar = false;
         }
+    }
+
+    public void imagenes() {
+        JfrmPrincipal vista = new JfrmPrincipal();
+        vista.jBtnCombos.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
+        vista.jBtnBebidas.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\bebidas.png"));
+        vista.jBtnPostres.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\postres.png"));
+        vista.jBtnSnacks.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\snacks.png"));
     }
 
 }

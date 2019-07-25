@@ -30,11 +30,11 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jLblUsuario = new javax.swing.JLabel();
-        jPan2 = new javax.swing.JPanel();
         jBtnSnacks = new javax.swing.JButton();
         jBtnCombos = new javax.swing.JButton();
         jBtnBebidas = new javax.swing.JButton();
         jBtnPostres = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -55,26 +55,12 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Usuario:");
         desktopPane.add(jLabel1);
-        jLabel1.setBounds(820, 20, 80, 16);
+        jLabel1.setBounds(770, 30, 80, 16);
 
         jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLblUsuario.setText("Nombre Usuario");
         desktopPane.add(jLblUsuario);
-        jLblUsuario.setBounds(900, 20, 170, 24);
-
-        javax.swing.GroupLayout jPan2Layout = new javax.swing.GroupLayout(jPan2);
-        jPan2.setLayout(jPan2Layout);
-        jPan2Layout.setHorizontalGroup(
-            jPan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 860, Short.MAX_VALUE)
-        );
-        jPan2Layout.setVerticalGroup(
-            jPan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
-        desktopPane.add(jPan2);
-        jPan2.setBounds(330, 80, 860, 600);
+        jLblUsuario.setBounds(870, 30, 170, 24);
 
         jBtnSnacks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +93,20 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         });
         desktopPane.add(jBtnPostres);
         jBtnPostres.setBounds(90, 380, 130, 130);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 980, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
+        );
+
+        desktopPane.add(jPanel1);
+        jPanel1.setBounds(230, 110, 980, 540);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -262,7 +262,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton jBtnSnacks;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLblUsuario;
-    public javax.swing.JPanel jPan2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
