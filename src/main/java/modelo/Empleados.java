@@ -10,55 +10,94 @@ package modelo;
  * @author javam2019
  */
 public class Empleados {
-
-    private String nombre;
-    private String correo;
-    private String password;
-    private byte tipo_empleado;
-
-    public Empleados(String nombre, String correo, String password, byte tipo_empleado) {
-        this.nombre = nombre;
-        this.correo = correo;
-        this.password = password;
-        this.tipo_empleado = tipo_empleado;
-    }
-
-    
+    private int empleado_id;
+    private String empleadonombre;
+    private String empleadoapellido;
+    private int empleadotelefono;
+    private String empleadodireccion;
+    private String empleadocorreo;
+    private String contraseña;
+    private byte tipoempleado_id;
 
     public Empleados() {
     }
 
-    public String getNombre() {
-        return nombre;
+    public Empleados(int empleado_id, String empleadonombre, String empleadoapellido, int empleadotelefono, String empleadodireccion, String empleadocorreo, String contraseña, byte tipoempleado_id) {
+        this.empleado_id = empleado_id;
+        this.empleadonombre = empleadonombre;
+        this.empleadoapellido = empleadoapellido;
+        this.empleadotelefono = empleadotelefono;
+        this.empleadodireccion = empleadodireccion;
+        this.empleadocorreo = empleadocorreo;
+        this.contraseña = contraseña;
+        this.tipoempleado_id = tipoempleado_id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getEmpleado_id() {
+        return empleado_id;
     }
 
-    public String getCorreo() {
-        return correo;
+    public void setEmpleado_id(int empleado_id) {
+        this.empleado_id = empleado_id;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public String getEmpleadonombre() {
+        return empleadonombre;
     }
 
-    public String getPassword() {
-        return password;
+    public void setEmpleadonombre(String empleadonombre) {
+        this.empleadonombre = empleadonombre;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String getEmpleadoapellido() {
+        return empleadoapellido;
     }
 
-    public byte getTipo_empleado() {
-        return tipo_empleado;
+    public void setEmpleadoapellido(String empleadoapellido) {
+        this.empleadoapellido = empleadoapellido;
     }
 
-    public void setTipo_empleado(byte tipo_empleado) {
-        this.tipo_empleado = tipo_empleado;
+    public int getEmpleadotelefono() {
+        return empleadotelefono;
     }
+
+    public void setEmpleadotelefono(int empleadotelefono) {
+        this.empleadotelefono = empleadotelefono;
+    }
+
+    public String getEmpleadodireccion() {
+        return empleadodireccion;
+    }
+
+    public void setEmpleadodireccion(String empleadodireccion) {
+        this.empleadodireccion = empleadodireccion;
+    }
+
+    public String getEmpleadocorreo() {
+        return empleadocorreo;
+    }
+
+    public void setEmpleadocorreo(String empleadocorreo) {
+        this.empleadocorreo = empleadocorreo;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public byte getTipoempleado_id() {
+        return tipoempleado_id;
+    }
+
+    public void setTipoempleado_id(byte tipoempleado_id) {
+        this.tipoempleado_id = tipoempleado_id;
+    }
+    
+    
     
     
 }

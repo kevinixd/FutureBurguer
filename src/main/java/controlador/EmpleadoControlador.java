@@ -42,8 +42,8 @@ public class EmpleadoControlador implements ActionListener {
     }
 
     public void datos() {
-        emp.setCorreo(String.valueOf(fromLogin.jTxtUser.getText()));
-        emp.setPassword(String.valueOf(fromLogin.jTxtPass.getText()));
+        emp.setEmpleadocorreo(String.valueOf(fromLogin.jTxtUser.getText()));
+        emp.setContraseña(String.valueOf(fromLogin.jTxtPass.getText()));
     }
 
     /* public void verificarDatos(){
@@ -64,14 +64,14 @@ public class EmpleadoControlador implements ActionListener {
             p = dao.confirmarUsuario(emp);
 
             //Se verifican si los datos son correctos
-            if ((p.getNombre() != null) && (p.getTipo_empleado() == 1)) {
+            if ((p.getEmpleadonombre()!= null) && (p.getTipoempleado_id() == 1)) {
                 JfrmPrincipal vista = new JfrmPrincipal();
                 vista.setVisible(true);
                 
-                vista.jLblUsuario.setText(p.getNombre());
+                vista.jLblUsuario.setText(p.getEmpleadonombre());
                 vista.setLocationRelativeTo(null);
                 fromLogin.hide();
-            } else if ((p.getNombre() != null) && (p.getTipo_empleado() == 2)) {
+            } else if ((p.getEmpleadonombre() != null) && (p.getTipoempleado_id() == 2)) {
                 JOptionPane.showMessageDialog(fromLogin, "No tiene accesso al sistema");
             } else {
                 JOptionPane.showMessageDialog(fromLogin, "Datos Incorrectos");
