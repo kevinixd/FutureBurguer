@@ -9,7 +9,7 @@ package modelo;
  *
  * @author javam2019
  */
-public class TipoEmpleado {
+public class TipoEmpleado{
     
     private byte tipoempleado_id;
     private String tipo_empleado;
