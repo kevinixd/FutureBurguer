@@ -67,7 +67,7 @@ public class EmpleadoControlador implements ActionListener {
             //Se verifican si los datos son correctos
             if ((p.getEmpleadonombre()!= null) && (p.getTipoempleado_id() == 1)) {
                 JfrmPrincipal vista = new JfrmPrincipal();
-                PrincipalControlador controlador= new PrincipalControlador(vista);
+                PrincipalControlador controladorPrincipal = new PrincipalControlador(vista);
                 vista.setVisible(true);
                 vista.jLblUsuario.setText(p.getEmpleadonombre());
 
