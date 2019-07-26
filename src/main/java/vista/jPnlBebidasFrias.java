@@ -9,12 +9,12 @@ package vista;
  *
  * @author javam2019
  */
-public class jPnlCombos extends javax.swing.JPanel {
+public class jPnlBebidasFrias extends javax.swing.JPanel {
 
     /**
-     * Creates new form jPnlCombos
+     * Creates new form jPnlBebidas
      */
-    public jPnlCombos() {
+    public jPnlBebidasFrias() {
         initComponents();
     }
 
@@ -27,20 +27,18 @@ public class jPnlCombos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBtnCombo3 = new javax.swing.JButton();
         jBtnCombo1 = new javax.swing.JButton();
-        jBtnCombo2 = new javax.swing.JButton();
-        jBtnCombo6 = new javax.swing.JButton();
-        jBtnCombo4 = new javax.swing.JButton();
-        jBtnCombo5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jBtnCombo4 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jBtnCombo2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jBtnCombo5 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jBtnCombo3 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jBtnCombo6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-
-        setPreferredSize(new java.awt.Dimension(910, 550));
 
         jBtnCombo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,22 +47,22 @@ public class jPnlCombos extends javax.swing.JPanel {
         });
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel1.setText("Combo 1");
-
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel2.setText("Combo 2");
+        jLabel1.setText("Coca-Cola");
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel3.setText("Combo 4");
+        jLabel3.setText("Te Lipton");
 
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel4.setText("Combo 3");
+        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel2.setText("Sprite");
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel5.setText("Combo 5");
+        jLabel5.setText("Pepsi");
+
+        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel4.setText("Fanta Naranja");
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel6.setText("Combo 6");
+        jLabel6.setText("Fanta Uva");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -86,18 +84,18 @@ public class jPnlCombos extends javax.swing.JPanel {
                             .addComponent(jBtnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtnCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
+                        .addGap(184, 184, 184)
                         .addComponent(jLabel1)
-                        .addGap(173, 173, 173)
+                        .addGap(179, 179, 179)
                         .addComponent(jLabel2)
-                        .addGap(175, 175, 175)
+                        .addGap(164, 164, 164)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
+                        .addGap(188, 188, 188)
                         .addComponent(jLabel3)
-                        .addGap(173, 173, 173)
+                        .addGap(182, 182, 182)
                         .addComponent(jLabel5)
-                        .addGap(171, 171, 171)
+                        .addGap(181, 181, 181)
                         .addComponent(jLabel6)))
                 .addContainerGap(153, Short.MAX_VALUE))
         );
