@@ -6,7 +6,7 @@ public class Combos {
     
     private int combo_id;
     private String combonombre;
-    private byte combodescuento;
+    private double combodescuento;
     private byte tipo_combo_id;
 
     public Combos() {
@@ -35,11 +35,11 @@ public class Combos {
         this.combonombre = combonombre;
     }
 
-    public byte getCombodescuento() {
+    public double getCombodescuento() {
         return combodescuento;
     }
 
-    public void setCombodescuento(byte combodescuento) {
+    public void setCombodescuento(double combodescuento) {
         this.combodescuento = combodescuento;
     }
 

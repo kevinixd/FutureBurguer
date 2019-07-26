@@ -1,15 +1,13 @@
-
 package modelo;
 
-
 public class Cliente {
-    
+
     private int clienteid;
-   private String  clientenit;
-   private String clientenombre;
-   private String clienteapellido;
-   private int clientetelefono;
-   private String clientedireccion;
+    private String clientenit;
+    private String clientenombre;
+    private String clienteapellido;
+    private int clientetelefono;
+    private String clientedireccion;
 
     public Cliente() {
     }
@@ -71,7 +69,4 @@ public class Cliente {
         this.clientedireccion = clientedireccion;
     }
 
-    
-
-   
 }
