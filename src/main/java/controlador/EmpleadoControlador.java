@@ -68,10 +68,9 @@ public class EmpleadoControlador implements ActionListener {
             if ((p.getEmpleadonombre()!= null) && (p.getTipoempleado_id() == 1)) {
                 JfrmPrincipal vista = new JfrmPrincipal();
                 PrincipalControlador controladorPrincipal = new PrincipalControlador(vista);
-                vista.setVisible(true);
+                vista.setExtendedState(6);
                 vista.jLblUsuario.setText(p.getEmpleadonombre());
-
-                vista.setLocationRelativeTo(null);
+                vista.setVisible(true);
                 fromLogin.hide();
             } else if ((p.getEmpleadonombre() != null) && (p.getTipoempleado_id() == 2)) {
                 JOptionPane.showMessageDialog(fromLogin, "No tiene accesso al sistema");

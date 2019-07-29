@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import vista.JfrmPrincipal;
+import vista.jPnlBebidasFrias;
 import vista.jPnlComboIndividual;
 import vista.jPnlCombos;
 
@@ -23,48 +24,52 @@ public class PrincipalControlador implements ActionListener {
     private int estado = 0;
     //panel de submentus
     jPnlCombos combos = new jPnlCombos();
-
-    //panel de combo individual
     jPnlComboIndividual combosIndividual = new jPnlComboIndividual();
+    jPnlBebidasFrias bebidas = new jPnlBebidasFrias();
 
-    jPnlComboIndividual comboIndividual;
+    //Ruta para las imagenes
+    String ruta = System.getProperty("user.dir");
 
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
         imagenes();
         principal.jBtnCombos.addActionListener(this);
         principal.jBtnBebidas.addActionListener(this);
+        combos.jBtnCombo1.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == principal.jBtnCombos) {
-            CombosControlador controladorCombos = new CombosControlador(combos, principal);
-            crearCombos();
-
+            principal.jPnlMenus.removeAll();
+            principal.jPnlMenus.add(combos);
+            combos.setSize(910, 550);
+            imagenesPanelCombos();
+            principal.jPnlMenus.revalidate();
+            principal.jPnlMenus.repaint();
         }
         if (e.getSource() == principal.jBtnBebidas) {
 
             principal.jPnlMenus.removeAll();
             principal.jPnlMenus.repaint();
-            combosIndividual.setSize(910, 550);
+            bebidas.setSize(910, 550);
             imagenesPanelCombos();
             //cargar el menu de combos
+            principal.jPnlMenus.add(bebidas);
+            principal.jPnlMenus.revalidate();
+            principal.jPnlMenus.repaint();
+        }
+        if (e.getSource() == combos.jBtnCombo1) {
+            principal.jPnlMenus.removeAll();
             principal.jPnlMenus.add(combosIndividual);
+            combosIndividual.setSize(910, 550);
             principal.jPnlMenus.revalidate();
             principal.jPnlMenus.repaint();
         }
     }
 
-    public void crearCombos() {
+    public void crearBebidas() {
         principal.jPnlMenus.removeAll();
-        principal.jPnlMenus.repaint();
-
-        combos.setSize(910, 550);
-        imagenesPanelCombos();
-        //cargar el menu de combos
-        principal.jPnlMenus.add(combos);
-        principal.jPnlMenus.revalidate();
         principal.jPnlMenus.repaint();
     }
 
@@ -72,20 +77,20 @@ public class PrincipalControlador implements ActionListener {
     *Método para asignar imagenes a cada boton
      */
     public void imagenes() {
-        String ruta = System.getProperty("user.dir");
+
         principal.jBtnCombos.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
         principal.jBtnBebidas.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas.png"));
-        principal.jBtnPostres.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\postres.png"));
-        principal.jBtnSnacks.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\snacks.png"));
+        principal.jBtnPostres.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\postres.png"));
+        principal.jBtnSnacks.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\snacks.png"));
     }
 
     public void imagenesPanelCombos() {
-        combos.jBtnCombo1.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-        combos.jBtnCombo2.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-        combos.jBtnCombo3.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-        combos.jBtnCombo4.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-        combos.jBtnCombo5.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
-        combos.jBtnCombo6.setIcon(new ImageIcon("C:\\Users\\javam2019\\Documents\\GitHub\\FutureBurguer\\src\\main\\java\\img\\combos.png"));
+        combos.jBtnCombo1.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
+        combos.jBtnCombo2.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
+        combos.jBtnCombo3.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
+        combos.jBtnCombo4.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
+        combos.jBtnCombo5.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
+        combos.jBtnCombo6.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\combos.png"));
     }
 
 }

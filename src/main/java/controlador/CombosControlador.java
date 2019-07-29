@@ -21,13 +21,13 @@ public class CombosControlador implements ActionListener{
 
     jPnlCombos combos;
     //elemento a mostrar al seleccionar un combo
-    jPnlComboIndividual comboIndividual;
+    jPnlComboIndividual comboIndividual = new jPnlComboIndividual();
     PrincipalControlador controlador;
 
     //obtener caracteristicas de controlador principal
     JfrmPrincipal principal;
 
-    public CombosControlador(jPnlCombos combos, JfrmPrincipal principal) {
+    public CombosControlador(jPnlCombos combos) {
         this.combos = combos;
         combos.jBtnCombo1.addActionListener(this);
     }
@@ -35,19 +35,8 @@ public class CombosControlador implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == combos.jBtnCombo1) {
-            System.out.println("Exito");
-
-            //principal = new JfrmPrincipal();
-            //combos = new jPnlCombos();
             principal.jPnlMenus.removeAll();
-            principal.jPnlMenus.repaint();
-
-            //comboIndividual = new jPnlComboIndividual();
-//            comboIndividual.setSize(910,550);
-//            imagenesPanelComboIndividual();
-//            principal.jPnlMenus.add(comboIndividual);
-//            principal.jPnlMenus.revalidate();
-//            principal.jPnlMenus.repaint();
+            principal.jPnlMenus.add(comboIndividual);
         }
     }
 
