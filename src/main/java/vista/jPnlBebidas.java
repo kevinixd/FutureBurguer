@@ -34,6 +34,12 @@ public class jPnlBebidas extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(910, 550));
 
+        jBtnCalientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCalientesActionPerformed(evt);
+            }
+        });
+
         jBtnFrias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnFriasActionPerformed(evt);
@@ -79,6 +85,10 @@ public class jPnlBebidas extends javax.swing.JPanel {
     private void jBtnFriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnFriasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnFriasActionPerformed
+
+    private void jBtnCalientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCalientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCalientesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
