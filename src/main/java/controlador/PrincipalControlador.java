@@ -63,7 +63,6 @@ public class PrincipalControlador implements ActionListener {
             //establecer el codigo de la hamburguesa
             detPedido.setProducto_tamaño_id(1);
             
-            
         }
         
         if (e.getSource() == hamburguesa.jBtnHamburguesa2) {
