@@ -48,6 +48,12 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
             }
         });
 
+        jBtnHamburguesa2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHamburguesa2ActionPerformed(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jLabel1.setText("H1");
 
@@ -131,6 +137,10 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
     private void jBtnHamburguesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHamburguesa1ActionPerformed
 
     }//GEN-LAST:event_jBtnHamburguesa1ActionPerformed
+
+    private void jBtnHamburguesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHamburguesa2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnHamburguesa2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
