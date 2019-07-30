@@ -27,22 +27,22 @@ public class jPnlBebidasFrias extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBtnCombo1 = new javax.swing.JButton();
+        jBtnBebida1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jBtnCombo4 = new javax.swing.JButton();
+        jBtnBebida4 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jBtnCombo2 = new javax.swing.JButton();
+        jBtnBebida2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jBtnCombo5 = new javax.swing.JButton();
+        jBtnBebida5 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jBtnCombo3 = new javax.swing.JButton();
+        jBtnBebida3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jBtnCombo6 = new javax.swing.JButton();
+        jBtnBebida6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        jBtnCombo1.addActionListener(new java.awt.event.ActionListener() {
+        jBtnBebida1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnCombo1ActionPerformed(evt);
+                jBtnBebida1ActionPerformed(evt);
             }
         });
 
@@ -73,16 +73,16 @@ public class jPnlBebidasFrias extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBtnBebida1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnBebida4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(95, 95, 95)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBtnBebida2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnBebida5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jBtnBebida3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnBebida6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(184, 184, 184)
                         .addComponent(jLabel1)
@@ -104,9 +104,9 @@ public class jPnlBebidasFrias extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBtnCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnBebida1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnBebida2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnBebida3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -114,9 +114,9 @@ public class jPnlBebidasFrias extends javax.swing.JPanel {
                     .addComponent(jLabel4))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jBtnCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnBebida5, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnBebida6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnBebida4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -126,18 +126,18 @@ public class jPnlBebidasFrias extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBtnCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCombo1ActionPerformed
+    private void jBtnBebida1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnBebida1ActionPerformed
 
-    }//GEN-LAST:event_jBtnCombo1ActionPerformed
+    }//GEN-LAST:event_jBtnBebida1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBtnCombo1;
-    public javax.swing.JButton jBtnCombo2;
-    public javax.swing.JButton jBtnCombo3;
-    public javax.swing.JButton jBtnCombo4;
-    public javax.swing.JButton jBtnCombo5;
-    public javax.swing.JButton jBtnCombo6;
+    public javax.swing.JButton jBtnBebida1;
+    public javax.swing.JButton jBtnBebida2;
+    public javax.swing.JButton jBtnBebida3;
+    public javax.swing.JButton jBtnBebida4;
+    public javax.swing.JButton jBtnBebida5;
+    public javax.swing.JButton jBtnBebida6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
