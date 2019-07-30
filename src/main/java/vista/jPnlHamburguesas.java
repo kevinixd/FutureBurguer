@@ -27,12 +27,12 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBtnCombo3 = new javax.swing.JButton();
-        jBtnCombo1 = new javax.swing.JButton();
-        jBtnCombo2 = new javax.swing.JButton();
-        jBtnCombo6 = new javax.swing.JButton();
-        jBtnCombo4 = new javax.swing.JButton();
-        jBtnCombo5 = new javax.swing.JButton();
+        jBtnHamburguesa3 = new javax.swing.JButton();
+        jBtnHamburguesa1 = new javax.swing.JButton();
+        jBtnHamburguesa2 = new javax.swing.JButton();
+        jBtnHamburguesa6 = new javax.swing.JButton();
+        jBtnHamburguesa4 = new javax.swing.JButton();
+        jBtnHamburguesa5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -42,29 +42,29 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(910, 550));
 
-        jBtnCombo1.addActionListener(new java.awt.event.ActionListener() {
+        jBtnHamburguesa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnCombo1ActionPerformed(evt);
+                jBtnHamburguesa1ActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel1.setText("Combo 1");
+        jLabel1.setText("H1");
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel2.setText("Combo 2");
+        jLabel2.setText("H2");
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel3.setText("Combo 4");
+        jLabel3.setText("H4");
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel4.setText("Combo 3");
+        jLabel4.setText("H3");
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel5.setText("Combo 5");
+        jLabel5.setText("H5");
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel6.setText("Combo 6");
+        jLabel6.setText("H6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -75,30 +75,30 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBtnHamburguesa1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnHamburguesa4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(95, 95, 95)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBtnHamburguesa2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnHamburguesa5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jBtnHamburguesa3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnHamburguesa6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jLabel1)
-                        .addGap(173, 173, 173)
-                        .addComponent(jLabel2)
-                        .addGap(175, 175, 175)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
+                        .addGap(212, 212, 212)
                         .addComponent(jLabel3)
-                        .addGap(173, 173, 173)
+                        .addGap(218, 218, 218)
                         .addComponent(jLabel5)
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel6)))
+                        .addGap(213, 213, 213)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addComponent(jLabel1)
+                        .addGap(220, 220, 220)
+                        .addComponent(jLabel2)
+                        .addGap(213, 213, 213)
+                        .addComponent(jLabel4)))
                 .addContainerGap(153, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -106,9 +106,9 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBtnCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnHamburguesa1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnHamburguesa2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnHamburguesa3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -116,9 +116,9 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
                     .addComponent(jLabel4))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jBtnCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnHamburguesa5, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnHamburguesa6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnHamburguesa4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -128,18 +128,18 @@ public class jPnlHamburguesas extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBtnCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCombo1ActionPerformed
+    private void jBtnHamburguesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHamburguesa1ActionPerformed
 
-    }//GEN-LAST:event_jBtnCombo1ActionPerformed
+    }//GEN-LAST:event_jBtnHamburguesa1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBtnCombo1;
-    public javax.swing.JButton jBtnCombo2;
-    public javax.swing.JButton jBtnCombo3;
-    public javax.swing.JButton jBtnCombo4;
-    public javax.swing.JButton jBtnCombo5;
-    public javax.swing.JButton jBtnCombo6;
+    public javax.swing.JButton jBtnHamburguesa1;
+    public javax.swing.JButton jBtnHamburguesa2;
+    public javax.swing.JButton jBtnHamburguesa3;
+    public javax.swing.JButton jBtnHamburguesa4;
+    public javax.swing.JButton jBtnHamburguesa5;
+    public javax.swing.JButton jBtnHamburguesa6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

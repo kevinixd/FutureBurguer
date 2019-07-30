@@ -26,35 +26,35 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jBtnCombo1" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="jBtnCombo4" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="jBtnHamburguesa1" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="jBtnHamburguesa4" min="-2" pref="140" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jBtnCombo2" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="jBtnCombo5" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="jBtnHamburguesa2" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="jBtnHamburguesa5" min="-2" pref="140" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jBtnCombo3" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="jBtnCombo6" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="jBtnHamburguesa3" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="jBtnHamburguesa6" min="-2" pref="140" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="153" max="32767" attributes="0"/>
@@ -66,9 +66,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jBtnCombo1" min="-2" pref="137" max="-2" attributes="0"/>
-                  <Component id="jBtnCombo2" min="-2" pref="137" max="-2" attributes="0"/>
-                  <Component id="jBtnCombo3" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="jBtnHamburguesa1" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="jBtnHamburguesa2" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="jBtnHamburguesa3" min="-2" pref="137" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -78,9 +78,9 @@
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jBtnCombo5" min="-2" pref="137" max="-2" attributes="0"/>
-                  <Component id="jBtnCombo6" min="-2" pref="137" max="-2" attributes="0"/>
-                  <Component id="jBtnCombo4" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="jBtnHamburguesa5" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="jBtnHamburguesa6" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="jBtnHamburguesa4" min="-2" pref="137" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -94,35 +94,35 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jBtnCombo3">
+    <Component class="javax.swing.JButton" name="jBtnHamburguesa3">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnCombo1">
+    <Component class="javax.swing.JButton" name="jBtnHamburguesa1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCombo1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnHamburguesa1ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnCombo2">
+    <Component class="javax.swing.JButton" name="jBtnHamburguesa2">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnCombo6">
+    <Component class="javax.swing.JButton" name="jBtnHamburguesa6">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnCombo4">
+    <Component class="javax.swing.JButton" name="jBtnHamburguesa4">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnCombo5">
+    <Component class="javax.swing.JButton" name="jBtnHamburguesa5">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -132,7 +132,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combo 1"/>
+        <Property name="text" type="java.lang.String" value="H1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -140,7 +140,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combo 2"/>
+        <Property name="text" type="java.lang.String" value="H2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -148,7 +148,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combo 4"/>
+        <Property name="text" type="java.lang.String" value="H4"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -156,7 +156,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combo 3"/>
+        <Property name="text" type="java.lang.String" value="H3"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -164,7 +164,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combo 5"/>
+        <Property name="text" type="java.lang.String" value="H5"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
@@ -172,7 +172,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combo 6"/>
+        <Property name="text" type="java.lang.String" value="H6"/>
       </Properties>
     </Component>
   </SubComponents>
