@@ -5,23 +5,19 @@
  */
 package modelo;
 
-<<<<<<< HEAD
-public class TIpoEmpleado {
-=======
 /**
  *
  * @author javam2019
  */
 public class TipoEmpleado{
->>>>>>> 666500d43986367b795edae0196d85bc8b8a9468
     
     private byte tipoEmpleadoId;
     private String tipoEmpleado;
 
-    public TIpoEmpleado() {
+    public TipoEmpleado() {
     }
 
-    public TIpoEmpleado(byte tipoEmpleadoId, String tipoEmpleado) {
+    public TipoEmpleado(byte tipoEmpleadoId, String tipoEmpleado) {
         this.tipoEmpleadoId = tipoEmpleadoId;
         this.tipoEmpleado = tipoEmpleado;
     }
