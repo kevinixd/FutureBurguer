@@ -55,12 +55,12 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Usuario:");
         desktopPane.add(jLabel1);
-        jLabel1.setBounds(770, 30, 80, 16);
+        jLabel1.setBounds(770, 30, 80, 20);
 
         jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLblUsuario.setText("Nombre Usuario");
         desktopPane.add(jLblUsuario);
-        jLblUsuario.setBounds(870, 30, 170, 24);
+        jLblUsuario.setBounds(850, 30, 170, 24);
 
         jBtnSnacks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -10,8 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import modelo.Clasificaciones;
 
 /**
@@ -39,6 +37,7 @@ public class DaoClasificaciones implements ClasificacionesInterface {
                 clasific = new Clasificaciones();
                 clasific.setClasificacion_id(resultado.getShort("clasificacion_id"));
                 clasific.setNombreClafisicacion(resultado.getString("nombre"));
+                
                 lista.add(clasific);
 
                 System.out.println("Nombre " + clasific.getNombreClafisicacion());
