@@ -11,37 +11,32 @@ package modelo;
  */
 public class TipoEmpleado{
     
-    private byte tipoempleado_id;
-    private String tipo_empleado;
+    private byte tipoEmpleadoId;
+    private String tipoEmpleado;
 
     public TipoEmpleado() {
-        
     }
 
-    public TipoEmpleado(byte tipoempleado_id, String tipo_empleado) {
-        this.tipoempleado_id = tipoempleado_id;
-        this.tipo_empleado = tipo_empleado;
+    public TipoEmpleado(byte tipoEmpleadoId, String tipoEmpleado) {
+        this.tipoEmpleadoId = tipoEmpleadoId;
+        this.tipoEmpleado = tipoEmpleado;
     }
 
-    public byte getTipoempleado_id() {
-        return tipoempleado_id;
+    public byte getTipoEmpleadoId() {
+        return tipoEmpleadoId;
     }
 
-    public void setTipoempleado_id(byte tipoempleado_id) {
-        this.tipoempleado_id = tipoempleado_id;
+    public void setTipoEmpleadoId(byte tipoEmpleadoId) {
+        this.tipoEmpleadoId = tipoEmpleadoId;
     }
 
-    public String getTipo_empleado() {
-        return tipo_empleado;
+    public String getTipoEmpleado() {
+        return tipoEmpleado;
     }
 
-    public void setTipo_empleado(String tipo_empleado) {
-        this.tipo_empleado = tipo_empleado;
+    public void setTipoEmpleado(String tipoEmpleado) {
+        this.tipoEmpleado = tipoEmpleado;
     }
-    
-    
-
-    
     
     
 }
