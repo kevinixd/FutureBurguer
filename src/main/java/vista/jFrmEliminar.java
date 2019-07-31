@@ -82,6 +82,7 @@ public class jFrmEliminar extends javax.swing.JFrame {
             JButton boton = new JButton("Boton" + indice);
             String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\Hamburguesas\\";
             boton.setIcon(new ImageIcon(ruta + "combo.png"));
+            boton.setLocation(i, i);
             Panel.add(boton);
             lista.add(boton);
             indice++;
