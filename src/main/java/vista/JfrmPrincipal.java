@@ -36,7 +36,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jBtnSnacks = new javax.swing.JButton();
         jBtnPostres = new javax.swing.JButton();
         jBtnBebidas = new javax.swing.JButton();
-        jBtnCombos1 = new javax.swing.JButton();
+        jBtnDesayunos = new javax.swing.JButton();
         jBtnCombos = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
@@ -58,12 +58,12 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Usuario:");
         desktopPane.add(jLabel1);
-        jLabel1.setBounds(770, 30, 80, 20);
+        jLabel1.setBounds(40, 30, 80, 20);
 
         jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLblUsuario.setText("Nombre Usuario");
         desktopPane.add(jLblUsuario);
-        jLblUsuario.setBounds(850, 30, 170, 24);
+        jLblUsuario.setBounds(120, 30, 170, 24);
 
         javax.swing.GroupLayout jPnlMenusLayout = new javax.swing.GroupLayout(jPnlMenus);
         jPnlMenus.setLayout(jPnlMenusLayout);
@@ -80,22 +80,22 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jPnlMenus.setBounds(270, 100, 910, 550);
 
         jPnlBotones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPnlBotones.add(jBtnSnacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 158, 109));
-        jPnlBotones.add(jBtnPostres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 158, 109));
+        jPnlBotones.add(jBtnSnacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 158, 109));
+        jPnlBotones.add(jBtnPostres, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 158, 109));
 
         jBtnBebidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnBebidasActionPerformed(evt);
             }
         });
-        jPnlBotones.add(jBtnBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 158, 109));
-        jPnlBotones.add(jBtnCombos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 158, 109));
-        jPnlBotones.add(jBtnCombos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 158, 109));
+        jPnlBotones.add(jBtnBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 158, 109));
+        jPnlBotones.add(jBtnDesayunos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 158, 109));
+        jPnlBotones.add(jBtnCombos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 158, 109));
 
         jScrollPane1.setViewportView(jPnlBotones);
 
         desktopPane.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 100, 200, 550);
+        jScrollPane1.setBounds(40, 100, 210, 550);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -235,7 +235,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu helpMenu;
     public javax.swing.JButton jBtnBebidas;
     public javax.swing.JButton jBtnCombos;
-    private javax.swing.JButton jBtnCombos1;
+    public javax.swing.JButton jBtnDesayunos;
     public javax.swing.JButton jBtnPostres;
     public javax.swing.JButton jBtnSnacks;
     private javax.swing.JLabel jLabel1;
