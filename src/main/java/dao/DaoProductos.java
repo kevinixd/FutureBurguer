@@ -33,11 +33,20 @@ public class DaoProductos implements ProductosInterface {
             ejecutar.setShort(1, id);
             resultado = ejecutar.executeQuery();
             while (resultado.next()) {
-                
+                producto= new Productos();
+                producto.setProducto_id(resultado.getInt("producto_id"));
+                producto.setProductonombre(resultado.getString("nombre"));
+                producto.setProductodescripcion(resultado.getString("descripcion"));
+                producto.setClasificacion_id(resultado.getInt("clasificacion_id"));
+                producto.setImagen(resultado.getString("imagenes"));
+                lista.add(producto);
             }
+            resultado.close();
 
         } catch (SQLException ex) {
             Logger.getLogger(DaoProductos.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            conexion.cerrarConexion();
         }
         return lista;
     }
