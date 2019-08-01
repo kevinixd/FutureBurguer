@@ -5,16 +5,14 @@
  */
 package controlador;
 
-import dao.DaoProductos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import modelo.DetallePedido;
-import modelo.Productos;
 import vista.JfrmPrincipal;
+import vista.jIntBebidas;
+import vista.jIntDesayunos;
+import vista.jIntHamburguesas;
 
 /**
  *
@@ -22,12 +20,9 @@ import vista.JfrmPrincipal;
  */
 public class PrincipalControlador implements ActionListener {
 
-    //Daos a utilizar
-    DaoProductos dao1 = new DaoProductos();
-
-    //ArrayList para botones
-    private List<JButton> lista;
-    private int indice;
+    jIntDesayunos desayunos = new jIntDesayunos();
+    jIntHamburguesas hamburguesas = new jIntHamburguesas();
+    jIntBebidas bebidas = new jIntBebidas();
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -40,31 +35,56 @@ public class PrincipalControlador implements ActionListener {
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
         imgPrincipal();
-
         setActionListeners();
-
         detPedido = new DetallePedido();
     }
 
     public void setActionListeners() {
         //Botones Principal
-        principal.jBtnCombos.addActionListener(this);
+        principal.jBtnDesayunos.addActionListener(this);
+        principal.jBtnHamburguesas.addActionListener(this);
         principal.jBtnBebidas.addActionListener(this);
 
         //Botones panel principal
         detPedido = new DetallePedido();
-        lista = new ArrayList<>();
-        indice = 0;
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == principal.jBtnCombos) {
-            crearCombos();
+        destruirInternal();
+        principal.jPnlMenus.removeAll();
+
+        if (e.getSource() == principal.jBtnHamburguesas) {
+
+            hamburguesas = new jIntHamburguesas();
+            HamburguesasControlador hc;
+            principal.jPnlMenus.add(hamburguesas);
+            hamburguesas.setSize(910, 550);
+            hamburguesas.setVisible(true);
+            hc = new HamburguesasControlador(hamburguesas);
 
         }
+        if (e.getSource() == principal.jBtnDesayunos) {
+
+            desayunos = new jIntDesayunos();
+            DesayunosControlador dc;
+            principal.jPnlMenus.add(desayunos);
+            desayunos.setSize(910, 550);
+            desayunos.setVisible(true);
+            dc = new DesayunosControlador(desayunos);
+
+        }
+
         if (e.getSource() == principal.jBtnBebidas) {
-            crearBebidas();
+
+            bebidas = new jIntBebidas();
+            BebidasControlador bc;
+            principal.jPnlMenus.add(bebidas);
+            bebidas.setSize(910, 550);
+            bebidas.setVisible(true);
+            bc = new BebidasControlador(bebidas);
+
         }
 
         /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
@@ -82,31 +102,9 @@ public class PrincipalControlador implements ActionListener {
         }*/
     }
 
-    public void crearCombos() {
-        short clasificacion = 1001;
-        for (Productos product : dao1.verProductos(clasificacion)) {
-            JButton boton = new JButton(product.getProductonombre());
-            String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\Hamburguesas\\";
-            boton.setIcon(new ImageIcon(ruta + "combo.png"));
-            principal.jPnlMenus.add(boton);
-            lista.add(boton);
-            principal.jPnlMenus.updateUI();
-        }
-        /*principal.jPnlMenus.removeAll();
-        principal.jPnlMenus.add(hamburguesa);
-        //imgPanelCombos();
-        hamburguesa.setSize(910, 550);
-        principal.jPnlMenus.revalidate();
-        principal.jPnlMenus.repaint();*/
-    }
-
-    public void crearBebidas() {
-        principal.jPnlMenus.removeAll();
-        //principal.jPnlMenus.add(bebida);
-        // imgPanelBebidas();
-        //bebida.setSize(910, 550);
-        principal.jPnlMenus.revalidate();
-        principal.jPnlMenus.repaint();
+    public void destruirInternal() {
+        desayunos = null;
+        hamburguesas = null;
     }
 
     /*
@@ -114,10 +112,11 @@ public class PrincipalControlador implements ActionListener {
      */
     public void imgPrincipal() {
 
-        principal.jBtnCombos.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-        principal.jBtnBebidas.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Bebidas\\bebidas.png"));
-        principal.jBtnPostres.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Postres\\postres.png"));
-        principal.jBtnSnacks.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Snacks\\snacks.png"));
+        principal.jBtnDesayunos.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\desayunos\\desayunos.png"));
+        principal.jBtnHamburguesas.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\hamburguesas\\combo.png"));
+        principal.jBtnBebidas.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidas.png"));
+        principal.jBtnPostres.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\postres\\postres.png"));
+        principal.jBtnSnacks.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\snacks\\snacks.png"));
     }
 
 }
