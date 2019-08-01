@@ -14,6 +14,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    JIntPruebaUno frmInterno = new JIntPruebaUno();
     public JfrmPrincipal() {
         initComponents();
     }
@@ -65,17 +66,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         desktopPane.add(jLblUsuario);
         jLblUsuario.setBounds(120, 30, 170, 24);
 
-        javax.swing.GroupLayout jPnlMenusLayout = new javax.swing.GroupLayout(jPnlMenus);
-        jPnlMenus.setLayout(jPnlMenusLayout);
-        jPnlMenusLayout.setHorizontalGroup(
-            jPnlMenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 910, Short.MAX_VALUE)
-        );
-        jPnlMenusLayout.setVerticalGroup(
-            jPnlMenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
-        );
-
+        jPnlMenus.setLayout(new java.awt.GridLayout(0, 3));
         desktopPane.add(jPnlMenus);
         jPnlMenus.setBounds(270, 100, 910, 550);
 
@@ -89,6 +80,12 @@ public class JfrmPrincipal extends javax.swing.JFrame {
             }
         });
         jPnlBotones.add(jBtnBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 158, 109));
+
+        jBtnDesayunos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnDesayunosActionPerformed(evt);
+            }
+        });
         jPnlBotones.add(jBtnDesayunos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 158, 109));
         jPnlBotones.add(jBtnCombos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 158, 109));
 
@@ -185,6 +182,13 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     private void jBtnBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnBebidasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnBebidasActionPerformed
+
+    private void jBtnDesayunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDesayunosActionPerformed
+        // TODO add your handling code here:
+        
+        jPnlMenus.add(frmInterno);
+        frmInterno.setVisible(true);
+    }//GEN-LAST:event_jBtnDesayunosActionPerformed
 
     /**
      * @param args the command line arguments

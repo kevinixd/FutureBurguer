@@ -33,7 +33,7 @@ public class DaoProductos implements ProductosInterface {
             ejecutar.setShort(1, id);
             resultado = ejecutar.executeQuery();
             while (resultado.next()) {
-                //
+                
             }
 
         } catch (SQLException ex) {

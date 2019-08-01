@@ -5,9 +5,13 @@
  */
 package controlador;
 
+import dao.DaoProductos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import modelo.DetallePedido;
 import modelo.Productos;
 import vista.JfrmPrincipal;
@@ -22,6 +26,14 @@ import vista.jPnlHamburguesas;
  */
 public class PrincipalControlador implements ActionListener {
 
+    //Daos a utilizar
+    DaoProductos dao1= new DaoProductos();
+    
+    //ArrayList para botones
+    private List<JButton> lista;
+    private int indice;
+    
+    
     public static JfrmPrincipal principal = new JfrmPrincipal();
     jPnlHamburguesas hamburguesa = new jPnlHamburguesas();
     jPnlComboIndividual comboIndividual = new jPnlComboIndividual();
@@ -32,18 +44,17 @@ public class PrincipalControlador implements ActionListener {
     String ruta = System.getProperty("user.dir");
     //para saber llevar el control de la solicitud del cliente
     DetallePedido detPedido;
+    
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
         imgPrincipal();
         principal.jBtnCombos.addActionListener(this);
         principal.jBtnBebidas.addActionListener(this);
         hamburguesa.jBtnHamburguesa1.addActionListener(this);
-        hamburguesa.jBtnHamburguesa2.addActionListener(this);
-        hamburguesa.jBtnHamburguesa3.addActionListener(this);
-        hamburguesa.jBtnHamburguesa4.addActionListener(this);
-        hamburguesa.jBtnHamburguesa5.addActionListener(this);
-        hamburguesa.jBtnHamburguesa6.addActionListener(this);
+        hamburguesa.jBtnHamburguesa2.addActionListener(this); 
         detPedido = new DetallePedido();
+        lista= new ArrayList<>();
+        indice=0;
     }
 
     @Override
@@ -71,38 +82,24 @@ public class PrincipalControlador implements ActionListener {
             comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h2.png"));
         }
         
-        if (e.getSource() == hamburguesa.jBtnHamburguesa3) {
-            crearComboIndividual();
-            comboIndividual.jBtnCombo.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-            comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h3.png"));
-        }
-        
-        if (e.getSource() == hamburguesa.jBtnHamburguesa4) {
-            crearComboIndividual();
-            comboIndividual.jBtnCombo.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-            comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h4.png"));
-        }
-        
-        if (e.getSource() == hamburguesa.jBtnHamburguesa5) {
-            crearComboIndividual();
-            comboIndividual.jBtnCombo.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-            comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h5.png"));
-        }
-        
-        if (e.getSource() == hamburguesa.jBtnHamburguesa6) {
-            crearComboIndividual();
-            comboIndividual.jBtnCombo.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-            comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h6.png"));
-        }
     }
 
     public void crearCombos() {
-        principal.jPnlMenus.removeAll();
+        short clasificacion=1001;
+        for (Productos product : dao1.verProductos(clasificacion)) {
+            JButton boton= new JButton(product.getProductonombre());
+            String ruta=System.getProperty("user.dir") + "\\src\\main\\java\\img\\Hamburguesas\\";
+            boton.setIcon(new ImageIcon(ruta + "combo.png"));
+            principal.jPnlMenus.add(boton);
+            lista.add(boton);
+            principal.jPnlMenus.updateUI();
+        }
+        /*principal.jPnlMenus.removeAll();
         principal.jPnlMenus.add(hamburguesa);
-        imgPanelCombos();
+        //imgPanelCombos();
         hamburguesa.setSize(910, 550);
         principal.jPnlMenus.revalidate();
-        principal.jPnlMenus.repaint();
+        principal.jPnlMenus.repaint();*/
     }
 
     public void crearBebidas() {
@@ -136,10 +133,6 @@ public class PrincipalControlador implements ActionListener {
     public void imgPanelCombos() {
         hamburguesa.jBtnHamburguesa1.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h1.png"));
         hamburguesa.jBtnHamburguesa2.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h2.png"));
-        hamburguesa.jBtnHamburguesa3.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h3.png"));
-        hamburguesa.jBtnHamburguesa4.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h4.png"));
-        hamburguesa.jBtnHamburguesa5.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h5.png"));
-        hamburguesa.jBtnHamburguesa6.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h6.png"));
     }
 
     public void imgPanelBebidas() {
