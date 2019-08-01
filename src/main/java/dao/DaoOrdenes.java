@@ -33,7 +33,7 @@ public class DaoOrdenes implements OrdenesInterface{
             vo.setCantidadOrden(rs.getInt("cantidad"));
             vo.setDescripcionOrden(rs.getString("descripcion"));
             vo.setPrecioOrden(rs.getFloat("precio"));
-            rs.close();
+            lista.add(vo);
             }
         } catch (Exception e) {
         }finally{
