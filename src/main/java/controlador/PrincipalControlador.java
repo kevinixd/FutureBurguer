@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
-import vista.jIntBebidas;
+import vista.jIntBebidasFrias;
 import vista.jIntDesayunos;
 import vista.jIntHamburguesas;
 
@@ -22,7 +22,7 @@ public class PrincipalControlador implements ActionListener {
 
     jIntDesayunos desayunos = new jIntDesayunos();
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
-    jIntBebidas bebidas = new jIntBebidas();
+    jIntBebidasFrias bebidas = new jIntBebidasFrias();
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -80,12 +80,12 @@ public class PrincipalControlador implements ActionListener {
 
         if (e.getSource() == principal.jBtnBebidas) {
 
-            bebidas = new jIntBebidas();
-            BebidasControlador bc;
+            bebidas = new jIntBebidasFrias();
+            BebidasFriasControlador bc;
             principal.jPnlMenus.add(bebidas);
             bebidas.setSize(910, 550);
             bebidas.setVisible(true);
-            bc = new BebidasControlador(bebidas);
+            bc = new BebidasFriasControlador(bebidas);
 
         }
 

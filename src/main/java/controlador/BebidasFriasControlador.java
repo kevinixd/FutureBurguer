@@ -14,20 +14,20 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import modelo.Productos;
-import vista.jIntBebidas;
+import vista.jIntBebidasFrias;
 
 /**
  *
  * @author javam2019
  */
-public class BebidasControlador implements ActionListener{
+public class BebidasFriasControlador implements ActionListener{
     
-    jIntBebidas bebidas = new jIntBebidas();
+    jIntBebidasFrias bebidas = new jIntBebidasFrias();
     DaoProductos dao = new DaoProductos();
     private List<JButton> lista3 = new ArrayList();
     private short clasificacion;
 
-    public BebidasControlador(jIntBebidas bebidas) {
+    public BebidasFriasControlador(jIntBebidasFrias bebidas) {
         this.bebidas = bebidas;
         crearBebidas();
     }
@@ -42,7 +42,7 @@ public class BebidasControlador implements ActionListener{
         clasificacion = 1002;
         for (Productos producto : dao.verProductos(clasificacion)) {
             JButton boton = new JButton(producto.getProductonombre());
-            String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\";
+            String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\";
             System.out.println("Ruta: "+ ruta);
             boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
             boton.addActionListener(this);

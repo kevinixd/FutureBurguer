@@ -9,12 +9,12 @@ package vista;
  *
  * @author javam2019
  */
-public class jIntBebidas extends javax.swing.JInternalFrame {
+public class jIntBebidasFrias extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form jIntBebidas
      */
-    public jIntBebidas() {
+    public jIntBebidasFrias() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
