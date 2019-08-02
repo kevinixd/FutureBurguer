@@ -55,16 +55,6 @@ public class PrincipalControlador implements ActionListener {
         destruirInternal();
         principal.jPnlMenus.removeAll();
 
-        if (e.getSource() == principal.jBtnHamburguesas) {
-
-            hamburguesas = new jIntHamburguesas();
-            HamburguesasControlador hc;
-            principal.jPnlMenus.add(hamburguesas);
-            hamburguesas.setSize(910, 550);
-            hamburguesas.setVisible(true);
-            hc = new HamburguesasControlador(hamburguesas);
-
-        }
         if (e.getSource() == principal.jBtnDesayunos) {
 
             desayunos = new jIntDesayunos();
@@ -75,6 +65,18 @@ public class PrincipalControlador implements ActionListener {
             dc = new DesayunosControlador(desayunos);
 
         }
+        
+        if (e.getSource() == principal.jBtnHamburguesas) {
+
+            hamburguesas = new jIntHamburguesas();
+            HamburguesasControlador hc;
+            principal.jPnlMenus.add(hamburguesas);
+            hamburguesas.setSize(910, 550);
+            hamburguesas.setVisible(true);
+            hc = new HamburguesasControlador(hamburguesas);
+
+        }
+        
 
         if (e.getSource() == principal.jBtnBebidas) {
 
