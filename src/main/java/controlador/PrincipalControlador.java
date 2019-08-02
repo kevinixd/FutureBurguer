@@ -37,6 +37,7 @@ public class PrincipalControlador implements ActionListener {
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
+        
     }
 
     public void setActionListeners() {

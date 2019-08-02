@@ -5,6 +5,8 @@
  */
 package vista;
 
+import java.awt.Image;
+
 /**
  *
  * @author javam2019
@@ -14,9 +16,15 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    private Image imagen;
+    
     public JfrmPrincipal() {
         initComponents();
+        
+         
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
