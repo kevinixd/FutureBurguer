@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Productos;
+import vista.jIntComboIndividualHamburguesas;
 import vista.jIntHamburguesas;
 
 /**
@@ -24,6 +25,7 @@ import vista.jIntHamburguesas;
 public class HamburguesasControlador implements ActionListener {
 
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
+    jIntComboIndividualHamburguesas comboIndividual = new jIntComboIndividualHamburguesas();
     DaoProductos dao = new DaoProductos();
     private List<JButton> lista = new ArrayList();
     private short clasificacion;
@@ -37,16 +39,18 @@ public class HamburguesasControlador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        hamburguesas.removeAll();
+        hamburguesas = null;
         if (e.getSource() == lista.get(0)) {
-            hamburguesas.removeAll();
-            crearComboIndividual();
+            comboIndividual = new jIntComboIndividualHamburguesas();
+            principal.jPnlMenus.add(comboIndividual);
+            comboIndividual.setSize(910, 550);
+            comboIndividual.setVisible(true);
             
-            
+
         }
         if (e.getSource() == lista.get(1)) {
             JOptionPane.showMessageDialog(principal, "bhjbhjbhjbh");
-            crearComboIndividual();
         }
 
     }
@@ -65,8 +69,8 @@ public class HamburguesasControlador implements ActionListener {
         }
     }
 
+    /*
     public void crearComboIndividual() {
-        
        
        for (int i = 0; i < 2; i++) {
             JButton individual = new JButton("Individual");
@@ -76,5 +80,5 @@ public class HamburguesasControlador implements ActionListener {
             principal.jPnlMenus.updateUI();
        }
     }
-
+     */
 }
