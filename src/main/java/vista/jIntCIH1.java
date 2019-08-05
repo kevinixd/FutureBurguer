@@ -30,10 +30,10 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
 
         jBtnIH1 = new javax.swing.JButton();
         jBtnCH1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLblCH1 = new javax.swing.JLabel();
+        jLblPrecioC1 = new javax.swing.JLabel();
+        jLblIH1 = new javax.swing.JLabel();
+        jLblPrecioI1 = new javax.swing.JLabel();
 
         jBtnIH1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,17 +47,17 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel1.setText("Combo");
+        jLblCH1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblCH1.setText("Combo");
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel2.setText("Q50.00");
+        jLblPrecioC1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblPrecioC1.setText("Q50.00");
 
-        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel5.setText("Individual");
+        jLblIH1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblIH1.setText("Individual");
 
-        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel6.setText("Q20.00");
+        jLblPrecioI1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblPrecioI1.setText("Q20.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,14 +73,14 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(398, 398, 398)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)))
+                            .addComponent(jLblCH1)
+                            .addComponent(jLblPrecioC1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(398, 398, 398)
-                        .addComponent(jLabel6))
+                        .addComponent(jLblPrecioI1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(387, 387, 387)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLblIH1)))
                 .addContainerGap(385, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -89,15 +89,15 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
                 .addGap(76, 76, 76)
                 .addComponent(jBtnCH1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(jLblCH1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(jLblPrecioC1)
                 .addGap(46, 46, 46)
                 .addComponent(jBtnIH1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(jLblIH1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addComponent(jLblPrecioI1)
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
@@ -116,9 +116,9 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBtnCH1;
     public javax.swing.JButton jBtnIH1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLblCH1;
+    private javax.swing.JLabel jLblIH1;
+    private javax.swing.JLabel jLblPrecioC1;
+    private javax.swing.JLabel jLblPrecioI1;
     // End of variables declaration//GEN-END:variables
 }

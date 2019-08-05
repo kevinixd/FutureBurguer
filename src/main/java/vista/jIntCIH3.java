@@ -9,12 +9,12 @@ package vista;
  *
  * @author javam2019
  */
-public class jIntCIH2 extends javax.swing.JInternalFrame {
+public class jIntCIH3 extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form jIntComboIndividualHamburguesas
      */
-    public jIntCIH2() {
+    public jIntCIH3() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
@@ -28,36 +28,36 @@ public class jIntCIH2 extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBtnIH2 = new javax.swing.JButton();
-        jBtnCH2 = new javax.swing.JButton();
-        jLblCH2 = new javax.swing.JLabel();
-        jLblPrecioC2 = new javax.swing.JLabel();
-        jLblIH2 = new javax.swing.JLabel();
-        jLblPrecioI2 = new javax.swing.JLabel();
+        jBtnIH3 = new javax.swing.JButton();
+        jBtnCH3 = new javax.swing.JButton();
+        jLblCH3 = new javax.swing.JLabel();
+        jLblPrecioC3 = new javax.swing.JLabel();
+        jLblIH3 = new javax.swing.JLabel();
+        jLblPrecioI3 = new javax.swing.JLabel();
 
-        jBtnIH2.addActionListener(new java.awt.event.ActionListener() {
+        jBtnIH3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnIH2ActionPerformed(evt);
+                jBtnIH3ActionPerformed(evt);
             }
         });
 
-        jBtnCH2.addActionListener(new java.awt.event.ActionListener() {
+        jBtnCH3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnCH2ActionPerformed(evt);
+                jBtnCH3ActionPerformed(evt);
             }
         });
 
-        jLblCH2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLblCH2.setText("Combo");
+        jLblCH3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblCH3.setText("Combo");
 
-        jLblPrecioC2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLblPrecioC2.setText("Q50.00");
+        jLblPrecioC3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblPrecioC3.setText("Q50.00");
 
-        jLblIH2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLblIH2.setText("Individual");
+        jLblIH3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblIH3.setText("Individual");
 
-        jLblPrecioI2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLblPrecioI2.setText("Q20.00");
+        jLblPrecioI3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblPrecioI3.setText("Q20.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,57 +68,57 @@ public class jIntCIH2 extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(351, 351, 351)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnCH2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnIH2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jBtnCH3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnIH3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(398, 398, 398)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLblCH2)
-                            .addComponent(jLblPrecioC2)))
+                            .addComponent(jLblCH3)
+                            .addComponent(jLblPrecioC3)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(398, 398, 398)
-                        .addComponent(jLblPrecioI2))
+                        .addComponent(jLblPrecioI3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(387, 387, 387)
-                        .addComponent(jLblIH2)))
+                        .addComponent(jLblIH3)))
                 .addContainerGap(385, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(jBtnCH2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBtnCH3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblCH2)
+                .addComponent(jLblCH3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblPrecioC2)
+                .addComponent(jLblPrecioC3)
                 .addGap(46, 46, 46)
-                .addComponent(jBtnIH2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBtnIH3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblIH2)
+                .addComponent(jLblIH3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblPrecioI2)
+                .addComponent(jLblPrecioI3)
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBtnIH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIH2ActionPerformed
+    private void jBtnIH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIH3ActionPerformed
 
-    }//GEN-LAST:event_jBtnIH2ActionPerformed
+    }//GEN-LAST:event_jBtnIH3ActionPerformed
 
-    private void jBtnCH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCH2ActionPerformed
+    private void jBtnCH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCH3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnCH2ActionPerformed
+    }//GEN-LAST:event_jBtnCH3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBtnCH2;
-    public javax.swing.JButton jBtnIH2;
-    private javax.swing.JLabel jLblCH2;
-    private javax.swing.JLabel jLblIH2;
-    private javax.swing.JLabel jLblPrecioC2;
-    private javax.swing.JLabel jLblPrecioI2;
+    public javax.swing.JButton jBtnCH3;
+    public javax.swing.JButton jBtnIH3;
+    private javax.swing.JLabel jLblCH3;
+    private javax.swing.JLabel jLblIH3;
+    private javax.swing.JLabel jLblPrecioC3;
+    private javax.swing.JLabel jLblPrecioI3;
     // End of variables declaration//GEN-END:variables
 }

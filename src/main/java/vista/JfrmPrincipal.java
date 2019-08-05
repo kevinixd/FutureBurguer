@@ -6,7 +6,8 @@
 package vista;
 
 import java.awt.Image;
-
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
 /**
  *
  * @author javam2019
@@ -16,7 +17,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
-    private Image imagen;
+    //private Image imagen;
     
     public JfrmPrincipal() {
         initComponents();
@@ -35,7 +36,13 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        EscritorioPrincipal = new javax.swing.JDesktopPane();
+        ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\fondoprincipal.png");
+        final Image image = icon.getImage();
+        EscritorioPrincipal = new javax.swing.JDesktopPane(){
+            public void paintComponent(Graphics g){
+                g.drawImage(image,0,0,getWidth(),getHeight(),this);
+            }
+        };
         jLabel1 = new javax.swing.JLabel();
         jLblUsuario = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -45,7 +52,6 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jBtnBebidas = new javax.swing.JButton();
         jBtnDesayunos = new javax.swing.JButton();
         jBtnHamburguesas = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -96,10 +102,6 @@ public class JfrmPrincipal extends javax.swing.JFrame {
 
         EscritorioPrincipal.add(jScrollPane1);
         jScrollPane1.setBounds(40, 100, 210, 550);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondoprincipal.jpg"))); // NOI18N
-        EscritorioPrincipal.add(jLabel2);
-        jLabel2.setBounds(0, 0, 1260, 720);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -247,7 +249,6 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton jBtnPostres;
     public javax.swing.JButton jBtnSnacks;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLblUsuario;
     public javax.swing.JPanel jPnlBotones;
     private javax.swing.JScrollPane jScrollPane1;

@@ -17,6 +17,8 @@ import javax.swing.JOptionPane;
 import modelo.Productos;
 import vista.jIntCIH1;
 import vista.jIntCIH2;
+import vista.jIntCIH3;
+import vista.jIntCIH4;
 import vista.jIntHamburguesas;
 
 /**
@@ -28,6 +30,8 @@ public class HamburguesasControlador implements ActionListener {
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntCIH1 comboInd1 = new jIntCIH1();
     jIntCIH2 comboInd2 = new jIntCIH2();
+    jIntCIH3 comboInd3 = new jIntCIH3();
+    jIntCIH4 comboInd4 = new jIntCIH4();
     DaoProductos dao = new DaoProductos();
     private List<JButton> lista = new ArrayList();
     private short clasificacion;
@@ -61,7 +65,24 @@ public class HamburguesasControlador implements ActionListener {
             comboInd2.jBtnCH2.setIcon(new ImageIcon(ruta + "combo.png"));
             comboInd2.jBtnIH2.setIcon(new ImageIcon(ruta + "2002.png"));
         }
-
+        if (e.getSource() == lista.get(2)) {
+            comboInd3 = new jIntCIH3();
+            principal.EscritorioPrincipal.add(comboInd3);
+            comboInd3.setLocation(300, 100);
+            comboInd3.setSize(910, 550);
+            comboInd3.setVisible(true);
+            comboInd3.jBtnCH3.setIcon(new ImageIcon(ruta + "combo.png"));
+            comboInd3.jBtnIH3.setIcon(new ImageIcon(ruta + "2003.png"));
+        }
+        if (e.getSource() == lista.get(3)) {
+            comboInd4 = new jIntCIH4();
+            principal.EscritorioPrincipal.add(comboInd4);
+            comboInd4.setLocation(300, 100);
+            comboInd4.setSize(910, 550);
+            comboInd4.setVisible(true);
+            comboInd4.jBtnCH4.setIcon(new ImageIcon(ruta + "combo.png"));
+            comboInd4.jBtnIH4.setIcon(new ImageIcon(ruta + "2004.png"));
+        }
     }
 
     public void crearHamburguesas() {

@@ -24,24 +24,24 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="351" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jBtnCH1" min="-2" pref="158" max="-2" attributes="0"/>
-                          <Component id="jBtnIH1" min="-2" pref="158" max="-2" attributes="0"/>
+                          <Component id="jBtnCH3" min="-2" pref="158" max="-2" attributes="0"/>
+                          <Component id="jBtnIH3" min="-2" pref="158" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="398" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLblCH1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLblPrecioC1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblCH3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblPrecioC3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="398" max="-2" attributes="0"/>
-                      <Component id="jLblPrecioI1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLblPrecioI3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="387" max="-2" attributes="0"/>
-                      <Component id="jLblIH1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLblIH3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="385" max="32767" attributes="0"/>
@@ -52,40 +52,40 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-              <Component id="jBtnCH1" min="-2" pref="109" max="-2" attributes="0"/>
+              <Component id="jBtnCH3" min="-2" pref="109" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLblCH1" min="-2" max="-2" attributes="0"/>
+              <Component id="jLblCH3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLblPrecioC1" min="-2" max="-2" attributes="0"/>
+              <Component id="jLblPrecioC3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-              <Component id="jBtnIH1" min="-2" pref="109" max="-2" attributes="0"/>
+              <Component id="jBtnIH3" min="-2" pref="109" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLblIH1" min="-2" max="-2" attributes="0"/>
+              <Component id="jLblIH3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLblPrecioI1" min="-2" max="-2" attributes="0"/>
+              <Component id="jLblPrecioI3" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="72" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jBtnIH1">
+    <Component class="javax.swing.JButton" name="jBtnIH3">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnIH1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnIH3ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnCH1">
+    <Component class="javax.swing.JButton" name="jBtnCH3">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCH1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCH3ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblCH1">
+    <Component class="javax.swing.JLabel" name="jLblCH3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="18" style="1"/>
@@ -93,7 +93,7 @@
         <Property name="text" type="java.lang.String" value="Combo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblPrecioC1">
+    <Component class="javax.swing.JLabel" name="jLblPrecioC3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="18" style="1"/>
@@ -101,7 +101,7 @@
         <Property name="text" type="java.lang.String" value="Q50.00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblIH1">
+    <Component class="javax.swing.JLabel" name="jLblIH3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="18" style="1"/>
@@ -109,7 +109,7 @@
         <Property name="text" type="java.lang.String" value="Individual"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblPrecioI1">
+    <Component class="javax.swing.JLabel" name="jLblPrecioI3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="18" style="1"/>

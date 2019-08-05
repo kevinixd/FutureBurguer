@@ -9,12 +9,12 @@ package vista;
  *
  * @author javam2019
  */
-public class ifrmCliente extends javax.swing.JInternalFrame {
+public class jIntCliente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ifrmCliente
      */
-    public ifrmCliente() {
+    public jIntCliente() {
         initComponents();
     }
 
