@@ -27,7 +27,7 @@ public class DaoTiposCombos implements TiposCombosInterface{
     public ArrayList<TiposCombos> verTipos() {
         ArrayList<TiposCombos> lista= new ArrayList();
         conexion.abrirConexion();
-        sql="select * from tiposcombos";
+        sql="select * from tiposcombos where tipo_combo_id<>3";
         try {
             ejecutar=conexion.getCon().prepareStatement(sql);
             resultado=ejecutar.executeQuery();

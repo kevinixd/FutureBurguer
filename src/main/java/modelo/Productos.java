@@ -58,7 +58,6 @@ public class Productos {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-    
-    
+
 
 }

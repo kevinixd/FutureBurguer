@@ -9,13 +9,14 @@ package vista;
  *
  * @author javam2019
  */
-public class JIntPruebaUno extends javax.swing.JInternalFrame {
+public class jIntDesayunos extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form JIntPruebaUno
+     * Creates new form jIntDesayunos
      */
-    public JIntPruebaUno() {
+    public jIntDesayunos() {
         initComponents();
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
 
     /**
@@ -27,16 +28,7 @@ public class JIntPruebaUno extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
-        );
+        getContentPane().setLayout(new java.awt.GridLayout(0, 3, 30, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
