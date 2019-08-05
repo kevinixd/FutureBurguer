@@ -15,7 +15,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Productos;
-import vista.jIntComboIndividualHamburguesas;
+import vista.jIntCIH1;
+import vista.jIntCIH2;
 import vista.jIntHamburguesas;
 
 /**
@@ -25,7 +26,8 @@ import vista.jIntHamburguesas;
 public class HamburguesasControlador implements ActionListener {
 
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
-    jIntComboIndividualHamburguesas comboIndividual = new jIntComboIndividualHamburguesas();
+    jIntCIH1 comboInd1 = new jIntCIH1();
+    jIntCIH2 comboInd2 = new jIntCIH2();
     DaoProductos dao = new DaoProductos();
     private List<JButton> lista = new ArrayList();
     private short clasificacion;
@@ -42,14 +44,22 @@ public class HamburguesasControlador implements ActionListener {
 
         hamburguesas = null;
         if (e.getSource() == lista.get(0)) {
-            comboIndividual = new jIntComboIndividualHamburguesas();
-            principal.EscritorioPrincipal.add(comboIndividual);
-            comboIndividual.setLocation(300, 100);
-            comboIndividual.setSize(910, 550);
-            comboIndividual.setVisible(true);
+            comboInd1 = new jIntCIH1();
+            principal.EscritorioPrincipal.add(comboInd1);
+            comboInd1.setLocation(300, 100);
+            comboInd1.setSize(910, 550);
+            comboInd1.setVisible(true);
+            comboInd1.jBtnCH1.setIcon(new ImageIcon(ruta + "combo.png"));
+            comboInd1.jBtnIH1.setIcon(new ImageIcon(ruta + "2001.png"));
         }
         if (e.getSource() == lista.get(1)) {
-            JOptionPane.showMessageDialog(principal, "bhjbhjbhjbh");
+            comboInd2 = new jIntCIH2();
+            principal.EscritorioPrincipal.add(comboInd2);
+            comboInd2.setLocation(300, 100);
+            comboInd2.setSize(910, 550);
+            comboInd2.setVisible(true);
+            comboInd2.jBtnCH2.setIcon(new ImageIcon(ruta + "combo.png"));
+            comboInd2.jBtnIH2.setIcon(new ImageIcon(ruta + "2002.png"));
         }
 
     }

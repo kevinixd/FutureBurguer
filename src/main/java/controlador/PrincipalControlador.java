@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
 import vista.jIntBebidasFrias;
-import vista.jIntComboIndividualHamburguesas;
+import vista.jIntCIH1;
 import vista.jIntDesayunos;
 import vista.jIntHamburguesas;
 
