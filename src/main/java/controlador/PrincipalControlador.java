@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
 import vista.jIntBebidasFrias;
+import vista.jIntComboIndividualHamburguesas;
 import vista.jIntDesayunos;
 import vista.jIntHamburguesas;
 
@@ -54,13 +55,13 @@ public class PrincipalControlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         destruirInternal();
-        principal.jPnlMenus.removeAll();
 
         if (e.getSource() == principal.jBtnDesayunos) {
 
             desayunos = new jIntDesayunos();
             DesayunosControlador dc;
-            principal.jPnlMenus.add(desayunos);
+            principal.EscritorioPrincipal.add(desayunos);
+            desayunos.setLocation(300, 100);
             desayunos.setSize(910, 550);
             desayunos.setVisible(true);
             dc = new DesayunosControlador(desayunos);
@@ -68,10 +69,11 @@ public class PrincipalControlador implements ActionListener {
         }
         
         if (e.getSource() == principal.jBtnHamburguesas) {
-
+            
             hamburguesas = new jIntHamburguesas();
             HamburguesasControlador hc;
-            principal.jPnlMenus.add(hamburguesas);
+            principal.EscritorioPrincipal.add(hamburguesas);
+            hamburguesas.setLocation(300, 100);
             hamburguesas.setSize(910, 550);
             hamburguesas.setVisible(true);
             hc = new HamburguesasControlador(hamburguesas);
@@ -80,10 +82,11 @@ public class PrincipalControlador implements ActionListener {
         
 
         if (e.getSource() == principal.jBtnBebidas) {
-
+            
             bebidas = new jIntBebidasFrias();
             BebidasFriasControlador bc;
-            principal.jPnlMenus.add(bebidas);
+            principal.EscritorioPrincipal.add(bebidas);
+            bebidas.setLocation(300, 100);
             bebidas.setSize(910, 550);
             bebidas.setVisible(true);
             bc = new BebidasFriasControlador(bebidas);
@@ -108,6 +111,7 @@ public class PrincipalControlador implements ActionListener {
     public void destruirInternal() {
         desayunos = null;
         hamburguesas = null;
+        bebidas = null;
     }
 
     /*
@@ -121,5 +125,6 @@ public class PrincipalControlador implements ActionListener {
         principal.jBtnPostres.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\postres\\postres.png"));
         principal.jBtnSnacks.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\snacks\\snacks.png"));
     }
-
+    
+    
 }

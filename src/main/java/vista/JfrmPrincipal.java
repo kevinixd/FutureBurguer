@@ -35,10 +35,9 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        desktopPane = new javax.swing.JDesktopPane();
+        EscritorioPrincipal = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jLblUsuario = new javax.swing.JLabel();
-        jPnlMenus = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPnlBotones = new javax.swing.JPanel();
         jBtnSnacks = new javax.swing.JButton();
@@ -65,27 +64,13 @@ public class JfrmPrincipal extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Usuario:");
-        desktopPane.add(jLabel1);
+        EscritorioPrincipal.add(jLabel1);
         jLabel1.setBounds(40, 30, 80, 20);
 
         jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLblUsuario.setText("Nombre Usuario");
-        desktopPane.add(jLblUsuario);
+        EscritorioPrincipal.add(jLblUsuario);
         jLblUsuario.setBounds(120, 30, 170, 24);
-
-        javax.swing.GroupLayout jPnlMenusLayout = new javax.swing.GroupLayout(jPnlMenus);
-        jPnlMenus.setLayout(jPnlMenusLayout);
-        jPnlMenusLayout.setHorizontalGroup(
-            jPnlMenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 910, Short.MAX_VALUE)
-        );
-        jPnlMenusLayout.setVerticalGroup(
-            jPnlMenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
-        );
-
-        desktopPane.add(jPnlMenus);
-        jPnlMenus.setBounds(270, 100, 910, 550);
 
         jPnlBotones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPnlBotones.add(jBtnSnacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 158, 109));
@@ -108,7 +93,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPnlBotones);
 
-        desktopPane.add(jScrollPane1);
+        EscritorioPrincipal.add(jScrollPane1);
         jScrollPane1.setBounds(40, 100, 210, 550);
 
         fileMenu.setMnemonic('f');
@@ -179,13 +164,13 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -241,12 +226,12 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JDesktopPane EscritorioPrincipal;
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
-    public javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
@@ -258,8 +243,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton jBtnSnacks;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLblUsuario;
-    private javax.swing.JPanel jPnlBotones;
-    public javax.swing.JPanel jPnlMenus;
+    public javax.swing.JPanel jPnlBotones;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;

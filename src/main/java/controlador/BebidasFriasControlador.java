@@ -43,12 +43,11 @@ public class BebidasFriasControlador implements ActionListener{
         for (Productos producto : dao.verProductos(clasificacion)) {
             JButton boton = new JButton(producto.getProductonombre());
             String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\";
-            System.out.println("Ruta: "+ ruta);
             boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
             boton.addActionListener(this);
             bebidas.add(boton);
             lista3.add(boton);
-            principal.jPnlMenus.updateUI();
+            //principal.jPnlMenus.updateUI();
             
         }
     }

@@ -39,15 +39,14 @@ public class HamburguesasControlador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        hamburguesas.removeAll();
+
         hamburguesas = null;
         if (e.getSource() == lista.get(0)) {
             comboIndividual = new jIntComboIndividualHamburguesas();
-            principal.jPnlMenus.add(comboIndividual);
+            principal.EscritorioPrincipal.add(comboIndividual);
+            comboIndividual.setLocation(300, 100);
             comboIndividual.setSize(910, 550);
             comboIndividual.setVisible(true);
-            
-
         }
         if (e.getSource() == lista.get(1)) {
             JOptionPane.showMessageDialog(principal, "bhjbhjbhjbh");
@@ -59,12 +58,13 @@ public class HamburguesasControlador implements ActionListener {
 
         clasificacion = 1001;
         for (Productos producto : dao.verProductos(clasificacion)) {
+            
             JButton boton = new JButton(producto.getProductonombre());
             boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
             boton.addActionListener(this);
             hamburguesas.add(boton);
             lista.add(boton);
-            principal.jPnlMenus.updateUI();
+            //principal.jPnlMenus.updateUI();
 
         }
     }

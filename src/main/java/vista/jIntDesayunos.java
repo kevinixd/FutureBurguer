@@ -5,6 +5,14 @@
  */
 package vista;
 
+import static controlador.PrincipalControlador.principal;
+import dao.DaoProductos;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import modelo.Productos;
+
 /**
  *
  * @author javam2019
@@ -14,11 +22,16 @@ public class jIntDesayunos extends javax.swing.JInternalFrame {
     /**
      * Creates new form jIntDesayunos
      */
+    
+    //jIntDesayunos desayunos = new jIntDesayunos();
     public jIntDesayunos() {
         initComponents();
+        //dejar fijo al panel
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+       
     }
 
+       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

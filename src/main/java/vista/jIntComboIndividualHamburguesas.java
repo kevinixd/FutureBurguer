@@ -16,6 +16,7 @@ public class jIntComboIndividualHamburguesas extends javax.swing.JInternalFrame 
      */
     public jIntComboIndividualHamburguesas() {
         initComponents();
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
 
     /**
