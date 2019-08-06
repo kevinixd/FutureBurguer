@@ -5,20 +5,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
-import vista.jIntCliente;
+import vista.JintCliente;
 
 public class ClienteControlador implements ActionListener {
 
-    jIntCliente fromCliente;
+    JintCliente fromCliente;
     DaoCliente dao = new DaoCliente();
     Cliente cl = new Cliente();
     String mensaje;
     
-    public ClienteControlador(jIntCliente fromCliente){
+    public ClienteControlador(JintCliente fromCliente){
         this.fromCliente=fromCliente;
         fromCliente.jBtnAgregar.addActionListener(this);
         fromCliente.jBtnBuscar.addActionListener(this);
-        
     }
     
     

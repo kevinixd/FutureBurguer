@@ -56,8 +56,7 @@ public class PrincipalControlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         destruirInternal();
 
-        if (e.getSource() == principal.jBtnDesayunos) {
-
+        if (e.getSource() == principal.jBtnDesayunos) {  
             desayunos = new jIntDesayunos();
             DesayunosControlador dc;
             principal.EscritorioPrincipal.add(desayunos);
@@ -65,11 +64,9 @@ public class PrincipalControlador implements ActionListener {
             desayunos.setSize(910, 550);
             desayunos.setVisible(true);
             dc = new DesayunosControlador(desayunos);
-
         }
         
         if (e.getSource() == principal.jBtnHamburguesas) {
-            
             hamburguesas = new jIntHamburguesas();
             HamburguesasControlador hc;
             principal.EscritorioPrincipal.add(hamburguesas);
@@ -77,12 +74,9 @@ public class PrincipalControlador implements ActionListener {
             hamburguesas.setSize(910, 550);
             hamburguesas.setVisible(true);
             hc = new HamburguesasControlador(hamburguesas);
-
         }
         
-
-        if (e.getSource() == principal.jBtnBebidas) {
-            
+        if (e.getSource() == principal.jBtnBebidas) {  
             bebidas = new jIntBebidasFrias();
             BebidasFriasControlador bc;
             principal.EscritorioPrincipal.add(bebidas);
@@ -90,7 +84,6 @@ public class PrincipalControlador implements ActionListener {
             bebidas.setSize(910, 550);
             bebidas.setVisible(true);
             bc = new BebidasFriasControlador(bebidas);
-
         }
 
         /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
