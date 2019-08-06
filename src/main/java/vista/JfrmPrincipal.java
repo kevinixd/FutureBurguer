@@ -40,14 +40,11 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\fondoprincipal.png");
+        ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\fondoprincipal.jpg");
         final Image image = icon.getImage();
-        ImageIcon icon2 = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\iconoGeneral.png");
-        final Image image2 = icon2.getImage();
         EscritorioPrincipal = new javax.swing.JDesktopPane(){
             public void paintComponent(Graphics g){
                 g.drawImage(image,0,0,getWidth(),getHeight(),this);
-                g.drawImage(image2,960,10,getWidth(),getHeight(),this);
             }
         };
         jLabel1 = new javax.swing.JLabel();
@@ -190,15 +187,17 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        EscritorioPrincipal.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

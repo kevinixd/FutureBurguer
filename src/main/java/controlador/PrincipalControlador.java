@@ -36,10 +36,10 @@ public class PrincipalControlador implements ActionListener {
 
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
+        principal.setExtendedState(6);
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
-
     }
 
     public void setActionListeners() {
