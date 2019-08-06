@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
-import vista.JintCliente;
 import vista.formulariosbebidas.jIntBebidasFrias;
 import vista.formulariosdesayunos.jIntDesayunos;
 import vista.formularioshamburguesas.jIntHamburguesas;
@@ -21,7 +20,6 @@ import vista.formularioshamburguesas.jIntHamburguesas;
  */
 public class PrincipalControlador implements ActionListener {
 
-    JintCliente cliente= new JintCliente();
     jIntDesayunos desayunos = new jIntDesayunos();
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntBebidasFrias bebidas = new jIntBebidasFrias();
