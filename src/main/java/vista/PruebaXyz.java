@@ -5,6 +5,8 @@
  */
 package vista;
 
+import vista.formulariosdesayunos.jIntDesayunos;
+
 /**
  *
  * @author javam2019

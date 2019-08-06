@@ -3,22 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package vista.formulariosdesayunos;
+
+import static controlador.PrincipalControlador.principal;
+import dao.DaoProductos;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import modelo.Productos;
 
 /**
  *
  * @author javam2019
  */
-public class jIntPostres extends javax.swing.JInternalFrame {
+public class jIntDesayunos extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form jIntPostres
+     * Creates new form jIntDesayunos
      */
-    public jIntPostres() {
+    
+    //jIntDesayunos desayunos = new jIntDesayunos();
+    public jIntDesayunos() {
         initComponents();
+        //dejar fijo al panel
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+       
     }
 
+       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,7 +41,7 @@ public class jIntPostres extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        getContentPane().setLayout(new java.awt.GridLayout(0, 3, 35, 35));
+        getContentPane().setLayout(new java.awt.GridLayout(0, 3, 30, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

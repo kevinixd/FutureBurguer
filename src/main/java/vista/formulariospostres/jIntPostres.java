@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package vista.formulariospostres;
 
 /**
  *
  * @author javam2019
  */
-public class jIntSnacks extends javax.swing.JInternalFrame {
+public class jIntPostres extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form jIntSnacks
+     * Creates new form jIntPostres
      */
-    public jIntSnacks() {
+    public jIntPostres() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }

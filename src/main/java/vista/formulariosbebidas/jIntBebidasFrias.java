@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package vista.formulariosbebidas;
 
 /**
  *
  * @author javam2019
  */
-public class jIntHamburguesas extends javax.swing.JInternalFrame {
+public class jIntBebidasFrias extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form jIntHamburguesas
+     * Creates new form jIntBebidas
      */
-    public jIntHamburguesas() {
+    public jIntBebidasFrias() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
@@ -28,7 +28,7 @@ public class jIntHamburguesas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        getContentPane().setLayout(new java.awt.GridLayout(0, 3, 35, 35));
+        getContentPane().setLayout(new java.awt.GridLayout(0, 3, 5, 5));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

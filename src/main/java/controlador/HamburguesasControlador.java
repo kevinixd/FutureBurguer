@@ -15,11 +15,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Productos;
-import vista.jIntCIH1;
-import vista.jIntCIH2;
-import vista.jIntCIH3;
-import vista.jIntCIH4;
-import vista.jIntHamburguesas;
+import vista.formularioshamburguesas.jIntCIH1;
+import vista.formularioshamburguesas.jIntCIH2;
+import vista.formularioshamburguesas.jIntCIH3;
+import vista.formularioshamburguesas.jIntCIH4;
+import vista.formularioshamburguesas.jIntHamburguesas;
 
 /**
  *

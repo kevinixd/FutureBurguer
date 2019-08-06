@@ -10,10 +10,10 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
-import vista.jIntBebidasFrias;
-import vista.jIntCIH1;
-import vista.jIntDesayunos;
-import vista.jIntHamburguesas;
+import vista.formulariosbebidas.jIntBebidasFrias;
+import vista.formularioshamburguesas.jIntCIH1;
+import vista.formulariosdesayunos.jIntDesayunos;
+import vista.formularioshamburguesas.jIntHamburguesas;
 
 /**
  *

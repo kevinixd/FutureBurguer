@@ -14,7 +14,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import modelo.Productos;
-import vista.jIntBebidasFrias;
+import vista.formulariosbebidas.jIntBebidasFrias;
 
 /**
  *

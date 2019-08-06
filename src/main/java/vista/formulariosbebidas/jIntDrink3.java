@@ -3,35 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
-
-import static controlador.PrincipalControlador.principal;
-import dao.DaoProductos;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import modelo.Productos;
+package vista.formulariosbebidas;
 
 /**
  *
  * @author javam2019
  */
-public class jIntDesayunos extends javax.swing.JInternalFrame {
+public class jIntDrink3 extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form jIntDesayunos
+     * Creates new form jIntDrink3
      */
-    
-    //jIntDesayunos desayunos = new jIntDesayunos();
-    public jIntDesayunos() {
+    public jIntDrink3() {
         initComponents();
-        //dejar fijo al panel
-        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
-       
     }
 
-       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,7 +27,16 @@ public class jIntDesayunos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        getContentPane().setLayout(new java.awt.GridLayout(0, 3, 30, 30));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 394, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 274, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

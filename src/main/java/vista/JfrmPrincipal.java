@@ -5,8 +5,12 @@
  */
 package vista;
 
+import java.awt.AlphaComposite;
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import javax.swing.ImageIcon;
 /**
  *
@@ -21,7 +25,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     
     public JfrmPrincipal() {
         initComponents();
-        
+        jPnlBotones.setOpaque(false);
          
     }
     
@@ -46,7 +50,16 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLblUsuario = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPnlBotones = new javax.swing.JPanel();
+        jPnlBotones = new javax.swing.JPanel(){
+            public void paintComponent (Graphics g)
+            {
+                ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,0.0f)); // draw transparent background
+                super.paintComponent(g);
+                ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,1.0f)); // turn on opacity
+                g.setColor(Color.GRAY);
+                g.fillRect(0, 0, 278, 649);
+            }
+        };
         jBtnSnacks = new javax.swing.JButton();
         jBtnPostres = new javax.swing.JButton();
         jBtnBebidas = new javax.swing.JButton();
@@ -79,6 +92,9 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         EscritorioPrincipal.add(jLblUsuario);
         jLblUsuario.setBounds(120, 30, 170, 24);
 
+        jPnlBotones.setBackground(new java.awt.Color(51, 51, 51));
+        jPnlBotones.setForeground(new java.awt.Color(51, 51, 51));
+        jPnlBotones.setOpaque(true);
         jPnlBotones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPnlBotones.add(jBtnSnacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 158, 109));
         jPnlBotones.add(jBtnPostres, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 158, 109));
