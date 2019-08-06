@@ -9,6 +9,7 @@ import vista.JintCliente;
 
 public class ClienteControlador implements ActionListener {
 
+    //Formulario
     JintCliente fromCliente= new JintCliente();
     DaoCliente dao = new DaoCliente();
     Cliente cl = new Cliente();
