@@ -1,4 +1,4 @@
-package controlador;
+/*package controlador;
 
 import dao.DaoCliente;
 import java.awt.event.ActionEvent;
@@ -58,4 +58,4 @@ public class ClienteControlador implements ActionListener {
         fromCliente.jTxtNit.setText(cl.getClientenit());
     }
     
-}
+}*/
