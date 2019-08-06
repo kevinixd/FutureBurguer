@@ -9,10 +9,10 @@ import vista.JintCliente;
 
 public class ClienteControlador implements ActionListener {
 
-    JintCliente fromCliente;
+    JintCliente fromCliente= new JintCliente();
     DaoCliente dao = new DaoCliente();
     Cliente cl = new Cliente();
-    String mensaje;
+    private String mensaje;
     
     public ClienteControlador(JintCliente fromCliente){
         this.fromCliente=fromCliente;
