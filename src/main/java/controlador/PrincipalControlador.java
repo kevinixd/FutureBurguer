@@ -10,8 +10,8 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
+import vista.JintCliente;
 import vista.formulariosbebidas.jIntBebidasFrias;
-import vista.formularioshamburguesas.jIntCIH1;
 import vista.formulariosdesayunos.jIntDesayunos;
 import vista.formularioshamburguesas.jIntHamburguesas;
 
@@ -21,6 +21,7 @@ import vista.formularioshamburguesas.jIntHamburguesas;
  */
 public class PrincipalControlador implements ActionListener {
 
+    JintCliente cliente= new JintCliente();
     jIntDesayunos desayunos = new jIntDesayunos();
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntBebidasFrias bebidas = new jIntBebidasFrias();
@@ -77,14 +78,13 @@ public class PrincipalControlador implements ActionListener {
         }
         
         if (e.getSource() == principal.jBtnBebidas) {  
-            /*bebidas = new jIntBebidasFrias();
+            bebidas = new jIntBebidasFrias();
             BebidasFriasControlador bc;
             principal.EscritorioPrincipal.add(bebidas);
             bebidas.setLocation(300, 100);
             bebidas.setSize(910, 550);
             bebidas.setVisible(true);
-            bc = new BebidasFriasControlador(bebidas);*/
-            
+            bc = new BebidasFriasControlador(bebidas);
         }
 
         /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
