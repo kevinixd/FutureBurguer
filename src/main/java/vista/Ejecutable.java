@@ -1,6 +1,6 @@
 package vista;
 
-import controlador.PrincipalControlador;
+import controlador.ClienteControlador;
 
 public class Ejecutable {
     public static void main(String[] args) {
@@ -8,8 +8,12 @@ public class Ejecutable {
         EmpleadoControlador controlador_empleado = new EmpleadoControlador(vista);
         vista.setVisible(true);
         vista.setLocationRelativeTo(null);*/
-        JfrmPrincipal principal= new JfrmPrincipal();
+        /*JfrmPrincipal principal= new JfrmPrincipal();
         PrincipalControlador controlador= new PrincipalControlador(principal);
-        principal.setVisible(true);
+        principal.setVisible(true);*/
+        JintCliente vistafrm= new JintCliente();
+        ClienteControlador controlador= new ClienteControlador(vistafrm);
+        vistafrm.setVisible(true);
+
     }
 }
