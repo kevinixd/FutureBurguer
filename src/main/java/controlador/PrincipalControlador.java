@@ -77,13 +77,14 @@ public class PrincipalControlador implements ActionListener {
         }
         
         if (e.getSource() == principal.jBtnBebidas) {  
-            bebidas = new jIntBebidasFrias();
+            /*bebidas = new jIntBebidasFrias();
             BebidasFriasControlador bc;
             principal.EscritorioPrincipal.add(bebidas);
             bebidas.setLocation(300, 100);
             bebidas.setSize(910, 550);
             bebidas.setVisible(true);
-            bc = new BebidasFriasControlador(bebidas);
+            bc = new BebidasFriasControlador(bebidas);*/
+            
         }
 
         /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
