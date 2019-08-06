@@ -42,12 +42,9 @@ public class JfrmPrincipal extends javax.swing.JFrame {
 
         ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\fondoprincipal.png");
         final Image image = icon.getImage();
-        ImageIcon icon2 = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\iconoGeneral.png");
-        final Image image2 = icon2.getImage();
         EscritorioPrincipal = new javax.swing.JDesktopPane(){
             public void paintComponent(Graphics g){
                 g.drawImage(image,0,0,getWidth(),getHeight(),this);
-                g.drawImage(image2,960,10,getWidth(),getHeight(),this);
             }
         };
         jLabel1 = new javax.swing.JLabel();
