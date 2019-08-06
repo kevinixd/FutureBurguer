@@ -15,6 +15,8 @@ import vista.formulariosbebidas.jIntBebidasFC;
 
 import vista.formulariosdesayunos.jIntDesayunos;
 import vista.formularioshamburguesas.jIntHamburguesas;
+import vista.formulariospostres.jIntPostres;
+import vista.formulariossnacks.jIntSnacks;
 
 /**
  *
@@ -25,6 +27,8 @@ public class PrincipalControlador implements ActionListener {
     jIntDesayunos desayunos = new jIntDesayunos();
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntBebidasFC bebidasfc = new jIntBebidasFC();
+    jIntPostres postres = new jIntPostres();
+    jIntSnacks snacks = new jIntSnacks();
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -39,7 +43,6 @@ public class PrincipalControlador implements ActionListener {
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
-
     }
 
     public void setActionListeners() {
@@ -47,6 +50,8 @@ public class PrincipalControlador implements ActionListener {
         principal.jBtnDesayunos.addActionListener(this);
         principal.jBtnHamburguesas.addActionListener(this);
         principal.jBtnBebidas.addActionListener(this);
+        principal.jBtnPostres.addActionListener(this);
+        principal.jBtnSnacks.addActionListener(this);
 
         //Botones panel principal
         detPedido = new DetallePedido();
@@ -89,6 +94,28 @@ public class PrincipalControlador implements ActionListener {
             bebidasfc.jBtnBC.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\2015.png"));
             bc = new BebidasFCControlador(bebidasfc);
         }
+        
+        if (e.getSource() == principal.jBtnPostres) {
+            
+            postres = new jIntPostres();
+            PostresControlador pc;
+            principal.EscritorioPrincipal.add(postres);
+            postres.setLocation(300, 100);
+            postres.setSize(910, 550);
+            postres.setVisible(true);
+            pc = new PostresControlador(postres);
+        }
+        
+        if (e.getSource() == principal.jBtnSnacks) {
+            
+            snacks = new jIntSnacks();
+            SnacksControlador sc;
+            principal.EscritorioPrincipal.add(snacks);
+            snacks.setLocation(300, 100);
+            snacks.setSize(910, 550);
+            snacks.setVisible(true);
+            sc = new SnacksControlador(snacks);
+        }
 
         /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
             crearComboIndividual();
@@ -109,6 +136,7 @@ public class PrincipalControlador implements ActionListener {
         desayunos = null;
         hamburguesas = null;
         bebidasfc = null;
+        postres = null;
     }
 
     /*

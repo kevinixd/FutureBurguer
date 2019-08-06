@@ -26,7 +26,6 @@ public class Conexion {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Conexion con exito");
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error en conexion> " + e);
         }
