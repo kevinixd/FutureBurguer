@@ -10,7 +10,9 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
-import vista.formulariosbebidas.jIntBebidasFrias;
+
+import vista.formulariosbebidas.jIntBebidasFC;
+
 import vista.formulariosdesayunos.jIntDesayunos;
 import vista.formularioshamburguesas.jIntHamburguesas;
 
@@ -22,7 +24,7 @@ public class PrincipalControlador implements ActionListener {
 
     jIntDesayunos desayunos = new jIntDesayunos();
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
-    jIntBebidasFrias bebidas = new jIntBebidasFrias();
+    jIntBebidasFC bebidasfc = new jIntBebidasFC();
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -37,7 +39,7 @@ public class PrincipalControlador implements ActionListener {
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
-        
+
     }
 
     public void setActionListeners() {
@@ -55,7 +57,7 @@ public class PrincipalControlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         destruirInternal();
 
-        if (e.getSource() == principal.jBtnDesayunos) {  
+        if (e.getSource() == principal.jBtnDesayunos) {
             desayunos = new jIntDesayunos();
             DesayunosControlador dc;
             principal.EscritorioPrincipal.add(desayunos);
@@ -64,7 +66,7 @@ public class PrincipalControlador implements ActionListener {
             desayunos.setVisible(true);
             dc = new DesayunosControlador(desayunos);
         }
-        
+
         if (e.getSource() == principal.jBtnHamburguesas) {
             hamburguesas = new jIntHamburguesas();
             HamburguesasControlador hc;
@@ -74,15 +76,18 @@ public class PrincipalControlador implements ActionListener {
             hamburguesas.setVisible(true);
             hc = new HamburguesasControlador(hamburguesas);
         }
-        
-        if (e.getSource() == principal.jBtnBebidas) {  
-            bebidas = new jIntBebidasFrias();
-            BebidasFriasControlador bc;
-            principal.EscritorioPrincipal.add(bebidas);
-            bebidas.setLocation(300, 100);
-            bebidas.setSize(910, 550);
-            bebidas.setVisible(true);
-            bc = new BebidasFriasControlador(bebidas);
+
+        if (e.getSource() == principal.jBtnBebidas) {
+
+            bebidasfc = new jIntBebidasFC();
+            BebidasFCControlador bc;
+            principal.EscritorioPrincipal.add(bebidasfc);
+            bebidasfc.setLocation(300, 100);
+            bebidasfc.setSize(910, 550);
+            bebidasfc.setVisible(true);
+            bebidasfc.jBtnBF.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\bebidas.png"));
+            bebidasfc.jBtnBC.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\2015.png"));
+            bc = new BebidasFCControlador(bebidasfc);
         }
 
         /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
@@ -103,7 +108,7 @@ public class PrincipalControlador implements ActionListener {
     public void destruirInternal() {
         desayunos = null;
         hamburguesas = null;
-        bebidas = null;
+        bebidasfc = null;
     }
 
     /*
@@ -117,6 +122,5 @@ public class PrincipalControlador implements ActionListener {
         principal.jBtnPostres.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\postres\\postres.png"));
         principal.jBtnSnacks.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\snacks\\snacks.png"));
     }
-    
-    
+
 }
