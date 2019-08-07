@@ -28,8 +28,7 @@ public class CombosDao implements CombosInterface{
     private String sql=null;
 
     @Override
-    public ArrayList<Combos> verTipos(byte tipoCombo) {
-        ArrayList<Combos> lista= new ArrayList();
+    public Combos verCombo(byte tipoCombo) {
         conexion.abrirConexion();
         sql="select * from combos where tipo_combo_id=?";
         try {
@@ -42,17 +41,12 @@ public class CombosDao implements CombosInterface{
                 combo.setCombonombre(resultado.getString("nombre"));
                 combo.setCombodescuento(resultado.getDouble("descuento"));
                 combo.setTipo_combo_id(resultado.getByte("tipo_combo_id"));
-                lista.add(combo);
-                System.out.println("Combo ID " + combo.getCombo_id());
-                System.out.println("Nombre " +combo.getCombonombre());
-                System.out.println("Descuento" + combo.getCombodescuento());
-                System.out.println("Tipo: " + combo.getTipo_combo_id());
             }
         } catch (SQLException ex) {
             System.out.println("Error en daoCombo verTipos " + ex);
         } finally{
             conexion.cerrarConexion();
         }
-        return lista;
+        return combo;
     }
 }

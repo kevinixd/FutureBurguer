@@ -14,5 +14,5 @@ import modelo.Combos;
  */
 public interface CombosInterface {
     
-    public ArrayList<Combos> verTipos(byte tipoCombo);
+    public Combos verCombo(byte tipoCombo);
 }

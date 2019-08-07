@@ -5,7 +5,6 @@
  */
 package controlador;
 
-import static controlador.PrincipalControlador.principal;
 import dao.DaoProductos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +14,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import modelo.Productos;
 import vista.JfrmPrincipal;
+import vista.formulariosdesayunos.JintDsy;
 import vista.formulariosdesayunos.jIntDesayunos;
 
 /**
@@ -23,8 +23,13 @@ import vista.formulariosdesayunos.jIntDesayunos;
  */
 public class DesayunosControlador implements ActionListener{
     
+    //Formularios a utilizar
     jIntDesayunos desayunos = new jIntDesayunos();
+    JintDsy opciones= new JintDsy();
+    
+    //Daos a utilizar
     DaoProductos dao = new DaoProductos();
+    
     private List<JButton> lista2 = new ArrayList();
     private short clasificacion;
     
