@@ -67,6 +67,8 @@ public class DesayunosControlador implements ActionListener {
             boton.addActionListener(this);
             desayunos.add(boton);
             lista2.add(boton);
+            //principal.jPnlMenus.updateUI();
+
         }
     }
 
