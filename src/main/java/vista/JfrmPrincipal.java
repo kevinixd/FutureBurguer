@@ -25,8 +25,6 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     
     public JfrmPrincipal() {
         initComponents();
-        jPnlBotones.setOpaque(false);
-         
     }
     
     
@@ -187,7 +185,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
+                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1260, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

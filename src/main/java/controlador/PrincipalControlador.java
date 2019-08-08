@@ -40,10 +40,10 @@ public class PrincipalControlador implements ActionListener {
 
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
-        principal.setExtendedState(6);
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
+        principal.setLocationRelativeTo(null);
     }
 
     public void setActionListeners() {
@@ -138,6 +138,7 @@ public class PrincipalControlador implements ActionListener {
         hamburguesas = null;
         bebidasfc = null;
         postres = null;
+        snacks = null;
     }
 
     /*
