@@ -5,6 +5,8 @@
  */
 package vista.formularioshamburguesas;
 
+import static controlador.PrincipalControlador.principal;
+
 /**
  *
  * @author javam2019
@@ -110,6 +112,8 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
 
     private void jBtnCH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCH1ActionPerformed
         // TODO add your handling code here:
+            
+            System.out.println("hola");
     }//GEN-LAST:event_jBtnCH1ActionPerformed
 
 

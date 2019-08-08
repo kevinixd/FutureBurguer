@@ -20,6 +20,7 @@ import vista.formularioshamburguesas.jIntCIH2;
 import vista.formularioshamburguesas.jIntCIH3;
 import vista.formularioshamburguesas.jIntCIH4;
 import vista.formularioshamburguesas.jIntHamburguesas;
+import vista.formularioshamburguesas.jIntOrdenarH1;
 
 /**
  *
@@ -39,8 +40,11 @@ public class HamburguesasControlador implements ActionListener {
     String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\hamburguesas\\";
 
     public HamburguesasControlador(jIntHamburguesas hamburguesas) {
+        System.out.println("LLego al controlador Hamburguesas");
+        
         this.hamburguesas = hamburguesas;
-        crearHamburguesas();
+        comboInd1.jBtnCH1.addActionListener(this);
+        crearHamburguesas(); 
     }
 
     @Override
@@ -49,12 +53,14 @@ public class HamburguesasControlador implements ActionListener {
         hamburguesas = null;
         if (e.getSource() == lista.get(0)) {
             comboInd1 = new jIntCIH1();
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
             principal.EscritorioPrincipal.add(comboInd1);
             comboInd1.setLocation(300, 100);
             comboInd1.setSize(910, 550);
             comboInd1.setVisible(true);
             comboInd1.jBtnCH1.setIcon(new ImageIcon(ruta + "combo.png"));
             comboInd1.jBtnIH1.setIcon(new ImageIcon(ruta + "2001.png"));
+            
         }
         if (e.getSource() == lista.get(1)) {
             comboInd2 = new jIntCIH2();
@@ -83,13 +89,15 @@ public class HamburguesasControlador implements ActionListener {
             comboInd4.jBtnCH4.setIcon(new ImageIcon(ruta + "combo.png"));
             comboInd4.jBtnIH4.setIcon(new ImageIcon(ruta + "2004.png"));
         }
+
+        
     }
 
     public void crearHamburguesas() {
 
         clasificacion = 1001;
         for (Productos producto : dao.verProductos(clasificacion)) {
-            
+
             JButton boton = new JButton(producto.getProductonombre());
             boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
             boton.addActionListener(this);
@@ -99,6 +107,7 @@ public class HamburguesasControlador implements ActionListener {
 
         }
     }
+
 
     /*
     public void crearComboIndividual() {
