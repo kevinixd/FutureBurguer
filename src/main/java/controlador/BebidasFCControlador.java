@@ -18,6 +18,9 @@ import vista.formulariosbebidas.jIntBebidasCalientes;
 import vista.formulariosbebidas.jIntBebidasFC;
 import vista.formulariosbebidas.jIntBebidasFrias;
 
+
+//import vista.jIntDrink1;
+
 /**
  *
  * @author javam2019
@@ -28,6 +31,7 @@ public class BebidasFCControlador implements ActionListener {
     jIntBebidasFrias bebidasFrias = new jIntBebidasFrias();
     jIntBebidasCalientes bebidasCalientes = new jIntBebidasCalientes();
     DaoProductos dao = new DaoProductos();
+
     private List<JButton> listaF = new ArrayList();
     private List<JButton> listaC = new ArrayList();
     private short clasificacion;
@@ -41,12 +45,15 @@ public class BebidasFCControlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == bebidas.jBtnBF) {
+            
             bebidasFrias = new jIntBebidasFrias();
+            BebidasFriasControlador bfc;
             principal.EscritorioPrincipal.add(bebidasFrias);
             bebidasFrias.setLocation(300, 100);
             bebidasFrias.setSize(910, 550);
             bebidasFrias.setVisible(true);
-            crearBebidasFrias();
+            //bfc = new BebidasFriasControlador(bebidasFrias);
+
         }
         if (e.getSource() == bebidas.jBtnBC) {
             bebidasCalientes = new jIntBebidasCalientes();
@@ -56,22 +63,11 @@ public class BebidasFCControlador implements ActionListener {
             bebidasCalientes.setVisible(true);
             crearBebidasCalientes();
         }
+
     }
 
-    public void crearBebidasFrias() {
-
-        clasificacion = 1002;
-        for (Productos producto : dao.verProductos(clasificacion)) {
-            JButton boton = new JButton(producto.getProductonombre());
-            String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\";
-            boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
-            boton.addActionListener(this);
-            bebidasFrias.add(boton);
-            listaF.add(boton);
-            //principal.jPnlMenus.updateUI();
-        }
-    }
     
+
     public void crearBebidasCalientes() {
 
         clasificacion = 1003;

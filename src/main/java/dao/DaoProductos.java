@@ -38,7 +38,7 @@ public class DaoProductos implements ProductosInterface {
                 producto.setProductonombre(resultado.getString("nombre"));
                 producto.setProductodescripcion(resultado.getString("descripcion"));
                 producto.setClasificacion_id(resultado.getInt("clasificacion_id"));
-                producto.setImagen(resultado.getString("imagenes"));
+                producto.setImagen(resultado.getString("imagen"));
                 lista.add(producto);
             }
             resultado.close();
