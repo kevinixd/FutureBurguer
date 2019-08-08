@@ -4,19 +4,22 @@ public class View_Descripcioncombo {
 
     private int detallescombosId;
     private int comboId;
-    private String imagenDetalleCombo;
     private String nombreCombo;
+    private String imagenDetalleCombo;
     private int productoTamanioId;
+    private int productoComboId;
     private String productoCombo;
     private String tamanioCombo;
-    private float precio;
+    private double precio;
 
-    public View_Descripcioncombo(int detallescombosId, int comboId, String imagenDetalleCombo, String nombreCombo, int productoTamanioId, String productoCombo, String tamanioCombo, float precio) {
+    public View_Descripcioncombo(int detallescombosId, int comboId, String imagenDetalleCombo,
+            String nombreCombo, int productoTamanioId, int productoComboId, String productoCombo, String tamanioCombo, float precio) {
         this.detallescombosId = detallescombosId;
         this.comboId = comboId;
         this.imagenDetalleCombo = imagenDetalleCombo;
         this.nombreCombo = nombreCombo;
         this.productoTamanioId = productoTamanioId;
+        this.productoComboId = productoComboId;
         this.productoCombo = productoCombo;
         this.tamanioCombo = tamanioCombo;
         this.precio = precio;
@@ -65,6 +68,14 @@ public class View_Descripcioncombo {
         this.productoTamanioId = productoTamanioId;
     }
 
+    public int getProductoComboId() {
+        return productoComboId;
+    }
+
+    public void setProductoComboId(int productoComboId) {
+        this.productoComboId = productoComboId;
+    }
+
     public String getProductoCombo() {
         return productoCombo;
     }
@@ -81,11 +92,11 @@ public class View_Descripcioncombo {
         this.tamanioCombo = tamanioCombo;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
