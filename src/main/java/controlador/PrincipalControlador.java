@@ -5,10 +5,13 @@
  */
 package controlador;
 
+import static controlador.ProductoSeleccionado.productoSeleccionado;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
+import modelo.Productos;
 import vista.JfrmPrincipal;
 
 import vista.formulariosbebidas.jIntBebidasFC;
@@ -29,7 +32,8 @@ public class PrincipalControlador implements ActionListener {
     jIntBebidasFC bebidasfc = new jIntBebidasFC();
     jIntPostres postres = new jIntPostres();
     jIntSnacks snacks = new jIntSnacks();
-
+    
+    
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
     //Ruta para las imagenes

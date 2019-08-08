@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import modelo.Productos;
 import vista.JfrmPrincipal;
 import vista.formulariosdesayunos.JintDsy;
@@ -21,22 +22,23 @@ import vista.formulariosdesayunos.jIntDesayunos;
  *
  * @author javam2019
  */
-public class DesayunosControlador implements ActionListener{
-    
+public class DesayunosControlador implements ActionListener {
+
     //Formularios a utilizar
     jIntDesayunos desayunos = new jIntDesayunos();
-    JintDsy opciones= new JintDsy();
-    
+    JintDsy opciones = new JintDsy();
+
     //Daos a utilizar
     DaoProductos dao = new DaoProductos();
-    
+
     private List<JButton> lista2 = new ArrayList();
     private short clasificacion;
-    
+    private int productoId;
+
     JfrmPrincipal principal;
     //PrincipalControlador controladorPrincipal;
-    
-    public DesayunosControlador(jIntDesayunos desayunos ) {
+
+    public DesayunosControlador(jIntDesayunos desayunos) {
         //this.controladorPrincipal=controladorPrincipal;
         this.desayunos = desayunos;
         crearDesayunos();
@@ -44,29 +46,28 @@ public class DesayunosControlador implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //this.controladorPrincipal.destruirInternal();
         if (e.getSource() == lista2.get(0)) {
-            
+            JOptionPane.showMessageDialog(principal, "Producto_Id " + productoId);
+        }
+        
+        if(e.getSource()==lista2.get(1)){
+            JOptionPane.showMessageDialog(principal, "Producto_Id " + productoId);
         }
 
     }
-    
-    public void crearDesayunos(){
-        
+
+    public void crearDesayunos() {
+
         clasificacion = 1006;
-       
+
         for (Productos producto : dao.verProductos(clasificacion)) {
-           
             JButton boton = new JButton(producto.getProductonombre());
             String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\desayunos\\";
             boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
             boton.addActionListener(this);
             desayunos.add(boton);
             lista2.add(boton);
-            //principal.jPnlMenus.updateUI();
-            
-            
         }
     }
-    
+
 }

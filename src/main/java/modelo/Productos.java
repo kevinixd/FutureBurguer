@@ -59,5 +59,11 @@ public class Productos {
         this.imagen = imagen;
     }
 
+    @Override
+    public String toString() {
+        return "Productos{" + "producto_id=" + producto_id + ", productonombre=" + productonombre + ", productodescripcion=" + productodescripcion + ", clasificacion_id=" + clasificacion_id + ", imagen=" + imagen + '}';
+    }
+
+    
 
 }
