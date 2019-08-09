@@ -12,33 +12,31 @@ public class DaoDescripcionCombo implements DescripcionComboInterface {
     PreparedStatement ps;
     ResultSet rs;
     String sql = null;
-    
-    
+
+    View_Descripcioncombo vc = new View_Descripcioncombo();
+
     @Override
-    public ArrayList<View_Descripcioncombo> verCombo(int id) {
-        ArrayList<View_Descripcioncombo> lista = new ArrayList();
+    public View_Descripcioncombo verCombo(View_Descripcioncombo view_Descripcioncombo) {
         con.abrirConexion();
-        sql="select * from  descripcioncombo where detallescombo_id=?";
+        sql = "select * from descripcioncombo where detallescombo_id=?";
         try {
             ps = con.getCon().prepareStatement(sql);
-            ps.setInt(1, id);
+            ps.setInt(1, view_Descripcioncombo.getComboId());
             rs = ps.executeQuery();
-            while(rs.next()){
-                View_Descripcioncombo vc = new View_Descripcioncombo();
-                vc.setComboId(rs.getInt("detallescombo_id"));
-                vc.setComboId(rs.getInt("combo_id"));
-                vc.setNombreCombo(rs.getString("combo"));
-                vc.setProductoTamanioId(rs.getInt("producto_tamanio_id"));
-                vc.setProductoCombo(rs.getString("producto"));
-                vc.setTamanioCombo(rs.getString("tamanio"));
-                vc.setPrecio(rs.getFloat("precio"));
-                lista.add(vc);
-            }
+            rs.next();
+            vc.setComboId(rs.getInt("detallescombo_id"));
+            vc.setComboId(rs.getInt("combo_id"));
+            vc.setNombreCombo(rs.getString("combo"));
+            vc.setProductoTamanioId(rs.getInt("producto_tamanio_id"));
+            vc.setProductoCombo(rs.getString("producto"));
+            vc.setTamanioCombo(rs.getString("tamanio"));
+            vc.setPrecio(rs.getFloat("precio"));
+            rs.close();
         } catch (Exception e) {
-        }finally{
+        } finally {
             con.cerrarConexion();
         }
-       return lista;
+        return vc;
     }
-    
+
 }

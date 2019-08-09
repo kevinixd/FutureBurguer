@@ -4,5 +4,5 @@ import java.util.ArrayList;
 import modelo.View_Descripcioncombo;
 
 public interface DescripcionComboInterface {
-    public ArrayList<View_Descripcioncombo> verCombo(int id);
+    public View_Descripcioncombo verCombo(View_Descripcioncombo view_Descripcioncombo );
 }

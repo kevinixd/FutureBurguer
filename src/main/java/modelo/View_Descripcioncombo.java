@@ -100,4 +100,10 @@ public class View_Descripcioncombo {
         this.precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return "View_Descripcioncombo{" + "detallescombosId=" + detallescombosId + ", comboId=" + comboId + ", nombreCombo=" + nombreCombo + ", imagenDetalleCombo=" + imagenDetalleCombo + ", productoTamanioId=" + productoTamanioId + ", productoComboId=" + productoComboId + ", productoCombo=" + productoCombo + ", tamanioCombo=" + tamanioCombo + ", precio=" + precio + '}';
+    }
+
+    
 }

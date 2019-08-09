@@ -52,7 +52,7 @@ public class BebidasFCControlador implements ActionListener {
             bebidasFrias.setLocation(300, 100);
             bebidasFrias.setSize(910, 550);
             bebidasFrias.setVisible(true);
-            //bfc = new BebidasFriasControlador(bebidasFrias);
+            bfc = new BebidasFriasControlador(bebidasFrias);
 
         }
         if (e.getSource() == bebidas.jBtnBC) {

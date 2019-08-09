@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import modelo.Productos;
 import vista.formulariosbebidas.jIntBebidasFrias;
 import vista.formulariosbebidas.jIntDrink1;
+
 //import vista.jIntBebidasFrias;
 //import vista.jIntDrink1;
 
@@ -27,6 +28,7 @@ public class BebidasFriasControlador implements ActionListener{
     
     jIntBebidasFrias bebidasFrias = new jIntBebidasFrias();
     jIntDrink1 bebida1 = new jIntDrink1();
+
     DaoProductos dao = new DaoProductos();
     
     private short clasificacion;
@@ -48,6 +50,7 @@ public class BebidasFriasControlador implements ActionListener{
             bebida1.setSize(910, 550);
             bebida1.setVisible(true);
         }
+        
     }
     
     public void crearBebidasFrias() {

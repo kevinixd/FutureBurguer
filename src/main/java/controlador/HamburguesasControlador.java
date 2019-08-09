@@ -28,9 +28,10 @@ import vista.formularioshamburguesas.jIntOrdenarH1;
  * @author javam2019
  */
 public class HamburguesasControlador implements ActionListener {
+
     //Array para productos
     ArrayList<Productos> listaProducto = new ArrayList<>();
-                        
+
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntCIH1 comboInd1 = new jIntCIH1();
     jIntCIH2 comboInd2 = new jIntCIH2();
@@ -41,13 +42,13 @@ public class HamburguesasControlador implements ActionListener {
     private short clasificacion;
     // Ruta para imagenes
     String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\hamburguesas\\";
-    
+
     public HamburguesasControlador(jIntHamburguesas hamburguesas) {
         System.out.println("LLego al controlador Hamburguesas");
-        
+
         this.hamburguesas = hamburguesas;
         comboInd1.jBtnCH1.addActionListener(this);
-        crearHamburguesas(); 
+        crearHamburguesas();
     }
 
     @Override
@@ -63,7 +64,7 @@ public class HamburguesasControlador implements ActionListener {
             comboInd1.setVisible(true);
             comboInd1.jBtnCH1.setIcon(new ImageIcon(ruta + "combo.png"));
             comboInd1.jBtnIH1.setIcon(new ImageIcon(ruta + "2001.png"));
-            
+
             productoSeleccionado = listaProducto.get(0);
             System.out.println("Producto: " + productoSeleccionado.toString());
         }
@@ -86,7 +87,7 @@ public class HamburguesasControlador implements ActionListener {
             comboInd3.setVisible(true);
             comboInd3.jBtnCH3.setIcon(new ImageIcon(ruta + "combo.png"));
             comboInd3.jBtnIH3.setIcon(new ImageIcon(ruta + "2003.png"));
-             productoSeleccionado = listaProducto.get(2);
+            productoSeleccionado = listaProducto.get(2);
             System.out.println("Producto: " + productoSeleccionado.toString());
         }
         if (e.getSource() == lista.get(3)) {
@@ -97,11 +98,10 @@ public class HamburguesasControlador implements ActionListener {
             comboInd4.setVisible(true);
             comboInd4.jBtnCH4.setIcon(new ImageIcon(ruta + "combo.png"));
             comboInd4.jBtnIH4.setIcon(new ImageIcon(ruta + "2004.png"));
-             productoSeleccionado = listaProducto.get(3);
+            productoSeleccionado = listaProducto.get(3);
             System.out.println("Producto: " + productoSeleccionado.toString());
         }
 
-        
     }
 
     public void crearHamburguesas() {
@@ -110,14 +110,14 @@ public class HamburguesasControlador implements ActionListener {
         for (Productos producto : dao.verProductos(clasificacion)) {
             //agregar cada producto al array list del producto
             listaProducto.add(producto);
-            
+
             JButton boton = new JButton(producto.getProductonombre());
             boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
             boton.addActionListener(this);
             hamburguesas.add(boton);
             lista.add(boton);
             //principal.jPnlMenus.updateUI();
-            
+
         }
     }
 

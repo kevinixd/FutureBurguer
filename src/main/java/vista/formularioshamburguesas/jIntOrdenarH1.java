@@ -32,104 +32,102 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
         jLblNombreH1 = new javax.swing.JLabel();
         jLblPrecioH1 = new javax.swing.JLabel();
         jLblDescripcionH1 = new javax.swing.JLabel();
-        jCmbPapaH1 = new javax.swing.JComboBox<>();
-        jCmbBebidaH1 = new javax.swing.JComboBox<>();
         jCmbTamanioH1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jBtnRegresarH1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLblPapaH1 = new javax.swing.JLabel();
+        jLblBebidaH1 = new javax.swing.JLabel();
+        jLblNombreComboH1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(910, 550));
 
-        jLblImgH1.setText("Imagen");
-
+        jLblNombreH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblNombreH1.setText("Nombre");
 
+        jLblPrecioH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblPrecioH1.setText("Precio");
 
+        jLblDescripcionH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblDescripcionH1.setText("Descripcion");
 
+        jButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jButton1.setText("Añadir a la lista");
 
+        jBtnRegresarH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jBtnRegresarH1.setText("Regresar");
 
+        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel5.setText("Tamaño:");
 
-        jLabel6.setText("Opcion de papa:");
+        jLblPapaH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLblPapaH1.setText("Papas");
 
-        jLabel7.setText("Bebida:");
+        jLblBebidaH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLblBebidaH1.setText("Bebida");
+
+        jLblNombreComboH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLblNombreComboH1.setText("Nombre Combo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(221, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jBtnRegresarH1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(309, 309, 309))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCmbPapaH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jCmbBebidaH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(198, 198, 198))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLblDescripcionH1)
+                            .addComponent(jLabel5)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(59, 59, 59)
+                                .addComponent(jLblPapaH1)
+                                .addGap(72, 72, 72)
+                                .addComponent(jLblBebidaH1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLblImgH1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(63, 63, 63)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLblNombreH1)
-                                    .addComponent(jLblPrecioH1)))))
+                                    .addComponent(jLblPrecioH1)))
+                            .addComponent(jLblNombreComboH1)
+                            .addComponent(jLblDescripcionH1)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
-                        .addComponent(jLabel5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(236, 236, 236)
+                        .addComponent(jBtnRegresarH1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
+                        .addGap(29, 29, 29)
+                        .addComponent(jLblNombreComboH1)
+                        .addGap(18, 18, 18)
                         .addComponent(jLblImgH1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addComponent(jLblNombreH1)
                         .addGap(18, 18, 18)
                         .addComponent(jLblPrecioH1)))
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLblDescripcionH1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(jLabel5)
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCmbPapaH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCmbBebidaH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(78, 78, 78)
+                    .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLblPapaH1)
+                    .addComponent(jLblBebidaH1))
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnRegresarH1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33))
+                .addGap(61, 61, 61))
         );
 
         pack();
@@ -137,17 +135,16 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnRegresarH1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jCmbBebidaH1;
-    private javax.swing.JComboBox<String> jCmbPapaH1;
-    private javax.swing.JComboBox<String> jCmbTamanioH1;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLblDescripcionH1;
-    private javax.swing.JLabel jLblImgH1;
-    private javax.swing.JLabel jLblNombreH1;
-    private javax.swing.JLabel jLblPrecioH1;
+    public javax.swing.JButton jBtnRegresarH1;
+    public javax.swing.JButton jButton1;
+    public javax.swing.JComboBox<String> jCmbTamanioH1;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLblBebidaH1;
+    public javax.swing.JLabel jLblDescripcionH1;
+    public javax.swing.JLabel jLblImgH1;
+    public javax.swing.JLabel jLblNombreComboH1;
+    public javax.swing.JLabel jLblNombreH1;
+    public javax.swing.JLabel jLblPapaH1;
+    public javax.swing.JLabel jLblPrecioH1;
     // End of variables declaration//GEN-END:variables
 }

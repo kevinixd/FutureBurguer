@@ -1,9 +1,10 @@
 package interfaces;
 
+import java.util.ArrayList;
 import modelo.View_Descripcioncombo;
 
 public interface View_DetalleComboInterface {
 
-    public View_Descripcioncombo verProductos(int productoId);
+    public ArrayList<View_Descripcioncombo> verProductos(int productoId);
     
 }
