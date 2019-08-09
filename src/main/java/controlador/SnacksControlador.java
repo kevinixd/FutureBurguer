@@ -42,7 +42,10 @@ public class SnacksControlador implements ActionListener{
         for (Productos producto : dao.verProductos(clasificacion)) {
             JButton boton = new JButton(producto.getProductonombre());
             String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\snacks\\";
-            boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
+            ImageIcon snackImg=new ImageIcon(ruta + producto.getImagen());
+            
+            ImageIcon snackImgRed= new ImageIcon(snackImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            boton.setIcon(snackImgRed);
             boton.addActionListener(this);
             snacks.add(boton);
             listaSnacks.add(boton);

@@ -16,6 +16,7 @@ public class JintDsy extends javax.swing.JInternalFrame {
      */
     public JintDsy() {
         initComponents();
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
 
     /**

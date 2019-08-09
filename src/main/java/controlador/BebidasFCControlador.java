@@ -74,7 +74,9 @@ public class BebidasFCControlador implements ActionListener {
         for (Productos producto : dao.verProductos(clasificacion)) {
             JButton boton = new JButton(producto.getProductonombre());
             String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\";
-            boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
+            ImageIcon bebidasImg=new ImageIcon(ruta + producto.getImagen());
+            ImageIcon bebidasImgRed= new ImageIcon(bebidasImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            boton.setIcon(bebidasImgRed);
             boton.addActionListener(this);
             bebidasCalientes.add(boton);
             listaC.add(boton);

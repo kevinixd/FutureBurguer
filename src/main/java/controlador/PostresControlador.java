@@ -44,7 +44,11 @@ public class PostresControlador implements ActionListener{
         for (Productos producto : dao.verProductos(clasificacion)) {
             JButton boton = new JButton(producto.getProductonombre());
             String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\postres\\";
-            boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
+            ImageIcon postreImg= new ImageIcon(ruta + producto.getImagen());
+            
+            ImageIcon postreImgRed= new ImageIcon(postreImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            
+            boton.setIcon(postreImgRed);
             boton.addActionListener(this);
             postres.add(boton);
             listaPostres.add(boton);

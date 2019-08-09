@@ -24,10 +24,8 @@
               <Group type="103" groupAlignment="2" attributes="0">
                   <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="2" groupAlignment="2" attributes="0">
-                      <Component id="jBtnIndividual" alignment="2" min="-2" pref="133" max="-2" attributes="0"/>
-                      <Component id="jBtnCombo" alignment="2" min="-2" pref="133" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jBtnIndividual" alignment="2" min="-2" pref="133" max="-2" attributes="0"/>
+                  <Component id="jBtnCombo" alignment="2" min="-2" pref="133" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
           </Group>

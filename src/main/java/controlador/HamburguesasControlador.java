@@ -112,7 +112,11 @@ public class HamburguesasControlador implements ActionListener {
             listaProducto.add(producto);
 
             JButton boton = new JButton(producto.getProductonombre());
-            boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
+            
+            ImageIcon icono= new ImageIcon(ruta + producto.getImagen());
+            
+            ImageIcon iconoRed= new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            boton.setIcon(iconoRed);
             boton.addActionListener(this);
             hamburguesas.add(boton);
             lista.add(boton);
