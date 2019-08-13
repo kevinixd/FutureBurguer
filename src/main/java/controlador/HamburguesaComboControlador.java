@@ -28,7 +28,7 @@ public class HamburguesaComboControlador implements ActionListener {
     jIntCIH1 comboInd1 = new jIntCIH1();
     jIntOrdenarH1 orden1 = new jIntOrdenarH1();
     View_Descripcioncombo datos = new View_Descripcioncombo();
-    
+
     ArrayList<View_Descripcioncombo> lista = new ArrayList();
 
     DaoView_DetalleCombo dao = new DaoView_DetalleCombo();
@@ -53,12 +53,17 @@ public class HamburguesaComboControlador implements ActionListener {
         }
     }
 
+    /**
+     * Se obtiene los datos del combo seleccionado y la lista obtiene las posiciones de la consulta
+     */
     public void cargarCombo1() {
         lista = dao.verProductos(2001);
+        
         orden1.jLblNombreComboH1.setText(lista.get(0).getNombreCombo());
         orden1.jLblImgH1.setIcon(new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo()));
         orden1.jLblNombreH1.setText(lista.get(0).getProductoCombo());
         orden1.jLblPapaH1.setText(lista.get(1).getProductoCombo());
         orden1.jLblBebidaH1.setText(lista.get(2).getProductoCombo());
+        orden1.jLblPrecioH1.setText("Q47.00");
     }
 }

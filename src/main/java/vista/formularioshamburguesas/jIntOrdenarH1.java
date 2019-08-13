@@ -51,6 +51,8 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
         jLblDescripcionH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblDescripcionH1.setText("Descripcion");
 
+        jCmbTamanioH1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mediano", "Agrandado" }));
+
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jButton1.setText("Añadir a la lista");
 

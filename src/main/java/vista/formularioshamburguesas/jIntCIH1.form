@@ -92,6 +92,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Combo"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblPrecioC1">
       <Properties>
@@ -100,6 +103,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Q50.00"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblIH1">
       <Properties>
@@ -108,6 +114,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Individual"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblPrecioI1">
       <Properties>
@@ -116,6 +125,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Q20.00"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
