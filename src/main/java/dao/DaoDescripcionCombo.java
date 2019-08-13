@@ -6,6 +6,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import modelo.View_Descripcioncombo;
 
+/**
+ * Clase para ver la descripcion del combo
+ * @author FutureBurguer
+ */
 public class DaoDescripcionCombo implements DescripcionComboInterface {
 
     Conexion con = new Conexion();
@@ -14,7 +18,13 @@ public class DaoDescripcionCombo implements DescripcionComboInterface {
     String sql = null;
 
     View_Descripcioncombo vc = new View_Descripcioncombo();
-
+    
+/**
+ * 
+ * @param view_Descripcioncombo datos del objeto definidos por el usuario 
+ * @return Objeto de tipo View_Descripcioncombo para la visualización de los datos de descripcioncombo  
+ */
+    
     @Override
     public View_Descripcioncombo verCombo(View_Descripcioncombo view_Descripcioncombo) {
         con.abrirConexion();

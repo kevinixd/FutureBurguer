@@ -5,6 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import modelo.Empleados;
 
+/**
+ * Clase para obtener datos del empleado para el login
+ * @author FutureBurguer
+ */
 public class DaoEmpleados implements EmpleadosInterface {
     
     Conexion cn = new Conexion();
@@ -13,6 +17,11 @@ public class DaoEmpleados implements EmpleadosInterface {
     
     private String sql = null;
     
+    /**
+     * 
+     * @param empleado datos del objeto definidos por el usuario
+     * @return Objeto de tipo empleado para obtener los datos de un empleado en especifico 
+     */
     @Override
     public Empleados confirmarUsuario(Empleados empleado) {
         Empleados emp = new Empleados();

@@ -20,7 +20,7 @@ public class DaoCliente implements ClienteInterface {
      * Metodo para agregar cliente a la base de datos
      *
      * @param cliente objeto de cliente, datos proporcionados por usario
-     * @return mesaje "datos ingresados" cuando la insersion tiene exito, al existir error retorna un texto con el error
+     * @return mensaje "datos ingresados" cuando la insersion tiene exito, al existir error retorna un texto con el error
      * retorna un texto con el error dado
      */
     @Override
@@ -54,15 +54,20 @@ public class DaoCliente implements ClienteInterface {
     public String eliminarCliente(Cliente cliente) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    /**
+     * 
+     * @param cliente datos del objeto definidos por el usuario
+     * @return un mensaje indicando que se modificaron los datos del cliente  
+     */
     @Override
     public String modificarCliente(Cliente cliente) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     /**
-     * 
-     * @param tel 
+     * Busca el cliente en la base de datos si es que existe
+     * @param tel datos del objeto definidos por el usuario
      * @return objeto de tipo cliente para visualizar los datos buscados de un cliente en especifico  
      */
 

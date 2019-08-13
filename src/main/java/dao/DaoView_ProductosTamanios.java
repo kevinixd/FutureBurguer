@@ -14,8 +14,8 @@ import java.util.logging.Logger;
 import modelo.View_productosTamanios;
 
 /**
- *
- * @author javam2019
+ *Clase para la visualizacion del tamaño del producto
+ * @author FutureBurguer
  */
 public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterface {
 
@@ -27,6 +27,11 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
 
     private String sql = null;
 
+    /**
+     * 
+     * @param productoId dato proporcionado por el usuario 
+     * @return Objeto de tipo View_productosTamanios 
+     */
     @Override
     public View_productosTamanios verProductoDetalle(int productoId) {
         cone.abrirConexion();
