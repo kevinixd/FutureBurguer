@@ -7,4 +7,6 @@ public interface View_DetalleComboInterface {
 
     public ArrayList<View_Descripcioncombo> verProductos(int productoId);
     
+    public View_Descripcioncombo verImagenCombo(int productoId);
+    
 }
