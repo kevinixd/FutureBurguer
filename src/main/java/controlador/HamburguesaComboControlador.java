@@ -32,6 +32,8 @@ public class HamburguesaComboControlador implements ActionListener {
     ArrayList<View_Descripcioncombo> lista = new ArrayList();
 
     DaoView_DetalleCombo dao = new DaoView_DetalleCombo();
+    
+    View_Descripcioncombo valor = new View_Descripcioncombo();
     private short clasificacion;
 
     String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
@@ -50,6 +52,7 @@ public class HamburguesaComboControlador implements ActionListener {
             orden1.setSize(910, 550);
             orden1.setVisible(true);
             cargarCombo1();
+            
         }
     }
 
@@ -58,7 +61,6 @@ public class HamburguesaComboControlador implements ActionListener {
      */
     public void cargarCombo1() {
         lista = dao.verProductos(2001);
-        
         orden1.jLblNombreComboH1.setText(lista.get(0).getNombreCombo());
         orden1.jLblImgH1.setIcon(new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo()));
         orden1.jLblNombreH1.setText(lista.get(0).getProductoCombo());

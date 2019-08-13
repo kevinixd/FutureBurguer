@@ -22,9 +22,7 @@ import modelo.ProductosTamanios;
 import modelo.View_Descripcioncombo;
 import modelo.View_productosTamanios;
 import vista.formularioshamburguesas.jIntCIH1;
-import vista.formularioshamburguesas.jIntCIH2;
-import vista.formularioshamburguesas.jIntCIH3;
-import vista.formularioshamburguesas.jIntCIH4;
+
 import vista.formularioshamburguesas.jIntHamburguesas;
 import vista.formularioshamburguesas.jIntOrdenarH1;
 
@@ -39,9 +37,7 @@ public class HamburguesasControlador implements ActionListener {
 
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntCIH1 comboInd1 = new jIntCIH1();
-    jIntCIH2 comboInd2 = new jIntCIH2();
-    jIntCIH3 comboInd3 = new jIntCIH3();
-    jIntCIH4 comboInd4 = new jIntCIH4();
+
     
     DaoProductos dao = new DaoProductos();
     DaoView_DetalleCombo dao2 = new DaoView_DetalleCombo();
@@ -83,6 +79,7 @@ public class HamburguesasControlador implements ActionListener {
         }
         
         if (e.getSource() == lista.get(1)) {
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
             principal.EscritorioPrincipal.add(comboInd1);
             comboInd1.setLocation(300, 100);
             comboInd1.setSize(910, 550);
@@ -94,6 +91,7 @@ public class HamburguesasControlador implements ActionListener {
         }
         
         if (e.getSource() == lista.get(2)) {
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
             principal.EscritorioPrincipal.add(comboInd1);
             comboInd1.setLocation(300, 100);
             comboInd1.setSize(910, 550);
@@ -105,6 +103,7 @@ public class HamburguesasControlador implements ActionListener {
         }
         
         if (e.getSource() == lista.get(3)) {
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
             principal.EscritorioPrincipal.add(comboInd1);
             comboInd1.setLocation(300, 100);
             comboInd1.setSize(910, 550);
