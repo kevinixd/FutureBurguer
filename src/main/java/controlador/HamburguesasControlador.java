@@ -8,6 +8,8 @@ package controlador;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.productoSeleccionado;
 import dao.DaoProductos;
+import dao.DaoView_DetalleCombo;
+import dao.DaoView_ProductosTamanios;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,10 +18,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Productos;
+import modelo.ProductosTamanios;
+import modelo.View_Descripcioncombo;
+import modelo.View_productosTamanios;
 import vista.formularioshamburguesas.jIntCIH1;
-import vista.formularioshamburguesas.jIntCIH2;
-import vista.formularioshamburguesas.jIntCIH3;
-import vista.formularioshamburguesas.jIntCIH4;
+
 import vista.formularioshamburguesas.jIntHamburguesas;
 import vista.formularioshamburguesas.jIntOrdenarH1;
 
@@ -34,14 +37,22 @@ public class HamburguesasControlador implements ActionListener {
 
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntCIH1 comboInd1 = new jIntCIH1();
-    jIntCIH2 comboInd2 = new jIntCIH2();
-    jIntCIH3 comboInd3 = new jIntCIH3();
-    jIntCIH4 comboInd4 = new jIntCIH4();
+
+    
     DaoProductos dao = new DaoProductos();
+    DaoView_DetalleCombo dao2 = new DaoView_DetalleCombo();
+    DaoView_ProductosTamanios dao3 = new DaoView_ProductosTamanios();
+    DaoView_DetalleCombo dao4 = new DaoView_DetalleCombo();
+    
+    View_productosTamanios producTamanios = new View_productosTamanios();
+    View_Descripcioncombo descripcion = new View_Descripcioncombo();
+    
     private List<JButton> lista = new ArrayList();
     private short clasificacion;
+    private int productoId;
     // Ruta para imagenes
-    String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\hamburguesas\\";
+    private String rutaProducto = System.getProperty("user.dir") + "\\src\\main\\java\\img\\hamburguesas\\";
+    private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
 
     public HamburguesasControlador(jIntHamburguesas hamburguesas) {
         System.out.println("LLego al controlador Hamburguesas");
@@ -56,50 +67,51 @@ public class HamburguesasControlador implements ActionListener {
 
         hamburguesas = null;
         if (e.getSource() == lista.get(0)) {
-            comboInd1 = new jIntCIH1();
             HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
             principal.EscritorioPrincipal.add(comboInd1);
             comboInd1.setLocation(300, 100);
             comboInd1.setSize(910, 550);
             comboInd1.setVisible(true);
-            comboInd1.jBtnCH1.setIcon(new ImageIcon(ruta + "combo.png"));
-            comboInd1.jBtnIH1.setIcon(new ImageIcon(ruta + "2001.png"));
-
             productoSeleccionado = listaProducto.get(0);
-            System.out.println("Producto: " + productoSeleccionado.toString());
+            productoId = productoSeleccionado.getProducto_id();
+            asignarProducto();
+            asignarCombo();
         }
+        
         if (e.getSource() == lista.get(1)) {
-            comboInd2 = new jIntCIH2();
-            principal.EscritorioPrincipal.add(comboInd2);
-            comboInd2.setLocation(300, 100);
-            comboInd2.setSize(910, 550);
-            comboInd2.setVisible(true);
-            comboInd2.jBtnCH2.setIcon(new ImageIcon(ruta + "combo.png"));
-            comboInd2.jBtnIH2.setIcon(new ImageIcon(ruta + "2002.png"));
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
+            principal.EscritorioPrincipal.add(comboInd1);
+            comboInd1.setLocation(300, 100);
+            comboInd1.setSize(910, 550);
+            comboInd1.setVisible(true);
             productoSeleccionado = listaProducto.get(1);
-            System.out.println("Producto: " + productoSeleccionado.toString());
+            productoId = productoSeleccionado.getProducto_id();
+            asignarProducto();
+            asignarCombo();
         }
+        
         if (e.getSource() == lista.get(2)) {
-            comboInd3 = new jIntCIH3();
-            principal.EscritorioPrincipal.add(comboInd3);
-            comboInd3.setLocation(300, 100);
-            comboInd3.setSize(910, 550);
-            comboInd3.setVisible(true);
-            comboInd3.jBtnCH3.setIcon(new ImageIcon(ruta + "combo.png"));
-            comboInd3.jBtnIH3.setIcon(new ImageIcon(ruta + "2003.png"));
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
+            principal.EscritorioPrincipal.add(comboInd1);
+            comboInd1.setLocation(300, 100);
+            comboInd1.setSize(910, 550);
+            comboInd1.setVisible(true);
             productoSeleccionado = listaProducto.get(2);
-            System.out.println("Producto: " + productoSeleccionado.toString());
+            productoId = productoSeleccionado.getProducto_id();
+            asignarProducto();
+            asignarCombo();
         }
+        
         if (e.getSource() == lista.get(3)) {
-            comboInd4 = new jIntCIH4();
-            principal.EscritorioPrincipal.add(comboInd4);
-            comboInd4.setLocation(300, 100);
-            comboInd4.setSize(910, 550);
-            comboInd4.setVisible(true);
-            comboInd4.jBtnCH4.setIcon(new ImageIcon(ruta + "combo.png"));
-            comboInd4.jBtnIH4.setIcon(new ImageIcon(ruta + "2004.png"));
+            HamburguesaComboControlador hcontrolador = new HamburguesaComboControlador(comboInd1);
+            principal.EscritorioPrincipal.add(comboInd1);
+            comboInd1.setLocation(300, 100);
+            comboInd1.setSize(910, 550);
+            comboInd1.setVisible(true);
             productoSeleccionado = listaProducto.get(3);
-            System.out.println("Producto: " + productoSeleccionado.toString());
+            productoId = productoSeleccionado.getProducto_id();
+            asignarProducto();
+            asignarCombo();
         }
 
     }
@@ -112,8 +124,8 @@ public class HamburguesasControlador implements ActionListener {
             listaProducto.add(producto);
 
             JButton boton = new JButton(producto.getProductonombre());
-            
-            ImageIcon icono= new ImageIcon(ruta + producto.getImagen());
+       
+            ImageIcon icono= new ImageIcon(rutaProducto + producto.getImagen());
             
             ImageIcon iconoRed= new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(iconoRed);
@@ -124,18 +136,29 @@ public class HamburguesasControlador implements ActionListener {
 
         }
     }
-
-
-    /*
-    public void crearComboIndividual() {
-       
-       for (int i = 0; i < 2; i++) {
-            JButton individual = new JButton("Individual");
-            individual.setIcon(new ImageIcon(ruta + "individual.png"));
-            individual.addActionListener(this);
-            hamburguesas.add(individual);
-            principal.jPnlMenus.updateUI();
-       }
+    
+    //Metodo para asignar imagen de individual a los botones
+    public void asignarProducto() {
+        producTamanios = dao3.verProductoDetalle(productoId);
+        ImageIcon icono = new ImageIcon(rutaProducto + producTamanios.getProductoImgView());
+        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+        comboInd1.jBtnIH1.setIcon(iconoRed);
     }
-     */
+    
+    public void asignarCombo() {
+        
+        descripcion = dao4.verImagenCombo(productoId);
+        if (descripcion.getImagenDetalleCombo() != null) {
+            ImageIcon icono = new ImageIcon(rutaCombo + descripcion.getImagenDetalleCombo());
+            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            comboInd1.jBtnCH1.setIcon(iconoRed);
+            System.out.println("Exito");
+        } else {
+            comboInd1.jBtnCH1.setVisible(false);
+            comboInd1.jLblCH1.setVisible(false);
+            comboInd1.jLblPrecioC1.setVisible(false);
+            comboInd1.jLblIH1.setBounds(100, 100, 74, 21);
+            comboInd1.jLblPrecioI1.setBounds(100, 100, 78, 25);
+        }
+    }
 }

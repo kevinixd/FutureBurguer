@@ -120,9 +120,9 @@ public class jIntCIH1 extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBtnCH1;
     public javax.swing.JButton jBtnIH1;
-    private javax.swing.JLabel jLblCH1;
-    private javax.swing.JLabel jLblIH1;
-    private javax.swing.JLabel jLblPrecioC1;
-    private javax.swing.JLabel jLblPrecioI1;
+    public javax.swing.JLabel jLblCH1;
+    public javax.swing.JLabel jLblIH1;
+    public javax.swing.JLabel jLblPrecioC1;
+    public javax.swing.JLabel jLblPrecioI1;
     // End of variables declaration//GEN-END:variables
 }

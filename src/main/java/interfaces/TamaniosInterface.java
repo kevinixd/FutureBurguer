@@ -5,12 +5,10 @@
  */
 package interfaces;
 
-import java.util.ArrayList;
-import modelo.Productos;
-
-public interface ProductosInterface {
+/**
+ *
+ * @author javam2019
+ */
+public interface TamaniosInterface {
     
-    public ArrayList<Productos> verProductos(short id);
-
-    public ArrayList<Productos> verBebidas();
 }
