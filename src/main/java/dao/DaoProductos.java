@@ -20,12 +20,13 @@ public class DaoProductos implements ProductosInterface {
     ResultSet resultado;
     PreparedStatement ejecutar;
     Productos producto = new Productos();
+    ArrayList<Productos> lista;
 
     private String sql = null;
 
     @Override
     public ArrayList<Productos> verProductos(short id) {
-        ArrayList<Productos> lista = new ArrayList();
+        lista = new ArrayList();
         conexion.abrirConexion();
         sql = "select * from productos where clasificacion_id=?";
         try {
@@ -33,7 +34,7 @@ public class DaoProductos implements ProductosInterface {
             ejecutar.setShort(1, id);
             resultado = ejecutar.executeQuery();
             while (resultado.next()) {
-                producto= new Productos();
+                producto = new Productos();
                 producto.setProducto_id(resultado.getInt("producto_id"));
                 producto.setProductonombre(resultado.getString("nombre"));
                 producto.setProductodescripcion(resultado.getString("descripcion"));
@@ -44,7 +45,30 @@ public class DaoProductos implements ProductosInterface {
             resultado.close();
 
         } catch (SQLException ex) {
-            Logger.getLogger(DaoProductos.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error en daoVerProductos " + ex);
+        } finally {
+            conexion.cerrarConexion();
+        }
+        return lista;
+    }
+
+    @Override
+    public ArrayList<Productos> verBebidas() {
+        lista = new ArrayList();
+        conexion.abrirConexion();
+        sql = "select * from productos where clasificacion_id=1002";
+        try {
+            ejecutar = conexion.getCon().prepareStatement(sql);
+            resultado = ejecutar.executeQuery();
+            while (resultado.next()) {
+                producto = new Productos();
+                producto.setProducto_id(resultado.getInt("producto_id"));
+                producto.setProductonombre(resultado.getString("nombre"));
+                producto.setImagen(resultado.getString("imagen"));
+                lista.add(producto);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error en dao VerBebidas " + ex);
         } finally{
             conexion.cerrarConexion();
         }

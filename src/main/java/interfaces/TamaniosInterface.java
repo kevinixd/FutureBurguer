@@ -9,6 +9,6 @@ package interfaces;
  *
  * @author javam2019
  */
-public interface DaoTamanios {
+public interface TamaniosInterface {
     
 }

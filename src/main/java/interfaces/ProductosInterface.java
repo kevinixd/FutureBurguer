@@ -12,4 +12,5 @@ public interface ProductosInterface {
     
     public ArrayList<Productos> verProductos(short id);
 
+    public ArrayList<Productos> verBebidas();
 }
