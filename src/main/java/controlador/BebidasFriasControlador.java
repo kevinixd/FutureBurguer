@@ -32,6 +32,7 @@ public class BebidasFriasControlador implements ActionListener{
     DaoProductos dao = new DaoProductos();
     
     private short clasificacion;
+    private String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\";
     
     private List<JButton> listaF = new ArrayList();
 
@@ -58,8 +59,9 @@ public class BebidasFriasControlador implements ActionListener{
         clasificacion = 1002;
         for (Productos producto : dao.verProductos(clasificacion)) {
             JButton boton = new JButton(producto.getProductonombre());
-            String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\";
-            boton.setIcon(new ImageIcon(ruta + producto.getImagen()));
+            ImageIcon icono= new ImageIcon(ruta + producto.getImagen());
+            ImageIcon iconoRed= new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            boton.setIcon(iconoRed);
             boton.addActionListener(this);
             bebidasFrias.add(boton);
             listaF.add(boton);

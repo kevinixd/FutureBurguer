@@ -37,8 +37,9 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
         jBtnRegresarH1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLblPapaH1 = new javax.swing.JLabel();
-        jLblBebidaH1 = new javax.swing.JLabel();
         jLblNombreComboH1 = new javax.swing.JLabel();
+        jCmbBebida = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(910, 550));
 
@@ -51,6 +52,7 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
         jLblDescripcionH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblDescripcionH1.setText("Descripcion");
 
+        jCmbTamanioH1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jCmbTamanioH1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mediano", "Agrandado" }));
 
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -65,11 +67,14 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
         jLblPapaH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblPapaH1.setText("Papas");
 
-        jLblBebidaH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLblBebidaH1.setText("Bebida");
-
         jLblNombreComboH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblNombreComboH1.setText("Nombre Combo");
+
+        jCmbBebida.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jCmbBebida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mediano", "Agrandado" }));
+
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLabel6.setText("Bebida:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,13 +85,6 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(59, 59, 59)
-                                .addComponent(jLblPapaH1)
-                                .addGap(72, 72, 72)
-                                .addComponent(jLblBebidaH1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLblImgH1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(63, 63, 63)
@@ -94,13 +92,24 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
                                     .addComponent(jLblNombreH1)
                                     .addComponent(jLblPrecioH1)))
                             .addComponent(jLblNombreComboH1)
-                            .addComponent(jLblDescripcionH1)))
+                            .addComponent(jLblDescripcionH1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(jLblPapaH1))
+                                    .addComponent(jLabel5))
+                                .addGap(79, 79, 79)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(236, 236, 236)
                         .addComponent(jBtnRegresarH1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,13 +127,15 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
                         .addComponent(jLblPrecioH1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLblDescripcionH1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLblPapaH1)
-                    .addComponent(jLblBebidaH1))
+                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnRegresarH1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -139,9 +150,10 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBtnRegresarH1;
     public javax.swing.JButton jButton1;
+    public javax.swing.JComboBox<String> jCmbBebida;
     public javax.swing.JComboBox<String> jCmbTamanioH1;
     public javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLblBebidaH1;
+    public javax.swing.JLabel jLabel6;
     public javax.swing.JLabel jLblDescripcionH1;
     public javax.swing.JLabel jLblImgH1;
     public javax.swing.JLabel jLblNombreComboH1;

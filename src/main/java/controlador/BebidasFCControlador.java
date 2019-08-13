@@ -80,7 +80,6 @@ public class BebidasFCControlador implements ActionListener {
             boton.addActionListener(this);
             bebidasCalientes.add(boton);
             listaC.add(boton);
-            //principal.jPnlMenus.updateUI();
         }
     }
 }

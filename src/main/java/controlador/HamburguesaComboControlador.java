@@ -6,14 +6,13 @@
 package controlador;
 
 import static controlador.PrincipalControlador.principal;
-import dao.DaoDescripcionCombo;
 import dao.DaoProductos;
 import dao.DaoView_DetalleCombo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import modelo.Productos;
 import modelo.View_Descripcioncombo;
 import vista.formularioshamburguesas.jIntCIH1;
@@ -25,15 +24,23 @@ import vista.formularioshamburguesas.jIntOrdenarH1;
  */
 public class HamburguesaComboControlador implements ActionListener {
 
+    //Formularios a utilizar
     jIntCIH1 comboInd1 = new jIntCIH1();
     jIntOrdenarH1 orden1 = new jIntOrdenarH1();
-    View_Descripcioncombo datos = new View_Descripcioncombo();
 
+    //Modelos a utilizar
+    View_Descripcioncombo datos = new View_Descripcioncombo();
+    View_Descripcioncombo valor = new View_Descripcioncombo();
+    
     ArrayList<View_Descripcioncombo> lista = new ArrayList();
 
+    //Dao
     DaoView_DetalleCombo dao = new DaoView_DetalleCombo();
+    DaoProductos dao2= new DaoProductos();
+
+    //Combos
+    DefaultComboBoxModel bebidas= new DefaultComboBoxModel();
     
-    View_Descripcioncombo valor = new View_Descripcioncombo();
     private short clasificacion;
 
     String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
@@ -52,20 +59,30 @@ public class HamburguesaComboControlador implements ActionListener {
             orden1.setSize(910, 550);
             orden1.setVisible(true);
             cargarCombo1();
-            
+
         }
     }
 
     /**
-     * Se obtiene los datos del combo seleccionado y la lista obtiene las posiciones de la consulta
+     * Se obtiene los datos del combo seleccionado y la lista obtiene las
+     * posiciones de la consulta
      */
     public void cargarCombo1() {
         lista = dao.verProductos(2001);
         orden1.jLblNombreComboH1.setText(lista.get(0).getNombreCombo());
-        orden1.jLblImgH1.setIcon(new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo()));
+        ImageIcon icono = new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo());
+        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+        orden1.jLblImgH1.setIcon(iconoRed);
+        cargarBebidas();
         orden1.jLblNombreH1.setText(lista.get(0).getProductoCombo());
         orden1.jLblPapaH1.setText(lista.get(1).getProductoCombo());
-        orden1.jLblBebidaH1.setText(lista.get(2).getProductoCombo());
         orden1.jLblPrecioH1.setText("Q47.00");
+    }
+
+    public void cargarBebidas() {
+        for (Productos producto : dao2.verBebidas()) {
+            bebidas.addElement(producto.getProductonombre());
+        }
+        orden1.jCmbBebida.setModel(bebidas);
     }
 }

@@ -96,7 +96,7 @@ public class PrincipalControlador implements ActionListener {
             bebidasfc.setSize(910, 550);
             bebidasfc.setVisible(true);
             bebidasfc.jBtnBF.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\bebidas.png"));
-            bebidasfc.jBtnBC.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\2015.png"));
+            bebidasfc.jBtnBC.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\bebidaCaliente.png"));
             bc = new BebidasFCControlador(bebidasfc);
         }
         
@@ -121,20 +121,6 @@ public class PrincipalControlador implements ActionListener {
             snacks.setVisible(true);
             sc = new SnacksControlador(snacks);
         }
-
-        /*if (e.getSource() == hamburguesa.jBtnHamburguesa1) {
-            crearComboIndividual();
-            comboIndividual.jBtnCombo.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-            comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h1.png"));
-            //establecer el codigo de la hamburguesa
-            detPedido.setProducto_tamaño_id(1);
-        }*/
-
- /*if (e.getSource() == hamburguesa.jBtnHamburguesa2) {
-            crearComboIndividual();
-            comboIndividual.jBtnCombo.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\combo.png"));
-            comboIndividual.jBtnIndividual.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\Hamburguesas\\h2.png"));
-        }*/
     }
 
     public void destruirInternal() {
