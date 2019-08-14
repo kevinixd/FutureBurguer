@@ -24,7 +24,7 @@ import modelo.View_productosTamanios;
 import vista.formularioshamburguesas.jIntCIH1;
 
 import vista.formularioshamburguesas.jIntHamburguesas;
-import vista.formularioshamburguesas.jIntOrdenarH1;
+import vista.formularioshamburguesas.JintOrdenarH1;
 
 /**
  *

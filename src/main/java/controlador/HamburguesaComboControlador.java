@@ -7,7 +7,6 @@ package controlador;
 
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.productoSeleccionado;
-import dao.DaoDescripcionCombo;
 import dao.DaoProductos;
 import dao.DaoView_DetalleCombo;
 import java.awt.event.ActionEvent;
@@ -17,8 +16,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import modelo.Productos;
 import modelo.View_Descripcioncombo;
+import vista.formularioshamburguesas.JintOrdenarH1;
 import vista.formularioshamburguesas.jIntCIH1;
-import vista.formularioshamburguesas.jIntOrdenarH1;
 
 /**
  *
@@ -28,7 +27,7 @@ public class HamburguesaComboControlador implements ActionListener {
 
     //Formularios a utilizar
     jIntCIH1 comboInd1 = new jIntCIH1();
-    jIntOrdenarH1 orden1 = new jIntOrdenarH1();
+    JintOrdenarH1 orden1= new JintOrdenarH1();
 
     //Modelos a utilizar
     View_Descripcioncombo datos = new View_Descripcioncombo();
@@ -56,7 +55,7 @@ public class HamburguesaComboControlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == comboInd1.jBtnCH1) {
-            orden1 = new jIntOrdenarH1();
+            orden1 = new JintOrdenarH1();
             principal.EscritorioPrincipal.add(orden1);
             orden1.setLocation(300, 100);
             orden1.setSize(910, 550);
@@ -79,14 +78,14 @@ public class HamburguesaComboControlador implements ActionListener {
      */
     public void cargarCombo1() {
         lista = dao.verProductos(2001);
-        orden1.jLblNombreComboH1.setText(lista.get(0).getNombreCombo());
+        orden1.jLblNombreCombo.setText(lista.get(0).getNombreCombo());
         ImageIcon icono = new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo());
         ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
-        orden1.jLblImgH1.setIcon(iconoRed);
+        orden1.jLblImgCombo.setIcon(iconoRed);
         cargarBebidas();
-        orden1.jLblNombreH1.setText(lista.get(0).getProductoCombo());
-        orden1.jLblPapaH1.setText(lista.get(1).getProductoCombo());
-        orden1.jLblPrecioH1.setText("Q47.00");
+        orden1.jLblNombreCombo.setText(lista.get(0).getProductoCombo());
+        orden1.jLblSnackCombo.setText(lista.get(1).getProductoCombo());
+        orden1.jLblPrecioCombo.setText("Q47.00");
         principal.EscritorioPrincipal.add(orden1);
         orden1.setLocation(300, 100);
         orden1.setSize(910, 550);
@@ -95,12 +94,12 @@ public class HamburguesaComboControlador implements ActionListener {
 
     public void cargarCombo2() {
         lista = dao.verProductos(2002);
-        orden1.jLblNombreComboH1.setText(lista.get(0).getNombreCombo());
-        orden1.jLblImgH1.setIcon(new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo()));
-        orden1.jLblNombreH1.setText(lista.get(0).getProductoCombo());
-        orden1.jLblPapaH1.setText(lista.get(1).getProductoCombo());
+        orden1.jLblNombreCombo.setText(lista.get(0).getNombreCombo());
+        orden1.jLblImgCombo.setIcon(new ImageIcon(ruta + lista.get(0).getImagenDetalleCombo()));
+        orden1.jLblNombreCombo.setText(lista.get(0).getProductoCombo());
+        orden1.jLblSnackCombo.setText(lista.get(1).getProductoCombo());
         cargarBebidas();
-        orden1.jLblPrecioH1.setText("Q50.00");
+        orden1.jLblPrecioCombo.setText("Q50.00");
         principal.EscritorioPrincipal.add(orden1);
         orden1.setLocation(300, 100);
         orden1.setSize(910, 550);
