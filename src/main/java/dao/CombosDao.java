@@ -15,8 +15,8 @@ import java.util.logging.Logger;
 import modelo.Combos;
 
 /**
- *
- * @author javam2019
+ *Clase para visualizar Combo
+ * @author FutureBurguer
  */
 public class CombosDao implements CombosInterface{
     
@@ -27,6 +27,11 @@ public class CombosDao implements CombosInterface{
     
     private String sql=null;
 
+    /**
+     * 
+     * @param tipoCombo datos del objeto definidos por el usuario
+     * @return Objeto de tipo combo 
+     */
     @Override
     public Combos verCombo(byte tipoCombo) {
         conexion.abrirConexion();
@@ -41,6 +46,7 @@ public class CombosDao implements CombosInterface{
                 combo.setCombonombre(resultado.getString("nombre"));
                 combo.setCombodescuento(resultado.getDouble("descuento"));
                 combo.setTipo_combo_id(resultado.getByte("tipo_combo_id"));
+                resultado.close();
             }
         } catch (SQLException ex) {
             System.out.println("Error en daoCombo verTipos " + ex);

@@ -14,6 +14,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Productos;
 
+
+/**
+ * Clase para la visualizacion de productos
+ * @author FutureBurguer
+ */
 public class DaoProductos implements ProductosInterface {
 
     Conexion conexion = new Conexion();
@@ -24,6 +29,12 @@ public class DaoProductos implements ProductosInterface {
 
     private String sql = null;
 
+    
+    /**
+     * 
+     * @param id dato definido por el usuario 
+     * @return Objeto de tipo ArrayList lista
+     */
     @Override
     public ArrayList<Productos> verProductos(short id) {
         lista = new ArrayList();

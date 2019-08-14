@@ -15,8 +15,8 @@ import java.util.logging.Logger;
 import modelo.View_Descripcioncombo;
 
 /**
- *
- * @author javam2019
+ *Clase para la visualizacion de productos
+ * @author FutureBurguer
  */
 public class DaoView_DetalleCombo implements View_DetalleComboInterface {
 
@@ -27,6 +27,12 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
 
     private String sql = null;
 
+    
+    /**
+     * 
+     * @param productoId dato proporcionado por el usuario
+     * @return Objeto de tipo ArrayList lista 
+     */
     @Override
     public ArrayList<View_Descripcioncombo> verProductos(int productoId) {
         ArrayList<View_Descripcioncombo> lista = new ArrayList();

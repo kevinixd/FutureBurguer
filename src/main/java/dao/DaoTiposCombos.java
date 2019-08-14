@@ -14,6 +14,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.TiposCombos;
 
+/**
+ * 
+ * @author FutureBurguer
+ */
 public class DaoTiposCombos implements TiposCombosInterface{
     
     Conexion conexion= new Conexion();
@@ -23,6 +27,11 @@ public class DaoTiposCombos implements TiposCombosInterface{
     
     private String sql=null;
 
+    
+    /**
+     * 
+     * @return 
+     */
     @Override
     public ArrayList<TiposCombos> verTipos() {
         ArrayList<TiposCombos> lista= new ArrayList();

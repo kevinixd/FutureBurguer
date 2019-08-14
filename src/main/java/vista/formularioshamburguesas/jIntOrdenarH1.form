@@ -41,6 +41,7 @@
                           <Component id="jLblDescripcionH1" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jCmbTamanioH1" min="-2" pref="151" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
@@ -53,6 +54,9 @@
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <Component id="jCmbBebida" min="-2" pref="214" max="-2" attributes="0"/>
                               </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="jLblBebidaH1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -158,6 +162,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCmbTamanioH1ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

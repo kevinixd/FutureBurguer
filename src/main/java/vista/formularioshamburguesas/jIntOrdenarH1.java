@@ -52,8 +52,15 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
         jLblDescripcionH1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLblDescripcionH1.setText("Descripcion");
 
+
         jCmbTamanioH1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jCmbTamanioH1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mediano", "Agrandado" }));
+
+        jCmbTamanioH1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCmbTamanioH1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jButton1.setText("Añadir a la lista");
@@ -104,6 +111,13 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6)
                                     .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabel5)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jCmbTamanioH1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(jLblPapaH1)))
+                                .addGap(68, 68, 68)
+                                .addComponent(jLblBebidaH1))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(236, 236, 236)
                         .addComponent(jBtnRegresarH1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -145,6 +159,10 @@ public class jIntOrdenarH1 extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCmbTamanioH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCmbTamanioH1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCmbTamanioH1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
