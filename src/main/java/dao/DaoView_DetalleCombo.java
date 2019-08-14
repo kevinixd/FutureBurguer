@@ -46,6 +46,7 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
                 descripcionCombo = new View_Descripcioncombo();
                 descripcionCombo.setDetallescombosId(resultado.getInt("detallescombos_id"));
                 descripcionCombo.setComboId(resultado.getInt("combo_id"));
+                descripcionCombo.setDescripcionCombo(resultado.getString("descripcion"));
                 descripcionCombo.setNombreCombo(resultado.getString("combo"));
                 descripcionCombo.setImagenDetalleCombo(resultado.getString("imagen"));
                 descripcionCombo.setProductoTamanioId(resultado.getInt("producto_tamanio_id"));

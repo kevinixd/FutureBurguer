@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista.formularioshamburguesas;
+package vista;
 
 /**
  *
  * @author javam2019
  */
-public class JintOrdenarH1 extends javax.swing.JInternalFrame {
+public class JintDescripcionCombo extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form JintOrdernarH1
      */
-    public JintOrdenarH1() {
+    public JintDescripcionCombo() {
         initComponents();
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
 
     /**
@@ -101,7 +102,7 @@ public class JintOrdenarH1 extends javax.swing.JInternalFrame {
                         .addComponent(JBtnRegresar)
                         .addGap(75, 75, 75)
                         .addComponent(jBtnAñadir)))
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

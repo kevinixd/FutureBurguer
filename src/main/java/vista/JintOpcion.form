@@ -20,20 +20,25 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="382" pref="382" max="-2" attributes="0"/>
-              <Component id="jBtnCombo" min="-2" pref="133" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="420" pref="420" max="-2" attributes="0"/>
-              <Component id="jLabelCombo" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="382" pref="382" max="-2" attributes="0"/>
-              <Component id="jBtnIndividual" min="-2" pref="133" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="411" pref="411" max="-2" attributes="0"/>
-              <Component id="JLabelSolo" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="382" pref="382" max="-2" attributes="0"/>
+                      <Component id="jBtnCombo" min="-2" pref="133" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="420" pref="420" max="-2" attributes="0"/>
+                      <Component id="jLabelCombo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="382" pref="382" max="-2" attributes="0"/>
+                      <Component id="jBtnIndividual" min="-2" pref="133" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="411" pref="411" max="-2" attributes="0"/>
+                      <Component id="JLabelSolo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="358" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -48,6 +53,7 @@
               <Component id="jBtnIndividual" min="-2" pref="119" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="JLabelSolo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="117" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

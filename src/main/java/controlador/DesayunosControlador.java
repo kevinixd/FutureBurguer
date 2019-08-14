@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import static controlador.ProductoSeleccionado.productoID;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.productoSeleccionado;
 import dao.DaoProductos;
@@ -20,7 +21,7 @@ import javax.swing.JButton;
 import modelo.Productos;
 import modelo.View_Descripcioncombo;
 import modelo.View_productosTamanios;
-import vista.formulariosdesayunos.JintDsy;
+import vista.JintOpcion;
 import vista.formulariosdesayunos.jIntDesayunos;
 
 /**
@@ -34,7 +35,7 @@ public class DesayunosControlador implements ActionListener {
 
     //Formularios a utilizar
     jIntDesayunos desayunos = new jIntDesayunos();
-    JintDsy opciones = new JintDsy();
+    JintOpcion opciones = new JintOpcion();
 
     //Daos a utilizar
     DaoProductos dao = new DaoProductos();
@@ -42,7 +43,7 @@ public class DesayunosControlador implements ActionListener {
     DaoView_ProductosTamanios dao3 = new DaoView_ProductosTamanios();
     DaoView_DetalleCombo dao4 = new DaoView_DetalleCombo();
 
-    //Modelos a utilizar;
+    //Modelos a utilizar:
     View_productosTamanios producTamanios = new View_productosTamanios();
     View_Descripcioncombo descripcion = new View_Descripcioncombo();
 
@@ -50,21 +51,20 @@ public class DesayunosControlador implements ActionListener {
     private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
     private List<JButton> lista2 = new ArrayList();
     private short clasificacion;
-    private int productoId;
     private Point lugar;
 
     public DesayunosControlador(jIntDesayunos desayunos) {
-        //this.controladorPrincipal=controladorPrincipal;
         this.desayunos = desayunos;
         crearDesayunos();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        productoId=0;
+        productoID = 0;
+        OpcionesControlador controlador = new OpcionesControlador(opciones);
         if (e.getSource() == lista2.get(0)) {
             productoSeleccionado = listaProducto.get(0);
-            productoId = productoSeleccionado.getProducto_id();
+            productoID = productoSeleccionado.getProducto_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -76,7 +76,7 @@ public class DesayunosControlador implements ActionListener {
 
         if (e.getSource() == lista2.get(1)) {
             productoSeleccionado = listaProducto.get(1);
-            productoId = productoSeleccionado.getProducto_id();
+            productoID = productoSeleccionado.getProducto_id();
             System.out.println("Producto ID " + productoSeleccionado.getProducto_id());
             asignarProducto();
             asignarCombo();
@@ -89,7 +89,7 @@ public class DesayunosControlador implements ActionListener {
 
         if (e.getSource() == lista2.get(2)) {
             productoSeleccionado = listaProducto.get(2);
-            productoId = productoSeleccionado.getProducto_id();
+            productoID = productoSeleccionado.getProducto_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -99,8 +99,9 @@ public class DesayunosControlador implements ActionListener {
         }
 
         if (e.getSource() == lista2.get(3)) {
+
             productoSeleccionado = listaProducto.get(3);
-            productoId = productoSeleccionado.getProducto_id();
+            productoID = productoSeleccionado.getProducto_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -134,13 +135,12 @@ public class DesayunosControlador implements ActionListener {
             boton.addActionListener(this);
             desayunos.add(boton);
             lista2.add(boton);
-
         }
     }
 
     //Metodo para asignar imagen de individual a los botones
     public void asignarProducto() {
-        producTamanios = dao3.verProductoDetalle(productoId);
+        producTamanios = dao3.verProductoDetalle(productoID);
         ImageIcon icono = new ImageIcon(rutaProducto + producTamanios.getProductoImgView());
         ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
         opciones.jBtnIndividual.setIcon(iconoRed);
@@ -148,8 +148,7 @@ public class DesayunosControlador implements ActionListener {
 
     //Metodo para asignar imagen de combo a los botones
     public void asignarCombo() {
-        
-        descripcion = dao4.verImagenCombo(productoId);
+        descripcion = dao4.verImagenCombo(productoID);
         if (descripcion.getImagenDetalleCombo() != null) {
             ImageIcon icono = new ImageIcon(rutaCombo + descripcion.getImagenDetalleCombo());
             ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));

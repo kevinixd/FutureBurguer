@@ -13,7 +13,9 @@ import modelo.Productos;
  * @author javam2019
  */
 public class ProductoSeleccionado {
+    
     public static Productos productoSeleccionado = new Productos();
-   
+    
+    public static int productoID;
 }
  

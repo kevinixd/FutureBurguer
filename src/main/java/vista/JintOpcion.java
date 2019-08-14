@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista.formulariosdesayunos;
+package vista;
 
 /**
  *
  * @author javam2019
  */
-public class JintDsy extends javax.swing.JInternalFrame {
+public class JintOpcion extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form JintDsy
      */
-    public JintDsy() {
+    public JintOpcion() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
@@ -44,17 +44,20 @@ public class JintDsy extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(382, 382, 382)
-                .addComponent(jBtnCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(420, 420, 420)
-                .addComponent(jLabelCombo))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(382, 382, 382)
-                .addComponent(jBtnIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(411, 411, 411)
-                .addComponent(JLabelSolo))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(382, 382, 382)
+                        .addComponent(jBtnCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(420, 420, 420)
+                        .addComponent(jLabelCombo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(382, 382, 382)
+                        .addComponent(jBtnIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(411, 411, 411)
+                        .addComponent(JLabelSolo)))
+                .addContainerGap(358, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,7 +69,8 @@ public class JintDsy extends javax.swing.JInternalFrame {
                 .addGap(50, 50, 50)
                 .addComponent(jBtnIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(JLabelSolo))
+                .addComponent(JLabelSolo)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         pack();
