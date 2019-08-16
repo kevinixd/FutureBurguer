@@ -39,6 +39,9 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         JBtnRegresar = new javax.swing.JButton();
         jBtnAñadir = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jLblSnackId = new javax.swing.JLabel();
+        jLblBebidaID = new javax.swing.JLabel();
+        jCmbPtId = new javax.swing.JComboBox<>();
 
         jLblNombreCombo.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLblNombreCombo.setText("Nombre Combo");
@@ -70,6 +73,12 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel7.setText("Bebida: ");
 
+        jLblSnackId.setText("IDSnack");
+
+        jLblBebidaID.setText("IDBebida");
+
+        jCmbPtId.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,7 +86,7 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
+                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLblDescpCombo)
                             .addGroup(layout.createSequentialGroup()
@@ -88,14 +97,18 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
                                     .addComponent(jLblPrecioCombo)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(103, 103, 103)
-                                        .addComponent(jLblSnackCombo))
+                                    .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel5))
+                                .addGap(103, 103, 103)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLblSnackId)
+                                    .addComponent(jLblSnackCombo))
                                 .addGap(89, 89, 89)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(39, 39, 39)
+                                        .addComponent(jLblBebidaID))
                                     .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
@@ -103,7 +116,9 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
                         .addGap(75, 75, 75)
                         .addComponent(jBtnAñadir)
                         .addGap(45, 45, 45)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCmbPtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,12 +136,15 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel7)
+                    .addComponent(jLblSnackId)
+                    .addComponent(jLblBebidaID))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLblSnackCombo)
-                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCmbPtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBtnRegresar)
@@ -142,13 +160,16 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
     public javax.swing.JButton JBtnRegresar;
     public javax.swing.JButton jBtnAñadir;
     public javax.swing.JComboBox<String> jCmbBebida;
+    public javax.swing.JComboBox<String> jCmbPtId;
     public javax.swing.JComboBox<String> jCmbTamanioCombo;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
+    public javax.swing.JLabel jLblBebidaID;
     public javax.swing.JLabel jLblDescpCombo;
     public javax.swing.JLabel jLblImgCombo;
     public javax.swing.JLabel jLblNombreCombo;
     public javax.swing.JLabel jLblPrecioCombo;
     public javax.swing.JLabel jLblSnackCombo;
+    public javax.swing.JLabel jLblSnackId;
     // End of variables declaration//GEN-END:variables
 }

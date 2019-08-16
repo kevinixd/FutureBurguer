@@ -9,12 +9,14 @@ import interfaces.View_ProductosTamaniosInterface;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.View_productosTamanios;
 
 /**
- *Clase para la visualizacion del tamaño del producto
+ * Clase para la visualizacion del tamaño del producto
+ *
  * @author FutureBurguer
  */
 public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterface {
@@ -27,10 +29,12 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
 
     private String sql = null;
 
+    private ArrayList<View_productosTamanios> listaProducto;
+
     /**
-     * 
-     * @param productoId dato proporcionado por el usuario 
-     * @return Objeto de tipo View_productosTamanios 
+     *
+     * @param productoId dato proporcionado por el usuario
+     * @return Objeto de tipo View_productosTamanios
      */
     @Override
     public View_productosTamanios verProductoDetalle(int productoId) {
@@ -51,7 +55,7 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
             resultado.close();
         } catch (SQLException ex) {
             System.out.println("Error en daoVerProductoDetalle " + ex);
-        } finally{
+        } finally {
             cone.cerrarConexion();
         }
         return productTamanio;
@@ -59,7 +63,7 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
 
     @Override
     public View_productosTamanios verPorTamanio(int productoId, String tamanio) {
-         cone.abrirConexion();
+        cone.abrirConexion();
         sql = "select * from view_productostamanios where producto_id=? and tamanio=?";
         try {
             ejecutar = cone.getCon().prepareStatement(sql);
@@ -77,8 +81,27 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
             resultado.close();
         } catch (SQLException ex) {
             System.out.println("Error en daoVerPorTamanio " + ex);
-        } finally{
+        } finally {
             cone.cerrarConexion();
+        }
+        return productTamanio;
+    }
+
+    @Override
+    public View_productosTamanios verProductoId(String tamanio, String producto) {
+        cone.abrirConexion();
+        sql = "select producto_tamanio_id from view_productostamanios where tamanio=? and producto=?";
+        try {
+            ejecutar = cone.getCon().prepareStatement(sql);
+            ejecutar.setString(1, tamanio);
+            ejecutar.setString(2, producto);
+            resultado = ejecutar.executeQuery();
+            resultado.next();
+            productTamanio = new View_productosTamanios();
+            productTamanio.setPtIdView(resultado.getShort("producto_tamanio_id"));
+            System.out.println(productTamanio.getPtIdView());
+        } catch (SQLException ex) {
+            System.out.println("Error en daoVerProductoId " + ex);
         }
         return productTamanio;
     }

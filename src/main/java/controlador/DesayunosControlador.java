@@ -63,13 +63,11 @@ public class DesayunosControlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         productoID = 0;
-        OpcionesControlador controlador = new OpcionesControlador(opciones);
+        clasificacion = 0;
         if (e.getSource() == lista2.get(0)) {
             productoSeleccionado = listaProducto.get(0);
             productoID = productoSeleccionado.getProducto_id();
-            clasificacion=productoSeleccionado.getClasificacion_id();
-            asignarProducto();
-            asignarCombo();
+            clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
             opciones.setLocation(300, 100);
@@ -80,9 +78,7 @@ public class DesayunosControlador implements ActionListener {
         if (e.getSource() == lista2.get(1)) {
             productoSeleccionado = listaProducto.get(1);
             productoID = productoSeleccionado.getProducto_id();
-            clasificacion=productoSeleccionado.getClasificacion_id();
-            asignarProducto();
-            asignarCombo();
+            clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
             opciones.setLocation(300, 100);
@@ -93,9 +89,7 @@ public class DesayunosControlador implements ActionListener {
         if (e.getSource() == lista2.get(2)) {
             productoSeleccionado = listaProducto.get(2);
             productoID = productoSeleccionado.getProducto_id();
-            clasificacion=productoSeleccionado.getClasificacion_id();
-            asignarProducto();
-            asignarCombo();
+            clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
             opciones.setLocation(300, 100);
@@ -106,14 +100,14 @@ public class DesayunosControlador implements ActionListener {
 
             productoSeleccionado = listaProducto.get(3);
             productoID = productoSeleccionado.getProducto_id();
-            clasificacion=productoSeleccionado.getClasificacion_id();
-            asignarProducto();
-            asignarCombo();
+            clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
             opciones.setLocation(300, 100);
             opciones.setSize(910, 550);
         }
+
+        OpcionesControlador controlador = new OpcionesControlador(opciones);
 
     }
 
@@ -143,26 +137,4 @@ public class DesayunosControlador implements ActionListener {
         }
     }
 
-    //Metodo para asignar imagen de individual a los botones
-    public void asignarProducto() {
-        producTamanios = dao3.verProductoDetalle(productoID);
-        ImageIcon icono = new ImageIcon(rutaProducto + producTamanios.getProductoImgView());
-        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
-        opciones.jBtnIndividual.setIcon(iconoRed);
-    }
-
-    //Metodo para asignar imagen de combo a los botones
-    public void asignarCombo() {
-        descripcion = dao4.verImagenCombo(productoID);
-        if (descripcion.getImagenDetalleCombo() != null) {
-            ImageIcon icono = new ImageIcon(rutaCombo + descripcion.getImagenDetalleCombo());
-            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
-            opciones.jBtnCombo.setIcon(iconoRed);
-            System.out.println("Exito");
-        } else {
-            opciones.jBtnCombo.setVisible(false);
-            opciones.jLabelCombo.setVisible(false);
-            opciones.JLabelSolo.setBounds(100, 100, 74, 21);
-        }
-    }
 }

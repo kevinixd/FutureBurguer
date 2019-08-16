@@ -33,8 +33,12 @@ public class DescripcionComboControlador implements ActionListener {
 
     //Modelos a utilizar
     View_Descripcioncombo descripcion= new View_Descripcioncombo();
-
+    
     private ArrayList<View_Descripcioncombo> listaCombo= new ArrayList();
+    
+//datos reales a guardar en la base de datos
+    private ArrayList<View_Descripcioncombo> listaComboRenovada= new ArrayList();
+    
     private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
     
     public DescripcionComboControlador(JintDescripcionCombo vista) {
@@ -48,7 +52,15 @@ public class DescripcionComboControlador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        /*
+        Si selecciona comboBox
+        Si selecciona grande
+        buscar codigo pt donde el tamanio_id sea igual a el item seleccionado 
+        el resultado de esabusqueda
+        vista.jLblSnackId.setText(String.valueOf(listaCombo.get(1).getProductoTamanioId()));
+        vista.jLblBebidaID.setText(String.valueOf(listaCombo.get(2).getProductoTamanioId()));
+        
+        */
     }
 
     public void llenarTamanios() {
@@ -82,6 +94,9 @@ public class DescripcionComboControlador implements ActionListener {
         vista.jLblPrecioCombo.setText("Q." + String.valueOf(listaCombo.get(0).getPrecio() + listaCombo.get(1).getPrecio() + listaCombo.get(2).getPrecio()));
         vista.jLblDescpCombo.setText(String.valueOf(listaCombo.get(0).getDescripcionCombo()));
         vista.jLblSnackCombo.setText(String.valueOf(listaCombo.get(1).getProductoCombo()));
+        vista.jLblSnackId.setText(String.valueOf(listaCombo.get(1).getProductoTamanioId()));
+        vista.jLblBebidaID.setText(String.valueOf(listaCombo.get(2).getProductoTamanioId()));
+        listaComboRenovada = listaCombo;
     }
     
 

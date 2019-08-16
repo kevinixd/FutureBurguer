@@ -36,7 +36,7 @@ public class PrincipalControlador implements ActionListener {
 
     //Ruta para las imagenes
     String ruta = System.getProperty("user.dir");
-
+    ImageIcon fondo= new ImageIcon(ruta + "\\src\\main\\java\\img\\fondoprincipal");
     //para saber llevar el control de la solicitud del cliente
     DetallePedido detPedido;
     
@@ -50,6 +50,9 @@ public class PrincipalControlador implements ActionListener {
         principal.setLocationRelativeTo(null);
         principal.setExtendedState(6);
         dim=principal.getToolkit().getScreenSize();
+        principal.EscritorioPrincipal.setSize(dim);
+        
+        
     }
 
     public void setActionListeners() {

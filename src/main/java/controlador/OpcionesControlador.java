@@ -41,7 +41,7 @@ public class OpcionesControlador implements ActionListener {
     DaoView_DetalleCombo dao4 = new DaoView_DetalleCombo();
 
     // Ruta para imagenes
-    private String rutaProducto = System.getProperty("user.dir") + "\\src\\main\\java\\img\\hamburguesas\\";
+    private String rutaProducto = System.getProperty("user.dir") + "\\src\\main\\java\\img\\vistaProductos\\";
     private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
 
     public OpcionesControlador(JintOpcion opcion) {
