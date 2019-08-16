@@ -90,7 +90,7 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
     @Override
     public View_productosTamanios verProductoId(String tamanio, String producto) {
         cone.abrirConexion();
-        sql = "select producto_tamanio_id from view_productostamanios where tamanio=? and producto=?";
+        sql = "select * from view_productostamanios where tamanio=? and producto=?";
         try {
             ejecutar = cone.getCon().prepareStatement(sql);
             ejecutar.setString(1, tamanio);
@@ -99,9 +99,12 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
             resultado.next();
             productTamanio = new View_productosTamanios();
             productTamanio.setPtIdView(resultado.getShort("producto_tamanio_id"));
+            productTamanio.setPrecioView(resultado.getDouble("precio"));
             System.out.println(productTamanio.getPtIdView());
         } catch (SQLException ex) {
             System.out.println("Error en daoVerProductoId " + ex);
+        } finally{
+            cone.cerrarConexion();
         }
         return productTamanio;
     }

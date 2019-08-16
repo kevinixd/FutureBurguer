@@ -31,26 +31,30 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jLblNombreCombo = new javax.swing.JLabel();
         jLblImgCombo = new javax.swing.JLabel();
         jLblDescpCombo = new javax.swing.JLabel();
-        jLblPrecioCombo = new javax.swing.JLabel();
+        jLblPrecio = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jCmbTamanioCombo = new javax.swing.JComboBox<>();
         jLblSnackCombo = new javax.swing.JLabel();
         jCmbBebida = new javax.swing.JComboBox<>();
         JBtnRegresar = new javax.swing.JButton();
         jBtnAñadir = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLblSnackId = new javax.swing.JLabel();
         jLblBebidaID = new javax.swing.JLabel();
-        jCmbPtId = new javax.swing.JComboBox<>();
+        Cantidad = new javax.swing.JLabel();
+        jLblProductPrincipal = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         jLblNombreCombo.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLblNombreCombo.setText("Nombre Combo");
 
-        jLblDescpCombo.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLblDescpCombo.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLblDescpCombo.setForeground(new java.awt.Color(255, 153, 51));
         jLblDescpCombo.setText("Descripción");
 
-        jLblPrecioCombo.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLblPrecioCombo.setText("Precio");
+        jLblPrecio.setFont(new java.awt.Font("Dialog", 1, 26)); // NOI18N
+        jLblPrecio.setText("Cantidad:");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel5.setText("Tamaño:");
@@ -70,106 +74,147 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jBtnAñadir.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jBtnAñadir.setText("Añadir a la orden");
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel7.setText("Bebida: ");
-
         jLblSnackId.setText("IDSnack");
 
         jLblBebidaID.setText("IDBebida");
 
-        jCmbPtId.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Cantidad.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        Cantidad.setText("Cantidad:");
+
+        jLblProductPrincipal.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLblProductPrincipal.setText("Hamburguesa");
+
+        jTextField1.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jTextField1.setText("1");
+
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jButton1.setText("+");
+
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jButton2.setText("-");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLblImgCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLblDescpCombo)
+                            .addComponent(jLblNombreCombo)
+                            .addComponent(jLblPrecio))
+                        .addGap(174, 174, 174)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLblImgCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(Cantidad))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblNombreCombo)
-                                    .addComponent(jLblPrecioCombo)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5))
-                                .addGap(103, 103, 103)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblSnackId)
-                                    .addComponent(jLblSnackCombo))
-                                .addGap(89, 89, 89)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addGap(39, 39, 39)
-                                        .addComponent(jLblBebidaID))
-                                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(JBtnRegresar)
-                        .addGap(75, 75, 75)
-                        .addComponent(jBtnAñadir)
-                        .addGap(45, 45, 45)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCmbPtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(4, 4, 4)
+                                .addComponent(jButton1))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLblDescpCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)
+                    .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLblProductPrincipal))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(501, 501, 501)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLblSnackId)
+                    .addComponent(jLblSnackCombo))
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLblBebidaID))
+                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(196, 196, 196)
+                .addComponent(JBtnRegresar)
+                .addGap(77, 77, 77)
+                .addComponent(jBtnAñadir))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLblNombreCombo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLblPrecioCombo)
-                        .addGap(0, 112, Short.MAX_VALUE))
-                    .addComponent(jLblImgCombo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLblDescpCombo)
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel7)
-                    .addComponent(jLblSnackId)
-                    .addComponent(jLblBebidaID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblSnackCombo)
-                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCmbPtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGap(19, 19, 19)
+                        .addComponent(jLblImgCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLblNombreCombo)
+                                .addGap(21, 21, 21)
+                                .addComponent(jLblPrecio))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Cantidad)
+                                .addGap(2, 2, 2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton1)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(13, 13, 13)
+                        .addComponent(jLblDescpCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel5)
+                        .addGap(12, 12, 12)
+                        .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(33, 33, 33)
+                .addComponent(jLblProductPrincipal)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLblSnackId)
+                        .addGap(6, 6, 6)
+                        .addComponent(jLblSnackCombo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLblBebidaID)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(99, 99, 99)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JBtnRegresar)
-                    .addComponent(jBtnAñadir))
-                .addGap(67, 67, 67))
+                    .addComponent(jBtnAñadir)))
         );
+
+        jLblDescpCombo.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel Cantidad;
     public javax.swing.JButton JBtnRegresar;
     public javax.swing.JButton jBtnAñadir;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     public javax.swing.JComboBox<String> jCmbBebida;
-    public javax.swing.JComboBox<String> jCmbPtId;
     public javax.swing.JComboBox<String> jCmbTamanioCombo;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     public javax.swing.JLabel jLblBebidaID;
     public javax.swing.JLabel jLblDescpCombo;
     public javax.swing.JLabel jLblImgCombo;
     public javax.swing.JLabel jLblNombreCombo;
-    public javax.swing.JLabel jLblPrecioCombo;
+    public javax.swing.JLabel jLblPrecio;
+    public javax.swing.JLabel jLblProductPrincipal;
     public javax.swing.JLabel jLblSnackCombo;
     public javax.swing.JLabel jLblSnackId;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

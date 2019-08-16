@@ -49,7 +49,7 @@ public class PrincipalControlador implements ActionListener {
         detPedido = new DetallePedido();
         principal.setLocationRelativeTo(null);
         principal.setExtendedState(6);
-        dim=principal.getToolkit().getScreenSize();
+        dim=principal.getSize();
         principal.EscritorioPrincipal.setSize(dim);
         
         
