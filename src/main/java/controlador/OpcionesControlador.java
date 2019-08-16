@@ -5,6 +5,8 @@
  */
 package controlador;
 
+import static controlador.PrincipalControlador.principal;
+import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.ProductoSeleccionado.productoID;
 import dao.DaoProductos;
 import dao.DaoView_DetalleCombo;
@@ -24,50 +26,71 @@ import vista.JintDescripcionProducto;
  * @author Futureburguer
  */
 public class OpcionesControlador implements ActionListener {
-    
-    //Formularios a utilizar
-    JintOpcion opcion= new JintOpcion();
-    JintDescripcionCombo combo= new JintDescripcionCombo();
-    JintDescripcionProducto producto= new JintDescripcionProducto();
-    
-    //Daos a utlizar
-    DaoProductos dao= new DaoProductos();
-    DaoView_ProductosTamanios dao2= new DaoView_ProductosTamanios();
-    DaoView_DetalleCombo dao3= new DaoView_DetalleCombo();
-    
-    //Modelos a utilizar:
-    View_productosTamanios producTamanios= new View_productosTamanios();
-    View_Descripcioncombo descripcion= new View_Descripcioncombo();
 
-    private ArrayList<View_Descripcioncombo> listaCombo= new ArrayList();
-    
-    
+    //Formularios a utilizar
+    JintOpcion opcion = new JintOpcion();
+    JintDescripcionCombo combo = new JintDescripcionCombo();
+    JintDescripcionProducto producto = new JintDescripcionProducto();
+
+    //Modelos a utilizar:
+    View_productosTamanios producTamanios = new View_productosTamanios();
+    View_Descripcioncombo descripcion = new View_Descripcioncombo();
+
+    //Daos a utilizar
+    DaoView_ProductosTamanios dao3 = new DaoView_ProductosTamanios();
+    DaoView_DetalleCombo dao4 = new DaoView_DetalleCombo();
+
+    // Ruta para imagenes
+    private String rutaProducto = System.getProperty("user.dir") + "\\src\\main\\java\\img\\hamburguesas\\";
+    private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
+
     public OpcionesControlador(JintOpcion opcion) {
         this.opcion = opcion;
         opcion.jBtnCombo.addActionListener(this);
         opcion.jBtnIndividual.addActionListener(this);
+        asignarCombo();
+        asignarProducto();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==opcion.jBtnCombo){
-            asignarDatosCombos();
+
+        if (e.getSource() == opcion.jBtnCombo) {
+            DescripcionComboControlador controlador = new DescripcionComboControlador(combo);
+            principal.EscritorioPrincipal.add(combo);
             combo.setVisible(true);
             combo.setLocation(300, 100);
             combo.setSize(910, 550);
         }
+
+        if (e.getSource() == opcion.jBtnIndividual) {
+            View_productosTamaniosControlador controladorProductos = new View_productosTamaniosControlador(producto);
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
     }
 
-    public void asignarDatosCombos(){
-        listaCombo=dao3.verProductos(productoID);
-        combo.jLblNombreCombo.setText(String.valueOf(listaCombo.get(0).getNombreCombo()));
-        ImageIcon icono= new ImageIcon(listaCombo.get(0).getImagenDetalleCombo());
-        ImageIcon iconoRed= new ImageIcon(icono.getImage().getScaledInstance(200, -1, java.awt.Image.SCALE_DEFAULT));
-        combo.jLblImgCombo.setIcon(iconoRed);
-        combo.jLblPrecioCombo.setText(String.valueOf(listaCombo.get(0).getPrecio() + listaCombo.get(1).getPrecio() + listaCombo.get(2).getPrecio()));
-        combo.jLblDescpCombo.setText(String.valueOf(listaCombo.get(0).getDescripcionCombo()));
-        combo.jLblSnackCombo.setText(String.valueOf(listaCombo.get(1).getProductoCombo()));
+    //Metodo para asignar imagen de individual a los botones
+    public void asignarProducto() {
+        producTamanios = dao3.verProductoDetalle(productoID);
+        ImageIcon icono = new ImageIcon(rutaProducto + producTamanios.getProductoImgView());
+        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+        opcion.jBtnIndividual.setIcon(iconoRed);
     }
-    
-    
+
+    public void asignarCombo() {
+        descripcion = dao4.verImagenCombo(productoID);
+        if (descripcion.getImagenDetalleCombo() != null) {
+            ImageIcon icono = new ImageIcon(rutaCombo + descripcion.getImagenDetalleCombo());
+            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            opcion.jBtnCombo.setIcon(iconoRed);
+        } else {
+            opcion.jBtnCombo.setVisible(false);
+            opcion.jLabelCombo.setVisible(false);
+            opcion.JLabelSolo.setBounds(100, 100, 74, 21);
+        }
+    }
+
 }

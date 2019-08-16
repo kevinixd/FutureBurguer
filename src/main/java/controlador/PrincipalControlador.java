@@ -5,13 +5,11 @@
  */
 package controlador;
 
-import static controlador.ProductoSeleccionado.productoSeleccionado;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
-import modelo.Productos;
 import vista.JfrmPrincipal;
 
 import vista.formulariosbebidas.jIntBebidasFC;
@@ -41,6 +39,8 @@ public class PrincipalControlador implements ActionListener {
 
     //para saber llevar el control de la solicitud del cliente
     DetallePedido detPedido;
+    
+    private Dimension dim;
 
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
@@ -48,6 +48,8 @@ public class PrincipalControlador implements ActionListener {
         setActionListeners();
         detPedido = new DetallePedido();
         principal.setLocationRelativeTo(null);
+        principal.setExtendedState(6);
+        dim=principal.getToolkit().getScreenSize();
     }
 
     public void setActionListeners() {

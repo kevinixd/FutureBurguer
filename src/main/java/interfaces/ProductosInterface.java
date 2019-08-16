@@ -10,7 +10,9 @@ import modelo.Productos;
 
 public interface ProductosInterface {
     
-    public ArrayList<Productos> verProductos(short id);
+    public ArrayList<Productos> verProductos(int id);
 
     public ArrayList<Productos> verBebidas();
+    
+    public ArrayList<Productos> verBebidasDesayuno();
 }

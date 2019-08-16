@@ -5,6 +5,9 @@
  */
 package controlador;
 
+import static controlador.ProductoSeleccionado.clasificacion;
+import static controlador.ProductoSeleccionado.productoID;
+import static controlador.ProductoSeleccionado.productoSeleccionado;
 import static controlador.PrincipalControlador.principal;
 import dao.DaoProductos;
 import java.awt.event.ActionEvent;
@@ -14,59 +17,125 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import modelo.Productos;
+import vista.JintDescripcionProducto;
 import vista.formulariosbebidas.jIntBebidasFrias;
-import vista.formulariosbebidas.jIntDrink1;
-
-//import vista.jIntBebidasFrias;
-//import vista.jIntDrink1;
 
 /**
  *
  * @author javam2019
  */
-public class BebidasFriasControlador implements ActionListener{
-    
+public class BebidasFriasControlador implements ActionListener {
+
+    //ArrayList para productos
+    ArrayList<Productos> listaProducto = new ArrayList<>();
+
     jIntBebidasFrias bebidasFrias = new jIntBebidasFrias();
-    jIntDrink1 bebida1 = new jIntDrink1();
+    JintDescripcionProducto producto = new JintDescripcionProducto();
 
     DaoProductos dao = new DaoProductos();
-    
-    private short clasificacion;
+
     private String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\";
-    
+
     private List<JButton> listaF = new ArrayList();
+
+    private int clasificacionBebid;
 
     public BebidasFriasControlador(jIntBebidasFrias bebidasFrias) {
         this.bebidasFrias = bebidasFrias;
         crearBebidasFrias();
     }
 
-    
     @Override
     public void actionPerformed(ActionEvent e) {
+        productoID = 0;
+        clasificacion = 0;
         if (e.getSource() == listaF.get(0)) {
-            bebida1 = new jIntDrink1();
-            principal.EscritorioPrincipal.add(bebida1);
-            bebida1.setLocation(300, 100);
-            bebida1.setSize(910, 550);
-            bebida1.setVisible(true);
+            productoSeleccionado = listaProducto.get(0);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
         }
         
+        if (e.getSource() == listaF.get(1)) {
+            productoSeleccionado = listaProducto.get(1);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
+        
+        if (e.getSource() == listaF.get(2)) {
+            productoSeleccionado = listaProducto.get(2);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
+        
+        if (e.getSource() == listaF.get(3)) {
+            productoSeleccionado = listaProducto.get(3);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
+        
+        if (e.getSource() == listaF.get(4)) {
+            productoSeleccionado = listaProducto.get(4);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
+        
+        if (e.getSource() == listaF.get(5)) {
+            productoSeleccionado = listaProducto.get(5);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
+        
+        if (e.getSource() == listaF.get(6)) {
+            productoSeleccionado = listaProducto.get(6);
+            productoID = productoSeleccionado.getProducto_id();
+            clasificacion = productoSeleccionado.getClasificacion_id();
+            principal.EscritorioPrincipal.add(producto);
+            producto.setVisible(true);
+            producto.setLocation(300, 100);
+            producto.setSize(910, 550);
+        }
+        View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
     }
-    
-    public void crearBebidasFrias() {
 
-        clasificacion = 1002;
-        for (Productos producto : dao.verProductos(clasificacion)) {
+    public void crearBebidasFrias() {
+        listaProducto.clear();
+        clasificacionBebid = 1002;
+        for (Productos producto : dao.verProductos(clasificacionBebid)) {
             JButton boton = new JButton(producto.getProductonombre());
-            ImageIcon icono= new ImageIcon(ruta + producto.getImagen());
-            ImageIcon iconoRed= new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+
+            listaProducto.add(producto);
+
+            ImageIcon icono = new ImageIcon(ruta + producto.getImagen());
+            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(iconoRed);
             boton.addActionListener(this);
             bebidasFrias.add(boton);
             listaF.add(boton);
-            //principal.jPnlMenus.updateUI();
         }
     }
-    
+
 }

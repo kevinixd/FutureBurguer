@@ -57,4 +57,30 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
         return productTamanio;
     }
 
+    @Override
+    public View_productosTamanios verPorTamanio(int productoId, String tamanio) {
+         cone.abrirConexion();
+        sql = "select * from view_productostamanios where producto_id=? and tamanio=?";
+        try {
+            ejecutar = cone.getCon().prepareStatement(sql);
+            ejecutar.setInt(1, productoId);
+            ejecutar.setString(2, tamanio);
+            resultado = ejecutar.executeQuery();
+            resultado.next();
+            productTamanio.setPtIdView(resultado.getShort("producto_tamanio_id"));
+            productTamanio.setProductoIdView(resultado.getInt("producto_id"));
+            productTamanio.setProductoView(resultado.getString("producto"));
+            productTamanio.setProductoImgView(resultado.getString("imagen"));
+            productTamanio.setProductoDescpView(resultado.getString("descripcion"));
+            productTamanio.setTamanioView(resultado.getString("tamanio"));
+            productTamanio.setPrecioView(resultado.getDouble("precio"));
+            resultado.close();
+        } catch (SQLException ex) {
+            System.out.println("Error en daoVerPorTamanio " + ex);
+        } finally{
+            cone.cerrarConexion();
+        }
+        return productTamanio;
+    }
+
 }

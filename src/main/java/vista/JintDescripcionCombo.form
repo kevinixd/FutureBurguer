@@ -45,7 +45,7 @@
                               <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCmbBebida" min="-2" pref="164" max="-2" attributes="0"/>
+                                  <Component id="jCmbBebida" min="-2" pref="209" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -55,9 +55,10 @@
                       <Component id="JBtnRegresar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                       <Component id="jBtnAñadir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="82" max="32767" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,7 +71,7 @@
                       <Component id="jLblNombreCombo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLblPrecioCombo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="116" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="112" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jLblImgCombo" max="32767" attributes="0"/>
               </Group>
@@ -101,7 +102,7 @@
     <Component class="javax.swing.JLabel" name="jLblNombreCombo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="36" style="1"/>
+          <Font name="Dialog" size="36" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Nombre Combo"/>
       </Properties>
@@ -128,7 +129,7 @@
     <Component class="javax.swing.JLabel" name="jLblPrecioCombo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="21" style="1"/>
+          <Font name="Dialog" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Precio"/>
       </Properties>

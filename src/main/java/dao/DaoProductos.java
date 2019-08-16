@@ -14,9 +14,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Productos;
 
-
 /**
  * Clase para la visualizacion de productos
+ *
  * @author FutureBurguer
  */
 public class DaoProductos implements ProductosInterface {
@@ -29,20 +29,19 @@ public class DaoProductos implements ProductosInterface {
 
     private String sql = null;
 
-    
     /**
-     * 
-     * @param id dato definido por el usuario 
+     *
+     * @param id dato definido por el usuario
      * @return Objeto de tipo ArrayList lista
      */
     @Override
-    public ArrayList<Productos> verProductos(short id) {
+    public ArrayList<Productos> verProductos(int id) {
         lista = new ArrayList();
         conexion.abrirConexion();
         sql = "select * from productos where clasificacion_id=?";
         try {
             ejecutar = conexion.getCon().prepareStatement(sql);
-            ejecutar.setShort(1, id);
+            ejecutar.setInt(1, id);
             resultado = ejecutar.executeQuery();
             while (resultado.next()) {
                 producto = new Productos();
@@ -54,7 +53,6 @@ public class DaoProductos implements ProductosInterface {
                 lista.add(producto);
             }
             resultado.close();
-
         } catch (SQLException ex) {
             System.out.println("Error en daoVerProductos " + ex);
         } finally {
@@ -80,10 +78,33 @@ public class DaoProductos implements ProductosInterface {
             }
         } catch (SQLException ex) {
             System.out.println("Error en dao VerBebidas " + ex);
-        } finally{
+        } finally {
             conexion.cerrarConexion();
         }
         return lista;
     }
 
+    @Override
+    public ArrayList<Productos> verBebidasDesayuno() {
+        lista = new ArrayList();
+        conexion.abrirConexion();
+        sql = "select * from productos where clasificacion_id=1003 or producto_id=2014";
+        try {
+            ejecutar = conexion.getCon().prepareStatement(sql);
+            resultado = ejecutar.executeQuery();
+            while (resultado.next()) {
+                producto = new Productos();
+                producto.setProducto_id(resultado.getInt("producto_id"));
+                producto.setProductonombre(resultado.getString("nombre"));
+                producto.setImagen(resultado.getString("imagen"));
+                lista.add(producto);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error en dao VerBebidas " + ex);
+        } finally {
+            conexion.cerrarConexion();
+        }
+        return lista;
+    }
+    
 }

@@ -39,7 +39,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\img\\fondoprincipal.jpg");
-        final Image image = icon.getImage();
+        final Image image = icon.getImage().getScaledInstance(1920, 720, java.awt.Image.SCALE_DEFAULT);
         EscritorioPrincipal = new javax.swing.JDesktopPane(){
             public void paintComponent(Graphics g){
                 g.drawImage(image,0,0,getWidth(),getHeight(),this);

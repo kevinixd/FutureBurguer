@@ -5,10 +5,10 @@
  */
 package controlador;
 
-import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.ProductoSeleccionado.productoID;
 import static controlador.ProductoSeleccionado.productoSeleccionado;
+import static controlador.PrincipalControlador.principal;
 import dao.DaoProductos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,39 +18,38 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import modelo.Productos;
 import vista.JintDescripcionProducto;
-import vista.formulariossnacks.jIntSnacks;
+import vista.formulariosbebidas.jIntBebidasCalientes;
 
 /**
  *
- * @author javam2019
+ * @author FutureBurguer
  */
-public class SnacksControlador implements ActionListener {
+public class BebidasCalienteControlador implements ActionListener {
 
-    //Array para utilizar
-    ArrayList<Productos> listaProducto = new ArrayList();
+    //ArrayList para productos
+    ArrayList<Productos> listaProducto = new ArrayList<>();
 
     //Frames a utilizar
-    jIntSnacks snacks = new jIntSnacks();
+    jIntBebidasCalientes bebidaCaliente = new jIntBebidasCalientes();
     JintDescripcionProducto producto = new JintDescripcionProducto();
 
-    //Daos a utilizar
+    //Dao
     DaoProductos dao = new DaoProductos();
 
-    private List<JButton> listaSnacks = new ArrayList();
-    private int clasificacionSnack;
-    private String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\snacks\\";
+    private List<JButton> listaC = new ArrayList();
+    private int clasificacionProd;
+    private String ruta = System.getProperty("user.dir") + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\";
 
-    public SnacksControlador(jIntSnacks snacks) {
-        this.snacks = snacks;
-        crearSnacks();
+    public BebidasCalienteControlador(jIntBebidasCalientes bebidaCaliente) {
+        this.bebidaCaliente = bebidaCaliente;
+        crearBebidasCalientes();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         productoID = 0;
         clasificacion = 0;
-
-        if (e.getSource() == listaSnacks.get(0)) {
+        if (e.getSource() == listaC.get(0)) {
             productoSeleccionado = listaProducto.get(0);
             productoID = productoSeleccionado.getProducto_id();
             clasificacion = productoSeleccionado.getClasificacion_id();
@@ -60,7 +59,7 @@ public class SnacksControlador implements ActionListener {
             producto.setSize(910, 550);
         }
 
-        if (e.getSource() == listaSnacks.get(1)) {
+        if (e.getSource() == listaC.get(1)) {
             productoSeleccionado = listaProducto.get(1);
             productoID = productoSeleccionado.getProducto_id();
             clasificacion = productoSeleccionado.getClasificacion_id();
@@ -73,22 +72,20 @@ public class SnacksControlador implements ActionListener {
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
     }
 
-    public void crearSnacks() {
+    public void crearBebidasCalientes() {
         listaProducto.clear();
-        clasificacionSnack = 1005;
-
-        for (Productos producto : dao.verProductos(clasificacionSnack)) {
+        clasificacionProd = 1003;
+        for (Productos producto : dao.verProductos(clasificacionProd)) {
             JButton boton = new JButton(producto.getProductonombre());
 
             listaProducto.add(producto);
 
-            ImageIcon snackImg = new ImageIcon(ruta + producto.getImagen());
-
-            ImageIcon snackImgRed = new ImageIcon(snackImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
-            boton.setIcon(snackImgRed);
+            ImageIcon bebidasImg = new ImageIcon(ruta + producto.getImagen());
+            ImageIcon bebidasImgRed = new ImageIcon(bebidasImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            boton.setIcon(bebidasImgRed);
             boton.addActionListener(this);
-            snacks.add(boton);
-            listaSnacks.add(boton);
+            bebidaCaliente.add(boton);
+            listaC.add(boton);
         }
     }
 }

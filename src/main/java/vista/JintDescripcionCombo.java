@@ -40,13 +40,13 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jBtnAñadir = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
-        jLblNombreCombo.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLblNombreCombo.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLblNombreCombo.setText("Nombre Combo");
 
         jLblDescpCombo.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLblDescpCombo.setText("Descripción");
 
-        jLblPrecioCombo.setFont(new java.awt.Font("Dialog", 1, 21)); // NOI18N
+        jLblPrecioCombo.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLblPrecioCombo.setText("Precio");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -96,13 +96,14 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
                                 .addGap(89, 89, 89)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
-                                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(JBtnRegresar)
                         .addGap(75, 75, 75)
-                        .addComponent(jBtnAñadir)))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addComponent(jBtnAñadir)
+                        .addGap(45, 45, 45)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +114,7 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
                         .addComponent(jLblNombreCombo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLblPrecioCombo)
-                        .addGap(0, 116, Short.MAX_VALUE))
+                        .addGap(0, 112, Short.MAX_VALUE))
                     .addComponent(jLblImgCombo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLblDescpCombo)

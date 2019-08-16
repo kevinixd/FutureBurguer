@@ -16,6 +16,10 @@ public class ProductoSeleccionado {
     
     public static Productos productoSeleccionado = new Productos();
     
+    //Variable para generalizar el ID del producto seleccionado
     public static int productoID;
+    
+    //Variable para generalizar el ID de la clasificación
+    public static int clasificacion;
 }
  

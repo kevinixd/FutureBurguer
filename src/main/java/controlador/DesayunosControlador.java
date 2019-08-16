@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.ProductoSeleccionado.productoID;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.productoSeleccionado;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import modelo.Productos;
 import modelo.View_Descripcioncombo;
 import modelo.View_productosTamanios;
@@ -50,7 +52,7 @@ public class DesayunosControlador implements ActionListener {
     private String rutaProducto = System.getProperty("user.dir") + "\\src\\main\\java\\img\\desayunos\\";
     private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
     private List<JButton> lista2 = new ArrayList();
-    private short clasificacion;
+    private int clasificacionProd;
     private Point lugar;
 
     public DesayunosControlador(jIntDesayunos desayunos) {
@@ -65,6 +67,7 @@ public class DesayunosControlador implements ActionListener {
         if (e.getSource() == lista2.get(0)) {
             productoSeleccionado = listaProducto.get(0);
             productoID = productoSeleccionado.getProducto_id();
+            clasificacion=productoSeleccionado.getClasificacion_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -77,7 +80,7 @@ public class DesayunosControlador implements ActionListener {
         if (e.getSource() == lista2.get(1)) {
             productoSeleccionado = listaProducto.get(1);
             productoID = productoSeleccionado.getProducto_id();
-            System.out.println("Producto ID " + productoSeleccionado.getProducto_id());
+            clasificacion=productoSeleccionado.getClasificacion_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -90,6 +93,7 @@ public class DesayunosControlador implements ActionListener {
         if (e.getSource() == lista2.get(2)) {
             productoSeleccionado = listaProducto.get(2);
             productoID = productoSeleccionado.getProducto_id();
+            clasificacion=productoSeleccionado.getClasificacion_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -102,6 +106,7 @@ public class DesayunosControlador implements ActionListener {
 
             productoSeleccionado = listaProducto.get(3);
             productoID = productoSeleccionado.getProducto_id();
+            clasificacion=productoSeleccionado.getClasificacion_id();
             asignarProducto();
             asignarCombo();
             principal.EscritorioPrincipal.add(opciones);
@@ -118,9 +123,9 @@ public class DesayunosControlador implements ActionListener {
      */
     public void crearDesayunos() {
         listaProducto.clear();
-        clasificacion = 1006;
+        clasificacionProd = 1006;
 
-        for (Productos producto : dao.verProductos(clasificacion)) {
+        for (Productos producto : dao.verProductos(clasificacionProd)) {
 
             //Agregamos todas las propiedades de producto al ArrayList
             listaProducto.add(producto);

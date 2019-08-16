@@ -5,10 +5,14 @@
  */
 package interfaces;
 
+import java.util.ArrayList;
+import modelo.Tamanios;
+
 /**
  *
  * @author javam2019
  */
 public interface TamaniosInterface {
     
+public ArrayList<Tamanios> verTamanios();
 }
