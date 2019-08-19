@@ -8,7 +8,7 @@ package modelo;
 public class View_Ordenes {
     
     private int numero_orden;
-    private byte mesaOrden;
+    private String direccion;
     private String tipoComboOrden;
     private String productoOrden;
     private String tamanioOrden;
@@ -19,9 +19,9 @@ public class View_Ordenes {
     public View_Ordenes() {
     }
 
-    public View_Ordenes(int numero_orden, byte mesaOrden, String tipoComboOrden, String productoOrden, String tamanioOrden, int cantidadOrden, String descripcionOrden, float precioOrden) {
+    public View_Ordenes(int numero_orden, String direccion, String tipoComboOrden, String productoOrden, String tamanioOrden, int cantidadOrden, String descripcionOrden, float precioOrden) {
         this.numero_orden = numero_orden;
-        this.mesaOrden = mesaOrden;
+        this.direccion= direccion;
         this.tipoComboOrden = tipoComboOrden;
         this.productoOrden = productoOrden;
         this.tamanioOrden = tamanioOrden;
@@ -38,12 +38,12 @@ public class View_Ordenes {
         this.numero_orden = numero_orden;
     }
 
-    public byte getMesaOrden() {
-        return mesaOrden;
+    public String getMesaOrden() {
+        return direccion;
     }
 
-    public void setMesaOrden(byte mesaOrden) {
-        this.mesaOrden = mesaOrden;
+    public void setMesaOrden(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getTipoComboOrden() {

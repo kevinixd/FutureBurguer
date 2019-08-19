@@ -45,8 +45,6 @@ public class JfrmPrincipal extends javax.swing.JFrame {
                 g.drawImage(image,0,0,getWidth(),getHeight(),this);
             }
         };
-        jLabel1 = new javax.swing.JLabel();
-        jLblUsuario = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPnlBotones = new javax.swing.JPanel(){
             public void paintComponent (Graphics g)
@@ -63,6 +61,13 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jBtnBebidas = new javax.swing.JButton();
         jBtnDesayunos = new javax.swing.JButton();
         jBtnHamburguesas = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLblEntregas = new javax.swing.JButton();
+        jBtnCarrito1 = new javax.swing.JButton();
+        jLblUsuario = new javax.swing.JLabel();
+        jBtnCerrarSesion = new javax.swing.JButton();
+        jLblFecha = new javax.swing.JLabel();
+        jLblHora = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -80,17 +85,8 @@ public class JfrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setText("Usuario:");
-        EscritorioPrincipal.add(jLabel1);
-        jLabel1.setBounds(40, 30, 80, 20);
-
-        jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLblUsuario.setText("Nombre Usuario");
-        EscritorioPrincipal.add(jLblUsuario);
-        jLblUsuario.setBounds(120, 30, 170, 24);
-
         jPnlBotones.setBackground(new java.awt.Color(51, 51, 51));
+        jPnlBotones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPnlBotones.setForeground(new java.awt.Color(51, 51, 51));
         jPnlBotones.setOpaque(true);
         jPnlBotones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,8 +110,88 @@ public class JfrmPrincipal extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPnlBotones);
 
-        EscritorioPrincipal.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 100, 210, 550);
+        jLblEntregas.setFont(new java.awt.Font("Dialog", 1, 40)); // NOI18N
+        jLblEntregas.setForeground(new java.awt.Color(51, 102, 255));
+        jLblEntregas.setText("🛵");
+
+        jBtnCarrito1.setFont(new java.awt.Font("Dialog", 1, 40)); // NOI18N
+        jBtnCarrito1.setForeground(new java.awt.Color(51, 102, 255));
+        jBtnCarrito1.setText("🛒");
+
+        jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLblUsuario.setText("Nombre Usuario");
+
+        jBtnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jBtnCerrarSesion.setForeground(new java.awt.Color(204, 51, 0));
+        jBtnCerrarSesion.setText("⛔");
+
+        jLblFecha.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLblFecha.setText("Fecha");
+
+        jLblHora.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLblHora.setText("Hora");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jBtnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(237, 237, 237)
+                .addComponent(jLblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(jLblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLblUsuario)
+                        .addComponent(jLblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        EscritorioPrincipal.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        EscritorioPrincipal.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout EscritorioPrincipalLayout = new javax.swing.GroupLayout(EscritorioPrincipal);
+        EscritorioPrincipal.setLayout(EscritorioPrincipalLayout);
+        EscritorioPrincipalLayout.setHorizontalGroup(
+            EscritorioPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EscritorioPrincipalLayout.createSequentialGroup()
+                .addGroup(EscritorioPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EscritorioPrincipalLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(EscritorioPrincipalLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        EscritorioPrincipalLayout.setVerticalGroup(
+            EscritorioPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EscritorioPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -185,14 +261,15 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1260, Short.MAX_VALUE)
+                .addComponent(EscritorioPrincipal)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(EscritorioPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(EscritorioPrincipal)
+                .addContainerGap())
         );
 
         EscritorioPrincipal.getAccessibleContext().setAccessibleName("");
@@ -260,12 +337,17 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     public javax.swing.JButton jBtnBebidas;
+    public javax.swing.JButton jBtnCarrito1;
+    public javax.swing.JButton jBtnCerrarSesion;
     public javax.swing.JButton jBtnDesayunos;
     public javax.swing.JButton jBtnHamburguesas;
     public javax.swing.JButton jBtnPostres;
     public javax.swing.JButton jBtnSnacks;
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JButton jLblEntregas;
+    public javax.swing.JLabel jLblFecha;
+    public javax.swing.JLabel jLblHora;
     public javax.swing.JLabel jLblUsuario;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPnlBotones;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuBar menuBar;

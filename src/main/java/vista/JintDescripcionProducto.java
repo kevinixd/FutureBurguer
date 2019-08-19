@@ -38,6 +38,10 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
         jBtnAñadirProduc = new javax.swing.JButton();
         jLblWarningProducto = new javax.swing.JLabel();
         JlblAdvertencia = new javax.swing.JLabel();
+        jBtnMas = new javax.swing.JButton();
+        jBtnMenos = new javax.swing.JButton();
+        jTxtCantidad = new javax.swing.JTextField();
+        Cantidad = new javax.swing.JLabel();
 
         jLblNombreProducto.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLblNombreProducto.setText("Nombre Producto");
@@ -68,14 +72,26 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
         JlblAdvertencia.setForeground(new java.awt.Color(0, 153, 0));
         JlblAdvertencia.setText("*");
 
+        jBtnMas.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jBtnMas.setText("+");
+
+        jBtnMenos.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jBtnMenos.setText("-");
+
+        jTxtCantidad.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jTxtCantidad.setText("1");
+
+        Cantidad.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        Cantidad.setText("Cantidad:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
                         .addComponent(jLblImgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,24 +99,30 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLblPrecioCombo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(JlblAdvertencia, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(JlblAdvertencia, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(Cantidad))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jBtnMenos)
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jTxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(jBtnMas))))))
+                    .addComponent(jLblDescpProducto)
+                    .addComponent(jLabel5)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jLblDescpProducto))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
                         .addComponent(jCmbTamanioProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
                         .addComponent(jLblWarningProducto))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(198, 198, 198)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(JBtnRegresarProduc)
-                        .addGap(75, 75, 75)
-                        .addComponent(jBtnAñadirProduc)))
-                .addContainerGap(169, Short.MAX_VALUE))
+                        .addGap(74, 74, 74)
+                        .addComponent(jBtnAñadirProduc)
+                        .addGap(176, 176, 176)))
+                .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +135,16 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLblPrecioCombo)
-                            .addComponent(JlblAdvertencia))))
+                            .addComponent(JlblAdvertencia)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Cantidad)
+                                .addGap(2, 2, 2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jBtnMenos)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(3, 3, 3)
+                                        .addComponent(jTxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jBtnMas))))))
                 .addGap(12, 12, 12)
                 .addComponent(jLblDescpProducto)
                 .addGap(23, 23, 23)
@@ -124,11 +155,11 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addComponent(jLblWarningProducto)))
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBtnRegresarProduc)
                     .addComponent(jBtnAñadirProduc))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -136,9 +167,12 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel Cantidad;
     public javax.swing.JButton JBtnRegresarProduc;
     public javax.swing.JLabel JlblAdvertencia;
     public javax.swing.JButton jBtnAñadirProduc;
+    public javax.swing.JButton jBtnMas;
+    public javax.swing.JButton jBtnMenos;
     public javax.swing.JComboBox<String> jCmbTamanioProducto;
     private javax.swing.JLabel jLabel5;
     public javax.swing.JLabel jLblDescpProducto;
@@ -146,5 +180,6 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLblNombreProducto;
     public javax.swing.JLabel jLblPrecioCombo;
     public javax.swing.JLabel jLblWarningProducto;
+    public javax.swing.JTextField jTxtCantidad;
     // End of variables declaration//GEN-END:variables
 }
