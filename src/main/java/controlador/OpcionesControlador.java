@@ -68,7 +68,7 @@ public class OpcionesControlador implements ActionListener {
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
             producto.setLocation(320, 105);
-            producto.setSize(910, 550);
+            producto.setSize(1500, 750);
         }
     }
 

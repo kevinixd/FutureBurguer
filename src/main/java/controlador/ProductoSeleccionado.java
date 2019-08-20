@@ -25,6 +25,6 @@ public class ProductoSeleccionado {
     public static int clasificacion;
     
     //ArrayList para
-    public static ArrayList<DetallePedido> agregarOrden= new ArrayList();
+    public static ArrayList<DetallePedido> agregarCarrito= new ArrayList();
 }
  

@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import static controlador.ProductoSeleccionado.agregarCarrito;
 import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.productoID;
@@ -14,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import modelo.DetallePedido;
 import modelo.Tamanios;
 import modelo.View_productosTamanios;
 import vista.JintCarrito;
@@ -69,6 +71,7 @@ public class View_productosTamaniosControlador implements ActionListener {
         vista.jLblWarningProducto.setVisible(false);
         llenarTamanios();
         asignarDatosProductos();
+        asignarDatosporTamanio();
         vista.JlblAdvertencia.setVisible(false);
     }
 
@@ -76,12 +79,11 @@ public class View_productosTamaniosControlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jCmbTamanioProducto) {
             asignarDatosporTamanio();
+            vista.jLblTamanio.setText(String.valueOf(vista.jCmbTamanioProducto.getSelectedItem()));
         }
 
         if (e.getSource() == vista.jBtnAñadirProduc) {
-            JintCarrito carrito= new JintCarrito();
-            principal.EscritorioPrincipal.add(carrito);
-            carrito.setVisible(true);
+            asignarDatosCarrito();
             
         }
 
@@ -161,19 +163,32 @@ public class View_productosTamaniosControlador implements ActionListener {
         ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(210, -1, java.awt.Image.SCALE_DEFAULT));
         vista.jLblImgProducto.setIcon(iconoRed);
         vista.jLblDescpProducto.setText(String.valueOf(producTamanios.getProductoDescpView()));
-        vista.jLblPrecioCombo.setText("Q." + String.valueOf(producTamanios.getPrecioView()));
+        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView()));
+        
+        //Asignamos el Tamanio al label para luego realizar la busqueda
+        vista.jLblTamanio.setText(String.valueOf(producTamanios.getTamanioView()));
 
         //Comprobamos si el tamaño es unico, de tal manera que si es asi se deshabilita el combo Box
         if (producTamanios.getTamanioView().equals("Único")) {
             vista.jCmbTamanioProducto.setEnabled(false);
             vista.jLblWarningProducto.setVisible(true);
+            vista.jLblTamanio.setText(String.valueOf("Unico"));
         }
     }
 
     public void asignarDatosporTamanio() {
-        String tamanio = String.valueOf(vista.jCmbTamanioProducto.getSelectedItem());
+        String tamanio = String.valueOf(vista.jLblTamanio.getText());
         producTamanios = dao.verPorTamanio(productoID, tamanio);
-        vista.jLblPrecioCombo.setText("Q." + String.valueOf(producTamanios.getPrecioView()));
+        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView()));
+        vista.jLblPtId.setText(String.valueOf(producTamanios.getPtIdView()));
         vista.JlblAdvertencia.setVisible(true);
+    }
+    
+    public void asignarDatosCarrito(){
+        DetallePedido pedido= new DetallePedido();
+        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblPtId.getText()));
+        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
+        pedido.setPrecio(Float.parseFloat(vista.jLblPrecioCombo.getText()));
+        agregarCarrito.add(pedido);
     }
 }

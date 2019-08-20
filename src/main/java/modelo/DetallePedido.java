@@ -1,38 +1,30 @@
-
 package modelo;
+
 /*
  * esta clase es un reflejo de la tabla detalle pedido de la base de datos
  * @author futurebuguer
  */
 
 public class DetallePedido {
-    
+
     private byte detallepedido_id;
     private byte pedido_id;
-    private byte tipo_combo_id;
-    private int  producto_tamaño_id;
+    private int producto_tamanio_id;
     private byte cantidad;
-    private String descripcion;
     private float precio;
-    
-    
-    //constructores
 
+    //constructores
     public DetallePedido() {
     }
 
-    public DetallePedido(byte detallepedido_id, byte pedido_id, byte tipo_combo_id, int producto_tamaño_id, byte cantidad, String descripcion, float precio) {
+    public DetallePedido(byte detallepedido_id, byte pedido_id, int producto_tamaño_id, byte cantidad, float precio) {
         this.detallepedido_id = detallepedido_id;
         this.pedido_id = pedido_id;
-        this.tipo_combo_id = tipo_combo_id;
-        this.producto_tamaño_id = producto_tamaño_id;
         this.cantidad = cantidad;
-        this.descripcion = descripcion;
         this.precio = precio;
     }
-    
-    //getter y setter
 
+    //getter y setter
     public byte getDetallepedido_id() {
         return detallepedido_id;
     }
@@ -49,20 +41,12 @@ public class DetallePedido {
         this.pedido_id = pedido_id;
     }
 
-    public byte getTipo_combo_id() {
-        return tipo_combo_id;
-    }
-
-    public void setTipo_combo_id(byte tipo_combo_id) {
-        this.tipo_combo_id = tipo_combo_id;
-    }
-
     public int getProducto_tamaño_id() {
-        return producto_tamaño_id;
+        return producto_tamanio_id;
     }
 
-    public void setProducto_tamaño_id(int producto_tamaño_id) {
-        this.producto_tamaño_id = producto_tamaño_id;
+    public void setProducto_tamaño_id(int producto_tamanio_id) {
+        this.producto_tamanio_id = producto_tamanio_id;
     }
 
     public byte getCantidad() {
@@ -73,14 +57,6 @@ public class DetallePedido {
         this.cantidad = cantidad;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
     public float getPrecio() {
         return precio;
     }
@@ -88,12 +64,5 @@ public class DetallePedido {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-    
- 
-    
-    
-    
-    
-    
-    
+
 }

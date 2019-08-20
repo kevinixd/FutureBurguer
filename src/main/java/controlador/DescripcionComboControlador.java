@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import static controlador.ProductoSeleccionado.agregarOrden;
+import static controlador.ProductoSeleccionado.agregarCarrito;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.ProductoSeleccionado.productoID;
@@ -18,6 +18,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import modelo.DetallePedido;
 import modelo.Productos;
 import modelo.Tamanios;
 import modelo.View_Descripcioncombo;
@@ -98,25 +99,24 @@ public class DescripcionComboControlador implements ActionListener {
         *vista.jLblSnackId.setText(String.valueOf(listaCombo.get(1).getProductoTamanioId()));
         *vista.jLblBebidaID.setText(String.valueOf(listaCombo.get(2).getProductoTamanioId()));        
          */
-        String tamanios = String.valueOf(vista.jCmbTamanioCombo.getSelectedItem());
-        String producto = String.valueOf(vista.jCmbBebida.getSelectedItem());
-        String snack = String.valueOf(vista.jLblSnackCombo.getText());
-
         if (e.getSource() == vista.jCmbTamanioCombo) {
+
+            String tamanios = String.valueOf(vista.jCmbTamanioCombo.getSelectedItem());
+            String producto = String.valueOf(vista.jCmbBebida.getSelectedItem());
+            String snack = String.valueOf(vista.jLblSnackCombo.getText());
 
             //Encontrar ID de Bebida por ComboBox Tamanio
             bebidaID = dao4.verProductoId(tamanios, producto);
             vista.jLblBebidaID.setText(String.valueOf(bebidaID.getPtIdView()));
-            vista.jLblPrecioBebida.setText(String.valueOf("Q. " + bebidaID.getPrecioView()));
+            vista.jLblPrecioBebida.setText(String.valueOf(bebidaID.getPrecioView()));
             //Encontrar ID de Snack
             snackID = dao4.verProductoId(tamanios, snack);
             vista.jLblSnackId.setText(String.valueOf(snackID.getPtIdView()));
-            vista.jLblSnackPrecio.setText(String.valueOf("Q. " + snackID.getPrecioView()));
+            vista.jLblSnackPrecio.setText(String.valueOf(snackID.getPrecioView()));
 
             //Asignar precio Total a la etiqueta de Precio
-            vista.jLblPrecio.setText(String.valueOf("Q."
-                    + String.valueOf(listaCombo.get(0).getPrecio() + bebidaID.getPrecioView()
-                            + snackID.getPrecioView())));
+            vista.jLblPrecio12.setText(String.valueOf(String.valueOf(listaCombo.get(0).getPrecio() + bebidaID.getPrecioView()
+                    + snackID.getPrecioView())));
 
             //Mostramos un asterico para demostrar el cambio en el precio
             vista.jLblAdvertencia.setVisible(true);
@@ -126,7 +126,9 @@ public class DescripcionComboControlador implements ActionListener {
         }
 
         if (e.getSource() == vista.jCmbBebida) {
-
+            String tamanios = String.valueOf(vista.jCmbTamanioCombo.getSelectedItem());
+            String producto = String.valueOf(vista.jCmbBebida.getSelectedItem());
+            String snack = String.valueOf(vista.jLblSnackCombo.getText());
             //Encontrar ID de Bebida por ComboBox Bebida
             bebidaID = dao4.verProductoId(tamanios, producto);
             vista.jLblBebidaID.setText(String.valueOf(bebidaID.getPtIdView()));
@@ -147,6 +149,10 @@ public class DescripcionComboControlador implements ActionListener {
             opcion.setVisible(true);
             opcion.setLocation(320, 105);
             opcion.setSize(1500, 750);
+        }
+        
+        if(e.getSource()== vista.jBtnAñadir){
+            asignarDatosCarrito();
         }
         deshabilitarBotonCantidad();
 
@@ -196,13 +202,13 @@ public class DescripcionComboControlador implements ActionListener {
         //Nombre del combo
         vista.jLblNombreCombo.setText(String.valueOf(listaCombo.get(0).getNombreCombo()));
         ImageIcon icono = new ImageIcon(rutaCombo + listaCombo.get(0).getImagenDetalleCombo());
-        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(210, -1, java.awt.Image.SCALE_DEFAULT));
+        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(230, -1, java.awt.Image.SCALE_DEFAULT));
 
         //Imagen del combo
         vista.jLblImgCombo.setIcon(iconoRed);
 
         //Precio del combo
-        vista.jLblPrecio.setText("Q." + String.valueOf(listaCombo.get(0).getPrecio() + listaCombo.get(1).getPrecio() + listaCombo.get(2).getPrecio()));
+        vista.jLblPrecio12.setText(String.valueOf(listaCombo.get(0).getPrecio() + listaCombo.get(1).getPrecio() + listaCombo.get(2).getPrecio()));
 
         //Descripcion del combo
         vista.jLblDescpCombo.setText(String.valueOf(listaCombo.get(0).getDescripcionCombo()));
@@ -210,22 +216,47 @@ public class DescripcionComboControlador implements ActionListener {
         //Principal Datos
         vista.jLblProductPrincipal.setText(String.valueOf(listaCombo.get(0).getProductoCombo()));
         vista.jLblPrincipalID.setText(String.valueOf(listaCombo.get(0).getProductoTamanioId()));
-        vista.jLblPrecioPrincipal.setText(String.valueOf("Q." + listaCombo.get(0).getPrecio()));
+        vista.jLblPrecioPrincipal.setText(String.valueOf(listaCombo.get(0).getPrecio()));
 
         //Snack datos
         vista.jLblSnackCombo.setText(String.valueOf(listaCombo.get(1).getProductoCombo()));
         vista.jLblSnackId.setText(String.valueOf(listaCombo.get(1).getProductoTamanioId()));
-        vista.jLblSnackPrecio.setText(String.valueOf("Q." + listaCombo.get(1).getPrecio()));
+        vista.jLblSnackPrecio.setText(String.valueOf(listaCombo.get(1).getPrecio()));
 
         //Bebida datos
         vista.jLblBebidaID.setText(String.valueOf(listaCombo.get(2).getProductoTamanioId()));
-        vista.jLblPrecioBebida.setText(String.valueOf("Q." + listaCombo.get(2).getPrecio()));
+        vista.jLblPrecioBebida.setText(String.valueOf(listaCombo.get(2).getPrecio()));
 
         //Principal ID
         listaComboRenovada = listaCombo;
     }
 
     public void asignarDatosCarrito() {
-        //
+        //Agregar principal
+        DetallePedido pedido = new DetallePedido();
+        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblPrincipalID.getText()));
+        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
+        pedido.setPrecio(Float.parseFloat(vista.jLblPrecioPrincipal.getText()));
+        agregarCarrito.add(pedido);
+        
+        //Agregar acompañamiento
+        pedido= new DetallePedido();
+        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblSnackId.getText()));
+        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
+        pedido.setPrecio(Float.parseFloat(vista.jLblSnackPrecio.getText()));
+        agregarCarrito.add(pedido);
+        
+        //Agregar Bebida
+        pedido= new DetallePedido();
+        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblBebidaID.getText()));
+        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
+        pedido.setPrecio(Float.parseFloat(vista.jLblPrecioBebida.getText()));
+        agregarCarrito.add(pedido);
+        
+        System.out.println(agregarCarrito.get(0).getProducto_tamaño_id());
+        System.out.println(agregarCarrito.get(1).getProducto_tamaño_id());
+        System.out.println(agregarCarrito.get(2).getProducto_tamaño_id());
+        System.out.println(agregarCarrito.get(3).getProducto_tamaño_id());
+
     }
 }
