@@ -59,15 +59,15 @@ public class OpcionesControlador implements ActionListener {
             DescripcionComboControlador controlador = new DescripcionComboControlador(combo);
             principal.EscritorioPrincipal.add(combo);
             combo.setVisible(true);
-            combo.setLocation(300, 100);
-            combo.setSize(910, 550);
+            combo.setLocation(320, 105);
+            combo.setSize(1500, 750);
         }
 
         if (e.getSource() == opcion.jBtnIndividual) {
             View_productosTamaniosControlador controladorProductos = new View_productosTamaniosControlador(producto);
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
+            producto.setLocation(320, 105);
             producto.setSize(910, 550);
         }
     }

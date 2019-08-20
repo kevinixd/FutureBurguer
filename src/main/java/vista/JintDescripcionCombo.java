@@ -57,122 +57,257 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jLblAdvertencia = new javax.swing.JLabel();
         jLblAdvertencia3 = new javax.swing.JLabel();
 
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jLblNombreCombo.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLblNombreCombo.setText("Nombre Combo");
-        getContentPane().add(jLblNombreCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 25, -1, -1));
-        getContentPane().add(jLblImgCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 25, 200, 243));
 
         jLblDescpCombo.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 16)); // NOI18N
         jLblDescpCombo.setForeground(new java.awt.Color(102, 0, 255));
         jLblDescpCombo.setText("Descripción");
-        getContentPane().add(jLblDescpCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 583, 34));
-        jLblDescpCombo.getAccessibleContext().setAccessibleDescription("");
 
         jLblPrecio.setFont(new java.awt.Font("Dialog", 1, 26)); // NOI18N
         jLblPrecio.setText("Q.123456");
-        getContentPane().add(jLblPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 93, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Elephant", 1, 20)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLabel5.setText("Tamaño:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 196, -1, -1));
 
-        jCmbTamanioCombo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jCmbTamanioCombo.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jCmbTamanioCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jCmbTamanioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 233, 164, -1));
 
-        jLblSnackCombo.setFont(new java.awt.Font("HP Simplified", 1, 20)); // NOI18N
+        jLblSnackCombo.setFont(new java.awt.Font("HP Simplified", 1, 25)); // NOI18N
         jLblSnackCombo.setForeground(new java.awt.Color(255, 204, 0));
         jLblSnackCombo.setText("Papas");
-        getContentPane().add(jLblSnackCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 359, -1, -1));
 
-        jCmbBebida.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jCmbBebida.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jCmbBebida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jCmbBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 358, 224, -1));
 
-        JBtnRegresar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        JBtnRegresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         JBtnRegresar.setText("Regresar");
-        getContentPane().add(JBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
 
-        jBtnAñadir.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jBtnAñadir.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnAñadir.setText("Añadir a la orden");
-        getContentPane().add(jBtnAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 440, -1, -1));
 
         jLblSnackId.setText("IDSnack");
-        getContentPane().add(jLblSnackId, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 389, -1, -1));
 
         jLblBebidaID.setText("IDBebida");
-        getContentPane().add(jLblBebidaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 398, 19, -1));
 
-        Cantidad.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        Cantidad.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         Cantidad.setText("Cantidad:");
-        getContentPane().add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 25, -1, -1));
 
-        jLblProductPrincipal.setFont(new java.awt.Font("HP Simplified", 1, 20)); // NOI18N
+        jLblProductPrincipal.setFont(new java.awt.Font("HP Simplified", 1, 25)); // NOI18N
         jLblProductPrincipal.setForeground(new java.awt.Color(255, 204, 0));
         jLblProductPrincipal.setText("Hamburguesa");
-        getContentPane().add(jLblProductPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(557, 229, 180, -1));
 
         jTxtCantidad.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
         jTxtCantidad.setText("1");
-        getContentPane().add(jTxtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 62, 40, 50));
 
         jBtnMas.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnMas.setText("+");
-        getContentPane().add(jBtnMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 59, -1, -1));
 
         jBtnMenos.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnMenos.setText("-");
-        getContentPane().add(jBtnMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 59, -1, -1));
 
-        jLblPrecioPrincipal.setFont(new java.awt.Font("Dialog", 3, 20)); // NOI18N
+        jLblPrecioPrincipal.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblPrecioPrincipal.setText("Precio");
-        getContentPane().add(jLblPrecioPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 230, 67, -1));
 
-        jLblSnackPrecio.setFont(new java.awt.Font("Dialog", 3, 20)); // NOI18N
+        jLblSnackPrecio.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblSnackPrecio.setText("Precio");
-        getContentPane().add(jLblSnackPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 359, -1, -1));
 
-        jLblProductPrincipal3.setFont(new java.awt.Font("Elephant", 1, 20)); // NOI18N
+        jLblProductPrincipal3.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLblProductPrincipal3.setText("Acompañamiento:");
-        getContentPane().add(jLblProductPrincipal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
-        jLblPrecioBebida.setFont(new java.awt.Font("Dialog", 3, 20)); // NOI18N
+        jLblPrecioBebida.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblPrecioBebida.setText("Precio");
-        getContentPane().add(jLblPrecioBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 361, 67, -1));
 
-        jLblProductPrincipal4.setFont(new java.awt.Font("Elephant", 1, 20)); // NOI18N
+        jLblProductPrincipal4.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLblProductPrincipal4.setText("Bebida: ");
-        getContentPane().add(jLblProductPrincipal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 326, -1, -1));
 
-        jLblProductPrincipal5.setFont(new java.awt.Font("Elephant", 1, 20)); // NOI18N
+        jLblProductPrincipal5.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLblProductPrincipal5.setText("Hamburguesa: ");
-        getContentPane().add(jLblProductPrincipal5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, -1, -1));
 
         jLblPrincipalID.setText("IDPrincipal");
-        getContentPane().add(jLblPrincipalID, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 229, 33, -1));
 
-        jLblAdvertencia2.setFont(new java.awt.Font("Gill Sans MT", 1, 30)); // NOI18N
+        jLblAdvertencia2.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
         jLblAdvertencia2.setForeground(new java.awt.Color(51, 255, 51));
         jLblAdvertencia2.setText("*");
-        getContentPane().add(jLblAdvertencia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 360, 19, -1));
 
-        jLblAdvertencia1.setFont(new java.awt.Font("Gill Sans MT", 1, 30)); // NOI18N
+        jLblAdvertencia1.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
         jLblAdvertencia1.setForeground(new java.awt.Color(51, 255, 51));
         jLblAdvertencia1.setText("*");
-        getContentPane().add(jLblAdvertencia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(816, 229, 26, -1));
 
-        jLblAdvertencia.setFont(new java.awt.Font("Gill Sans MT", 1, 30)); // NOI18N
+        jLblAdvertencia.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
         jLblAdvertencia.setForeground(new java.awt.Color(51, 255, 51));
         jLblAdvertencia.setText("*");
-        getContentPane().add(jLblAdvertencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 20, -1));
 
         jLblAdvertencia3.setFont(new java.awt.Font("Gill Sans MT", 1, 30)); // NOI18N
         jLblAdvertencia3.setForeground(new java.awt.Color(51, 255, 51));
         jLblAdvertencia3.setLabelFor(jLblPrecio);
         jLblAdvertencia3.setText("*");
-        getContentPane().add(jLblAdvertencia3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 26, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(458, 458, 458)
+                        .addComponent(JBtnRegresar)
+                        .addGap(77, 77, 77)
+                        .addComponent(jBtnAñadir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLblSnackCombo)
+                                    .addComponent(jLblSnackId))
+                                .addGap(60, 60, 60)
+                                .addComponent(jLblSnackPrecio)
+                                .addGap(22, 22, 22)
+                                .addComponent(jLblAdvertencia, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLblProductPrincipal3))
+                        .addGap(421, 421, 421)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLblProductPrincipal4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(15, 15, 15)
+                                        .addComponent(jLblBebidaID, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(6, 6, 6)
+                                .addComponent(jLblPrecioBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)
+                                .addComponent(jLblAdvertencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLblImgCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLblPrecio)
+                                        .addGap(3, 3, 3)
+                                        .addComponent(jLblAdvertencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(4, 4, 4)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLblNombreCombo)
+                                            .addComponent(jLblDescpCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(437, 437, 437)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Cantidad)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jBtnMenos)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(jTxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(jBtnMas))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(118, 118, 118)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addGap(322, 322, 322)
+                                        .addComponent(jLblProductPrincipal5))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(266, 266, 266)
+                                        .addComponent(jLblPrincipalID, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(jLblProductPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(jLblPrecioPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(3, 3, 3)
+                                .addComponent(jLblAdvertencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(40, 40, 40))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLblNombreCombo)
+                                .addGap(23, 23, 23)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(3, 3, 3)
+                                        .addComponent(jLblPrecio))
+                                    .addComponent(jLblAdvertencia3))
+                                .addGap(13, 13, 13)
+                                .addComponent(jLblDescpCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(69, 69, 69)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel5)
+                                            .addComponent(jLblProductPrincipal5))
+                                        .addGap(3, 3, 3)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCmbTamanioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLblPrincipalID)
+                                                    .addComponent(jLblProductPrincipal)
+                                                    .addComponent(jLblPrecioPrincipal)))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(50, 50, 50)
+                                        .addComponent(jLblAdvertencia1))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Cantidad)
+                                .addGap(11, 11, 11)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jBtnMenos)
+                                    .addComponent(jTxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jBtnMas)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLblImgCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLblProductPrincipal4)
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCmbBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(jLblBebidaID))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jLblPrecioBebida))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(jLblAdvertencia2))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLblProductPrincipal3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jLblSnackCombo)
+                                .addGap(4, 4, 4)
+                                .addComponent(jLblSnackId))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jLblSnackPrecio))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(jLblAdvertencia)))))
+                .addGap(86, 86, 86)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JBtnRegresar)
+                    .addComponent(jBtnAñadir))
+                .addGap(50, 50, 50))
+        );
+
+        jLblDescpCombo.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

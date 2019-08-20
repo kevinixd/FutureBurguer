@@ -50,6 +50,7 @@ public class HamburguesasControlador implements ActionListener {
     public HamburguesasControlador(jIntHamburguesas hamburguesas) {
         this.hamburguesas = hamburguesas;
         crearHamburguesas();
+        hamburguesas.setOpaque(false);
     }
 
     @Override
@@ -62,8 +63,8 @@ public class HamburguesasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opcion);
             opcion.setVisible(true);
-            opcion.setLocation(300, 100);
-            opcion.setSize(910, 550);
+            opcion.setLocation(320, 105);
+            opcion.setSize(1500, 750);
         }
 
         if (e.getSource() == lista.get(1)) {
@@ -72,8 +73,8 @@ public class HamburguesasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opcion);
             opcion.setVisible(true);
-            opcion.setLocation(300, 100);
-            opcion.setSize(910, 550);
+            opcion.setLocation(320, 105);
+            opcion.setSize(1500, 750);
         }
 
         if (e.getSource() == lista.get(2)) {
@@ -83,8 +84,8 @@ public class HamburguesasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opcion);
             opcion.setVisible(true);
-            opcion.setLocation(300, 100);
-            opcion.setSize(910, 550);
+            opcion.setLocation(320, 105);
+            opcion.setSize(1500, 750);
         }
 
         if (e.getSource() == lista.get(3)) {
@@ -93,8 +94,8 @@ public class HamburguesasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opcion);
             opcion.setVisible(true);
-            opcion.setLocation(300, 100);
-            opcion.setSize(910, 550);
+            opcion.setLocation(320, 105);
+            opcion.setSize(1500, 750);
         }
         OpcionesControlador controlador = new OpcionesControlador(opcion);
 
@@ -113,7 +114,7 @@ public class HamburguesasControlador implements ActionListener {
 
             //Asignar imagen a los botones
             ImageIcon icono = new ImageIcon(rutaProducto + producto.getImagen());
-            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(150, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(iconoRed);
             boton.addActionListener(this);
             hamburguesas.add(boton);

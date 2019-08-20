@@ -33,6 +33,8 @@ public class jIntBebidasFC extends javax.swing.JInternalFrame {
         jLblBF = new javax.swing.JLabel();
         jLblBC = new javax.swing.JLabel();
 
+        setOpaque(false);
+
         jBtnBC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnBCActionPerformed(evt);
@@ -45,10 +47,10 @@ public class jIntBebidasFC extends javax.swing.JInternalFrame {
             }
         });
 
-        jLblBF.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblBF.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         jLblBF.setText("Bebidas Frias");
 
-        jLblBC.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLblBC.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         jLblBC.setText("Bebidas Calientes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -56,30 +58,26 @@ public class jIntBebidasFC extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(351, 351, 351)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnBF, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnBC, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblBC)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(370, 370, 370)
-                        .addComponent(jLblBF)))
-                .addContainerGap(385, Short.MAX_VALUE))
+                .addGap(620, 620, 620)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jBtnBF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnBC, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLblBF)
+                    .addComponent(jLblBC))
+                .addContainerGap(620, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(jBtnBF, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblBF)
-                .addGap(67, 67, 67)
-                .addComponent(jBtnBC, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(144, 144, 144)
+                .addComponent(jBtnBC, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLblBC)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addComponent(jBtnBF, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLblBF)
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         pack();

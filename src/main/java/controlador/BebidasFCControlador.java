@@ -41,16 +41,16 @@ public class BebidasFCControlador implements ActionListener {
         if (e.getSource() == bebidas.jBtnBF) {
             BebidasFriasControlador bfc = new BebidasFriasControlador(bebidasFrias);
             principal.EscritorioPrincipal.add(bebidasFrias);
-            bebidasFrias.setLocation(300, 100);
-            bebidasFrias.setSize(910, 550);
+            bebidasFrias.setLocation(320, 105);
+            bebidasFrias.setSize(1500, 750);
             bebidasFrias.setVisible(true);
 
         }
         if (e.getSource() == bebidas.jBtnBC) {
             BebidasCalienteControlador bcc = new BebidasCalienteControlador(bebidasCalientes);
             principal.EscritorioPrincipal.add(bebidasCalientes);
-            bebidasCalientes.setLocation(300, 100);
-            bebidasCalientes.setSize(910, 550);
+            bebidasCalientes.setLocation(320, 105);
+            bebidasCalientes.setSize(1500, 750);
             bebidasCalientes.setVisible(true);
         }
 

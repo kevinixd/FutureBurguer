@@ -56,8 +56,8 @@ public class SnacksControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
 
         if (e.getSource() == listaSnacks.get(1)) {
@@ -66,8 +66,8 @@ public class SnacksControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
 
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
@@ -84,7 +84,7 @@ public class SnacksControlador implements ActionListener {
 
             ImageIcon snackImg = new ImageIcon(ruta + producto.getImagen());
 
-            ImageIcon snackImgRed = new ImageIcon(snackImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            ImageIcon snackImgRed = new ImageIcon(snackImg.getImage().getScaledInstance(150, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(snackImgRed);
             boton.addActionListener(this);
             snacks.add(boton);

@@ -16,6 +16,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import modelo.Tamanios;
 import modelo.View_productosTamanios;
+import vista.JintCarrito;
 import vista.JintDescripcionProducto;
 import vista.JintOpcion;
 import vista.formulariosbebidas.jIntBebidasCalientes;
@@ -77,37 +78,48 @@ public class View_productosTamaniosControlador implements ActionListener {
             asignarDatosporTamanio();
         }
 
+        if (e.getSource() == vista.jBtnAñadirProduc) {
+            JintCarrito carrito= new JintCarrito();
+            principal.EscritorioPrincipal.add(carrito);
+            carrito.setVisible(true);
+            
+        }
+
         if (e.getSource() == vista.JBtnRegresarProduc) {
             if (clasificacion == 1001 || clasificacion == 1006) {
                 controlador = new OpcionesControlador(opcion);
                 principal.EscritorioPrincipal.add(opcion);
                 opcion.setVisible(true);
-                opcion.setLocation(300, 100);
-                opcion.setSize(910, 550);
+                opcion.setLocation(320, 105);
+                opcion.setSize(1500, 750);
+
             } else if (clasificacion == 1002) {
                 bfControlador = new BebidasFriasControlador(bebidasFrias);
                 principal.EscritorioPrincipal.add(bebidasFrias);
                 bebidasFrias.setVisible(true);
-                bebidasFrias.setLocation(300, 100);
-                bebidasFrias.setSize(910, 550);
+                bebidasFrias.setLocation(320, 105);
+                bebidasFrias.setSize(1500, 750);
+
             } else if (clasificacion == 1003) {
                 bcControlador = new BebidasCalienteControlador(bebidaCaliente);
                 principal.EscritorioPrincipal.add(bebidaCaliente);
                 bebidaCaliente.setVisible(true);
-                bebidaCaliente.setLocation(300, 100);
-                bebidaCaliente.setSize(910, 550);
+                bebidaCaliente.setLocation(320, 105);
+                bebidaCaliente.setSize(1500, 750);
+
             } else if (clasificacion == 1004) {
                 postreControlador = new PostresControlador(postres);
                 principal.EscritorioPrincipal.add(postres);
                 postres.setVisible(true);
-                postres.setLocation(300, 100);
-                postres.setSize(910, 550);
-            } else if(clasificacion==1005){
-                snackControlador= new SnacksControlador(snack);
+                postres.setLocation(320, 105);
+                postres.setSize(1500, 750);
+
+            } else if (clasificacion == 1005) {
+                snackControlador = new SnacksControlador(snack);
                 principal.EscritorioPrincipal.add(snack);
                 snack.setVisible(true);
-                snack.setLocation(300, 100);
-                snack.setSize(910, 550);
+                snack.setLocation(320, 105);
+                snack.setSize(1500, 750);
             }
         }
 
@@ -146,7 +158,7 @@ public class View_productosTamaniosControlador implements ActionListener {
         producTamanios = dao.verProductoDetalle(productoID);
         vista.jLblNombreProducto.setText(String.valueOf(producTamanios.getProductoView()));
         ImageIcon icono = new ImageIcon(rutaProducto + producTamanios.getProductoImgView());
-        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(190, -1, java.awt.Image.SCALE_DEFAULT));
+        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(210, -1, java.awt.Image.SCALE_DEFAULT));
         vista.jLblImgProducto.setIcon(iconoRed);
         vista.jLblDescpProducto.setText(String.valueOf(producTamanios.getProductoDescpView()));
         vista.jLblPrecioCombo.setText("Q." + String.valueOf(producTamanios.getPrecioView()));

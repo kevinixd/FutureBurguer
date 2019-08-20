@@ -145,8 +145,8 @@ public class DescripcionComboControlador implements ActionListener {
             controlador = new OpcionesControlador(opcion);
             principal.EscritorioPrincipal.add(opcion);
             opcion.setVisible(true);
-            opcion.setLocation(300, 100);
-            opcion.setSize(910, 550);
+            opcion.setLocation(320, 105);
+            opcion.setSize(1500, 750);
         }
         deshabilitarBotonCantidad();
 
@@ -196,7 +196,7 @@ public class DescripcionComboControlador implements ActionListener {
         //Nombre del combo
         vista.jLblNombreCombo.setText(String.valueOf(listaCombo.get(0).getNombreCombo()));
         ImageIcon icono = new ImageIcon(rutaCombo + listaCombo.get(0).getImagenDetalleCombo());
-        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(190, -1, java.awt.Image.SCALE_DEFAULT));
+        ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(210, -1, java.awt.Image.SCALE_DEFAULT));
 
         //Imagen del combo
         vista.jLblImgCombo.setIcon(iconoRed);

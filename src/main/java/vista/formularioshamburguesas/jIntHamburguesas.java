@@ -28,6 +28,7 @@ public class jIntHamburguesas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setOpaque(false);
         getContentPane().setLayout(new java.awt.GridLayout(0, 3, 35, 35));
 
         pack();

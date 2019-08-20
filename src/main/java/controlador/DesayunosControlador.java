@@ -70,8 +70,8 @@ public class DesayunosControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
-            opciones.setLocation(300, 100);
-            opciones.setSize(910, 550);
+            opciones.setLocation(320, 105);
+            opciones.setSize(1500, 750);
 
         }
 
@@ -81,8 +81,8 @@ public class DesayunosControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
-            opciones.setLocation(300, 100);
-            opciones.setSize(910, 550);
+            opciones.setLocation(320, 105);
+            opciones.setSize(1500, 750);
 
         }
 
@@ -92,8 +92,8 @@ public class DesayunosControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
-            opciones.setLocation(300, 100);
-            opciones.setSize(910, 550);
+            opciones.setLocation(320, 105);
+            opciones.setSize(1500, 750);
         }
 
         if (e.getSource() == lista2.get(3)) {
@@ -103,8 +103,8 @@ public class DesayunosControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(opciones);
             opciones.setVisible(true);
-            opciones.setLocation(300, 100);
-            opciones.setSize(910, 550);
+            opciones.setLocation(320, 105);
+            opciones.setSize(1500, 750);
         }
 
         OpcionesControlador controlador = new OpcionesControlador(opciones);
@@ -129,7 +129,7 @@ public class DesayunosControlador implements ActionListener {
 
             //Asignar imagen a los botones
             ImageIcon desayImg = new ImageIcon(rutaProducto + producto.getImagen());
-            ImageIcon desayunosRed = new ImageIcon(desayImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            ImageIcon desayunosRed = new ImageIcon(desayImg.getImage().getScaledInstance(150, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(desayunosRed);
             boton.addActionListener(this);
             desayunos.add(boton);

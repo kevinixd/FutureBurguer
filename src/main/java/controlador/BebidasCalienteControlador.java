@@ -55,8 +55,8 @@ public class BebidasCalienteControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
 
         if (e.getSource() == listaC.get(1)) {
@@ -65,8 +65,8 @@ public class BebidasCalienteControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
 
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
@@ -81,7 +81,7 @@ public class BebidasCalienteControlador implements ActionListener {
             listaProducto.add(producto);
 
             ImageIcon bebidasImg = new ImageIcon(ruta + producto.getImagen());
-            ImageIcon bebidasImgRed = new ImageIcon(bebidasImg.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            ImageIcon bebidasImgRed = new ImageIcon(bebidasImg.getImage().getScaledInstance(150, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(bebidasImgRed);
             boton.addActionListener(this);
             bebidaCaliente.add(boton);

@@ -55,8 +55,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         
         if (e.getSource() == listaF.get(1)) {
@@ -65,8 +65,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         
         if (e.getSource() == listaF.get(2)) {
@@ -75,8 +75,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         
         if (e.getSource() == listaF.get(3)) {
@@ -85,8 +85,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         
         if (e.getSource() == listaF.get(4)) {
@@ -95,8 +95,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         
         if (e.getSource() == listaF.get(5)) {
@@ -105,8 +105,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         
         if (e.getSource() == listaF.get(6)) {
@@ -115,8 +115,8 @@ public class BebidasFriasControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(300, 100);
-            producto.setSize(910, 550);
+            producto.setLocation(320, 105);
+            producto.setSize(1500, 750);
         }
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
     }
@@ -130,7 +130,7 @@ public class BebidasFriasControlador implements ActionListener {
             listaProducto.add(producto);
 
             ImageIcon icono = new ImageIcon(ruta + producto.getImagen());
-            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(110, -1, java.awt.Image.SCALE_DEFAULT));
+            ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(150, -1, java.awt.Image.SCALE_DEFAULT));
             boton.setIcon(iconoRed);
             boton.addActionListener(this);
             bebidasFrias.add(boton);

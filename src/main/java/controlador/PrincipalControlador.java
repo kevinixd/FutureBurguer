@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -49,10 +50,9 @@ public class PrincipalControlador implements ActionListener {
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
-        principal.setLocationRelativeTo(null);
         principal.setExtendedState(6);
-        dim = principal.getSize();
-        principal.EscritorioPrincipal.setSize(dim);
+        System.out.println(principal.JPnlBotones.getLocation());
+        
 
     }
 
@@ -99,8 +99,8 @@ public class PrincipalControlador implements ActionListener {
             desayunos = new jIntDesayunos();
             DesayunosControlador dc;
             principal.EscritorioPrincipal.add(desayunos);
-            desayunos.setLocation(300, 100);
-            desayunos.setSize(910, 550);
+            desayunos.setLocation(320, 105);
+            desayunos.setSize(1500, 750);
             desayunos.setVisible(true);
             dc = new DesayunosControlador(desayunos);
         }
@@ -109,8 +109,8 @@ public class PrincipalControlador implements ActionListener {
             hamburguesas = new jIntHamburguesas();
             HamburguesasControlador hc;
             principal.EscritorioPrincipal.add(hamburguesas);
-            hamburguesas.setLocation(300, 100);
-            hamburguesas.setSize(910, 550);
+            hamburguesas.setLocation(320, 105);
+            hamburguesas.setSize(1500, 750);
             hamburguesas.setVisible(true);
             hc = new HamburguesasControlador(hamburguesas);
         }
@@ -120,8 +120,8 @@ public class PrincipalControlador implements ActionListener {
             bebidasfc = new jIntBebidasFC();
             BebidasFCControlador bc;
             principal.EscritorioPrincipal.add(bebidasfc);
-            bebidasfc.setLocation(300, 100);
-            bebidasfc.setSize(910, 550);
+            bebidasfc.setLocation(320, 105);
+            bebidasfc.setSize(1500, 750);
             bebidasfc.setVisible(true);
             bebidasfc.jBtnBF.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidasfrias\\bebidas.png"));
             bebidasfc.jBtnBC.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\bebidaCaliente.png"));
@@ -133,8 +133,8 @@ public class PrincipalControlador implements ActionListener {
             postres = new jIntPostres();
             PostresControlador pc;
             principal.EscritorioPrincipal.add(postres);
-            postres.setLocation(300, 100);
-            postres.setSize(910, 550);
+            postres.setLocation(320, 105);
+            postres.setSize(1500, 750);
             postres.setVisible(true);
             pc = new PostresControlador(postres);
         }
@@ -144,8 +144,8 @@ public class PrincipalControlador implements ActionListener {
             snacks = new jIntSnacks();
             SnacksControlador sc;
             principal.EscritorioPrincipal.add(snacks);
-            snacks.setLocation(300, 100);
-            snacks.setSize(910, 550);
+            snacks.setLocation(320, 105);
+            snacks.setSize(1500, 750);
             snacks.setVisible(true);
             sc = new SnacksControlador(snacks);
         }

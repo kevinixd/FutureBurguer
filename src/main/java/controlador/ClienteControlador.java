@@ -3,6 +3,7 @@ package controlador;
 import dao.DaoCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
 import vista.JintCliente;
@@ -10,31 +11,38 @@ import vista.JintCliente;
 public class ClienteControlador implements ActionListener {
 
     //Formulario
-    JintCliente fromCliente= new JintCliente();
+    JintCliente fromCliente = new JintCliente();
     DaoCliente dao = new DaoCliente();
     Cliente cl = new Cliente();
+
     private String mensaje;
-    
-    public ClienteControlador(JintCliente fromCliente){
-        this.fromCliente=fromCliente;
-        fromCliente.jBtnAgregar.addActionListener(this);
+    private String ruta = System.getProperty("user.dir");
+
+    public ClienteControlador(JintCliente fromCliente) {
+        this.fromCliente = fromCliente;
+        fromCliente.jBtnOrdenarCliente.addActionListener(this);
         fromCliente.jBtnBuscar.addActionListener(this);
+        ImageIcon mod = new ImageIcon(ruta + "\\src\\main\\java\\img\\Modificar.png");
+        ImageIcon add = new ImageIcon(ruta + "\\src\\main\\java\\img\\Agregar.png");
+        ImageIcon modRed = new ImageIcon(mod.getImage().getScaledInstance(100, -1, java.awt.Image.SCALE_DEFAULT));
+        ImageIcon addRed = new ImageIcon(add.getImage().getScaledInstance(100, -1, java.awt.Image.SCALE_DEFAULT));
+        fromCliente.jBtnOrdenarCliente.setIcon(addRed);
+        fromCliente.jBtnModificar.setIcon(modRed);
+        validarCampos();
     }
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==fromCliente.jBtnAgregar) {
-             guardarCliente();
+        if (e.getSource() == fromCliente.jBtnOrdenarCliente) {
+            guardarCliente();
         }
-        
-        if (e.getSource()==fromCliente.jBtnBuscar) {
+
+        if (e.getSource() == fromCliente.jBtnBuscar) {
             buscarCliente();
         }
     }
-    
-    
-    public void guardarCliente(){
+
+    public void guardarCliente() {
         cl.setClientenombre(fromCliente.jTxtNombre.getText());
         cl.setClienteapellido(fromCliente.jTxtApellido.getText());
         cl.setClientetelefono(Integer.parseInt(fromCliente.jTxtTel.getText()));
@@ -48,8 +56,8 @@ public class ClienteControlador implements ActionListener {
         fromCliente.jTxtDire.setText("");
         fromCliente.jTxtNit.setText("");
     }
-    
-    public void buscarCliente(){
+
+    public void buscarCliente() {
         int tel = Integer.parseInt(fromCliente.jTxtTel.getText());
         cl = dao.buscarCliente(tel);
         fromCliente.jTxtNombre.setText(cl.getClientenombre());
@@ -58,5 +66,13 @@ public class ClienteControlador implements ActionListener {
         fromCliente.jTxtDire.setText(cl.getClientedireccion());
         fromCliente.jTxtNit.setText(cl.getClientenit());
     }
-    
+
+    public void validarCampos() {
+        //Validar Campos
+        ValidarCampos validar = new ValidarCampos();
+        validar.ValidarSoloLetras(fromCliente.jTxtNombre);
+        validar.ValidarSoloLetras(fromCliente.jTxtApellido);
+        validar.ValidarSoloNumeros(fromCliente.jTxtTel);
+    }
+
 }
