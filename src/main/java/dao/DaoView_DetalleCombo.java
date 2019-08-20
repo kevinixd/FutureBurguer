@@ -10,8 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import modelo.View_Descripcioncombo;
 
 /**
@@ -47,6 +45,7 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
                 descripcionCombo.setDetallescombosId(resultado.getInt("detallescombos_id"));
                 descripcionCombo.setComboId(resultado.getInt("combo_id"));
                 descripcionCombo.setNombreCombo(resultado.getString("combo"));
+                descripcionCombo.setDescripcionCombo(resultado.getString("descripcion"));
                 descripcionCombo.setImagenDetalleCombo(resultado.getString("imagen"));
                 descripcionCombo.setProductoTamanioId(resultado.getInt("producto_tamanio_id"));
                 descripcionCombo.setProductoComboId(resultado.getInt("producto_id"));
@@ -83,6 +82,8 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
             descripcionCombo = new View_Descripcioncombo();
             descripcionCombo.setDetallescombosId(resultado.getInt("detallescombos_id"));
             descripcionCombo.setComboId(resultado.getInt("combo_id"));
+            descripcionCombo.setDescripcionCombo(resultado.getString("descripcion"));
+            descripcionCombo.setDescuento(resultado.getDouble("descuento"));
             descripcionCombo.setNombreCombo(resultado.getString("combo"));
             descripcionCombo.setImagenDetalleCombo(resultado.getString("imagen"));
             descripcionCombo.setProductoTamanioId(resultado.getInt("producto_tamanio_id"));
@@ -98,6 +99,7 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
             System.out.println("Detalle Combo Id " + descripcionCombo.getImagenDetalleCombo());
             System.out.println("Producto Tamanio ID" + descripcionCombo.getProductoTamanioId());
             System.out.println("Producto " + descripcionCombo.getProductoCombo());
+            System.out.println("Descripcion " + descripcionCombo.getDescripcionCombo());
             System.out.println("Tamaño " + descripcionCombo.getTamanioCombo());
             System.out.println("Precio " + descripcionCombo.getPrecio());
 

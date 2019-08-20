@@ -8,6 +8,8 @@ package controlador;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
@@ -30,26 +32,50 @@ public class PrincipalControlador implements ActionListener {
     jIntBebidasFC bebidasfc = new jIntBebidasFC();
     jIntPostres postres = new jIntPostres();
     jIntSnacks snacks = new jIntSnacks();
-    
-    
+
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
     //Ruta para las imagenes
     String ruta = System.getProperty("user.dir");
-
+    ImageIcon fondo = new ImageIcon(ruta + "\\src\\main\\java\\img\\fondoprincipal");
     //para saber llevar el control de la solicitud del cliente
     DetallePedido detPedido;
-    
+
     private Dimension dim;
 
     public PrincipalControlador(JfrmPrincipal principal) {
         this.principal = principal;
+        horaYFecha();
         imgPrincipal();
         setActionListeners();
         detPedido = new DetallePedido();
         principal.setLocationRelativeTo(null);
         principal.setExtendedState(6);
-        dim=principal.getToolkit().getScreenSize();
+        dim = principal.getSize();
+        principal.EscritorioPrincipal.setSize(dim);
+
+    }
+
+    public void horaYFecha() {
+        //Fechas y horas
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm a"); // El formato es HH:mm:ss
+        DateTimeFormatter formateadorFecha = DateTimeFormatter.ofPattern("dd/MM/yy");
+        principal.jLblFecha.setText(formateadorFecha.format(LocalDateTime.now()));
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(500);
+                        principal.jLblHora.setText(formateador.format(LocalDateTime.now()));
+                    } catch (InterruptedException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        };
+        Thread hilo = new Thread(runnable);
+        hilo.start();
     }
 
     public void setActionListeners() {
@@ -101,9 +127,9 @@ public class PrincipalControlador implements ActionListener {
             bebidasfc.jBtnBC.setIcon(new ImageIcon(ruta + "\\src\\main\\java\\img\\bebidas\\bebidascalientes\\bebidaCaliente.png"));
             bc = new BebidasFCControlador(bebidasfc);
         }
-        
+
         if (e.getSource() == principal.jBtnPostres) {
-            
+
             postres = new jIntPostres();
             PostresControlador pc;
             principal.EscritorioPrincipal.add(postres);
@@ -112,9 +138,9 @@ public class PrincipalControlador implements ActionListener {
             postres.setVisible(true);
             pc = new PostresControlador(postres);
         }
-        
+
         if (e.getSource() == principal.jBtnSnacks) {
-            
+
             snacks = new jIntSnacks();
             SnacksControlador sc;
             principal.EscritorioPrincipal.add(snacks);

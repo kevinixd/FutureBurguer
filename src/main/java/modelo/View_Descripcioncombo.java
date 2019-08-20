@@ -9,6 +9,7 @@ public class View_Descripcioncombo {
     private int detallescombosId;
     private int comboId;
     private String descripcionCombo;
+    private double descuento;
     private String nombreCombo;
     private String imagenDetalleCombo;
     private int productoTamanioId;
@@ -20,11 +21,12 @@ public class View_Descripcioncombo {
     
     //constructores
 
-    public View_Descripcioncombo(int detallescombosId, int comboId, String descripcionCombo, String imagenDetalleCombo,
+    public View_Descripcioncombo(int detallescombosId, int comboId, String descripcionCombo, double descuento, String imagenDetalleCombo,
             String nombreCombo, int productoTamanioId, int productoComboId, String productoCombo, String tamanioCombo, float precio) {
         this.detallescombosId = detallescombosId;
         this.comboId = comboId;
         this.descripcionCombo = descripcionCombo;
+        this.descuento = descuento;
         this.imagenDetalleCombo = imagenDetalleCombo;
         this.nombreCombo = nombreCombo;
         this.productoTamanioId = productoTamanioId;
@@ -61,7 +63,14 @@ public class View_Descripcioncombo {
     public void setDescripcionCombo(String descripcionCombo) {
         this.descripcionCombo = descripcionCombo;
     }
-    
+
+    public double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
 
     public String getImagenDetalleCombo() {
         return imagenDetalleCombo;
