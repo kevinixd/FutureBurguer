@@ -1,6 +1,9 @@
 
 package modelo;
-
+/*
+ * esta clase es un reflejo de la tabla pedidos de la base de datos
+ * @author futureburguer
+ */
 import java.sql.Date;
 
 
@@ -13,7 +16,9 @@ public class Pedidos {
     private byte estadopedido_id;
     private byte cliente_id;
     private int empleado_id;
-
+    
+    
+    //constructores
     public Pedidos() {
     }
 
@@ -27,6 +32,7 @@ public class Pedidos {
         this.empleado_id = empleado_id;
     }
 
+    //getter y setter
     public byte getPedido_id() {
         return pedido_id;
     }

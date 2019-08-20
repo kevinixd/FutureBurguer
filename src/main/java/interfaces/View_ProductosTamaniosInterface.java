@@ -1,4 +1,11 @@
 package interfaces;
+/**
+ * esta interfaz va mostrar los productos a detalle.
+ * mostrara los productos por tamaño.
+ * 
+ * @author futureburguer
+ * 
+ */
 
 import java.util.ArrayList;
 import modelo.View_productosTamanios;

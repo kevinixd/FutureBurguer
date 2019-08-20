@@ -1,9 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package interfaces;
+/**
+ * esta intefaz mostrara los productos.
+ * esta intefaz mostrara las bebidas.
+ * esta  interfaz mostrara las bebidas desayunos.
+ * 
+ * @author futureburguer
+ */
 
 import java.util.ArrayList;
 import modelo.Productos;

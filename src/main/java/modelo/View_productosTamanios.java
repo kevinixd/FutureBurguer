@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo;
+/*
+ * esta clase es un reflejo de la tabla productos tamaño de la base de datos
+ * @author futureburguer
+ */
 
 public class View_productosTamanios {
 
@@ -14,6 +14,9 @@ public class View_productosTamanios {
     private String productoDescpView;
     private String tamanioView;
     private double precioView;
+    
+    
+    //constructores
 
     public View_productosTamanios() {
     }
@@ -27,6 +30,8 @@ public class View_productosTamanios {
         this.tamanioView = tamanioView;
         this.precioView = precioView;
     }
+    
+    //getter y setter
 
     public short getPtIdView() {
         return ptIdView;

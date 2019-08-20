@@ -1,5 +1,8 @@
 package modelo;
-
+/**
+ * esta clase es un reflejo de la tabla de clasificaciones en la base de datos.
+ * @author futureburguer
+ */
 public class Clasificaciones {
 
     private short clasificacion_id;

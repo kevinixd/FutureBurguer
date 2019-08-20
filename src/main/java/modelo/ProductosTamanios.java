@@ -1,5 +1,9 @@
 
 package modelo;
+/* 
+ * esta clase es un reflejo de la tabla productos tamaños de la base de datos
+ * @author futureburguer
+ */
 
 
 public class ProductosTamanios {
@@ -7,7 +11,9 @@ public class ProductosTamanios {
     private int producto_id;
     private byte tamanio_id;
     private float precio;
-
+    
+    
+//constructores
     public ProductosTamanios() {
     }
 
@@ -18,6 +24,7 @@ public class ProductosTamanios {
         this.precio = precio;
     }
 
+    //getter y setter
     public int getProducto_tamanios_id() {
         return producto_tamanios_id;
     }

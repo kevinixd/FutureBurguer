@@ -1,4 +1,8 @@
 package modelo;
+/*
+ *esta clase es un reflejo de la tabla descripcion combo de la base de datos
+ * @author futureburguer
+ */
 
 public class View_Descripcioncombo {
 
@@ -12,6 +16,9 @@ public class View_Descripcioncombo {
     private String productoCombo;
     private String tamanioCombo;
     private double precio;
+    
+    
+    //constructores
 
     public View_Descripcioncombo(int detallescombosId, int comboId, String descripcionCombo, String imagenDetalleCombo,
             String nombreCombo, int productoTamanioId, int productoComboId, String productoCombo, String tamanioCombo, float precio) {
@@ -27,6 +34,7 @@ public class View_Descripcioncombo {
         this.precio = precio;
     }
 
+    //getter y setter
     public View_Descripcioncombo() {
     }
 

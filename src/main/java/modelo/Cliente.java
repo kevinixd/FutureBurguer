@@ -1,5 +1,8 @@
 package modelo;
-
+/**
+ * esta clase es un reflejo de la tabla clientes de la base de datos
+ * @author futureburguer
+ */
 public class Cliente {
 
     private int clienteid;
@@ -8,6 +11,10 @@ public class Cliente {
     private String clienteapellido;
     private int clientetelefono;
     private String clientedireccion;
+    
+    
+    
+    //constructores
 
     public Cliente() {
     }
@@ -20,6 +27,8 @@ public class Cliente {
         this.clientetelefono = clientetelefono;
         this.clientedireccion = clientedireccion;
     }
+    
+    //getter y setter
 
     public int getClienteid() {
         return clienteid;

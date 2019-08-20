@@ -1,6 +1,11 @@
 
 package modelo;
 
+/**
+ * esta clase es un reflejo de la tabla conbos en la base de datos
+ * @author javam2019
+ */
+
 
 public class Combos {
     

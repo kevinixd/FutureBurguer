@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo;
 
-/**
- *
- * @author javam2019
+/*
+ *esta clase es un reflejo de la tabla empleados de la base de datos
+ * @author fututeburguer
  */
 public class Empleados {
     private int empleado_id;
@@ -18,6 +14,9 @@ public class Empleados {
     private String empleadocorreo;
     private String contraseña;
     private byte tipoempleado_id;
+    
+    
+    //constructores
 
     public Empleados() {
     }
@@ -33,6 +32,8 @@ public class Empleados {
         this.tipoempleado_id = tipoempleado_id;
     }
 
+    
+    //getter y setter
     public int getEmpleado_id() {
         return empleado_id;
     }

@@ -1,5 +1,7 @@
 package vista;
-
+/**
+ * 
+ */
 import controlador.PrincipalControlador;
 
 public class Ejecutable {

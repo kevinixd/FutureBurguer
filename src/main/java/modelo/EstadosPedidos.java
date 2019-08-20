@@ -1,12 +1,17 @@
 
 package modelo;
-
+/*
+ * esta clase es un reflejo de la tabla estadospedidos de la base de datos
+ * @author futureburguer
+ */
 
 public class EstadosPedidos {
 
     private byte estadopedido_id;
     private String estadopedidonombre;
-
+    
+    
+    //constructores
     public EstadosPedidos() {
     }
 
@@ -15,6 +20,7 @@ public class EstadosPedidos {
         this.estadopedidonombre = estadopedidonombre;
     }
 
+    //getter y setter
     public byte getEstadopedido_id() {
         return estadopedido_id;
     }

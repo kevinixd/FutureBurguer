@@ -1,11 +1,16 @@
 
 package modelo;
-
+/* 
+ esta clase es un reflejo de la tabla tipo combos de la base de datos
+ * @author futureburguer
+ */
 
 public class TipoCombos {
     private byte tipo_combo_id;
     private String nombre;
-
+    
+    
+//constructores
     public TipoCombos() {
     }
 
@@ -14,6 +19,7 @@ public class TipoCombos {
         this.nombre = nombre;
     }
 
+    //getter y setter
     public byte getTipo_combo_id() {
         return tipo_combo_id;
     }

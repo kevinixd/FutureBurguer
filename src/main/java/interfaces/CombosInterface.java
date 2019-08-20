@@ -1,17 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package interfaces;
+/**
+ *esta intefaz va mostrar los combos de los productos. 
+ * @author futureburguer
+ */
 
 import java.util.ArrayList;
 import modelo.Combos;
 
-/**
- *
- * @author javam2019
- */
+
 public interface CombosInterface {
     
     public Combos verCombo(byte tipoCombo);

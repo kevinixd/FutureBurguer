@@ -1,4 +1,8 @@
 package interfaces;
+/**
+ * esta interfaz va  mostrar los detalles de los combos. 
+ * @author futureburguer
+ */
 
 import java.util.ArrayList;
 import modelo.View_Descripcioncombo;

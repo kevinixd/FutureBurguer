@@ -1,4 +1,8 @@
 package interfaces;
+/**
+ * esta interfaz va agregar, eliminar , modificar y buscar a  clientes.
+ * @author futureburguer
+ */
 
 import modelo.Cliente;
 

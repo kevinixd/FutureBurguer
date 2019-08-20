@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo;
+/**
+ *esta clase es un reflejo de la tabla ordenes de la base de datos
+ *@author futureburguer
+ */
 
 public class View_Ordenes {
     
@@ -16,6 +16,8 @@ public class View_Ordenes {
     private String descripcionOrden;
     private float precioOrden;
 
+    //constructores
+    
     public View_Ordenes() {
     }
 
@@ -30,6 +32,7 @@ public class View_Ordenes {
         this.precioOrden = precioOrden;
     }
 
+    //getter y setter
     public int getNumero_orden() {
         return numero_orden;
     }

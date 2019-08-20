@@ -1,13 +1,18 @@
 
 package modelo;
-
+/*
+ * esta clase es un reflejo de la tabla tamaños de la base de datos
+ * @author futureburguer
+ */
 
 public class Tamanios {
     
     private byte tamanio_id;
     private String tamanionombre;
     private String tamaniodescripcion;
-
+    
+    
+//constructores
     public Tamanios() {
     }
 
@@ -17,6 +22,8 @@ public class Tamanios {
         this.tamaniodescripcion = tamaniodescripcion;
     }
 
+    
+    //getter y setter
     public byte getTamanio_id() {
         return tamanio_id;
     }

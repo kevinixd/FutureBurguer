@@ -1,6 +1,9 @@
 
 package modelo;
-
+/*
+ * esta clase es un reflejo de la tabla detalle pedido de la base de datos
+ * @author futurebuguer
+ */
 
 public class DetallePedido {
     
@@ -11,6 +14,9 @@ public class DetallePedido {
     private byte cantidad;
     private String descripcion;
     private float precio;
+    
+    
+    //constructores
 
     public DetallePedido() {
     }
@@ -24,6 +30,8 @@ public class DetallePedido {
         this.descripcion = descripcion;
         this.precio = precio;
     }
+    
+    //getter y setter
 
     public byte getDetallepedido_id() {
         return detallepedido_id;

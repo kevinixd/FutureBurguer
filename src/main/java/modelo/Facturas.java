@@ -1,6 +1,10 @@
 
 package modelo;
 
+/*
+ * esta clase es un reflejo de la tabla facturas de la base de datos
+ * @author futureburguer
+ */
 import java.sql.Date;
 
 
@@ -13,7 +17,9 @@ public class Facturas {
     private String nombre;
     private float total;
     private Date fecha;
-
+    
+    
+//constructores
     public Facturas() {
     }
 
@@ -27,6 +33,8 @@ public class Facturas {
         this.fecha = fecha;
     }
 
+    
+    //getter y setter
     public byte getNopedido() {
         return nopedido;
     }

@@ -1,4 +1,8 @@
 package modelo;
+/*
+ * esta clase es un reflejo de la tabla productos de la base de datos
+ * @author futureburguer
+ */
 
 public class Productos {
 
@@ -8,6 +12,7 @@ public class Productos {
     private int clasificacion_id;
     private String imagen;
 
+    //constructores
     public Productos() {
     }
 
@@ -19,6 +24,7 @@ public class Productos {
         this.imagen = imagen;
     }
 
+    //getter y setter
     public int getProducto_id() {
         return producto_id;
     }
