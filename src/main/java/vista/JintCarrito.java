@@ -31,7 +31,13 @@ public class JintCarrito extends javax.swing.JInternalFrame {
         jTlbCarrito = new javax.swing.JTable();
         jBtnOrdenar = new javax.swing.JButton();
         jBtnCancelar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
+        jTlbCarrito = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex){
+                return false;
+            }
+        };
         jTlbCarrito.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -44,6 +50,8 @@ public class JintCarrito extends javax.swing.JInternalFrame {
             }
         ));
         jTlbCarrito.setRowHeight(60);
+        jTlbCarrito.getTableHeader().setResizingAllowed(false);
+        jTlbCarrito.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTlbCarrito);
 
         jBtnOrdenar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
@@ -52,31 +60,38 @@ public class JintCarrito extends javax.swing.JInternalFrame {
         jBtnCancelar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnCancelar.setText("Cancelar Orden");
 
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setText("Carrito de compras");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addComponent(jBtnCancelar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBtnOrdenar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(106, 106, 106))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addContainerGap(11, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnOrdenar)
                     .addComponent(jBtnCancelar))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(36, 36, 36))
         );
 
         pack();
@@ -84,9 +99,10 @@ public class JintCarrito extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnCancelar;
-    private javax.swing.JButton jBtnOrdenar;
+    public javax.swing.JButton jBtnCancelar;
+    public javax.swing.JButton jBtnOrdenar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTlbCarrito;
+    public javax.swing.JTable jTlbCarrito;
     // End of variables declaration//GEN-END:variables
 }

@@ -74,7 +74,7 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jLblPrecio.setText("Q.123456");
         getContentPane().add(jLblPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 93, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Elephant", 1, 20)); // NOI18N
         jLabel5.setText("Tamaño:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 196, -1, -1));
 

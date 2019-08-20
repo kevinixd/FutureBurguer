@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import static controlador.ProductoSeleccionado.agregarOrden;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.ProductoSeleccionado.productoID;
@@ -222,5 +223,9 @@ public class DescripcionComboControlador implements ActionListener {
 
         //Principal ID
         listaComboRenovada = listaCombo;
+    }
+    
+    public void asignarDatosCarrito(){
+        //
     }
 }

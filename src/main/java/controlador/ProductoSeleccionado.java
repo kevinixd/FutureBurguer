@@ -6,6 +6,8 @@
 package controlador;
 
 
+import java.util.ArrayList;
+import modelo.DetallePedido;
 import modelo.Productos;
 
 /**
@@ -21,5 +23,8 @@ public class ProductoSeleccionado {
     
     //Variable para generalizar el ID de la clasificación
     public static int clasificacion;
+    
+    //ArrayList para
+    public static ArrayList<DetallePedido> agregarOrden= new ArrayList();
 }
  
