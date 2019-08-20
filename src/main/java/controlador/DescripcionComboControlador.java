@@ -29,7 +29,7 @@ public class DescripcionComboControlador implements ActionListener {
 
     //Frames a utilizar
     JintDescripcionCombo vista;
-    JintOpcion opcion= new JintOpcion();
+    JintOpcion opcion = new JintOpcion();
     DefaultComboBoxModel tamaniosComboBox = new DefaultComboBoxModel();
     DefaultComboBoxModel productosComboBox;
 
@@ -43,7 +43,7 @@ public class DescripcionComboControlador implements ActionListener {
     View_Descripcioncombo descripcion = new View_Descripcioncombo();
     View_productosTamanios bebidaID = new View_productosTamanios();
     View_productosTamanios snackID = new View_productosTamanios();
-    
+
     //Controlador a utlizar
     OpcionesControlador controlador;
 
@@ -140,9 +140,9 @@ public class DescripcionComboControlador implements ActionListener {
             cantidad--;
             vista.jTxtCantidad.setText(String.valueOf(cantidad));
         }
-        
-        if(e.getSource()==vista.JBtnRegresar){
-            controlador= new OpcionesControlador(opcion);
+
+        if (e.getSource() == vista.JBtnRegresar) {
+            controlador = new OpcionesControlador(opcion);
             principal.EscritorioPrincipal.add(opcion);
             opcion.setVisible(true);
             opcion.setLocation(300, 100);
@@ -224,8 +224,8 @@ public class DescripcionComboControlador implements ActionListener {
         //Principal ID
         listaComboRenovada = listaCombo;
     }
-    
-    public void asignarDatosCarrito(){
+
+    public void asignarDatosCarrito() {
         //
     }
 }
