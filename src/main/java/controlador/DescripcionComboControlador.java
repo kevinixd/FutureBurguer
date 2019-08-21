@@ -27,6 +27,7 @@ import vista.JintOpcion;
 import static controlador.ProductoSeleccionado.insertarPedido;
 import modelo.View_Ordenes;
 import static controlador.ProductoSeleccionado.verDetalle;
+import java.text.DecimalFormat;
 import vista.JintCarrito;
 
 public class DescripcionComboControlador implements ActionListener {
@@ -53,6 +54,8 @@ public class DescripcionComboControlador implements ActionListener {
     OpcionesControlador controlador;
     CarritoControlador controladorCarrito;
 
+    //Mostrar solo dos decimales
+    DecimalFormat formato1= new DecimalFormat("#.00");
     private ArrayList<View_Descripcioncombo> listaCombo = new ArrayList();
 
 //datos reales a guardar en la base de datos
@@ -159,7 +162,7 @@ public class DescripcionComboControlador implements ActionListener {
             principal.EscritorioPrincipal.add(carrito);
             carrito.setVisible(true);
             carrito.setLocation(320, 105);
-            carrito.setSize(1138, 550);
+            carrito.setSize(1500, 750);
         }
 
         cantidadActualizada = Integer.parseInt(vista.jTxtCantidad.getText());
@@ -251,6 +254,7 @@ public class DescripcionComboControlador implements ActionListener {
         vista.jLblNombreCombo.setText(String.valueOf(listaCombo.get(0).getNombreCombo()));
         ImageIcon icono = new ImageIcon(rutaCombo + listaCombo.get(0).getImagenDetalleCombo());
         ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(230, -1, java.awt.Image.SCALE_DEFAULT));
+        vista.jLblDescuento.setText(String.valueOf(listaCombo.get(0).getDescuento()) + "% de Descuento");
 
         //Imagen del combo
         vista.jLblImgCombo.setIcon(iconoRed);

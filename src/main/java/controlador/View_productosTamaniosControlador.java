@@ -24,6 +24,7 @@ import vista.formulariosbebidas.jIntBebidasFrias;
 import vista.formulariospostres.jIntPostres;
 import vista.formulariossnacks.jIntSnacks;
 import static controlador.ProductoSeleccionado.insertarPedido;
+import static controlador.ProductoSeleccionado.verDetalle;
 import modelo.View_Ordenes;
 import vista.JintCarrito;
 
@@ -89,7 +90,7 @@ public class View_productosTamaniosControlador implements ActionListener {
 
         if (e.getSource() == vista.jBtnAñadirProduc) {
             asignarDatosPedido();
-
+            asignarDatosCarrito();
         }
 
         if (e.getSource() == vista.JBtnRegresarProduc) {
@@ -206,5 +207,6 @@ public class View_productosTamaniosControlador implements ActionListener {
         carrito.setProductoOrden(vista.jLblNombreProducto.getText());
         carrito.setTamanioOrden(String.valueOf(vista.jLblTamanio.getText()));
         carrito.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblPtId.getText()));
+        verDetalle.add(carrito);
     }
 }

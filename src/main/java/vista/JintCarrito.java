@@ -18,6 +18,7 @@ public class JintCarrito extends javax.swing.JInternalFrame {
      */
     public JintCarrito() {
         initComponents();
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
     }
 
     /**
@@ -54,6 +55,8 @@ public class JintCarrito extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTlbCarrito.setCellSelectionEnabled(true);
+        jTlbCarrito.setIntercellSpacing(new java.awt.Dimension(10, 10));
         jTlbCarrito.setRowHeight(60);
         jTlbCarrito.getTableHeader().setResizingAllowed(false);
         jTlbCarrito.getTableHeader().setReorderingAllowed(false);
@@ -108,7 +111,7 @@ public class JintCarrito extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnOrdenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnOrdenarActionPerformed
-        JintCliente cliente= new JintCliente();
+        JintCliente cliente = new JintCliente();
         principal.EscritorioPrincipal.add(cliente);
         cliente.setVisible(true);
     }//GEN-LAST:event_jBtnOrdenarActionPerformed
