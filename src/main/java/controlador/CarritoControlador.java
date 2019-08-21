@@ -5,12 +5,18 @@
  */
 package controlador;
 
-import static controlador.ProductoSeleccionado.agregarCarrito;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 import modelo.DetallePedido;
+import modelo.View_Ordenes;
 import vista.JintCarrito;
 import vista.JintCliente;
+import static controlador.ProductoSeleccionado.insertarPedido;
+import static controlador.ProductoSeleccionado.verDetalle;
+import javax.swing.JButton;
 
-public class CarritoControlador {
+public class CarritoControlador implements ActionListener {
 
     //Frames a utlizar
     JintCarrito carrito = new JintCarrito();
@@ -22,21 +28,44 @@ public class CarritoControlador {
     //Modelos a utilizar
     DetallePedido orden = new DetallePedido();
 
-    private byte pedido_id=1;
+    //Tabla
+    private String[] titulos = {"Cantidad", "Producto", "Tamaño", "Precio", "Editar", "Eliminar"};
+    DefaultTableModel tablaCarrito = new DefaultTableModel(titulos, 0);
+
+    private byte pedido_id = 10;
+    private javax.swing.JButton eliminar;
+    private javax.swing.JButton modificar;
 
     public CarritoControlador(JintCarrito carrito) {
         this.carrito = carrito;
+        carrito.jBtnCancelar.addActionListener(this);
+        carrito.jBtnOrdenar.addActionListener(this);
+        eliminar= new javax.swing.JButton();
+        modificar= new javax.swing.JButton();
+        eliminar.setText("Eliminar");
+        modificar.setText("Modificar");
+        verCarrito();
     }
 
-    public void agregarDetallePedido() {
-        pedido_id++;
-        for (int i = 0; i < agregarCarrito.size() - 1; i++) {
-            orden.setPedido_id(pedido_id);
-            orden.setProducto_tamaño_id(agregarCarrito.get(i).getProducto_tamaño_id());
-            orden.setCantidad(agregarCarrito.get(i).getCantidad());
-            orden.setPrecio(agregarCarrito.get(i).getPrecio());            
+    public void verCarrito() {
+
+        Object[] filas = new Object[6];
+        for (View_Ordenes orden : verDetalle) {
+            filas[0] = orden.getCantidadOrden();
+            filas[1] = orden.getProductoOrden();
+            filas[2] = orden.getTamanioOrden();
+            filas[3] = orden.getPrecioOrden();
+            filas[4] = modificar;
+            filas[5] = eliminar;
+            tablaCarrito.addRow(filas);
         }
-        
+        carrito.jTlbCarrito.setModel(tablaCarrito);
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

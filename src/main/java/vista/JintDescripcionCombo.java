@@ -31,7 +31,7 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jLblNombreCombo = new javax.swing.JLabel();
         jLblImgCombo = new javax.swing.JLabel();
         jLblDescpCombo = new javax.swing.JLabel();
-        jLblPrecio12 = new javax.swing.JLabel();
+        jLblPrecioCombo = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jCmbTamanioCombo = new javax.swing.JComboBox<>();
         jLblSnackCombo = new javax.swing.JLabel();
@@ -51,15 +51,17 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         jLblProductPrincipal4 = new javax.swing.JLabel();
         jLblProductPrincipal5 = new javax.swing.JLabel();
         jLblPrincipalID = new javax.swing.JLabel();
-        jLblAdvertencia2 = new javax.swing.JLabel();
-        jLblAdvertencia1 = new javax.swing.JLabel();
-        jLblAdvertencia = new javax.swing.JLabel();
-        jLblAdvertencia3 = new javax.swing.JLabel();
+        jLblAdvertenciaBebida = new javax.swing.JLabel();
+        jLblAdvertenciaPrincipal = new javax.swing.JLabel();
+        jLblAdvertenciaSnack = new javax.swing.JLabel();
+        jLblAdvertenciaCombo = new javax.swing.JLabel();
         jLblSnackPrecio = new javax.swing.JLabel();
         jLblSnackPrecio2 = new javax.swing.JLabel();
         jLblSnackPrecio3 = new javax.swing.JLabel();
         jLblSnackPrecio4 = new javax.swing.JLabel();
         jLblPrecio2 = new javax.swing.JLabel();
+        jLblDescuento = new javax.swing.JLabel();
+        jLblPrincipalTamanio = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -74,132 +76,139 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
         getContentPane().add(jLblDescpCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 152, 583, 34));
         jLblDescpCombo.getAccessibleContext().setAccessibleDescription("");
 
-        jLblPrecio12.setFont(new java.awt.Font("Dialog", 1, 26)); // NOI18N
-        jLblPrecio12.setText("Q.123456");
-        getContentPane().add(jLblPrecio12, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 100, -1, -1));
+        jLblPrecioCombo.setFont(new java.awt.Font("Dialog", 1, 26)); // NOI18N
+        jLblPrecioCombo.setText("123456");
+        getContentPane().add(jLblPrecioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLabel5.setText("Tamaño:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(411, 247, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, -1, -1));
 
         jCmbTamanioCombo.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jCmbTamanioCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jCmbTamanioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(411, 287, 164, -1));
+        getContentPane().add(jCmbTamanioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 164, -1));
 
         jLblSnackCombo.setFont(new java.awt.Font("HP Simplified", 1, 25)); // NOI18N
         jLblSnackCombo.setForeground(new java.awt.Color(255, 204, 0));
         jLblSnackCombo.setText("Papas");
-        getContentPane().add(jLblSnackCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 488, 180, -1));
+        getContentPane().add(jLblSnackCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 180, -1));
 
         jCmbBebida.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jCmbBebida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jCmbBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 476, 224, -1));
+        getContentPane().add(jCmbBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 224, -1));
 
         JBtnRegresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         JBtnRegresar.setText("Regresar");
-        getContentPane().add(JBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 627, -1, -1));
+        getContentPane().add(JBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, -1, -1));
 
         jBtnAñadir.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnAñadir.setText("Añadir a la orden");
-        getContentPane().add(jBtnAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 627, -1, -1));
+        getContentPane().add(jBtnAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, -1, -1));
 
         jLblSnackId.setText("IDSnack");
-        getContentPane().add(jLblSnackId, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 525, -1, -1));
+        getContentPane().add(jLblSnackId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
 
         jLblBebidaID.setText("IDBebida");
-        getContentPane().add(jLblBebidaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 525, 19, -1));
+        getContentPane().add(jLblBebidaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 19, -1));
 
         Cantidad.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         Cantidad.setText("Cantidad:");
-        getContentPane().add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 20, -1, -1));
+        getContentPane().add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 30, -1, -1));
 
         jLblProductPrincipal.setFont(new java.awt.Font("HP Simplified", 1, 25)); // NOI18N
         jLblProductPrincipal.setForeground(new java.awt.Color(255, 204, 0));
         jLblProductPrincipal.setText("Hamburguesa");
-        getContentPane().add(jLblProductPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(901, 297, 240, -1));
+        getContentPane().add(jLblProductPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 240, -1));
 
         jTxtCantidad.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
         jTxtCantidad.setText("1");
-        getContentPane().add(jTxtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 70, 40, 50));
+        getContentPane().add(jTxtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 80, 40, 50));
 
         jBtnMas.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnMas.setText("+");
-        getContentPane().add(jBtnMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 70, -1, -1));
+        getContentPane().add(jBtnMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 80, -1, -1));
 
         jBtnMenos.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnMenos.setText("-");
-        getContentPane().add(jBtnMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 70, -1, -1));
+        getContentPane().add(jBtnMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 80, -1, -1));
 
         jLblPrecioPrincipal.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblPrecioPrincipal.setText("Precio");
-        getContentPane().add(jLblPrecioPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1169, 301, 79, -1));
+        getContentPane().add(jLblPrecioPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 270, 79, -1));
 
         jLblProductPrincipal3.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLblProductPrincipal3.setText("Acompañamiento:");
-        getContentPane().add(jLblProductPrincipal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 448, -1, -1));
+        getContentPane().add(jLblProductPrincipal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
         jLblPrecioBebida.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblPrecioBebida.setText("Precio");
-        getContentPane().add(jLblPrecioBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(1139, 484, 85, -1));
+        getContentPane().add(jLblPrecioBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 85, -1));
 
         jLblProductPrincipal4.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLblProductPrincipal4.setText("Bebida: ");
-        getContentPane().add(jLblProductPrincipal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 437, -1, -1));
+        getContentPane().add(jLblProductPrincipal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, -1, -1));
 
         jLblProductPrincipal5.setFont(new java.awt.Font("Elephant", 1, 30)); // NOI18N
         jLblProductPrincipal5.setText("Hamburguesa: ");
-        getContentPane().add(jLblProductPrincipal5, new org.netbeans.lib.awtextra.AbsoluteConstraints(879, 243, -1, -1));
+        getContentPane().add(jLblProductPrincipal5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, -1, -1));
 
         jLblPrincipalID.setText("IDPrincipal");
-        getContentPane().add(jLblPrincipalID, new org.netbeans.lib.awtextra.AbsoluteConstraints(841, 290, 33, -1));
+        getContentPane().add(jLblPrincipalID, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 280, 33, -1));
 
-        jLblAdvertencia2.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
-        jLblAdvertencia2.setForeground(new java.awt.Color(51, 255, 51));
-        jLblAdvertencia2.setText("*");
-        getContentPane().add(jLblAdvertencia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1229, 484, 19, -1));
+        jLblAdvertenciaBebida.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
+        jLblAdvertenciaBebida.setForeground(new java.awt.Color(51, 255, 51));
+        jLblAdvertenciaBebida.setText("*");
+        getContentPane().add(jLblAdvertenciaBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 370, 19, -1));
 
-        jLblAdvertencia1.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
-        jLblAdvertencia1.setForeground(new java.awt.Color(51, 255, 51));
-        jLblAdvertencia1.setText("*");
-        getContentPane().add(jLblAdvertencia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1249, 291, 26, -1));
+        jLblAdvertenciaPrincipal.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
+        jLblAdvertenciaPrincipal.setForeground(new java.awt.Color(51, 255, 51));
+        jLblAdvertenciaPrincipal.setText("*");
+        getContentPane().add(jLblAdvertenciaPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 260, 26, -1));
 
-        jLblAdvertencia.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
-        jLblAdvertencia.setForeground(new java.awt.Color(51, 255, 51));
-        jLblAdvertencia.setText("*");
-        getContentPane().add(jLblAdvertencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 484, 20, -1));
+        jLblAdvertenciaSnack.setFont(new java.awt.Font("Gill Sans MT", 1, 35)); // NOI18N
+        jLblAdvertenciaSnack.setForeground(new java.awt.Color(51, 255, 51));
+        jLblAdvertenciaSnack.setText("*");
+        getContentPane().add(jLblAdvertenciaSnack, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 20, -1));
 
-        jLblAdvertencia3.setFont(new java.awt.Font("Gill Sans MT", 1, 30)); // NOI18N
-        jLblAdvertencia3.setForeground(new java.awt.Color(51, 255, 51));
-        jLblAdvertencia3.setLabelFor(jLblPrecio12);
-        jLblAdvertencia3.setText("*");
-        getContentPane().add(jLblAdvertencia3, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 79, 26, -1));
+        jLblAdvertenciaCombo.setFont(new java.awt.Font("Gill Sans MT", 1, 30)); // NOI18N
+        jLblAdvertenciaCombo.setForeground(new java.awt.Color(51, 255, 51));
+        jLblAdvertenciaCombo.setLabelFor(jLblPrecioCombo);
+        jLblAdvertenciaCombo.setText("*");
+        getContentPane().add(jLblAdvertenciaCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 26, -1));
 
         jLblSnackPrecio.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblSnackPrecio.setText("Precio");
-        getContentPane().add(jLblSnackPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 494, -1, -1));
+        getContentPane().add(jLblSnackPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, -1, -1));
 
         jLblSnackPrecio2.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblSnackPrecio2.setText("Q.");
-        getContentPane().add(jLblSnackPrecio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 494, -1, -1));
+        getContentPane().add(jLblSnackPrecio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, -1, -1));
 
         jLblSnackPrecio3.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblSnackPrecio3.setText("Q.");
-        getContentPane().add(jLblSnackPrecio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 304, -1, -1));
+        getContentPane().add(jLblSnackPrecio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
 
         jLblSnackPrecio4.setFont(new java.awt.Font("Dialog", 3, 22)); // NOI18N
         jLblSnackPrecio4.setText("Q.");
-        getContentPane().add(jLblSnackPrecio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 484, -1, -1));
+        getContentPane().add(jLblSnackPrecio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 370, -1, -1));
 
         jLblPrecio2.setFont(new java.awt.Font("Dialog", 1, 26)); // NOI18N
         jLblPrecio2.setText("Q.");
         getContentPane().add(jLblPrecio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 100, -1, -1));
+
+        jLblDescuento.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLblDescuento.setText("Q.123456");
+        getContentPane().add(jLblDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
+
+        jLblPrincipalTamanio.setText("IDPrincipal");
+        getContentPane().add(jLblPrincipalTamanio, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 33, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JLabel Cantidad;
+    private javax.swing.JLabel Cantidad;
     public javax.swing.JButton JBtnRegresar;
     public javax.swing.JButton jBtnAñadir;
     public javax.swing.JButton jBtnMas;
@@ -207,19 +216,21 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
     public javax.swing.JComboBox<String> jCmbBebida;
     public javax.swing.JComboBox<String> jCmbTamanioCombo;
     private javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLblAdvertencia;
-    public javax.swing.JLabel jLblAdvertencia1;
-    public javax.swing.JLabel jLblAdvertencia2;
-    public javax.swing.JLabel jLblAdvertencia3;
+    public javax.swing.JLabel jLblAdvertenciaBebida;
+    public javax.swing.JLabel jLblAdvertenciaCombo;
+    public javax.swing.JLabel jLblAdvertenciaPrincipal;
+    public javax.swing.JLabel jLblAdvertenciaSnack;
     public javax.swing.JLabel jLblBebidaID;
     public javax.swing.JLabel jLblDescpCombo;
+    public javax.swing.JLabel jLblDescuento;
     public javax.swing.JLabel jLblImgCombo;
     public javax.swing.JLabel jLblNombreCombo;
-    public javax.swing.JLabel jLblPrecio12;
     private javax.swing.JLabel jLblPrecio2;
     public javax.swing.JLabel jLblPrecioBebida;
+    public javax.swing.JLabel jLblPrecioCombo;
     public javax.swing.JLabel jLblPrecioPrincipal;
     public javax.swing.JLabel jLblPrincipalID;
+    public javax.swing.JLabel jLblPrincipalTamanio;
     public javax.swing.JLabel jLblProductPrincipal;
     private javax.swing.JLabel jLblProductPrincipal3;
     private javax.swing.JLabel jLblProductPrincipal4;
@@ -227,9 +238,9 @@ public class JintDescripcionCombo extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLblSnackCombo;
     public javax.swing.JLabel jLblSnackId;
     public javax.swing.JLabel jLblSnackPrecio;
-    public javax.swing.JLabel jLblSnackPrecio2;
-    public javax.swing.JLabel jLblSnackPrecio3;
-    public javax.swing.JLabel jLblSnackPrecio4;
+    private javax.swing.JLabel jLblSnackPrecio2;
+    private javax.swing.JLabel jLblSnackPrecio3;
+    private javax.swing.JLabel jLblSnackPrecio4;
     public javax.swing.JTextField jTxtCantidad;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,6 +9,7 @@ package controlador;
 import java.util.ArrayList;
 import modelo.DetallePedido;
 import modelo.Productos;
+import modelo.View_Ordenes;
 
 /**
  * Clase para obtener los datos del producto selecionado por el cliente
@@ -24,7 +25,10 @@ public class ProductoSeleccionado {
     //Variable para generalizar el ID de la clasificación
     public static int clasificacion;
     
-    //ArrayList para
-    public static ArrayList<DetallePedido> agregarCarrito= new ArrayList();
+    //ArrayList para ver los datos en el carrito de compras
+    public static ArrayList<DetallePedido> insertarPedido= new ArrayList();
+    
+    //ArrayList para insertar datos en el carrito de compras
+    public static ArrayList<View_Ordenes> verDetalle= new ArrayList();
 }
  

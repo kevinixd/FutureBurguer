@@ -44,6 +44,7 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
                 descripcionCombo = new View_Descripcioncombo();
                 descripcionCombo.setDetallescombosId(resultado.getInt("detallescombos_id"));
                 descripcionCombo.setComboId(resultado.getInt("combo_id"));
+                descripcionCombo.setDescuento(resultado.getDouble("descuento"));
                 descripcionCombo.setNombreCombo(resultado.getString("combo"));
                 descripcionCombo.setDescripcionCombo(resultado.getString("descripcion"));
                 descripcionCombo.setImagenDetalleCombo(resultado.getString("imagen"));
@@ -63,6 +64,7 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
             System.out.println("Producto " + descripcionCombo.getProductoCombo());
             System.out.println("Tamaño " + descripcionCombo.getTamanioCombo());
             System.out.println("Precio " + descripcionCombo.getPrecio());
+            System.out.println("Descuento" + descripcionCombo.getDescuento());
 
         } catch (SQLException ex) {
             System.out.println("Error en dao VerProductos " + ex);

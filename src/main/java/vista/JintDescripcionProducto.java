@@ -46,147 +46,72 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
         jLblPrecioCombo1 = new javax.swing.JLabel();
         jLblTamanio = new javax.swing.JLabel();
 
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jLblImgProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 230, 233));
+
         jLblNombreProducto.setFont(new java.awt.Font("Dialog", 3, 38)); // NOI18N
         jLblNombreProducto.setText("Nombre Producto");
+        getContentPane().add(jLblNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
         jLblPrecioCombo.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
         jLblPrecioCombo.setText("Precio");
+        getContentPane().add(jLblPrecioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 108, -1, -1));
 
         jLblDescpProducto.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jLblDescpProducto.setText("Descripción");
+        getContentPane().add(jLblDescpProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 357, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jLabel5.setText("Tamaño:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 222, -1, -1));
 
         jCmbTamanioProducto.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jCmbTamanioProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jCmbTamanioProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 267, 269, -1));
 
         JBtnRegresarProduc.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         JBtnRegresarProduc.setText("Regresar");
+        getContentPane().add(JBtnRegresarProduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(298, 438, -1, -1));
 
         jBtnAñadirProduc.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnAñadirProduc.setText("Añadir a la orden");
+        getContentPane().add(jBtnAñadirProduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 438, -1, -1));
 
         jLblWarningProducto.setFont(new java.awt.Font("Dialog", 2, 20)); // NOI18N
         jLblWarningProducto.setForeground(new java.awt.Color(255, 0, 0));
         jLblWarningProducto.setText("!El producto solo cuenta con un tamaño¡");
+        getContentPane().add(jLblWarningProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 316, -1, -1));
 
         JlblAdvertencia.setFont(new java.awt.Font("Dialog", 1, 35)); // NOI18N
         JlblAdvertencia.setForeground(new java.awt.Color(0, 153, 0));
         JlblAdvertencia.setText("*");
+        getContentPane().add(JlblAdvertencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 101, 19, -1));
 
         jBtnMas.setFont(new java.awt.Font("Dialog", 1, 35)); // NOI18N
         jBtnMas.setText("+");
+        getContentPane().add(jBtnMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 90, -1, -1));
 
         jBtnMenos.setFont(new java.awt.Font("Dialog", 1, 35)); // NOI18N
         jBtnMenos.setText("-");
+        getContentPane().add(jBtnMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 90, -1, -1));
 
         jTxtCantidad.setFont(new java.awt.Font("Dialog", 0, 35)); // NOI18N
         jTxtCantidad.setText("1");
+        getContentPane().add(jTxtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 90, 40, 50));
 
         Cantidad.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         Cantidad.setText("Cantidad:");
+        getContentPane().add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 40, -1, -1));
 
         jLblPtId.setText("ProductoTamanioID");
+        getContentPane().add(jLblPtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, -1, -1));
 
         jLblPrecioCombo1.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
         jLblPrecioCombo1.setText("Q.");
+        getContentPane().add(jLblPrecioCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 108, -1, -1));
 
         jLblTamanio.setText("Tamanio");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(627, 627, 627)
-                .addComponent(jCmbTamanioProducto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblTamanio)
-                .addGap(589, 589, 589))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jLblImgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLblNombreProducto)
-                            .addComponent(jLblPtId)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLblPrecioCombo1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLblPrecioCombo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(JlblAdvertencia, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(653, 653, 653)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Cantidad)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBtnMenos)
-                                .addGap(6, 6, 6)
-                                .addComponent(jTxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(4, 4, 4)
-                                .addComponent(jBtnMas))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jLblDescpProducto))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(485, 485, 485)
-                        .addComponent(JBtnRegresarProduc)
-                        .addGap(74, 74, 74)
-                        .addComponent(jBtnAñadirProduc))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(655, 655, 655)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(536, 536, 536)
-                        .addComponent(jLblWarningProducto)))
-                .addGap(38, 38, 38))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLblImgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLblNombreProducto)
-                        .addGap(2, 2, 2)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JlblAdvertencia)
-                            .addComponent(jLblPrecioCombo)
-                            .addComponent(jLblPrecioCombo1))
-                        .addGap(14, 14, 14)
-                        .addComponent(jLblPtId))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Cantidad)
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnMenos)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jTxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jBtnMas))))
-                .addGap(45, 45, 45)
-                .addComponent(jLblDescpProducto)
-                .addGap(25, 25, 25)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCmbTamanioProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblTamanio))
-                .addGap(12, 12, 12)
-                .addComponent(jLblWarningProducto)
-                .addGap(108, 108, 108)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JBtnRegresarProduc)
-                    .addComponent(jBtnAñadirProduc))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        getContentPane().add(jLblTamanio, new org.netbeans.lib.awtextra.AbsoluteConstraints(722, 285, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

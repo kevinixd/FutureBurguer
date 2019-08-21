@@ -56,8 +56,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(1)) {
@@ -66,8 +66,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(2)) {
@@ -76,8 +76,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(3)) {
@@ -86,8 +86,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(4)) {
@@ -96,8 +96,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(5)) {
@@ -106,8 +106,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(6)) {
@@ -116,8 +116,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(7)) {
@@ -126,8 +126,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
         
         if (e.getSource() == listaPostres.get(8)) {
@@ -136,8 +136,8 @@ public class PostresControlador implements ActionListener {
             clasificacion = productoSeleccionado.getClasificacion_id();
             principal.EscritorioPrincipal.add(producto);
             producto.setVisible(true);
-            producto.setLocation(320, 105);
-            producto.setSize(1500, 750);
+            producto.setLocation(290, 105);
+            producto.setSize(1138, 550);
         }
 
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);

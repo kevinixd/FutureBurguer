@@ -9,11 +9,10 @@ public class View_Ordenes {
     
     private int numero_orden;
     private String direccion;
-    private String tipoComboOrden;
+    private int productoTamanioIdOrden;
     private String productoOrden;
     private String tamanioOrden;
     private int cantidadOrden;
-    private String descripcionOrden;
     private float precioOrden;
 
     //constructores
@@ -21,14 +20,13 @@ public class View_Ordenes {
     public View_Ordenes() {
     }
 
-    public View_Ordenes(int numero_orden, String direccion, String tipoComboOrden, String productoOrden, String tamanioOrden, int cantidadOrden, String descripcionOrden, float precioOrden) {
+    public View_Ordenes(int numero_orden, String direccion, int productoTamanioIdOrden, String tipoComboOrden, String productoOrden, String tamanioOrden, int cantidadOrden, String descripcionOrden, float precioOrden) {
         this.numero_orden = numero_orden;
         this.direccion= direccion;
-        this.tipoComboOrden = tipoComboOrden;
+        this.productoTamanioIdOrden= productoTamanioIdOrden;
         this.productoOrden = productoOrden;
         this.tamanioOrden = tamanioOrden;
         this.cantidadOrden = cantidadOrden;
-        this.descripcionOrden = descripcionOrden;
         this.precioOrden = precioOrden;
     }
 
@@ -41,21 +39,22 @@ public class View_Ordenes {
         this.numero_orden = numero_orden;
     }
 
-    public String getMesaOrden() {
+    public String getDireccion() {
         return direccion;
     }
 
-    public void setMesaOrden(String direccion) {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
-    public String getTipoComboOrden() {
-        return tipoComboOrden;
+    public int getProductoTamanioIdOrden() {
+        return productoTamanioIdOrden;
     }
 
-    public void setTipoComboOrden(String tipoComboOrden) {
-        this.tipoComboOrden = tipoComboOrden;
+    public void setProductoTamanioIdOrden(int productoTamanioIdOrden) {
+        this.productoTamanioIdOrden = productoTamanioIdOrden;
     }
+    
 
     public String getProductoOrden() {
         return productoOrden;
@@ -79,14 +78,6 @@ public class View_Ordenes {
 
     public void setCantidadOrden(int cantidadOrden) {
         this.cantidadOrden = cantidadOrden;
-    }
-
-    public String getDescripcionOrden() {
-        return descripcionOrden;
-    }
-
-    public void setDescripcionOrden(String descripcionOrden) {
-        this.descripcionOrden = descripcionOrden;
     }
 
     public float getPrecioOrden() {

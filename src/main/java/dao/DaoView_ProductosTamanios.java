@@ -100,7 +100,6 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
             productTamanio = new View_productosTamanios();
             productTamanio.setPtIdView(resultado.getShort("producto_tamanio_id"));
             productTamanio.setPrecioView(resultado.getDouble("precio"));
-            System.out.println(productTamanio.getPtIdView());
         } catch (SQLException ex) {
             System.out.println("Error en daoVerProductoId " + ex);
         } finally{

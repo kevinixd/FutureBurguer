@@ -38,11 +38,9 @@ public class DaoOrdenes implements OrdenesInterface{
             View_Ordenes vo = new View_Ordenes();
             vo.setNumero_orden(rs.getInt("numero_orden"));
             //vo.setMesaOrden(rs.getByte("mesa"));
-            vo.setTipoComboOrden(rs.getString("tipocombo"));
             vo.setProductoOrden(rs.getString("producto"));
             vo.setTamanioOrden(rs.getString("tamanio"));
             vo.setCantidadOrden(rs.getInt("cantidad"));
-            vo.setDescripcionOrden(rs.getString("descripcion"));
             vo.setPrecioOrden(rs.getFloat("precio"));
             lista.add(vo);
             }

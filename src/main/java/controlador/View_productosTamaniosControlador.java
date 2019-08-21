@@ -5,7 +5,6 @@
  */
 package controlador;
 
-import static controlador.ProductoSeleccionado.agregarCarrito;
 import static controlador.ProductoSeleccionado.clasificacion;
 import static controlador.PrincipalControlador.principal;
 import static controlador.ProductoSeleccionado.productoID;
@@ -18,13 +17,15 @@ import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import modelo.Tamanios;
 import modelo.View_productosTamanios;
-import vista.JintCarrito;
 import vista.JintDescripcionProducto;
 import vista.JintOpcion;
 import vista.formulariosbebidas.jIntBebidasCalientes;
 import vista.formulariosbebidas.jIntBebidasFrias;
 import vista.formulariospostres.jIntPostres;
 import vista.formulariossnacks.jIntSnacks;
+import static controlador.ProductoSeleccionado.insertarPedido;
+import modelo.View_Ordenes;
+import vista.JintCarrito;
 
 /**
  *
@@ -39,6 +40,7 @@ public class View_productosTamaniosControlador implements ActionListener {
     jIntBebidasFrias bebidasFrias = new jIntBebidasFrias();
     jIntPostres postres = new jIntPostres();
     jIntSnacks snack = new jIntSnacks();
+    JintCarrito carrito= new JintCarrito();
 
     DefaultComboBoxModel tamanio = new DefaultComboBoxModel();
 
@@ -55,10 +57,13 @@ public class View_productosTamaniosControlador implements ActionListener {
     BebidasFriasControlador bfControlador;
     PostresControlador postreControlador;
     SnacksControlador snackControlador;
+    CarritoControlador carritoControlador;
 
     private String rutaProducto = System.getProperty("user.dir") + "\\src\\main\\java\\img\\vistaProductos\\";
 
     private int cantidad = 0;
+
+    private int cantidadActualizada = 1;
 
     public View_productosTamaniosControlador(JintDescripcionProducto vista) {
         cantidad = 1;
@@ -78,13 +83,13 @@ public class View_productosTamaniosControlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jCmbTamanioProducto) {
-            asignarDatosporTamanio();
             vista.jLblTamanio.setText(String.valueOf(vista.jCmbTamanioProducto.getSelectedItem()));
+            asignarDatosporTamanio();
         }
 
         if (e.getSource() == vista.jBtnAñadirProduc) {
-            asignarDatosCarrito();
-            
+            asignarDatosPedido();
+
         }
 
         if (e.getSource() == vista.JBtnRegresarProduc) {
@@ -134,6 +139,9 @@ public class View_productosTamaniosControlador implements ActionListener {
             vista.jTxtCantidad.setText(String.valueOf(cantidad));
         }
         deshabilitarBotonCantidad();
+
+        cantidadActualizada = Integer.parseInt(vista.jTxtCantidad.getText());
+        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView() * cantidadActualizada));
     }
 
     //Deshabilitar botones Mas y Menos dependiendo de la cantidad
@@ -163,8 +171,8 @@ public class View_productosTamaniosControlador implements ActionListener {
         ImageIcon iconoRed = new ImageIcon(icono.getImage().getScaledInstance(210, -1, java.awt.Image.SCALE_DEFAULT));
         vista.jLblImgProducto.setIcon(iconoRed);
         vista.jLblDescpProducto.setText(String.valueOf(producTamanios.getProductoDescpView()));
-        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView()));
-        
+        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView() * cantidadActualizada));
+
         //Asignamos el Tamanio al label para luego realizar la busqueda
         vista.jLblTamanio.setText(String.valueOf(producTamanios.getTamanioView()));
 
@@ -179,16 +187,24 @@ public class View_productosTamaniosControlador implements ActionListener {
     public void asignarDatosporTamanio() {
         String tamanio = String.valueOf(vista.jLblTamanio.getText());
         producTamanios = dao.verPorTamanio(productoID, tamanio);
-        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView()));
+        vista.jLblPrecioCombo.setText(String.valueOf(producTamanios.getPrecioView() * cantidadActualizada));
         vista.jLblPtId.setText(String.valueOf(producTamanios.getPtIdView()));
         vista.JlblAdvertencia.setVisible(true);
     }
-    
-    public void asignarDatosCarrito(){
-        DetallePedido pedido= new DetallePedido();
+
+    public void asignarDatosPedido() {
+        DetallePedido pedido = new DetallePedido();
         pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblPtId.getText()));
         pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
         pedido.setPrecio(Float.parseFloat(vista.jLblPrecioCombo.getText()));
-        agregarCarrito.add(pedido);
+        insertarPedido.add(pedido);
+    }
+    
+    public void asignarDatosCarrito(){
+        View_Ordenes carrito= new View_Ordenes();
+        carrito.setCantidadOrden(Integer.parseInt(vista.jTxtCantidad.getText()));
+        carrito.setProductoOrden(vista.jLblNombreProducto.getText());
+        carrito.setTamanioOrden(String.valueOf(vista.jLblTamanio.getText()));
+        carrito.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblPtId.getText()));
     }
 }
