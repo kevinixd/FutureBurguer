@@ -46,7 +46,6 @@ public class CarritoControlador implements ActionListener {
         eliminar.setText("Eliminar");
         modificar.setFont(new java.awt.Font("Dialog", 1, 30));
         modificar.setText("Modificar");
-        carrito.jTlbCarrito.setRowMargin(12);
         verCarrito();
         dimensionesTabla();
     }
