@@ -6,8 +6,8 @@
 package controlador;
 
 import static controlador.PrincipalControlador.principal;
-import static controlador.ProductoSeleccionado.clasificacion;
-import static controlador.ProductoSeleccionado.productoID;
+import static controlador.VariablesEstaticas.clasificacion;
+import static controlador.VariablesEstaticas.productoID;
 import dao.DaoProductos;
 import dao.DaoTamanios;
 import dao.DaoView_DetalleCombo;
@@ -24,9 +24,11 @@ import modelo.View_Descripcioncombo;
 import modelo.View_productosTamanios;
 import vista.JintDescripcionCombo;
 import vista.JintOpcion;
-import static controlador.ProductoSeleccionado.insertarPedido;
+import static controlador.VariablesEstaticas.insertarPedido;
 import modelo.View_Ordenes;
-import static controlador.ProductoSeleccionado.verDetalle;
+import static controlador.VariablesEstaticas.verDetalle;
+import static controlador.VariablesEstaticas.cantidad;
+import static controlador.VariablesEstaticas.index;
 import java.text.DecimalFormat;
 import vista.JintCarrito;
 
@@ -34,7 +36,7 @@ public class DescripcionComboControlador implements ActionListener {
 
     //Frames a utilizar
     JintDescripcionCombo vista;
-    JintCarrito carrito= new JintCarrito();
+    JintCarrito carrito = new JintCarrito();
     JintOpcion opcion = new JintOpcion();
     DefaultComboBoxModel tamaniosComboBox = new DefaultComboBoxModel();
     DefaultComboBoxModel productosComboBox;
@@ -55,7 +57,7 @@ public class DescripcionComboControlador implements ActionListener {
     CarritoControlador controladorCarrito;
 
     //Mostrar solo dos decimales
-    DecimalFormat formato1= new DecimalFormat("#.00");
+    DecimalFormat formato1 = new DecimalFormat("#.00");
     private ArrayList<View_Descripcioncombo> listaCombo = new ArrayList();
 
 //datos reales a guardar en la base de datos
@@ -63,9 +65,14 @@ public class DescripcionComboControlador implements ActionListener {
 
     private String rutaCombo = System.getProperty("user.dir") + "\\src\\main\\java\\img\\combos\\";
 
-    private int cantidad = 0;
+    //Variable para la cantidad del JtextField
+    private int cantidadTxt = 0;
 
+    //Variable para la cantidad que se actualiza en el JtextField
     private int cantidadActualizada = 1;
+
+    //Variable para acumular la cantidad de productos
+    private int acumulador = 0;
 
     //Datos para la consulta sobre los precios
     private String tamanios;
@@ -73,14 +80,14 @@ public class DescripcionComboControlador implements ActionListener {
     private String producto;
 
     public DescripcionComboControlador(JintDescripcionCombo vista) {
-        cantidad = 1;
+        cantidadTxt = 1;
         this.vista = vista;
         llenarTamanios();
         llenarBebidas();
         addListeners();
         esconderEtiquetas();
-        //Llenar cantidad en jTextFieldCantidad
-        vista.jTxtCantidad.setText(String.valueOf(cantidad));
+        //Llenar cantidadTxt en jTextFieldCantidad
+        vista.jTxtCantidad.setText(String.valueOf(cantidadTxt));
         asignarDatosCombos();
         verPrecioTamanio();
 
@@ -138,13 +145,13 @@ public class DescripcionComboControlador implements ActionListener {
         }
 
         if (e.getSource() == vista.jBtnMas) {
-            cantidad++;
-            vista.jTxtCantidad.setText(String.valueOf(cantidad));
+            cantidadTxt++;
+            vista.jTxtCantidad.setText(String.valueOf(cantidadTxt));
         }
 
         if (e.getSource() == vista.jBtnMenos) {
-            cantidad--;
-            vista.jTxtCantidad.setText(String.valueOf(cantidad));
+            cantidadTxt--;
+            vista.jTxtCantidad.setText(String.valueOf(cantidadTxt));
         }
 
         if (e.getSource() == vista.JBtnRegresar) {
@@ -158,7 +165,8 @@ public class DescripcionComboControlador implements ActionListener {
         if (e.getSource() == vista.jBtnAñadir) {
             asignarDatosPedido();
             asignarDatos();
-            controladorCarrito= new CarritoControlador(carrito);
+            agregarCantidad();
+            controladorCarrito = new CarritoControlador(carrito);
             principal.EscritorioPrincipal.add(carrito);
             carrito.setVisible(true);
             carrito.setLocation(320, 105);
@@ -209,12 +217,12 @@ public class DescripcionComboControlador implements ActionListener {
                 + snackID.getPrecioView() * cantidadActualizada) * (listaCombo.get(0).getDescuento() / 100))))));
     }
 
-    //Deshabilitar botones Mas y Menos dependiendo de la cantidad
+    //Deshabilitar botones Mas y Menos dependiendo de la cantidadTxt
     public void deshabilitarBotonCantidad() {
-        if (cantidad > 14) {
+        if (cantidadTxt > 14) {
             vista.jBtnMas.setEnabled(false);
-            vista.jTxtCantidad.setText(String.valueOf(cantidad));
-        } else if (cantidad == 1) {
+            vista.jTxtCantidad.setText(String.valueOf(cantidadTxt));
+        } else if (cantidadTxt == 1) {
             vista.jBtnMenos.setEnabled(false);
         } else {
             vista.jBtnMenos.setEnabled(true);
@@ -334,7 +342,17 @@ public class DescripcionComboControlador implements ActionListener {
         orden.setCantidadOrden(Integer.parseInt(vista.jTxtCantidad.getText()));
         orden.setProductoOrden(String.valueOf(vista.jLblSnackCombo.getText()));
         orden.setTamanioOrden(String.valueOf(vista.jCmbTamanioCombo.getSelectedItem()));
-        orden.setPrecioOrden(Float.parseFloat(vista.jLblSnackId.getText()));
+        orden.setPrecioOrden(Float.parseFloat(vista.jLblSnackPrecio.getText()));
         verDetalle.add(orden);
     }
+
+    public void agregarCantidad() {
+        for (int i = index; i <= verDetalle.size() - 1; i++) {
+            acumulador = verDetalle.get(i).getCantidadOrden();
+            cantidad = cantidad + acumulador;
+            index++;
+        }
+        principal.jLblCantidadProductos.setText("+" + String.valueOf(cantidad));
+    }
+
 }

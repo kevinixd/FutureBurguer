@@ -6,8 +6,8 @@
 package controlador;
 
 import static controlador.PrincipalControlador.principal;
-import static controlador.ProductoSeleccionado.clasificacion;
-import static controlador.ProductoSeleccionado.productoID;
+import static controlador.VariablesEstaticas.clasificacion;
+import static controlador.VariablesEstaticas.productoID;
 import dao.DaoProductos;
 import dao.DaoView_DetalleCombo;
 import dao.DaoView_ProductosTamanios;

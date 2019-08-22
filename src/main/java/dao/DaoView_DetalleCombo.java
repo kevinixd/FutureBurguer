@@ -56,15 +56,6 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
                 lista.add(descripcionCombo);
             }
             resultado.close();
-            System.out.println("Detalle Combo Id " + descripcionCombo.getDetallescombosId());
-            System.out.println("Combo Id " + descripcionCombo.getComboId());
-            System.out.println("Producto " + descripcionCombo.getNombreCombo());
-            System.out.println("Detalle Combo Id " + descripcionCombo.getImagenDetalleCombo());
-            System.out.println("Producto Tamanio ID" + descripcionCombo.getProductoTamanioId());
-            System.out.println("Producto " + descripcionCombo.getProductoCombo());
-            System.out.println("Tamaño " + descripcionCombo.getTamanioCombo());
-            System.out.println("Precio " + descripcionCombo.getPrecio());
-            System.out.println("Descuento" + descripcionCombo.getDescuento());
 
         } catch (SQLException ex) {
             System.out.println("Error en dao VerProductos " + ex);
@@ -94,17 +85,6 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
             descripcionCombo.setTamanioCombo(resultado.getString("tamanio"));
             descripcionCombo.setPrecio(resultado.getDouble("precio"));
             resultado.close();
-            
-            System.out.println("Detalle Combo Id " + descripcionCombo.getDetallescombosId());
-            System.out.println("Combo Id " + descripcionCombo.getComboId());
-            System.out.println("Producto " + descripcionCombo.getNombreCombo());
-            System.out.println("Detalle Combo Id " + descripcionCombo.getImagenDetalleCombo());
-            System.out.println("Producto Tamanio ID" + descripcionCombo.getProductoTamanioId());
-            System.out.println("Producto " + descripcionCombo.getProductoCombo());
-            System.out.println("Descripcion " + descripcionCombo.getDescripcionCombo());
-            System.out.println("Tamaño " + descripcionCombo.getTamanioCombo());
-            System.out.println("Precio " + descripcionCombo.getPrecio());
-
         } catch (SQLException ex) {
             System.out.println("Error en dao VerProductos " + ex);
             descripcionCombo.setImagenDetalleCombo(null);

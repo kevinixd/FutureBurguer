@@ -15,7 +15,7 @@ import modelo.View_Ordenes;
  * Clase para obtener los datos del producto selecionado por el cliente
  * @author javam2019
  */
-public class ProductoSeleccionado {
+public class VariablesEstaticas {
     
     public static Productos productoSeleccionado = new Productos();
     
@@ -30,5 +30,11 @@ public class ProductoSeleccionado {
     
     //ArrayList para insertar datos en el carrito de compras
     public static ArrayList<View_Ordenes> verDetalle= new ArrayList();
+    
+    //Variable para verCantidad de Productos
+    public static int cantidad;
+    
+    //Variable para ir contando en Index
+    public static int index;
 }
  

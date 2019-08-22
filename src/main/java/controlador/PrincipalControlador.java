@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import java.awt.Color;
+import static controlador.VariablesEstaticas.cantidad;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
+import vista.JintCarrito;
 
 import vista.formulariosbebidas.jIntBebidasFC;
 
@@ -33,6 +34,10 @@ public class PrincipalControlador implements ActionListener {
     jIntBebidasFC bebidasfc = new jIntBebidasFC();
     jIntPostres postres = new jIntPostres();
     jIntSnacks snacks = new jIntSnacks();
+    JintCarrito carrito = new JintCarrito();
+
+    //Controladores
+    CarritoControlador controladorCarrito;
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -52,8 +57,7 @@ public class PrincipalControlador implements ActionListener {
         detPedido = new DetallePedido();
         principal.setExtendedState(6);
         System.out.println(principal.JPnlBotones.getLocation());
-        
-
+        principal.jLblCantidadProductos.setText("+" + String.valueOf(cantidad));
     }
 
     public void horaYFecha() {
@@ -85,6 +89,7 @@ public class PrincipalControlador implements ActionListener {
         principal.jBtnBebidas.addActionListener(this);
         principal.jBtnPostres.addActionListener(this);
         principal.jBtnSnacks.addActionListener(this);
+        principal.jBtnCarrito1.addActionListener(this);
 
         //Botones panel principal
         detPedido = new DetallePedido();
@@ -149,6 +154,15 @@ public class PrincipalControlador implements ActionListener {
             snacks.setVisible(true);
             sc = new SnacksControlador(snacks);
         }
+
+        if (e.getSource() == principal.jBtnCarrito1) {
+            carrito= new JintCarrito();
+            principal.EscritorioPrincipal.add(carrito);
+            carrito.setVisible(true);
+            carrito.setLocation(320, 105);
+            carrito.setSize(1500, 750);
+            controladorCarrito = new CarritoControlador(carrito);
+        }
     }
 
     public void destruirInternal() {
@@ -157,6 +171,7 @@ public class PrincipalControlador implements ActionListener {
         bebidasfc = null;
         postres = null;
         snacks = null;
+        carrito= null;
     }
 
     /*

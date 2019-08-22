@@ -35,8 +35,13 @@ public class JintCarrito extends javax.swing.JInternalFrame {
         jBtnOrdenar = new javax.swing.JButton();
         jBtnCancelar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLblTotal = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLblTotal1 = new javax.swing.JLabel();
+        jLblTotal2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1500, 750));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTlbCarrito = new javax.swing.JTable(){
             public boolean isCellEditable(int rowIndex, int colIndex){
@@ -62,6 +67,8 @@ public class JintCarrito extends javax.swing.JInternalFrame {
         jTlbCarrito.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTlbCarrito);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 59, 1321, 480));
+
         jBtnOrdenar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnOrdenar.setText("Ordenar");
         jBtnOrdenar.addActionListener(new java.awt.event.ActionListener() {
@@ -69,43 +76,31 @@ public class JintCarrito extends javax.swing.JInternalFrame {
                 jBtnOrdenarActionPerformed(evt);
             }
         });
+        getContentPane().add(jBtnOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 637, 176, -1));
 
         jBtnCancelar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jBtnCancelar.setText("Cancelar Orden");
+        getContentPane().add(jBtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 637, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setText("Carrito de compras");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 6, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addComponent(jBtnCancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 877, Short.MAX_VALUE)
-                .addComponent(jBtnOrdenar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1389, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnOrdenar)
-                    .addComponent(jBtnCancelar))
-                .addGap(36, 36, 36))
-        );
+        jLblTotal.setFont(new java.awt.Font("Dialog", 3, 32)); // NOI18N
+        jLblTotal.setText("Q.123456");
+        getContentPane().add(jLblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 550, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
+        jLabel3.setText("Total: ");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 550, -1, -1));
+
+        jLblTotal1.setFont(new java.awt.Font("Dialog", 3, 32)); // NOI18N
+        jLblTotal1.setText("________");
+        getContentPane().add(jLblTotal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 560, 160, -1));
+
+        jLblTotal2.setFont(new java.awt.Font("Dialog", 3, 32)); // NOI18N
+        jLblTotal2.setText("________");
+        getContentPane().add(jLblTotal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 550, 160, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -121,6 +116,10 @@ public class JintCarrito extends javax.swing.JInternalFrame {
     public javax.swing.JButton jBtnCancelar;
     public javax.swing.JButton jBtnOrdenar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLblTotal;
+    private javax.swing.JLabel jLblTotal1;
+    private javax.swing.JLabel jLblTotal2;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jTlbCarrito;
     // End of variables declaration//GEN-END:variables

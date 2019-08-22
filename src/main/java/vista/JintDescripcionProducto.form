@@ -47,7 +47,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblPrecioCombo">
+    <Component class="javax.swing.JLabel" name="jLblPrecioProducto">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="28" style="1"/>

@@ -30,7 +30,7 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
 
         jLblImgProducto = new javax.swing.JLabel();
         jLblNombreProducto = new javax.swing.JLabel();
-        jLblPrecioCombo = new javax.swing.JLabel();
+        jLblPrecioProducto = new javax.swing.JLabel();
         jLblDescpProducto = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jCmbTamanioProducto = new javax.swing.JComboBox<>();
@@ -53,9 +53,9 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
         jLblNombreProducto.setText("Nombre Producto");
         getContentPane().add(jLblNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
-        jLblPrecioCombo.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
-        jLblPrecioCombo.setText("Precio");
-        getContentPane().add(jLblPrecioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 108, -1, -1));
+        jLblPrecioProducto.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
+        jLblPrecioProducto.setText("Precio");
+        getContentPane().add(jLblPrecioProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 108, -1, -1));
 
         jLblDescpProducto.setFont(new java.awt.Font("Dialog", 1, 25)); // NOI18N
         jLblDescpProducto.setText("Descripción");
@@ -129,8 +129,8 @@ public class JintDescripcionProducto extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLblDescpProducto;
     public javax.swing.JLabel jLblImgProducto;
     public javax.swing.JLabel jLblNombreProducto;
-    public javax.swing.JLabel jLblPrecioCombo;
     public javax.swing.JLabel jLblPrecioCombo1;
+    public javax.swing.JLabel jLblPrecioProducto;
     public javax.swing.JLabel jLblPtId;
     public javax.swing.JLabel jLblTamanio;
     public javax.swing.JLabel jLblWarningProducto;

@@ -53,6 +53,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jBtnCerrarSesion = new javax.swing.JButton();
         jLblFecha = new javax.swing.JLabel();
         jLblHora = new javax.swing.JLabel();
+        jLblCantidadProductos = new javax.swing.JLabel();
         JPnlBotones = new javax.swing.JPanel();
         jBtnDesayunos = new javax.swing.JButton();
         jBtnHamburguesas = new javax.swing.JButton();
@@ -99,6 +100,9 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLblHora.setForeground(new java.awt.Color(0, 51, 153));
         jLblHora.setText("Hora");
 
+        jLblCantidadProductos.setFont(new java.awt.Font("Dialog", 1, 33)); // NOI18N
+        jLblCantidadProductos.setText("+123");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -112,25 +116,29 @@ public class JfrmPrincipal extends javax.swing.JFrame {
                 .addComponent(jLblFecha)
                 .addGap(54, 54, 54)
                 .addComponent(jLblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 293, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
                 .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLblCantidadProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLblUsuario)
                         .addComponent(jLblFecha)
                         .addComponent(jLblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jBtnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jBtnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLblCantidadProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -347,6 +355,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton jBtnHamburguesas;
     public javax.swing.JButton jBtnPostres;
     public javax.swing.JButton jBtnSnacks;
+    public javax.swing.JLabel jLblCantidadProductos;
     public javax.swing.JButton jLblEntregas;
     public javax.swing.JLabel jLblFecha;
     public javax.swing.JLabel jLblHora;

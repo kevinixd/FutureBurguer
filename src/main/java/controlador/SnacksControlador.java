@@ -6,9 +6,9 @@
 package controlador;
 
 import static controlador.PrincipalControlador.principal;
-import static controlador.ProductoSeleccionado.clasificacion;
-import static controlador.ProductoSeleccionado.productoID;
-import static controlador.ProductoSeleccionado.productoSeleccionado;
+import static controlador.VariablesEstaticas.clasificacion;
+import static controlador.VariablesEstaticas.productoID;
+import static controlador.VariablesEstaticas.productoSeleccionado;
 import dao.DaoProductos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
