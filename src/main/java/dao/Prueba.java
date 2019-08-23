@@ -6,7 +6,7 @@
 package dao;
 
 /**
- *
+ * clase ejecutable para proba si la coneccion a la base de datos esta correcta.
  * @author javam2019
  */
 public class Prueba {

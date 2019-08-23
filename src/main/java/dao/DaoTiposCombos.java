@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import modelo.TiposCombos;
 
 /**
- * 
+ *clase para visualizar tipo combos 
  * @author FutureBurguer
  */
 public class DaoTiposCombos implements TiposCombosInterface{

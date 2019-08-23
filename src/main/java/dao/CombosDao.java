@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import modelo.Combos;
 
 /**
- *Clase para visualizar Combo
+ *Clase para visualizar Combo.
  * @author FutureBurguer
  */
 public class CombosDao implements CombosInterface{

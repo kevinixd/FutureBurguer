@@ -21,8 +21,10 @@ import vista.JintDescripcionProducto;
 import vista.formulariospostres.jIntPostres;
 
 /**
- *
- * @author javam2019
+ *Esta clase listara el producto postres  y se encargara de que
+ * el ususario seleccione el tipo de postre que decea el cliente. 
+ * 
+ *  @author FutureBurguer.
  */
 public class PostresControlador implements ActionListener {
 

@@ -31,8 +31,10 @@ import modelo.View_Ordenes;
 import vista.JintCarrito;
 
 /**
+ *Esta clase nos servira para que el usuario pueda seleccionar los tamaños,
+ * de los productos que ordene el cliente.
  *
- * @author qobis
+ * @author FutureBurguer
  */
 public class View_productosTamaniosControlador implements ActionListener {
 

@@ -24,8 +24,11 @@ import vista.formulariospostres.jIntPostres;
 import vista.formulariossnacks.jIntSnacks;
 
 /**
- *
- * @author javam2019
+ * Al iniciar secion  el usuario, se le mostrara en pantalla la pagina principal,
+ * de la aplicacion  que seria todo los productos conforme a su categoria, 
+ * y podra el usuario tomar la orden del cliente.
+ * 
+ * @author FutureBurguer.
  */
 public class PrincipalControlador implements ActionListener {
 

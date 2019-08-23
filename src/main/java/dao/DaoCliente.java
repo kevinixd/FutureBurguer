@@ -21,7 +21,9 @@ public class DaoCliente implements ClienteInterface {
      *
      * @param cliente objeto de cliente, datos proporcionados por usario
      * @return mensaje "datos ingresados" cuando la insersion tiene exito, al existir error retorna un texto con el error
-     * retorna un texto con el error dado
+     * retorna un texto con el error dado.
+     * 
+     * @author FutureBurguer
      */
     @Override
     public String agregarCliente(Cliente cliente) {

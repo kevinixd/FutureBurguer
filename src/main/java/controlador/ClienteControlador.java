@@ -8,6 +8,14 @@ import javax.swing.JOptionPane;
 import modelo.Cliente;
 import vista.JintCliente;
 
+/**
+ * Esta clase tiene como accion agregar a un nuevo cliente,
+ * y a buscar a los clientes agregados,  
+ * por medio de un formulario a mostrar.
+ * @author futureBurguer
+ */
+
+
 public class ClienteControlador implements ActionListener {
 
     //Formulario

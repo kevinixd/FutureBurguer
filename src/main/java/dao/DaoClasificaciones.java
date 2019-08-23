@@ -13,8 +13,9 @@ import java.util.ArrayList;
 import modelo.Clasificaciones;
 
 /**
- *
- * @author Admin
+ *clase para visualizar las clasificaciones de los productos
+ * por medio de una lista a mostrar.
+ * @author FutureBurguer
  */
 public class DaoClasificaciones implements ClasificacionesInterface {
 

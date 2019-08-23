@@ -5,6 +5,13 @@
  */
 package controlador;
 
+/**
+ * Esta clase mostrara al usuario la descripcion del combo
+ * que ordeno el cliente.
+ * 
+ * @author futureBurguer
+ */
+
 import static controlador.PrincipalControlador.principal;
 import static controlador.VariablesEstaticas.clasificacion;
 import static controlador.VariablesEstaticas.productoID;

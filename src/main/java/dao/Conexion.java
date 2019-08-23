@@ -1,4 +1,8 @@
 package dao;
+/**
+ * Clase  para la conexion a la base de datos.
+ * @author FutureBurguer
+ */
 
 import java.sql.Connection;
 import java.sql.DriverManager;
