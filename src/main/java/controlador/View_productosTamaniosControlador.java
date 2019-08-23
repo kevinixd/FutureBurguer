@@ -25,7 +25,6 @@ import vista.formulariosbebidas.jIntBebidasCalientes;
 import vista.formulariosbebidas.jIntBebidasFrias;
 import vista.formulariospostres.jIntPostres;
 import vista.formulariossnacks.jIntSnacks;
-import static controlador.VariablesEstaticas.insertarPedido;
 import static controlador.VariablesEstaticas.verDetalle;
 import modelo.View_Ordenes;
 import vista.JintCarrito;
@@ -85,6 +84,7 @@ public class View_productosTamaniosControlador implements ActionListener {
         llenarTamanios();
         asignarDatosProductos();
         asignarDatosporTamanio();
+        deshabilitarBotonCantidad();
         vista.JlblAdvertencia.setVisible(false);
     }
 
@@ -96,11 +96,10 @@ public class View_productosTamaniosControlador implements ActionListener {
         }
 
         if (e.getSource() == vista.jBtnAñadirProduc) {
-            asignarDatosPedido();
             asignarDatosCarrito();
             agregarCantidad();
-            principal.EscritorioPrincipal.add(carrito);
             carritoControlador = new CarritoControlador(carrito);
+            principal.EscritorioPrincipal.add(carrito);
             carrito.setVisible(true);
             carrito.setLocation(320, 105);
             carrito.setSize(1500, 750);
@@ -206,16 +205,9 @@ public class View_productosTamaniosControlador implements ActionListener {
         vista.JlblAdvertencia.setVisible(true);
     }
 
-    public void asignarDatosPedido() {
-        DetallePedido pedido = new DetallePedido();
-        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblPtId.getText()));
-        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
-        pedido.setPrecio(Float.parseFloat(vista.jLblPrecioProducto.getText()));
-        insertarPedido.add(pedido);
-    }
-
     public void asignarDatosCarrito() {
         View_Ordenes carrito = new View_Ordenes();
+        carrito.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblPtId.getText()));
         carrito.setCantidadOrden(Integer.parseInt(vista.jTxtCantidad.getText()));
         carrito.setProductoOrden(vista.jLblNombreProducto.getText());
         carrito.setTamanioOrden(String.valueOf(vista.jLblTamanio.getText()));
@@ -224,7 +216,6 @@ public class View_productosTamaniosControlador implements ActionListener {
     }
 
     public void agregarCantidad() {
-
         for (int i = index; i <= verDetalle.size() - 1; i++) {
             acumulador = verDetalle.get(i).getCantidadOrden();
             cantidad = cantidad + acumulador;

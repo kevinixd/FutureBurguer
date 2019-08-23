@@ -24,7 +24,6 @@ import modelo.View_Descripcioncombo;
 import modelo.View_productosTamanios;
 import vista.JintDescripcionCombo;
 import vista.JintOpcion;
-import static controlador.VariablesEstaticas.insertarPedido;
 import modelo.View_Ordenes;
 import static controlador.VariablesEstaticas.verDetalle;
 import static controlador.VariablesEstaticas.cantidad;
@@ -88,9 +87,10 @@ public class DescripcionComboControlador implements ActionListener {
         esconderEtiquetas();
         //Llenar cantidadTxt en jTextFieldCantidad
         vista.jTxtCantidad.setText(String.valueOf(cantidadTxt));
+        vista.jTxtCantidad.setEnabled(false);
         asignarDatosCombos();
         verPrecioTamanio();
-
+        deshabilitarBotonCantidad();
     }
 
     public void addListeners() {
@@ -163,7 +163,6 @@ public class DescripcionComboControlador implements ActionListener {
         }
 
         if (e.getSource() == vista.jBtnAñadir) {
-            asignarDatosPedido();
             asignarDatos();
             agregarCantidad();
             controladorCarrito = new CarritoControlador(carrito);
@@ -290,32 +289,7 @@ public class DescripcionComboControlador implements ActionListener {
         vista.jLblPrecioBebida.setText(String.valueOf((listaCombo.get(2).getPrecio() * cantidadActualizada) - ((listaCombo.get(2).getPrecio() * cantidadActualizada) * (listaCombo.get(2).getDescuento() / 100))));
     }
 
-    /**
-     * Metodo para asignar datos para luego ser insertados a la tabla
-     */
-    public void asignarDatosPedido() {
-        //Agregar principal
-        DetallePedido pedido = new DetallePedido();
-        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblPrincipalID.getText()));
-        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
-        pedido.setPrecio(Float.parseFloat(vista.jLblPrecioPrincipal.getText()));
-        insertarPedido.add(pedido);
-
-        //Agregar acompañamiento
-        pedido = new DetallePedido();
-        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblSnackId.getText()));
-        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
-        pedido.setPrecio(Float.parseFloat(vista.jLblSnackPrecio.getText()));
-        insertarPedido.add(pedido);
-
-        //Agregar Bebida
-        pedido = new DetallePedido();
-        pedido.setProducto_tamaño_id(Integer.parseInt(vista.jLblBebidaID.getText()));
-        pedido.setCantidad(Byte.parseByte(vista.jTxtCantidad.getText()));
-        pedido.setPrecio(Float.parseFloat(vista.jLblPrecioBebida.getText()));
-        insertarPedido.add(pedido);
-
-    }
+    
 
     /**
      * Metodo para asinarDatos al Carrito de Compras
@@ -323,6 +297,7 @@ public class DescripcionComboControlador implements ActionListener {
     public void asignarDatos() {
         //Datos Principal
         View_Ordenes orden = new View_Ordenes();
+        orden.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblPrincipalID.getText()));
         orden.setCantidadOrden(Integer.parseInt(vista.jTxtCantidad.getText()));
         orden.setProductoOrden(String.valueOf(vista.jLblProductPrincipal.getText()));
         orden.setTamanioOrden(String.valueOf(vista.jLblPrincipalTamanio.getText()));
@@ -331,6 +306,7 @@ public class DescripcionComboControlador implements ActionListener {
 
         //Datos bebida
         orden = new View_Ordenes();
+        orden.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblBebidaID.getText()));
         orden.setCantidadOrden(Integer.parseInt(vista.jTxtCantidad.getText()));
         orden.setProductoOrden(String.valueOf(vista.jCmbBebida.getSelectedItem()));
         orden.setTamanioOrden(String.valueOf(vista.jCmbTamanioCombo.getSelectedItem()));
@@ -339,6 +315,7 @@ public class DescripcionComboControlador implements ActionListener {
 
         //Datos acompañamiento
         orden = new View_Ordenes();
+        orden.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblSnackId.getText()));
         orden.setCantidadOrden(Integer.parseInt(vista.jTxtCantidad.getText()));
         orden.setProductoOrden(String.valueOf(vista.jLblSnackCombo.getText()));
         orden.setTamanioOrden(String.valueOf(vista.jCmbTamanioCombo.getSelectedItem()));

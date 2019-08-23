@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import modelo.DetallePedido;
 import vista.JfrmPrincipal;
 import vista.JintCarrito;
+import vista.JintCliente;
 
 import vista.formulariosbebidas.jIntBebidasFC;
 
@@ -29,15 +30,18 @@ import vista.formulariossnacks.jIntSnacks;
  */
 public class PrincipalControlador implements ActionListener {
 
+    //Frames a utilizar
     jIntDesayunos desayunos = new jIntDesayunos();
     jIntHamburguesas hamburguesas = new jIntHamburguesas();
     jIntBebidasFC bebidasfc = new jIntBebidasFC();
     jIntPostres postres = new jIntPostres();
     jIntSnacks snacks = new jIntSnacks();
     JintCarrito carrito = new JintCarrito();
-
+    JintCliente cliente= new JintCliente();
+    
     //Controladores
     CarritoControlador controladorCarrito;
+    ClienteControlador controladorCliente;
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -90,6 +94,7 @@ public class PrincipalControlador implements ActionListener {
         principal.jBtnPostres.addActionListener(this);
         principal.jBtnSnacks.addActionListener(this);
         principal.jBtnCarrito1.addActionListener(this);
+        principal.jBtnCliente.addActionListener(this);
 
         //Botones panel principal
         detPedido = new DetallePedido();
@@ -156,12 +161,21 @@ public class PrincipalControlador implements ActionListener {
         }
 
         if (e.getSource() == principal.jBtnCarrito1) {
-            carrito= new JintCarrito();
+            carrito = new JintCarrito();
             principal.EscritorioPrincipal.add(carrito);
             carrito.setVisible(true);
             carrito.setLocation(320, 105);
             carrito.setSize(1500, 750);
             controladorCarrito = new CarritoControlador(carrito);
+        }
+
+        if (e.getSource() == principal.jBtnCliente) {
+            cliente= new JintCliente();
+            principal.EscritorioPrincipal.add(cliente);
+            cliente.setVisible(true);
+            cliente.setLocation(320, 105);
+            cliente.setSize(1500, 750);
+            controladorCliente= new ClienteControlador(cliente);
         }
     }
 
@@ -171,7 +185,7 @@ public class PrincipalControlador implements ActionListener {
         bebidasfc = null;
         postres = null;
         snacks = null;
-        carrito= null;
+        carrito = null;
     }
 
     /*

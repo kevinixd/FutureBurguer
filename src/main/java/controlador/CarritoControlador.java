@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import static controlador.PrincipalControlador.principal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.table.DefaultTableModel;
@@ -12,7 +13,6 @@ import modelo.DetallePedido;
 import modelo.View_Ordenes;
 import vista.JintCarrito;
 import vista.JintCliente;
-import static controlador.VariablesEstaticas.insertarPedido;
 import static controlador.VariablesEstaticas.verDetalle;
 import static controlador.VariablesEstaticas.cantidad;
 import dao.agregar;
@@ -32,14 +32,14 @@ public class CarritoControlador implements ActionListener {
     DetallePedido orden = new DetallePedido();
 
     //Tabla
-    private String[] titulos = {"Cantidad", "Producto", "Tamaño", "Precio", "Editar", "Eliminar"};
+    private String[] titulos = {"Cantidad", "Producto ID", "Producto", "Tamaño", "Precio", "Editar", "Eliminar"};
     DefaultTableModel tablaCarrito = new DefaultTableModel(titulos, 0);
-
+    
     private byte pedido_id = 10;
     private JButton eliminar;
     private JButton modificar;
     private float sumaPrecio;
-
+    
     public CarritoControlador(JintCarrito carrito) {
         this.carrito = carrito;
         carrito.jBtnCancelar.addActionListener(this);
@@ -56,55 +56,63 @@ public class CarritoControlador implements ActionListener {
         asignarPrecioTotal();
         dimensionesTabla();
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == carrito.jBtnCancelar) {
             verDetalle.clear();
         }
+        
+        if (e.getSource() == carrito.jBtnOrdenar) {
+            controladorCliente = new ClienteControlador(cliente);
+            principal.EscritorioPrincipal.add(cliente);
+            cliente.setVisible(true);
+            cliente.setLocation(320, 105);
+            cliente.setSize(1500, 750);
+        }
+        
         verCarrito();
     }
-
+    
     public void limpiarTabla() {
         int a = tablaCarrito.getRowCount() - 1;
         for (int i = a; i >= 0; i--) {
             tablaCarrito.removeRow(i);
         }
     }
-
+    
     public void verCarrito() {
         limpiarTabla();
         carrito.jTlbCarrito.setDefaultRenderer(Object.class, new RenderTabla());
-        Object[] filas = new Object[6];
+        Object[] filas = new Object[7];
         for (View_Ordenes orden : verDetalle) {
             filas[0] = orden.getCantidadOrden();
-            filas[1] = orden.getProductoOrden();
-            filas[2] = orden.getTamanioOrden();
-            filas[3] = "Q." + orden.getPrecioOrden();
-            filas[4] = modificar;
-            filas[5] = eliminar;
+            filas[1] = orden.getProductoTamanioIdOrden();
+            filas[2] = orden.getProductoOrden();
+            filas[3] = orden.getTamanioOrden();
+            filas[4] = "Q." + orden.getPrecioOrden();
+            filas[5] = modificar;
+            filas[6] = eliminar;
             tablaCarrito.addRow(filas);
-            sumaPrecio+=orden.getPrecioOrden();
+            sumaPrecio += orden.getPrecioOrden();
         }
         carrito.jTlbCarrito.setModel(tablaCarrito);
     }
-
+    
     public void asignarPrecioTotal() {
-        /*for (int i = 0; i < tablaCarrito.getRowCount(); i++) {
-            sumaPrecio = Float.parseFloat(String.valueOf(carrito.jTlbCarrito.getValueAt(i, 3)));
-            sumaPrecio += sumaPrecio;
-        }*/
         carrito.jLblTotal.setText("Q." + String.valueOf(sumaPrecio));
     }
-
+    
     public void dimensionesTabla() {
         carrito.jTlbCarrito.getColumnModel().getColumn(0).setMaxWidth(100);
-        carrito.jTlbCarrito.getColumnModel().getColumn(1).setMaxWidth(360);
-        carrito.jTlbCarrito.getColumnModel().getColumn(2).setMaxWidth(250);
-        carrito.jTlbCarrito.getColumnModel().getColumn(3).setMaxWidth(200);
-        carrito.jTlbCarrito.getColumnModel().getColumn(4).setMaxWidth(250);
+        carrito.jTlbCarrito.getColumnModel().getColumn(1).setMaxWidth(0);
+        carrito.jTlbCarrito.getColumnModel().getColumn(1).setMinWidth(0);
+        carrito.jTlbCarrito.getColumnModel().getColumn(2).setMaxWidth(360);
+        carrito.jTlbCarrito.getColumnModel().getColumn(3).setMaxWidth(250);
+        carrito.jTlbCarrito.getColumnModel().getColumn(4).setMaxWidth(200);
         carrito.jTlbCarrito.getColumnModel().getColumn(5).setMaxWidth(250);
-
+        carrito.jTlbCarrito.getColumnModel().getColumn(6).setMaxWidth(250);
+        
     }
-
+    
 }

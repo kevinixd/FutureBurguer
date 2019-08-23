@@ -7,6 +7,7 @@ package modelo;
 
 public class View_Ordenes {
     
+    private int detalle_pedidoOrden;
     private int numero_orden;
     private String direccion;
     private int productoTamanioIdOrden;
@@ -20,7 +21,8 @@ public class View_Ordenes {
     public View_Ordenes() {
     }
 
-    public View_Ordenes(int numero_orden, String direccion, int productoTamanioIdOrden, String tipoComboOrden, String productoOrden, String tamanioOrden, int cantidadOrden, String descripcionOrden, float precioOrden) {
+    public View_Ordenes(int detalle_pedidoOrden,int numero_orden, String direccion, int productoTamanioIdOrden, String tipoComboOrden, String productoOrden, String tamanioOrden, int cantidadOrden, String descripcionOrden, float precioOrden) {
+        this.detalle_pedidoOrden= detalle_pedidoOrden;
         this.numero_orden = numero_orden;
         this.direccion= direccion;
         this.productoTamanioIdOrden= productoTamanioIdOrden;
@@ -31,6 +33,15 @@ public class View_Ordenes {
     }
 
     //getter y setter
+
+    public int getDetalle_pedidoOrden() {
+        return detalle_pedidoOrden;
+    }
+
+    public void setDetalle_pedidoOrden(int detalle_pedidoOrden) {
+        this.detalle_pedidoOrden = detalle_pedidoOrden;
+    }
+        
     public int getNumero_orden() {
         return numero_orden;
     }

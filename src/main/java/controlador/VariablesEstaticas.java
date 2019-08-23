@@ -25,9 +25,6 @@ public class VariablesEstaticas {
     //Variable para generalizar el ID de la clasificación
     public static int clasificacion;
     
-    //ArrayList para ver los datos en el carrito de compras
-    public static ArrayList<DetallePedido> insertarPedido= new ArrayList();
-    
     //ArrayList para insertar datos en el carrito de compras
     public static ArrayList<View_Ordenes> verDetalle= new ArrayList();
     

@@ -106,9 +106,7 @@ public class JintCarrito extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnOrdenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnOrdenarActionPerformed
-        JintCliente cliente = new JintCliente();
-        principal.EscritorioPrincipal.add(cliente);
-        cliente.setVisible(true);
+
     }//GEN-LAST:event_jBtnOrdenarActionPerformed
 
 

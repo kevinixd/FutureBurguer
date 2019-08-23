@@ -176,7 +176,9 @@
                       <Component id="jLblFecha" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       <Component id="jLblHora" min="-2" pref="210" max="-2" attributes="0"/>
-                      <EmptySpace pref="244" max="32767" attributes="0"/>
+                      <EmptySpace pref="148" max="32767" attributes="0"/>
+                      <Component id="jBtnCliente" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLblEntregas" min="-2" pref="90" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jBtnCarrito1" min="-2" pref="90" max="-2" attributes="0"/>
@@ -198,14 +200,13 @@
                               <Component id="jBtnCerrarSesion" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLblCantidadProductos" alignment="3" max="32767" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                                  <Component id="jLblEntregas" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jBtnCarrito1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLblEntregas" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="jBtnCarrito1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="jBtnCliente" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jLblCantidadProductos" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -298,6 +299,20 @@
                   <Font name="Dialog" size="33" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="+123"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="jBtnCliente">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="40" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="66" red="33" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="\ud83d\ude4b&#x200d;" containsInvalidXMLChars="true"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

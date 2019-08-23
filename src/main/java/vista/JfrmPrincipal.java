@@ -54,6 +54,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLblFecha = new javax.swing.JLabel();
         jLblHora = new javax.swing.JLabel();
         jLblCantidadProductos = new javax.swing.JLabel();
+        jBtnCliente = new javax.swing.JButton();
         JPnlBotones = new javax.swing.JPanel();
         jBtnDesayunos = new javax.swing.JButton();
         jBtnHamburguesas = new javax.swing.JButton();
@@ -103,6 +104,10 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jLblCantidadProductos.setFont(new java.awt.Font("Dialog", 1, 33)); // NOI18N
         jLblCantidadProductos.setText("+123");
 
+        jBtnCliente.setFont(new java.awt.Font("Dialog", 1, 40)); // NOI18N
+        jBtnCliente.setForeground(new java.awt.Color(51, 102, 255));
+        jBtnCliente.setText("🙋‍");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -116,7 +121,9 @@ public class JfrmPrincipal extends javax.swing.JFrame {
                 .addComponent(jLblFecha)
                 .addGap(54, 54, 54)
                 .addComponent(jLblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addComponent(jBtnCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,11 +142,11 @@ public class JfrmPrincipal extends javax.swing.JFrame {
                         .addComponent(jLblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jBtnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLblCantidadProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLblEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnCarrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLblCantidadProductos))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         JPnlBotones.setOpaque(false);
@@ -351,6 +358,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton jBtnBebidas;
     public javax.swing.JButton jBtnCarrito1;
     public javax.swing.JButton jBtnCerrarSesion;
+    public javax.swing.JButton jBtnCliente;
     public javax.swing.JButton jBtnDesayunos;
     public javax.swing.JButton jBtnHamburguesas;
     public javax.swing.JButton jBtnPostres;
