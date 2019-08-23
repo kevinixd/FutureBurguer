@@ -31,7 +31,7 @@ public class BebidasCalienteControlador implements ActionListener {
     //ArrayList para productos
     ArrayList<Productos> listaProducto = new ArrayList<>();
 
-    //Frames a utilizar
+    //Frames a utilizar para el formulario
     jIntBebidasCalientes bebidaCaliente = new jIntBebidasCalientes();
     JintDescripcionProducto producto = new JintDescripcionProducto();
 
