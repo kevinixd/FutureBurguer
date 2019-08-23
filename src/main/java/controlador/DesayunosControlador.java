@@ -27,8 +27,11 @@ import vista.JintOpcion;
 import vista.formulariosdesayunos.jIntDesayunos;
 
 /**
- *
- * @author javam2019
+ * Esta clase mostrara el listrado de los productos desayunos,
+ * y la  clase se encargara de que el usario pueda selecciona que tipo
+ * de desayuno decea el cliente.
+ * 
+ * @author futureBurguer
  */
 public class DesayunosControlador implements ActionListener {
 

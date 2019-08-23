@@ -15,7 +15,9 @@ import vista.JfrmLogin;
 import vista.JfrmPrincipal;
 
 /**
- *
+ *Clase donde el empleado tiene que  inicial secion en la aplicaicon,
+ * para ello tiene que ingresar su usuario y su contraseña, 
+ * y esta clase se encargara de verificar sus datos y validar campos.
  * @author javam2019
  */
 public class EmpleadoControlador implements ActionListener {

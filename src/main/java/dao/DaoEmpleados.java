@@ -21,6 +21,8 @@ public class DaoEmpleados implements EmpleadosInterface {
      * 
      * @param empleado datos del objeto definidos por el usuario
      * @return Objeto de tipo empleado para obtener los datos de un empleado en especifico 
+     * 
+     * @author FutureBurguer
      */
     @Override
     public Empleados confirmarUsuario(Empleados empleado) {

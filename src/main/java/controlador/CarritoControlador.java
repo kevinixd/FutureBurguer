@@ -5,6 +5,11 @@
  */
 package controlador;
 
+
+/**
+ *Esta clase almacenara todos los productos seleccionado de la orden que se efectue.
+ * @author futureBurguer
+ */
 import static controlador.PrincipalControlador.principal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

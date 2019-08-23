@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import modelo.Tamanios;
 
 /**
- *
+ * Clase para la visualizacion de tamaños.
  * @author FutureBurguer
  */
 public class DaoTamanios implements TamaniosInterface {

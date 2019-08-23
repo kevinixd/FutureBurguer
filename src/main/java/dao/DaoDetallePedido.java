@@ -14,8 +14,9 @@ import java.util.logging.Logger;
 import modelo.DetallePedido;
 
 /**
- *
- * @author javam2019
+ * clase para poder visualizar el detalles de los combos 
+ * de las ordenes pedidas por los clientes.
+ * @author futureburguer.
  */
 public class DaoDetallePedido implements DetallePedidoInterface {
 

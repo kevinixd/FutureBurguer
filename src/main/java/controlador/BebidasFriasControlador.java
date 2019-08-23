@@ -19,10 +19,10 @@ import javax.swing.JButton;
 import modelo.Productos;
 import vista.JintDescripcionProducto;
 import vista.formulariosbebidas.jIntBebidasFrias;
-
 /**
- *
- * @author javam2019
+ * Esta clase listara el producto de bebidas frias y se encargara de que
+ * el ususario seleccione el tipo de bebida fria que decea el cliente. 
+ *  @author FutureBurguer.
  */
 public class BebidasFriasControlador implements ActionListener {
 

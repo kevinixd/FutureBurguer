@@ -20,9 +20,10 @@ import vista.formulariosbebidas.jIntBebidasFC;
 import vista.formulariosbebidas.jIntBebidasFrias;
 
 //import vista.jIntDrink1;
+
 /**
- *
- * @author javam2019
+ * Clase donde el usuario puede seleccionar que tipo de bebida decea el cliente. 
+ *  @author FutureBurguer.
  */
 public class BebidasFCControlador implements ActionListener {
 

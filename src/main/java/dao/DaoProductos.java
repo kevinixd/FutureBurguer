@@ -33,6 +33,8 @@ public class DaoProductos implements ProductosInterface {
      *
      * @param id dato definido por el usuario
      * @return Objeto de tipo ArrayList lista
+     * 
+     * @author FutureBurguer
      */
     @Override
     public ArrayList<Productos> verProductos(int id) {

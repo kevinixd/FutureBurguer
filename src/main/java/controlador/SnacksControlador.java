@@ -21,8 +21,9 @@ import vista.JintDescripcionProducto;
 import vista.formulariossnacks.jIntSnacks;
 
 /**
- *
- * @author javam2019
+ *Esta clase el usuario va seleccionar que tipo de sancks decea ordenar.
+ * 
+ * @author futureburguer.
  */
 public class SnacksControlador implements ActionListener {
 

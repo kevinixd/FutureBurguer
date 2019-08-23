@@ -22,7 +22,9 @@ import vista.JintDescripcionCombo;
 import vista.JintDescripcionProducto;
 
 /**
- *
+ *Esta clase va mostrar al usuario las opciones que tiene el clientes,
+ * al poder  ordenar, si quiere un combo  o decea un individual.
+ * 
  * @author Futureburguer
  */
 public class OpcionesControlador implements ActionListener {

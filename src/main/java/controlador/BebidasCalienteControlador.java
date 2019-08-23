@@ -21,15 +21,17 @@ import vista.JintDescripcionProducto;
 import vista.formulariosbebidas.jIntBebidasCalientes;
 
 /**
- *
- * @author FutureBurguer
+ * Esta clase listara el producto de bebidas calientes y se encargara
+ * de que el ususario seleccione el tipo de bebida caliente que decea el cliente. 
+ * 
+ * @author FutureBurguer.
  */
 public class BebidasCalienteControlador implements ActionListener {
 
     //ArrayList para productos
     ArrayList<Productos> listaProducto = new ArrayList<>();
 
-    //Frames a utilizar
+    //Frames a utilizar para el formulario
     jIntBebidasCalientes bebidaCaliente = new jIntBebidasCalientes();
     JintDescripcionProducto producto = new JintDescripcionProducto();
 
