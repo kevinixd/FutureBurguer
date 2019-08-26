@@ -30,8 +30,8 @@ import modelo.View_Ordenes;
 import vista.JintCarrito;
 
 /**
- *Esta clase nos servira para que el usuario pueda seleccionar los tamaños,
- * de los productos que ordene el cliente.
+ * Esta clase nos servira para que el usuario pueda seleccionar los tamaños, de
+ * los productos que ordene el cliente.
  *
  * @author FutureBurguer
  */

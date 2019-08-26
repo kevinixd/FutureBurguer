@@ -29,7 +29,8 @@ import vista.formularioshamburguesas.jIntHamburguesas;
 import vista.JintDescripcionCombo;
 
 /**
- *  Esta clase va mostrar al usuario las clasificaciones de hamburguesas que hay.
+ * Esta clase va mostrar al usuario las clasificaciones de hamburguesas que hay.
+ *
  * @author futureBurguer
  */
 public class HamburguesasControlador implements ActionListener {
