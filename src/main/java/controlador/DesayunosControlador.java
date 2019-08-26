@@ -28,7 +28,7 @@ import vista.formulariosdesayunos.jIntDesayunos;
 
 /**
  * Esta clase mostrara el listrado de los productos desayunos,
- * y la  clase se encargara de que el usario pueda selecciona que tipo
+ * y la  clase se encargara de que el usario pueda seleccionar que tipo
  * de desayuno decea el cliente.
  * 
  * @author futureBurguer

@@ -7,6 +7,9 @@ import javax.swing.JTextField;
 /**
  *
  * @author FutureBurguer
+ *Esta clase va validar los campos de jtextfield,
+ * al ingresar un campo de texto o numero.
+ * @author ftureburguer.
  */
 public class ValidarCampos {
     
