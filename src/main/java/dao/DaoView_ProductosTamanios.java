@@ -33,8 +33,10 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
 
     /**
      *
-     * @param productoId dato proporcionado por el usuario
-     * @return Objeto de tipo View_productosTamanios
+     * @param productoId se utiliza el Producto ID para ver 
+     * que producto se requiere
+     * @return Objeto de tipo View_productosTamanios en el que vemos
+     * los datos del mismo
      */
     @Override
     public View_productosTamanios verProductoDetalle(int productoId) {
@@ -61,6 +63,13 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
         return productTamanio;
     }
 
+    /**
+     * 
+     * @param productoId vemos el ProductoID perteneciente al mismo
+     * @param tamanio utilizamos el nombre del tamaño 
+     * @return un elemento de Tipo Productos tamanios en el cual veremos
+     * los detalles del mismo
+     */
     @Override
     public View_productosTamanios verPorTamanio(int productoId, String tamanio) {
         cone.abrirConexion();
@@ -87,6 +96,13 @@ public class DaoView_ProductosTamanios implements View_ProductosTamaniosInterfac
         return productTamanio;
     }
 
+    /**
+     * 
+     * @param tamanio evaluamos el tamanio del mismo por medio de un String
+     * @param producto Obtenemos el nombre del producto
+     * @return un elemento de tipo ProductosTamanios para ver el productoID
+     * perteneciente al elemento
+     */
     @Override
     public View_productosTamanios verProductoId(String tamanio, String producto) {
         cone.abrirConexion();

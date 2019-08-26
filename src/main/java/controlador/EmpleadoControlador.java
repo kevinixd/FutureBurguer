@@ -44,6 +44,9 @@ public class EmpleadoControlador implements ActionListener {
         }
     }
 
+    /**
+     * Método para asignar datos al modelo por medio de los TextField
+     */
     public void datos() {
         emp.setEmpleadocorreo(String.valueOf(fromLogin.jTxtUser.getText()));
         emp.setContraseña(String.valueOf(fromLogin.jTxtPass.getText()));
@@ -60,6 +63,14 @@ public class EmpleadoControlador implements ActionListener {
             JOptionPane.showMessageDialog(null, "Datos incorrectos");
         }
     }*/
+    
+    /**
+     * Método para verificar si los datos ingresados por el usuario son correctos
+     * y si es así se le permite el ingreso al sistema
+     * en dado caso el empleado sea de tipo Repartidor y/o Motorista se le mostrará
+     * un mensaje en el que dirá que el formulario no está en construccion o que no tiene
+     * acceso al sistema
+     */
     public void verificarUsuario() {
         if (verificar == false) {
             Empleados p = new Empleados();
@@ -83,6 +94,9 @@ public class EmpleadoControlador implements ActionListener {
 
     }
 
+    /**
+     * Método para validar los campos del frame y si estos contienen valores correctos y predeterminados
+     */
     public void validarCampos() {
         comprobarCampos = 0;
         if (fromLogin.jTxtUser.getText().isEmpty() && fromLogin.jTxtPass.getText().isEmpty()) {

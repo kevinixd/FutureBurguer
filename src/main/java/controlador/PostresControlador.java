@@ -146,6 +146,9 @@ public class PostresControlador implements ActionListener {
 
     }
 
+    /**
+     * Metodo para crear los botones correspondientes a los postres
+     */
     public void crearPostres() {
         listaProductos.clear();
         clasificacionPostre = 1004;

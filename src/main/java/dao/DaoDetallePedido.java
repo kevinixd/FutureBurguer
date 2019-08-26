@@ -14,8 +14,9 @@ import java.util.logging.Logger;
 import modelo.DetallePedido;
 
 /**
- * clase para poder visualizar el detalles de los combos 
- * de las ordenes pedidas por los clientes.
+ * clase para poder visualizar el detalles de los combos de las ordenes pedidas
+ * por los clientes.
+ *
  * @author futureburguer.
  */
 public class DaoDetallePedido implements DetallePedidoInterface {
@@ -23,8 +24,15 @@ public class DaoDetallePedido implements DetallePedidoInterface {
     PreparedStatement ejecutar;
 
     private String sql = null;
-    Conexion con;
+    Conexion con = new Conexion();
+    DetallePedido pedido= new DetallePedido();
 
+    /**
+     *
+     * @param pedido de tipo ArrayList para que se vayan agregando diferentes
+     * productos a la tabla de detallePedido
+     * @return
+     */
     @Override
     public boolean agregarPedido(ArrayList<DetallePedido> pedido) {
 
@@ -32,19 +40,19 @@ public class DaoDetallePedido implements DetallePedidoInterface {
             con = new Conexion();
             con.getCon().setAutoCommit(false); //inicia una transaccion
             for (DetallePedido detallePedido : pedido) {
-                sql = "insert into detalle sdasdadsadasd";
+                sql = "insert into detallepedido ";
                 //ejecutar=cone.getconexion.preparedStamentent(sql);
                 //ejecutar.setShort(1, detallePedido.getPedido_id());
-                
+
             }
-            
+
             con.getCon().commit(); //finaliza la transacción
-            
+
         } catch (SQLException ex) {
             try {
                 con.getCon().rollback(); //elimina la insersiones anteriores si no completan todas
             } catch (SQLException ex1) {
-                System.out.println("Error : " +ex1);
+                System.out.println("Error : " + ex1);
             }
         }
         return false;

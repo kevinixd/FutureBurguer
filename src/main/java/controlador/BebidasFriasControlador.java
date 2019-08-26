@@ -121,6 +121,9 @@ public class BebidasFriasControlador implements ActionListener {
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
     }
 
+    /**
+     * Metodo para crear los botones de las BebidasFrias en relacion a los datos creados
+     */
     public void crearBebidasFrias() {
         listaProducto.clear();
         clasificacionBebid = 1002;

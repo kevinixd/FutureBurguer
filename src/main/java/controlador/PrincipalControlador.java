@@ -25,10 +25,10 @@ import vista.formulariospostres.jIntPostres;
 import vista.formulariossnacks.jIntSnacks;
 
 /**
- * Al iniciar secion  el usuario, se le mostrara en pantalla la pagina principal,
- * de la aplicacion  que seria todo los productos conforme a su categoria, 
- * y podra el usuario tomar la orden del cliente.
- * 
+ * Al iniciar secion el usuario, se le mostrara en pantalla la pagina principal,
+ * de la aplicacion que seria todo los productos conforme a su categoria, y
+ * podra el usuario tomar la orden del cliente.
+ *
  * @author FutureBurguer.
  */
 public class PrincipalControlador implements ActionListener {
@@ -40,8 +40,8 @@ public class PrincipalControlador implements ActionListener {
     jIntPostres postres = new jIntPostres();
     jIntSnacks snacks = new jIntSnacks();
     JintCarrito carrito = new JintCarrito();
-    JintCliente cliente= new JintCliente();
-    
+    JintCliente cliente = new JintCliente();
+
     //Controladores
     CarritoControlador controladorCarrito;
     ClienteControlador controladorCliente;
@@ -67,6 +67,10 @@ public class PrincipalControlador implements ActionListener {
         principal.jLblCantidadProductos.setText("+" + String.valueOf(cantidad));
     }
 
+    /**
+     * Método para mostrar la fecha y la hora dentro del sistema
+     * la cual se está actualizando a cada segundo
+     */
     public void horaYFecha() {
         //Fechas y horas
         DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm a"); // El formato es HH:mm:ss
@@ -173,15 +177,18 @@ public class PrincipalControlador implements ActionListener {
         }
 
         if (e.getSource() == principal.jBtnCliente) {
-            cliente= new JintCliente();
+            cliente = new JintCliente();
             principal.EscritorioPrincipal.add(cliente);
             cliente.setVisible(true);
             cliente.setLocation(320, 105);
             cliente.setSize(1500, 750);
-            controladorCliente= new ClienteControlador(cliente);
+            controladorCliente = new ClienteControlador(cliente);
         }
     }
 
+    /**
+     * Metodo para eliminar los frames una vez utilizados
+     */
     public void destruirInternal() {
         desayunos = null;
         hamburguesas = null;
@@ -191,8 +198,8 @@ public class PrincipalControlador implements ActionListener {
         carrito = null;
     }
 
-    /*
-    *Método para asignar imagenes a cada boton
+    /**
+     * Método para asignar imagenes a cada boton
      */
     public void imgPrincipal() {
 

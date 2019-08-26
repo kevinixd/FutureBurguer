@@ -74,7 +74,9 @@ public class OpcionesControlador implements ActionListener {
         }
     }
 
-    //Metodo para asignar imagen de individual a los botones
+    /**
+     * Metodo para asignar imagen de individual a los botones
+     */
     public void asignarProducto() {
         producTamanios = dao3.verProductoDetalle(productoID);
         ImageIcon icono = new ImageIcon(rutaProducto + producTamanios.getProductoImgView());
@@ -82,6 +84,9 @@ public class OpcionesControlador implements ActionListener {
         opcion.jBtnIndividual.setIcon(iconoRed);
     }
 
+    /**
+     * Método para asignar datos del combo a el botón ya determinado de combo
+     */
     public void asignarCombo() {
         descripcion = dao4.verImagenCombo(productoID);
         if (descripcion.getImagenDetalleCombo() != null) {

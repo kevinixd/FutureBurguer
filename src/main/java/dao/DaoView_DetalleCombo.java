@@ -28,8 +28,10 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
     
     /**
      * 
-     * @param productoId dato proporcionado por el usuario
-     * @return Objeto de tipo ArrayList lista 
+     * @param productoId Se usa el ProductoID
+     * @return Objeto de tipo ArrayList lista para ver los datos
+     * del producto en el que evaluamos si el producto principal existe
+     * dentro del combo o si este pertenece a uno 
      */
     @Override
     public ArrayList<View_Descripcioncombo> verProductos(int productoId) {
@@ -63,6 +65,12 @@ public class DaoView_DetalleCombo implements View_DetalleComboInterface {
         return lista;
     }
 
+    /**
+     * 
+     * @param productoId se utiliza el ID del producto
+     * @return un elemento de tipo View_DescripcionCombo
+     * en el que podemos ver la imagen y el nombre del mismo
+     */
     @Override
     public View_Descripcioncombo verImagenCombo(int productoId) {
         cone.abrirConexion();

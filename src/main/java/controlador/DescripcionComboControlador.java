@@ -185,7 +185,9 @@ public class DescripcionComboControlador implements ActionListener {
 
     }
 
-    //Asignar precio e iD por busqueda de tamanio
+    /**
+     * Asignar precio e iD por busqueda de tamanio
+     */
     public void verPrecioTamanio() {
         tamanios = String.valueOf(vista.jCmbTamanioCombo.getSelectedItem());
         producto = String.valueOf(vista.jCmbBebida.getSelectedItem());
@@ -206,7 +208,9 @@ public class DescripcionComboControlador implements ActionListener {
 
     }
 
-    //Asignar SOLO precios dependiendo del tamaño
+    /**
+     * Asignar SOLO precios dependiendo del tamaño
+     */
     public void asignarPrecios() {
         //Precio Bebida
         vista.jLblPrecioBebida.setText(String.valueOf((bebidaID.getPrecioView() * cantidadActualizada) - ((bebidaID.getPrecioView() * cantidadActualizada)) * (listaCombo.get(0).getDescuento() / 100)));
@@ -223,7 +227,9 @@ public class DescripcionComboControlador implements ActionListener {
                 + snackID.getPrecioView() * cantidadActualizada) * (listaCombo.get(0).getDescuento() / 100))))));
     }
 
-    //Deshabilitar botones Mas y Menos dependiendo de la cantidadTxt
+    /**
+     * Deshabilitar botones Mas y Menos dependiendo de la cantidadTxt
+     */
     public void deshabilitarBotonCantidad() {
         if (cantidadTxt > 14) {
             vista.jBtnMas.setEnabled(false);
@@ -236,7 +242,9 @@ public class DescripcionComboControlador implements ActionListener {
         }
     }
 
-    //Metodo para llenar el comboBox de tamaños
+    /**
+     * Metodo para llenar el comboBox de tamaños
+     */
     public void llenarTamanios() {
         for (Tamanios tamanios : dao2.verTamanios()) {
             tamaniosComboBox.addElement(tamanios.getTamanionombre());
@@ -244,7 +252,9 @@ public class DescripcionComboControlador implements ActionListener {
         vista.jCmbTamanioCombo.setModel(tamaniosComboBox);
     }
 
-    //Metodo para llenar el comboBox de Bebidas
+    /**
+     * Metodo para llenar el comboBox de Bebidas
+     */
     public void llenarBebidas() {
         if (clasificacion == 1001) {
             productosComboBox = new DefaultComboBoxModel();
@@ -260,7 +270,9 @@ public class DescripcionComboControlador implements ActionListener {
         vista.jCmbBebida.setModel(productosComboBox);
     }
 
-    //Asignar datos a los elementos del frame para ver la descripcion de los Combox
+    /**
+     * Asignar datos a los elementos del frame para ver la descripcion de los Combox
+     */
     public void asignarDatosCombos() {
         listaCombo = dao3.verProductos(productoID);
 
@@ -330,6 +342,10 @@ public class DescripcionComboControlador implements ActionListener {
         verDetalle.add(orden);
     }
 
+    /**
+     * Método para agregar la cantidad de los productos elegidos a la etiqueta que 
+     * muestra la cantidad
+     */
     public void agregarCantidad() {
         for (int i = index; i <= verDetalle.size() - 1; i++) {
             acumulador = verDetalle.get(i).getCantidadOrden();

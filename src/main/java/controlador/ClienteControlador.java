@@ -3,20 +3,20 @@ package controlador;
 import dao.DaoCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
 import vista.JintCliente;
 
 /**
- * Esta clase tiene como accion agregar a un nuevo cliente,
- * y a buscar a los clientes agregados,  
- * por medio de un formulario a mostrar.
+ * Esta clase tiene como accion agregar a un nuevo cliente, y a buscar a los
+ * clientes agregados, por medio de un formulario a mostrar.
+ *
  * @author futureBurguer
  */
-
-
-public class ClienteControlador implements ActionListener {
+public class ClienteControlador implements ActionListener, KeyListener {
 
     //Formulario
     JintCliente fromCliente;
@@ -32,16 +32,28 @@ public class ClienteControlador implements ActionListener {
         fromCliente.jBtnOrdenarCliente.addActionListener(this);
         fromCliente.jBtnBuscar.addActionListener(this);
         fromCliente.jBtnModificar.addActionListener(this);
+        fromCliente.jBtnAgregarCliente.addActionListener(this);
+        setKeyListeners();
         asignarImagenes();
         validarCampos();
-        fromCliente.jLblClienteID.setVisible(false);
-        validarCamposLlenos();
+        validarCamposParaAgregar();
+        fromCliente.jLblClienteID.setVisible(true);
+        fromCliente.jBtnAgregarCliente.setEnabled(false);
+    }
+
+    public void setKeyListeners() {
+        fromCliente.jTxtApellido.addKeyListener(this);
+        fromCliente.jTxtDire.addKeyListener(this);
+        fromCliente.jTxtNit.addKeyListener(this);
+        fromCliente.jTxtNombre.addKeyListener(this);
+        fromCliente.jTxtTel.addKeyListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == fromCliente.jBtnAgregarCliente) {
             guardarCliente();
+            validarCamposLlenos();
         }
 
         if (e.getSource() == fromCliente.jBtnBuscar) {
@@ -51,9 +63,13 @@ public class ClienteControlador implements ActionListener {
 
         if (e.getSource() == fromCliente.jBtnModificar) {
             modificarCliente();
+            validarCamposLlenos();
         }
     }
 
+    /**
+     * Metodo para asignar imagenes a los botones dentro del formulario
+     */
     public void asignarImagenes() {
         ImageIcon mod = new ImageIcon(ruta + "\\src\\main\\java\\img\\Modificar.png");
         ImageIcon add = new ImageIcon(ruta + "\\src\\main\\java\\img\\Agregar.png");
@@ -73,23 +89,11 @@ public class ClienteControlador implements ActionListener {
     }
 
     /**
-     * Método para borrar cajas de texto
-     */
-    public void borrarCajas() {
-        fromCliente.jTxtNombre.setText("");
-        fromCliente.jTxtApellido.setText("");
-        fromCliente.jTxtTel.setText("");
-        fromCliente.jTxtDire.setText("");
-        fromCliente.jTxtNit.setText("");
-    }
-
-    /**
      * Método para modificar datos del cliente
      */
     public void modificarCliente() {
-        int clienteID = Integer.parseInt(fromCliente.jLblClienteID.getText());
-        asignarDatos();
-        mensaje = dao.modificarCliente(clienteID);
+        cl.setClienteid(Integer.parseInt(fromCliente.jLblClienteID.getText()));
+        mensaje = dao.modificarCliente(cl);
         JOptionPane.showMessageDialog(fromCliente, mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -98,11 +102,11 @@ public class ClienteControlador implements ActionListener {
      * modelo
      */
     public void asignarDatos() {
-        cl.setClientenombre(fromCliente.jTxtNombre.getText());
-        cl.setClienteapellido(fromCliente.jTxtApellido.getText());
+        cl.setClientenit(String.valueOf(fromCliente.jTxtNit.getText()));
+        cl.setClientenombre(String.valueOf(fromCliente.jTxtNombre.getText()));
+        cl.setClienteapellido(String.valueOf(fromCliente.jTxtApellido.getText()));
         cl.setClientetelefono(Integer.parseInt(fromCliente.jTxtTel.getText()));
-        cl.setClientedireccion(fromCliente.jTxtDire.getText());
-        cl.setClientenit(fromCliente.jTxtNit.getText());
+        cl.setClientedireccion(String.valueOf(fromCliente.jTxtDire.getText()));
     }
 
     /**
@@ -112,26 +116,34 @@ public class ClienteControlador implements ActionListener {
         int tel = Integer.parseInt(fromCliente.jTxtTel.getText());
         cl = dao.buscarCliente(tel);
 
-        if (cl.getClientenombre() == null) {
-            JOptionPane.showMessageDialog(fromCliente, "Cliente no encontrado" + nl + "Se necesita agregarlo", "Información", JOptionPane.INFORMATION_MESSAGE);
-        } else {
+        if (cl.getClientenombre() != null) {
             fromCliente.jLblClienteID.setText(String.valueOf(cl.getClienteid()));
-            fromCliente.jTxtNombre.setText(cl.getClientenombre());
-            fromCliente.jTxtApellido.setText(cl.getClienteapellido());
+            fromCliente.jTxtNombre.setText(String.valueOf(cl.getClientenombre()));
+            fromCliente.jTxtApellido.setText(String.valueOf(cl.getClienteapellido()));
             fromCliente.jTxtTel.setText(String.valueOf(cl.getClientetelefono()));
-            fromCliente.jTxtDire.setText(cl.getClientedireccion());
-            fromCliente.jTxtNit.setText(cl.getClientenit());
+            fromCliente.jTxtDire.setText(String.valueOf(cl.getClientedireccion()));
+            fromCliente.jTxtNit.setText(String.valueOf(cl.getClientenit()));
+            fromCliente.jBtnAgregarCliente.setEnabled(false);
+        } else {
+            fromCliente.jBtnAgregarCliente.setEnabled(true);
+            JOptionPane.showMessageDialog(fromCliente, "Cliente no encontrado" + nl + "Se necesita agregarlo", "Información", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
+    /**
+     * Método para validar los datos correctos de los campos
+     */
     public void validarCampos() {
         //Validar Campos
         ValidarCampos validar = new ValidarCampos();
         validar.ValidarSoloLetras(fromCliente.jTxtNombre);
         validar.ValidarSoloLetras(fromCliente.jTxtApellido);
-        validar.ValidarSoloNumeros(fromCliente.jTxtTel);
+        validar.ValidarSoloNumeros(fromCliente.jTxtTel, 8);
     }
 
+    /**
+     * Método para validar que todos los campos estén llenos
+     */
     public void validarCamposLlenos() {
         fromCliente.jBtnOrdenarCliente.setEnabled(!fromCliente.jTxtNombre.getText().isEmpty()
                 && !fromCliente.jTxtApellido.getText().isEmpty()
@@ -139,4 +151,31 @@ public class ClienteControlador implements ActionListener {
                 && !fromCliente.jTxtDire.getText().isEmpty());
     }
 
+    @Override
+    public void keyTyped(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        validarCamposParaAgregar();
+    }
+
+    public void validarCamposParaAgregar() {
+        fromCliente.jBtnAgregarCliente.setEnabled(!fromCliente.jTxtNombre.getText().isEmpty()
+                && !fromCliente.jTxtApellido.getText().isEmpty()
+                && !fromCliente.jTxtTel.getText().isEmpty()
+                && !fromCliente.jTxtDire.getText().isEmpty()
+                && !fromCliente.jTxtNit.getText().isEmpty());
+        fromCliente.jBtnOrdenarCliente.setEnabled(!fromCliente.jTxtNombre.getText().isEmpty()
+                && !fromCliente.jTxtApellido.getText().isEmpty()
+                && !fromCliente.jTxtTel.getText().isEmpty()
+                && !fromCliente.jTxtDire.getText().isEmpty()
+                && !fromCliente.jTxtNit.getText().isEmpty());
+    }
 }

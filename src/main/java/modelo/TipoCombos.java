@@ -1,6 +1,6 @@
 
 package modelo;
-/* 
+/** 
  esta clase es un reflejo de la tabla tipo combos de la base de datos
  * @author futureburguer
  */

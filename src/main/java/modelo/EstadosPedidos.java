@@ -1,6 +1,6 @@
 
 package modelo;
-/*
+/**
  * esta clase es un reflejo de la tabla estadospedidos de la base de datos
  * @author futureburguer
  */

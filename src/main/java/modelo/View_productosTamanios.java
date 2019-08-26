@@ -1,6 +1,6 @@
 
 package modelo;
-/*
+/**
  * esta clase es un reflejo de la tabla productos tamaño de la base de datos
  * @author futureburguer
  */

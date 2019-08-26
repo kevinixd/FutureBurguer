@@ -102,6 +102,9 @@ public class HamburguesasControlador implements ActionListener {
 
     }
 
+    /**
+     * Método para crear los botones de las hamburguesas
+     */
     public void crearHamburguesas() {
         listaProducto.clear();
         clasificacionProducto = 1001;

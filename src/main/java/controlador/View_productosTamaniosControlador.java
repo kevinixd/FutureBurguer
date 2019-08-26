@@ -159,7 +159,9 @@ public class View_productosTamaniosControlador implements ActionListener {
         vista.jLblPrecioProducto.setText(String.valueOf(producTamanios.getPrecioView() * cantidadActualizada));
     }
 
-    //Deshabilitar botones Mas y Menos dependiendo de la cantidadTxt
+    /**
+     * Deshabilitar botones Mas y Menos dependiendo de la cantidadTxt
+     */
     public void deshabilitarBotonCantidad() {
         if (cantidadTxt > 14) {
             vista.jBtnMas.setEnabled(false);
@@ -172,6 +174,9 @@ public class View_productosTamaniosControlador implements ActionListener {
         }
     }
 
+    /**
+     * Metodo para lenar el comboBox con los tamanios de la base de datos
+     */
     public void llenarTamanios() {
         for (Tamanios verTamanio : dao2.verTamanios()) {
             tamanio.addElement(verTamanio.getTamanionombre());
@@ -179,6 +184,10 @@ public class View_productosTamaniosControlador implements ActionListener {
         vista.jCmbTamanioProducto.setModel(tamanio);
     }
 
+    /**
+     * Metodo para asignar los datos del producto a cada elemento correspondiente
+     * del mismo
+     */
     public void asignarDatosProductos() {
         producTamanios = dao.verProductoDetalle(productoID);
         vista.jLblNombreProducto.setText(String.valueOf(producTamanios.getProductoView()));
@@ -199,6 +208,10 @@ public class View_productosTamaniosControlador implements ActionListener {
         }
     }
 
+    /**
+     * Método para asignar los datos determinados tales como el ID y el precio 
+     * dependiendo del tamaño que se eliga
+     */
     public void asignarDatosporTamanio() {
         String tamanio = String.valueOf(vista.jLblTamanio.getText());
         producTamanios = dao.verPorTamanio(productoID, tamanio);
@@ -207,6 +220,9 @@ public class View_productosTamaniosControlador implements ActionListener {
         vista.JlblAdvertencia.setVisible(true);
     }
 
+    /**
+     * Método para asignar de valores al carrito de compras
+     */
     public void asignarDatosCarrito() {
         View_Ordenes carrito = new View_Ordenes();
         carrito.setProductoTamanioIdOrden(Integer.parseInt(vista.jLblPtId.getText()));
@@ -217,6 +233,10 @@ public class View_productosTamaniosControlador implements ActionListener {
         verDetalle.add(carrito);
     }
 
+    /**
+     * Metodo para agregar la cantidad de productos ordenados a la cantidad de productos
+     * que se estará mostrando en el Label de cantidad
+     */
     public void agregarCantidad() {
         for (int i = index; i <= verDetalle.size() - 1; i++) {
             acumulador = verDetalle.get(i).getCantidadOrden();

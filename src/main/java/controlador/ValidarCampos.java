@@ -6,7 +6,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author javam2019
+ * @author FutureBurguer
  */
 public class ValidarCampos {
     
@@ -22,12 +22,16 @@ public class ValidarCampos {
         });
     }
     
-    public void ValidarSoloNumeros(JTextField campo){
+    public void ValidarSoloNumeros(JTextField campo, int caracteres){
         campo.addKeyListener(new KeyAdapter(){
             public void keyTyped(KeyEvent e){
                 char c= e.getKeyChar();
-                
+                int longitud= campo.getText().length();
                 if(!Character.isDigit(c)){
+                    e.consume();
+                }
+                
+                if(longitud>caracteres){
                     e.consume();
                 }
             }

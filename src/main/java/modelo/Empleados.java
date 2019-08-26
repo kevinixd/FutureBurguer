@@ -1,7 +1,7 @@
 
 package modelo;
 
-/*
+/**
  *esta clase es un reflejo de la tabla empleados de la base de datos
  * @author fututeburguer
  */

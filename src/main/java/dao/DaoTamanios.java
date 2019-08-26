@@ -28,6 +28,12 @@ public class DaoTamanios implements TamaniosInterface {
 
     private String sql = null;
 
+    /**
+     * 
+     * @return un arrayList con los nombres de los tamaños
+     * así mismo como sus nombres y su ID para trabajar con 
+     * los mismos
+     */
     @Override
     public ArrayList<Tamanios> verTamanios() {
         conexion.abrirConexion();

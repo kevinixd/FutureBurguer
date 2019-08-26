@@ -74,6 +74,9 @@ public class BebidasCalienteControlador implements ActionListener {
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
     }
 
+    /**
+     * Método para crear los botones con relacion a las bebidas calientes
+     */
     public void crearBebidasCalientes() {
         listaProducto.clear();
         clasificacionProd = 1003;

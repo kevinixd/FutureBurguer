@@ -20,8 +20,8 @@ public class DaoCliente implements ClienteInterface {
     ResultSet rs;
     private String mensaje;
     private String sql = null;
-    
-    Cliente cliente= new Cliente();
+
+    Cliente cliente = new Cliente();
 
     /**
      * Metodo para agregar cliente a la base de datos
@@ -30,9 +30,10 @@ public class DaoCliente implements ClienteInterface {
      * @return mensaje "datos ingresados" cuando la insersion tiene exito, al
      * existir error retorna un texto con el error retorna un texto con el error
      * dado
-     * @return mensaje "datos ingresados" cuando la insersion tiene exito, al existir error retorna un texto con el error
-     * retorna un texto con el error dado.
-     * 
+     * @return mensaje "datos ingresados" cuando la insersion tiene exito, al
+     * existir error retorna un texto con el error retorna un texto con el error
+     * dado.
+     *
      * @author FutureBurguer
      */
     @Override
@@ -57,27 +58,15 @@ public class DaoCliente implements ClienteInterface {
     }
 
     /**
-     * Elimina de la base de datos clientes
      *
-     * @param cliente datos del objeto definidos por el usuario
-     * @return un mensaje indicando si se elimino el registro o si no se puede
-     * eliminar con el mensaje de error
-     */
-    @Override
-    public String eliminarCliente(Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    /**
-     *
-     * @param cliente datos del objeto definidos por el usuario
+     * @param clienteID datos del objeto definidos por el usuario
      * @return un mensaje indicando que se modificaron los datos del cliente
      */
     @Override
-    public String modificarCliente(int clienteID) {
+    public String modificarCliente(Cliente cliente) {
         con.abrirConexion();
-        sql = "update clientes set nit=?, nombre=?, apellido=?, telefono=?, direccion=? where cliente_id=?";
         try {
+            sql = "update clientes set nit=?, nombre=?, apellido=?, telefono=?, direccion=? where cliente_id=?";
             ps = con.getCon().prepareStatement(sql);
             ps.setString(1, cliente.getClientenit());
             ps.setString(2, cliente.getClientenombre());
@@ -85,8 +74,10 @@ public class DaoCliente implements ClienteInterface {
             ps.setInt(4, cliente.getClientetelefono());
             ps.setString(5, cliente.getClientedireccion());
             ps.setInt(6, cliente.getClienteid());
+            ps.executeUpdate();
             mensaje = "¡Cliente Modificado con Exito!";
         } catch (SQLException ex) {
+            mensaje= "NO se ha podido modificar";
             System.out.println("Error en dao Modificar Cliente " + ex);
         } finally {
             con.cerrarConexion();
@@ -118,8 +109,10 @@ public class DaoCliente implements ClienteInterface {
             cl.setClientenit(rs.getString("nit"));
             cl.setClientedireccion(rs.getString("direccion"));
             rs.close();
-
+            System.out.println(cl.getClientenit());
+            System.out.println(cl.getClientenombre());
         } catch (Exception e) {
+            System.out.println("Error en dao buscarCliente " + e);
         } finally {
             con.cerrarConexion();
         }

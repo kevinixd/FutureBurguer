@@ -63,6 +63,11 @@ public class DaoProductos implements ProductosInterface {
         return lista;
     }
 
+    /**
+     * 
+     * @return un arrayList con el nombre de las bebidas frias para los elementos
+     * de la descripción del combo y/o producto
+     */
     @Override
     public ArrayList<Productos> verBebidas() {
         lista = new ArrayList();
@@ -86,6 +91,11 @@ public class DaoProductos implements ProductosInterface {
         return lista;
     }
 
+    /**
+     * 
+     * @return un arrayList con las bebidas de tipo desayuno 
+     * para la descripción del combo
+     */
     @Override
     public ArrayList<Productos> verBebidasDesayuno() {
         lista = new ArrayList();

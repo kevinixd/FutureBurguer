@@ -46,6 +46,10 @@ public class SnacksControlador implements ActionListener {
         crearSnacks();
     }
 
+    /**
+     * 
+     * @param e 
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         productoID = 0;
@@ -71,6 +75,9 @@ public class SnacksControlador implements ActionListener {
         View_productosTamaniosControlador controlador = new View_productosTamaniosControlador(producto);
     }
 
+    /**
+     * Metodo para crear los botones correspondientes a la categoria de snacks
+     */
     public void crearSnacks() {
         listaProducto.clear();
         clasificacionSnack = 1005;

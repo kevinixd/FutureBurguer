@@ -5,9 +5,10 @@
  */
 package controlador;
 
-
 /**
- *Esta clase almacenara todos los productos seleccionado de la orden que se efectue.
+ * Esta clase almacenara todos los productos seleccionado de la orden que se
+ * efectue.
+ *
  * @author futureBurguer
  */
 import static controlador.PrincipalControlador.principal;
@@ -39,12 +40,12 @@ public class CarritoControlador implements ActionListener {
     //Tabla
     private String[] titulos = {"Cantidad", "Producto ID", "Producto", "Tamaño", "Precio", "Editar", "Eliminar"};
     DefaultTableModel tablaCarrito = new DefaultTableModel(titulos, 0);
-    
+
     private byte pedido_id = 10;
     private JButton eliminar;
     private JButton modificar;
     private float sumaPrecio;
-    
+
     public CarritoControlador(JintCarrito carrito) {
         this.carrito = carrito;
         carrito.jBtnCancelar.addActionListener(this);
@@ -61,13 +62,13 @@ public class CarritoControlador implements ActionListener {
         asignarPrecioTotal();
         dimensionesTabla();
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == carrito.jBtnCancelar) {
             verDetalle.clear();
         }
-        
+
         if (e.getSource() == carrito.jBtnOrdenar) {
             controladorCliente = new ClienteControlador(cliente);
             principal.EscritorioPrincipal.add(cliente);
@@ -75,17 +76,24 @@ public class CarritoControlador implements ActionListener {
             cliente.setLocation(320, 105);
             cliente.setSize(1500, 750);
         }
-        
+
         verCarrito();
     }
-    
+
+    /**
+     * Método para limpiar y/o actualizar los datos de la tabla
+     */
     public void limpiarTabla() {
         int a = tablaCarrito.getRowCount() - 1;
         for (int i = a; i >= 0; i--) {
             tablaCarrito.removeRow(i);
         }
     }
-    
+
+    /**
+     * Método para ver todos los datos del carrito mientras se van agregando al
+     * arrayList
+     */
     public void verCarrito() {
         limpiarTabla();
         carrito.jTlbCarrito.setDefaultRenderer(Object.class, new RenderTabla());
@@ -103,11 +111,18 @@ public class CarritoControlador implements ActionListener {
         }
         carrito.jTlbCarrito.setModel(tablaCarrito);
     }
-    
+
+    /**
+     * Método para asignar el precio total, o sease la suma del precio de todos
+     * los productos
+     */
     public void asignarPrecioTotal() {
         carrito.jLblTotal.setText("Q." + String.valueOf(sumaPrecio));
     }
-    
+
+    /**
+     * Método para esconder valores en la tabla
+     */
     public void dimensionesTabla() {
         carrito.jTlbCarrito.getColumnModel().getColumn(0).setMaxWidth(100);
         carrito.jTlbCarrito.getColumnModel().getColumn(1).setMaxWidth(0);
@@ -117,7 +132,7 @@ public class CarritoControlador implements ActionListener {
         carrito.jTlbCarrito.getColumnModel().getColumn(4).setMaxWidth(200);
         carrito.jTlbCarrito.getColumnModel().getColumn(5).setMaxWidth(250);
         carrito.jTlbCarrito.getColumnModel().getColumn(6).setMaxWidth(250);
-        
+
     }
-    
+
 }
