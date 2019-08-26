@@ -21,7 +21,7 @@ import vista.JintDescripcionProducto;
 import vista.formulariosbebidas.jIntBebidasFrias;
 /**
  * Esta clase listara el producto de bebidas frias y se encargara de que
- * el ususario seleccione el tipo de bebida fria que decea el cliente. 
+ * el usuario seleccione el tipo de bebida fria que decea el cliente. 
  *  @author FutureBurguer.
  */
 public class BebidasFriasControlador implements ActionListener {

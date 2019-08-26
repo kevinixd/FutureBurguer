@@ -25,7 +25,7 @@ public class Conexion {
         this.con = con;
     }
     
-    
+    // abrir la conexion.
     public void abrirConexion(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -35,6 +35,7 @@ public class Conexion {
         }
     }
     
+    //cerrar la conexion.
     public void cerrarConexion(){
         if (con!=null) {
             try {

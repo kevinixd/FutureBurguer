@@ -11,8 +11,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
 /**
- *
- * @author javam2019
+ *Esta clase nos servira para poder inssrtar botones a una celda de una tabla.
+ * @author futureburguer.
  */
 public class RenderTabla extends DefaultTableCellRenderer {
 

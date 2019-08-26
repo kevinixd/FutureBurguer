@@ -21,7 +21,7 @@ import vista.JintDescripcionProducto;
 import vista.formulariossnacks.jIntSnacks;
 
 /**
- *Esta clase el usuario va seleccionar que tipo de sancks decea ordenar.
+ *Esta clase el usuario va seleccionar que tipo de sancks decea ordenar el cliente.
  * 
  * @author futureburguer.
  */
