@@ -13,6 +13,10 @@ import javax.swing.JOptionPane;
 import modelo.Empleados;
 import vista.JfrmLogin;
 import vista.JfrmPrincipal;
+import static controlador.VariablesEstaticas.usuario;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import javafx.scene.input.KeyCode;
 
 /**
  *Clase donde el empleado tiene que  inicial secion en la aplicaicon,
@@ -20,7 +24,7 @@ import vista.JfrmPrincipal;
  * y esta clase se encargara de verificar sus datos y validar campos.
  * @author javam2019
  */
-public class EmpleadoControlador implements ActionListener {
+public class EmpleadoControlador implements ActionListener, KeyListener {
 
     JfrmLogin fromLogin;
     DaoEmpleados dao = new DaoEmpleados();
@@ -32,6 +36,9 @@ public class EmpleadoControlador implements ActionListener {
     public EmpleadoControlador(JfrmLogin fromLogin) {
         this.fromLogin = fromLogin;
         fromLogin.jBtnEntrar.addActionListener(this);
+        fromLogin.jTxtPass.addKeyListener(this);
+        fromLogin.jTxtUser.addKeyListener(this);
+        fromLogin.jTxtUser.requestFocus();
         fromLogin.jLblError.setText("");
     }
 
@@ -51,18 +58,6 @@ public class EmpleadoControlador implements ActionListener {
         emp.setEmpleadocorreo(String.valueOf(fromLogin.jTxtUser.getText()));
         emp.setContraseña(String.valueOf(fromLogin.jTxtPass.getText()));
     }
-
-    /* public void verificarDatos(){
-        Empleados empleados = new Empleados();
-        datos();
-        empleados = dao.confirmarUsuario(emp);
-        
-        if (empleados.getCorreo() != null) {
-            JOptionPane.showMessageDialog(null,"Bienvenido");
-        } else {
-            JOptionPane.showMessageDialog(null, "Datos incorrectos");
-        }
-    }*/
     
     /**
      * Método para verificar si los datos ingresados por el usuario son correctos
@@ -84,6 +79,7 @@ public class EmpleadoControlador implements ActionListener {
                 vista.setExtendedState(6);
                 vista.jLblUsuario.setText(p.getEmpleadonombre());
                 vista.setVisible(true);
+                usuario= p.getEmpleadonombre() +" " + p.getEmpleadoapellido();
                 fromLogin.hide();
             } else if ((p.getEmpleadonombre() != null) && (p.getTipoempleado_id() == 2)) {
                 JOptionPane.showMessageDialog(fromLogin, "No tiene accesso al sistema");
@@ -122,6 +118,31 @@ public class EmpleadoControlador implements ActionListener {
         } else {
             verificar = false;
         }
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if(e.getSource()== fromLogin.jTxtUser){
+            if(e.getKeyCode()== KeyEvent.VK_ENTER){
+                fromLogin.jTxtPass.requestFocus();
+            }
+        }
+        
+        if(e.getSource()== fromLogin.jTxtPass){
+            if(e.getKeyCode()== KeyEvent.VK_ENTER){
+                fromLogin.jBtnEntrar.doClick();
+            }
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

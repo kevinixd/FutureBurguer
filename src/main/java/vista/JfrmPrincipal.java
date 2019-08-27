@@ -86,7 +86,7 @@ public class JfrmPrincipal extends javax.swing.JFrame {
         jBtnCarrito1.setForeground(new java.awt.Color(51, 102, 255));
         jBtnCarrito1.setText("🛒");
 
-        jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jLblUsuario.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLblUsuario.setText("Nombre Usuario");
 
         jBtnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N

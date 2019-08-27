@@ -6,6 +6,7 @@
 package controlador;
 
 import static controlador.VariablesEstaticas.cantidad;
+import static controlador.VariablesEstaticas.usuario;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.ImageIcon;
 import modelo.DetallePedido;
+import vista.JfrmLogin;
 import vista.JfrmPrincipal;
 import vista.JintCarrito;
 import vista.JintCliente;
@@ -41,10 +43,12 @@ public class PrincipalControlador implements ActionListener {
     jIntSnacks snacks = new jIntSnacks();
     JintCarrito carrito = new JintCarrito();
     JintCliente cliente = new JintCliente();
+    JfrmLogin logIn= new JfrmLogin();
 
     //Controladores
     CarritoControlador controladorCarrito;
     ClienteControlador controladorCliente;
+    EmpleadoControlador empleadoControlador;
 
     public static JfrmPrincipal principal = new JfrmPrincipal();
 
@@ -65,6 +69,7 @@ public class PrincipalControlador implements ActionListener {
         principal.setExtendedState(6);
         System.out.println(principal.JPnlBotones.getLocation());
         principal.jLblCantidadProductos.setText("+" + String.valueOf(cantidad));
+        principal.jLblUsuario.setText(usuario);
     }
 
     /**
@@ -102,7 +107,7 @@ public class PrincipalControlador implements ActionListener {
         principal.jBtnSnacks.addActionListener(this);
         principal.jBtnCarrito1.addActionListener(this);
         principal.jBtnCliente.addActionListener(this);
-
+        principal.jBtnCerrarSesion.addActionListener(this);
         //Botones panel principal
         detPedido = new DetallePedido();
 
@@ -183,6 +188,14 @@ public class PrincipalControlador implements ActionListener {
             cliente.setLocation(320, 105);
             cliente.setSize(1500, 750);
             controladorCliente = new ClienteControlador(cliente);
+        }
+        
+        if(e.getSource()== principal.jBtnCerrarSesion){
+            principal.dispose();
+            logIn= new JfrmLogin();
+            empleadoControlador= new EmpleadoControlador(logIn);
+            logIn.setVisible(true);
+            logIn.setLocationRelativeTo(null);
         }
     }
 

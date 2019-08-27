@@ -33,5 +33,7 @@ public class VariablesEstaticas {
     
     //Variable para ir contando en Index
     public static int index;
+    
+    public static String usuario;
 }
  
