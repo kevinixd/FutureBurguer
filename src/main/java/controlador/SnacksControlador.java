@@ -21,8 +21,9 @@ import vista.JintDescripcionProducto;
 import vista.formulariossnacks.jIntSnacks;
 
 /**
- *Esta clase el usuario va seleccionar que tipo de sancks decea ordenar el cliente.
- * 
+ * Esta clase el usuario va seleccionar que tipo de sancks decea ordenar el
+ * cliente.
+ *
  * @author futureburguer.
  */
 public class SnacksControlador implements ActionListener {
@@ -47,8 +48,8 @@ public class SnacksControlador implements ActionListener {
     }
 
     /**
-     * 
-     * @param e 
+     *
+     * @param e
      */
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -56,18 +57,29 @@ public class SnacksControlador implements ActionListener {
         clasificacion = 0;
 
         if (e.getSource() == listaSnacks.get(0)) {
+            //Asignamos al arraylist los valores obtenidos en la posición cero
             productoSeleccionado = listaProducto.get(0);
+
+            //Se le asigna a nuestra variable estatica el valor del productoID que se seleccionó
             productoID = productoSeleccionado.getProducto_id();
+
+            //Se le asigna a nuestra variable estatica el valor de la clasificación que se seleccionó
             clasificacion = productoSeleccionado.getClasificacion_id();
 
         }
 
         if (e.getSource() == listaSnacks.get(1)) {
+
+            //Asignamos al arraylist los valores obtenidos en la posición cero
             productoSeleccionado = listaProducto.get(1);
+
+            //Se le asigna a nuestra variable estatica el valor del productoID que se seleccionó
             productoID = productoSeleccionado.getProducto_id();
+
+            //Se le asigna a nuestra variable estatica el valor de la clasificación que se seleccionó
             clasificacion = productoSeleccionado.getClasificacion_id();
         }
-        
+
         principal.EscritorioPrincipal.add(producto);
         producto.setVisible(true);
         producto.setLocation(320, 105);

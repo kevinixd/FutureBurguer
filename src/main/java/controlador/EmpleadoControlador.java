@@ -19,9 +19,10 @@ import java.awt.event.KeyListener;
 import javafx.scene.input.KeyCode;
 
 /**
- *Clase donde el empleado tiene que  inicial secion en la aplicaicon,
- * para ello tiene que ingresar su usuario y su contraseña, 
- * y esta clase se encargara de verificar sus datos y validar campos.
+ * Clase donde el empleado tiene que inicial secion en la aplicaicon, para ello
+ * tiene que ingresar su usuario y su contraseña, y esta clase se encargara de
+ * verificar sus datos y validar campos.
+ *
  * @author javam2019
  */
 public class EmpleadoControlador implements ActionListener, KeyListener {
@@ -58,12 +59,12 @@ public class EmpleadoControlador implements ActionListener, KeyListener {
         emp.setEmpleadocorreo(String.valueOf(fromLogin.jTxtUser.getText()));
         emp.setContraseña(String.valueOf(fromLogin.jTxtPass.getText()));
     }
-    
+
     /**
-     * Método para verificar si los datos ingresados por el usuario son correctos
-     * y si es así se le permite el ingreso al sistema
-     * en dado caso el empleado sea de tipo Repartidor y/o Motorista se le mostrará
-     * un mensaje en el que dirá que el formulario no está en construccion o que no tiene
+     * Método para verificar si los datos ingresados por el usuario son
+     * correctos y si es así se le permite el ingreso al sistema en dado caso el
+     * empleado sea de tipo Repartidor y/o Motorista se le mostrará un mensaje
+     * en el que dirá que el formulario no está en construccion o que no tiene
      * acceso al sistema
      */
     public void verificarUsuario() {
@@ -73,17 +74,24 @@ public class EmpleadoControlador implements ActionListener, KeyListener {
             p = dao.confirmarUsuario(emp);
 
             //Se verifican si los datos son correctos
-            if ((p.getEmpleadonombre()!= null) && (p.getTipoempleado_id() == 1)) {
+            if ((p.getEmpleadonombre() != null) && (p.getTipoempleado_id() == 1)) {
                 JfrmPrincipal vista = new JfrmPrincipal();
                 PrincipalControlador controladorPrincipal = new PrincipalControlador(vista);
+
+                //Se le asigna un tamaño para la pantalla completa
                 vista.setExtendedState(6);
-                vista.jLblUsuario.setText(p.getEmpleadonombre());
+
+                //Asignamos el nombre y apellido a la etiqueta del formulario principal
+                vista.jLblUsuario.setText(p.getEmpleadonombre() + "" + p.getEmpleadoapellido());
                 vista.setVisible(true);
-                usuario= p.getEmpleadonombre() +" " + p.getEmpleadoapellido();
+
+                //Escondemos el formulario del Login
                 fromLogin.hide();
             } else if ((p.getEmpleadonombre() != null) && (p.getTipoempleado_id() == 2)) {
+                //SI el usuario es tipo repartidor mostramos el mensaje:
                 JOptionPane.showMessageDialog(fromLogin, "No tiene accesso al sistema");
             } else {
+                //Si los valores son erroneos mostramos el mensaje:
                 JOptionPane.showMessageDialog(fromLogin, "Datos Incorrectos");
             }
         }
@@ -91,31 +99,48 @@ public class EmpleadoControlador implements ActionListener, KeyListener {
     }
 
     /**
-     * Método para validar los campos del frame y si estos contienen valores correctos y predeterminados
+     * Método para validar los campos del frame y si estos contienen valores
+     * correctos y predeterminados
      */
     public void validarCampos() {
+
+        //Variable para aumentar si alguno de los campos está erroneo
         comprobarCampos = 0;
+
         if (fromLogin.jTxtUser.getText().isEmpty() && fromLogin.jTxtPass.getText().isEmpty()) {
             JOptionPane.showMessageDialog(fromLogin, "Campo contraseña y usuario requerido");
+
+            //Cada vez que se comete un error esta variable aumenta
             comprobarCampos++;
 
         } else if (fromLogin.jTxtPass.getText().isEmpty()) {
             JOptionPane.showMessageDialog(fromLogin, "Campo Contraseña requerido");
+
+            //Cada vez que se comete un error esta variable aumenta
             comprobarCampos++;
 
         } else if (fromLogin.jTxtUser.getText().isEmpty()) {
             JOptionPane.showMessageDialog(fromLogin, "Campos usuario requerido");
+
+            //Cada vez que se comete un error esta variable aumenta
             comprobarCampos++;
+
         } else if (!fromLogin.jTxtUser.getText().contains("@") || !fromLogin.jTxtUser.getText().contains(".")) {
             fromLogin.jLblError.setText("Correo Invalido");
+
+            //Cada vez que se comete un error esta variable aumenta
             comprobarCampos++;
+
         } else {
             fromLogin.jLblError.setText(" ");
         }
 
+        //Si la variable es diferente de cero asignamos true, mostrando que si hay errores
         if (comprobarCampos != 0) {
             verificar = true;
         } else {
+
+            //De lo contrario, se asigna false
             verificar = false;
         }
     }
@@ -127,14 +152,19 @@ public class EmpleadoControlador implements ActionListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getSource()== fromLogin.jTxtUser){
-            if(e.getKeyCode()== KeyEvent.VK_ENTER){
+
+        /*
+        *Para hacer el programa más amigable al usuario hacemos que por medio de la tecla enter vaya cambiando el foco
+        *de los textField para al fin llegar al boton
+         */
+        if (e.getSource() == fromLogin.jTxtUser) {
+            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                 fromLogin.jTxtPass.requestFocus();
             }
         }
-        
-        if(e.getSource()== fromLogin.jTxtPass){
-            if(e.getKeyCode()== KeyEvent.VK_ENTER){
+
+        if (e.getSource() == fromLogin.jTxtPass) {
+            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                 fromLogin.jBtnEntrar.doClick();
             }
         }
@@ -144,7 +174,5 @@ public class EmpleadoControlador implements ActionListener, KeyListener {
     public void keyReleased(KeyEvent e) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
 
 }
